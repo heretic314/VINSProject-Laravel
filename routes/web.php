@@ -69,6 +69,61 @@ Route::get('/DrugRequisition', function(){
     return view('DrugRequisition');
 });
 
+Route::post('/DrugRequisition', function(Request $request){
+  $data = $request->validate([
+    'name_of_drug_01' => 'nullable|max:255',
+    'quantity_01' => 'nullable|max:255',
+    'batch_no_01' => 'nullable|max:255',
+    'expiry_date_01' => 'nullable|max:255',
+    'issued_by_01' => 'nullable|max:255',
+    'received_by_01' => 'nullable|max:255',
+    'name_of_drug_02' => 'nullable|max:255',
+    'quantity_02' => 'nullable|max:255',
+    'batch_no_02' => 'nullable|max:255',
+    'expiry_date_02' => 'nullable|max:255',
+    'issued_by_02' => 'nullable|max:255',
+    'received_by_02' => 'nullable|max:255',
+    'name_of_drug_03' => 'nullable|max:255',
+    'quantity_03' => 'nullable|max:255',
+    'batch_no_03' => 'nullable|max:255',
+    'expiry_date_03' => 'nullable|max:255',
+    'issued_by_03' => 'nullable|max:255',
+    'received_by_03' => 'nullable|max:255',
+    'name_of_drug_04' => 'nullable|max:255',
+    'quantity_04' => 'nullable|max:255',
+    'batch_no_04' => 'nullable|max:255',
+    'expiry_date_04' => 'nullable|max:255',
+    'issued_by_04' => 'nullable|max:255',
+    'received_by_04' => 'nullable|max:255',
+    'name_of_drug_05' => 'nullable|max:255',
+    'quantity_05' => 'nullable|max:255',
+    'batch_no_05' => 'nullable|max:255',
+    'expiry_date_05' => 'nullable|max:255',
+    'issued_by_05' => 'nullable|max:255',
+    'received_by_05' => 'nullable|max:255',
+    'name_of_drug_06' => 'nullable|max:255',
+    'quantity_06' => 'nullable|max:255',
+    'batch_no_06' => 'nullable|max:255',
+    'expiry_date_06' => 'nullable|max:255',
+    'issued_by_06' => 'nullable|max:255',
+    'received_by_06' => 'nullable|max:255',
+    'name_of_drug_07' => 'nullable|max:255',
+    'quantity_07' => 'nullable|max:255',
+    'batch_no_07' => 'nullable|max:255',
+    'expiry_date_07' => 'nullable|max:255',
+    'issued_by_07' => 'nullable|max:255',
+    'received_by_07' => 'nullable|max:255',
+    'name' => 'required|max:255',
+    'date' => 'required|max:255',
+    'time' => 'required|max:255',
+
+  ]);
+
+  $link = tap(new App\DrugRequisition($data))->save();
+
+  return view('Index');
+});
+
 Route::get('/ERObservation', function(){
     return view('ERObservation');
 });
