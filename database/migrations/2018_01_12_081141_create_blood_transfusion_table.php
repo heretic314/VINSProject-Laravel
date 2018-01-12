@@ -13,9 +13,27 @@ class CreateBloodTransfusionTable extends Migration
      */
     public function up()
     {
-        Schema::create('blood_transfusion', function (Blueprint $table) {
+        Schema::create('bloodtransfusionform', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->string('patient_name');
+            $table->string('ipd_no');
+            $table->string('age');
+            $table->string('sex');
+            $table->date('date');
+            $table->time('time');
+            $table->string('blood_group');
+            $table->string('history_bt');
+            $table->string('adv');
+            $table->string('blood_bag_no');
+            $table->string('blood_bag_group');
+            $table->string('prod_name');
+            $table->string('name_blood_bank');
+            $table->date('expiry_date');
+            $table->string('checked_by');
+            $table->string('unit_nurse');
+            $table->time('start_time');
+            $table->time('end_time');
         });
     }
 

@@ -33,10 +33,6 @@ Route::get('/AppointmentBook', function(){
     return view('AppointmentBook');
 });
 
-Route::get('/BloodTransfusionForm', function(){
-    return view('BloodTransfusionForm');
-});
-
 Route::get('/Checklist', function(){
     return view('Checklist');
 });
@@ -192,6 +188,41 @@ Route::post('/DoctorsInitialAssessment', function(Request $request){
 
   return view('Index');
 });
+
+//
+//
+
+Route::get('/BloodTransfusionForm', function(){
+    return view('BloodTransfusionForm');
+});
+
+Route::post('/BloodTransfusionForm', function(Request $request){
+  $data = $request->validate([
+    'patient_name'  => 'required|max:255',
+    'ipd_no'  => 'required|max:255',
+    'age'  => 'required|max:255',
+    'sex'  => 'required|max:255',
+    'date'  => 'required|max:255',
+    'time'  => 'required|max:255',
+    'blood_group'  => 'required|max:255',
+    'history_bt'  => 'required|max:255',
+    'adv'  => 'required|max:255',
+    'blood_bag_no'  => 'required|max:255',
+    'blood_bag_group'  => 'required|max:255',
+    'prod_name'  => 'required|max:255',
+    'name_blood_bank'  => 'required|max:255',
+    'expiry_date'  => 'required|max:255',
+    'checked_by'  => 'required|max:255',
+    'unit_nurse'  => 'required|max:255',
+    'start_time'  => 'required|max:255',
+    'end_time'  => 'required|max:255'
+  ]);
+
+  $link2 = tap(new App\BloodTransfusionForm($data))->save();
+
+  return view('Index');
+});
+
 
 
 /*

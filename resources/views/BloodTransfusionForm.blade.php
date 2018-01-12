@@ -3,23 +3,24 @@
 	<title>
 		Blood Transfusion Form
 	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <div class="container">
-	<form name="bloodtransfusion">
+	<form action="/BloodTransfusionForm" method="post">
+			{{ csrf_field() }}
 		<div class="page-header">
 			<div class="row">
 				<div class="col-md-6">
 				<h1>Blood Transfusion Form</h1>
-				</div>	
+				</div>
 				<div class="col-md-6">
 					<div class="text-right">
 						DOC NO. FMT/IPD/36 <br>
 						REV. No. 0.1 <br>
 						WEF 01-10-2014 <br>
 						PAGE NO. 01 OF 02
-					</div>	
+					</div>
 				</div>
 			</div>
 		</div>
@@ -30,7 +31,7 @@
 				<textarea class="form-control" name="addressograph" placeholder="Addressograph here"></textarea>
 			</div>
 		</div>
-		
+
 		<div class="row form-group">
 			<div class="col-md-6">
 				<div class="col-md-6">
@@ -71,7 +72,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="row form-group">
 			<div class="col-md-6">
 				<div class="col-md-6">
@@ -90,7 +91,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="row form-group">
 			<div class="col-md-6">
 				<div class="col-md-6">
@@ -122,26 +123,26 @@
 				</div>
 			</div>
 		</div>
-		
-		
+
+
 		<div class="row form-group">
 			<div class="col-md-6">
 				<label>If adverse reaction during previous transfusion and it's nature :</label>
 			</div>
 			<div class="col-md-6">
-				<input type="text" class="form-control" name="bill-amt" id="adv">
+				<input type="text" class="form-control" name="adv" id="adv">
 			</div>
 		</div>
-		
+
 		<hr>
-		
+
 		<div class="row form-group">
 			<div class="col-md-6">
 				<div class="col-md-6">
 					<label>Blood Bag No.:</label>
 				</div>
 				<div class="col-md-6">
-					<input type="text" class="form-control" name="blood_bag_no1" id="blood_bag_no">
+					<input type="text" class="form-control" name="blood_bag_no" id="blood_bag_no">
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -162,14 +163,14 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="row form-group">
 			<div class="col-md-6">
 				<div class="col-md-6">
 					<label>Product's Name:</label>
 				</div>
 				<div class="col-md-6">
-					<select class="form-control" id="prod_name1" name="prod_name">
+					<select class="form-control" id="prod_name" name="prod_name">
 							<option> Whole Blood </option>
 							<option> PCV </option>
 							<option> PRC </option>
@@ -189,7 +190,7 @@
 				</div>
 			</div>
 		</div>
-	
+
 		<div class="row form-group">
 			<div class="col-md-6">
 				<div class="col-md-6">
@@ -208,7 +209,7 @@
 				</div>
 			</div>
 		</div>
-	
+
 		<div class="row form-group">
 			<div class="col-md-6">
 				<div class="col-md-6">
@@ -219,7 +220,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="row form-group">
 			<div class="col-md-6">
 				<div class="col-md-6">
@@ -238,7 +239,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="row form-group">
 			<h3>Vital Chart:</h3>
 			Vitals must be taken every 15 mins during transfusion and post transfusion upto 60 minutes.
@@ -252,7 +253,7 @@
 						<th colspan="4" class="text-center">II</th>
 					</tr>
 					<tr>
-						<th></th>	
+						<th></th>
 						<th>Time</th>
 						<th>Temp</th>
 						<th>Resp</th>
@@ -454,5 +455,9 @@
 				</tbody>
 			</table>
 		</div>
+		<div class="row form-group">
+			<button class="btn btn-success" type="submit">Submit</button>
+		</div>
+	</form>
 </div>
-</html>	
+</html>
