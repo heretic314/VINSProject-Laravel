@@ -74,7 +74,8 @@
 
 	  </div><!-- /.container-fluid -->
 		</nav>
-		<form id="doctors_handover" method="post">
+		<form action="DoctorsHandover" method="post">
+			{{ csrf_field() }}
 			<div class="row form-group">
 			  <div class="col-md-8">
 					<div class="col-md-4">
@@ -122,7 +123,7 @@
 					    <td class="text-center">4</td>
 							<td>Physician's reference</td>
 							<td><input type="text" class="form-control" name="physician_reference_day" id="physician_reference_day"></td>
-							<td><input type="text" class="form-control" name="physician_reference_day" id="physician_reference_night" ></td>
+							<td><input type="text" class="form-control" name="physician_reference_night" id="physician_reference_night" ></td>
 					  </tr>
 					  <tr>
 					    <td class="text-center">5</td>
@@ -175,8 +176,8 @@
 					  <tr>
 					    <td class="text-center">13</td>
 							<td>Physiotherapy</td>
-							<td class="text-center"><input type="checkbox" name="surgical_day" id="surgical_day" value="yes"/></td>
-							<td class="text-center"><input type="checkbox" name="surgical_day" id="surgical_day" value="yes"/></td>
+							<td class="text-center"><input type="checkbox" name="physiotherapy_day" value="yes"/></td>
+							<td class="text-center"><input type="checkbox" name="physiotherapy_night" value="yes"/></td>
 					  </tr>
 					  <tr>
 					    <td class="text-center">14</td>
@@ -198,25 +199,19 @@
 					  </tr>
 						<tr>
 							<td class=""></td>
-							<td>16.1 Signature</td>
-							<td><input type="text" class="form-control" name="signature_given_day" id="signature_given_day" /></td>
-							<td><input type="text" class="form-control" name="signature_given_night" id="signature_given_night" /></td>
-						</tr>
-						<tr>
-							<td class=""></td>
-							<td>16.2 Name</td>
+							<td>16.1 Name</td>
 							<td><input type="text" class="form-control" name="name_given_day" id="name_given_day" /></td>
 							<td><input type="text" class="form-control" name="name_given_night" id="name_given_night" /></td>
 						</tr>
 						<tr>
 							<td class=""></td>
-							<td>16.3 Date</td>
+							<td>16.2 Date</td>
 							<td><input type="date" class="form-control" name="date_given_day" id="date_given_day" /></td>
 							<td><input type="date" class="form-control" name="date_given_night" id="date_given_night" /></td>
 						</tr>
 						<tr>
 							<td class=""></td>
-							<td>16.4 Time</td>
+							<td>16.3 Time</td>
 							<td><input type="time" class="form-control" name="time_given_day" id="time_given_day" /></td>
 							<td><input type="time" class="form-control" name="time_given_night" id="time_given_night" /></td>
 						</tr>
@@ -228,25 +223,19 @@
 					  </tr>
 						<tr>
 							<td class=""></td>
-							<td>17.1 Signature</td>
-							<td><input type="text" class="form-control" name="signature_taken_day" id="signature_taken_day" /></td>
-							<td><input type="text" class="form-control" name="signature_taken_night" id="signature_taken_night" /></td>
-						</tr>
-						<tr>
-							<td class=""></td>
-							<td>17.2 Name</td>
+							<td>17.1 Name</td>
 							<td><input type="text" class="form-control" name="name_taken_day" id="name_taken_day" /></td>
 							<td><input type="text" class="form-control" name="name_taken_night" id="name_taken_night" /></td>
 						</tr>
 						<tr>
 							<td class=""></td>
-							<td>17.3 Date</td>
+							<td>17.2 Date</td>
 							<td><input type="date" class="form-control" name="date_taken_day" id="date_taken_day" /></td>
 							<td><input type="date" class="form-control" name="date_taken_night" id="date_taken_night" /></td>
 						</tr>
 						<tr>
 							<td class=""></td>
-							<td>17.4 Time</td>
+							<td>17.3 Time</td>
 							<td><input type="time" class="form-control" name="time_taken_day" id="time_taken_day" /></td>
 							<td><input type="time" class="form-control" name="time_taken_night" id="time_taken_night" /></td>
 						</tr>
@@ -255,7 +244,7 @@
 			  </table>
 			</div>
 			<div class="form-group text-center">
-				<a class="btn btn-success btn-bg" href="/submit_doctors_handover">Submit</a>
+				<button class="btn btn-success" type="submit">Submit</button>
 			</div>
 		</form>
 	</div>

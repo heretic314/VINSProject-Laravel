@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\BloodTransfusionForm' => $baseDir . '/app/BloodTransfusionForm.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\DoctorsHandover' => $baseDir . '/app/DoctorsHandover.php',
     'App\\DoctorsInitialAssessment' => $baseDir . '/app/DoctorsInitialAssessment.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -3254,6 +3255,7 @@ return array(
     'Whoops\\Util\\TemplateHelper' => $vendorDir . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
     'XdgBaseDir\\Xdg' => $vendorDir . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
     'bloodtransfusionformseeder' => $baseDir . '/database/seeds/bloodtransfusionformseeder.php',
+    'doctorshandoverseeder' => $baseDir . '/database/seeds/doctorshandoverseeder.php',
     'doctorsinitialassessmentseeder' => $baseDir . '/database/seeds/doctorsinitialassessmentseeder.php',
     'phpDocumentor\\Reflection\\DocBlock' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
     'phpDocumentor\\Reflection\\DocBlockFactory' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',

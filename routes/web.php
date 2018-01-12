@@ -64,11 +64,6 @@ Route::get('/DischarheGatepass', function(){
 Route::get('/DoctorsDailyNotes', function(){
     return view('DoctorsDailyNotes');
 });
-Route::get('/DoctorsHandover', function(){
-    return view('DoctorsHandover');
-});
-
-
 
 Route::get('/DrugRequisition', function(){
     return view('DrugRequisition');
@@ -219,6 +214,57 @@ Route::post('/BloodTransfusionForm', function(Request $request){
   ]);
 
   $link2 = tap(new App\BloodTransfusionForm($data))->save();
+
+  return view('Index');
+});
+
+Route::get('/DoctorsHandover', function(){
+    return view('DoctorsHandover');
+});
+Route::post('/DoctorsHandover', function(Request $request){
+  $data = $request->validate([
+    'surgical_day'  => 'required|max:255',
+    'surgical_night'  => 'required|max:255',
+    'tentative_date_of_surgery_day'  => 'required|max:255',
+    'tentative_date_of_surgery_night'  => 'required|max:255',
+    'date_of_surgery_day'  => 'required|max:255',
+    'date_of_surgery_night'  => 'required|max:255',
+    'physician_reference_day'  => 'required|max:255',
+    'physician_reference_night'  => 'required|max:255',
+    'other_physician_reference_day'  => 'required|max:255',
+    'other_physician_reference_night'  => 'required|max:255',
+    'pathological_investigation_done_day'  => 'required|max:255',
+    'pathological_investigation_done_night'  => 'required|max:255',
+    'pathological_investigation_collected_day'  => 'required|max:255',
+    'pathological_investigation_collected_night'  => 'required|max:255',
+    'radiological_investigation_collected_day'  => 'required|max:255',
+    'radiological_investigation_collected_night'  => 'required|max:255',
+    'other_investigation_done_day'  => 'required|max:255',
+    'other_investigation_done_night'  => 'required|max:255',
+    'other_investigation_collected_day'  => 'required|max:255',
+    'other_investigation_collected_night'  => 'required|max:255',
+    'echo_day'  => 'required|max:255',
+    'echo_night'  => 'required|max:255',
+    'physiotherapy_day'  => 'required|max:255',
+    'physiotherapy_night'  => 'required|max:255',
+    'specific_instruction_day'  => 'required|max:255',
+    'specific_instruction_night'  => 'required|max:255',
+    'verified_by_assistant_day'  => 'required|max:255',
+    'verified_by_assistant_night'  => 'required|max:255',
+    'name_given_day'  => 'required|max:255',
+    'name_given_night'  => 'required|max:255',
+    'date_given_day'  => 'required|max:255',
+    'date_given_night'  => 'required|max:255',
+    'time_given_day'  => 'required|max:255',
+    'time_given_night'  => 'required|max:255',
+    'name_taken_day'  => 'required|max:255',
+    'name_taken_night'  => 'required|max:255',
+    'date_taken_day'  => 'required|max:255',
+    'date_taken_night'  => 'required|max:255',
+    'time_taken_day'  => 'required|max:255',
+    'time_taken_night'  => 'required|max:255'
+  ]);
+  $link3 = tap(new App\DoctorsHandover($data))->save();
 
   return view('Index');
 });
