@@ -166,7 +166,7 @@ Route::post('/DoctorsInitialAssessment', function(Request $request){
       'name_informant' => 'required|max:255',
       'brought_by' => 'required|max:255',
       'place_of_accident' => 'required|max:255',
-      'current_time' => 'required|time|max:255',
+      'current_time' => 'required|max:255',
       'current_date' => 'required|max:255',
       'mlc' => 'required|max:255',
       'loc' => 'required|max:255',
