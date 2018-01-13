@@ -2,7 +2,7 @@ VINSPRoject-Laravel
 
 Shreya : LabSheet
 
-Nachiket : DoctorsDailyNotes
+Nachiket : NursingDutyOver
 
 Remaining :
 AppointmentBook
@@ -23,7 +23,6 @@ InvestigationSheet1
 InvestigationSheet2
 LabSheet
 MARFlowSheet
-NursingDutyOver
 NutritionalAssessmentForm
 PatientDietRecord
 PatientsDetailForm

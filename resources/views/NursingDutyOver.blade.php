@@ -45,7 +45,7 @@
 						<tr>
 							<td>Unit Nurse Name</td>
 							<div class="form-group">
-								<td colspan="2"><input type = "text" class = "form-control" name="M_nurse_name" id = "M_nurse_name"></td>
+								<td colspan="2"><input type = "text" class = "form-control" name="M_nurse_name" id = "M_nurse_name"/></td>
 								<td colspan="2"><input type = "text" class = "form-control" name="E_nurse_name" id = "E_nurse_name"/></td>
 								<td colspan="2"><input type = "text" class = "form-control" name="N_nurse_name" id = "N_nurse_name"/></td>
 							</div>
@@ -63,72 +63,72 @@
 					  <tr>
 							<td>1. Eye Care </td>
 							<div class="form-check-input">
-								<td colspan="2"><input type="checkbox" class="form-check" name="M_eyecare" id="M_eyecare" value="yes" /></td>
-								<td colspan="2"><input type="checkbox" class="form-check" name="E_eyecare" id="E_eyecare" value="yes" /></td>
-								<td colspan="2"><input type="checkbox" class="form-check" name="N_eyecare" id="N_eyecare" value="yes" /></td>
+								<td colspan="2" class="text-center"><input type="radio" class="form-check" name="M_eyecare" id="M_eyecare" value="yes" /></td>
+								<td colspan="2" class="text-center"><input type="radio" class="form-check" name="E_eyecare" id="E_eyecare" value="yes" /></td>
+								<td colspan="2" class="text-center"><input type="radio" class="form-check" name="N_eyecare" id="N_eyecare" value="yes" /></td>
 							</div>
 					  </tr>
 
 					  <tr>
 							<td>2. Mouth Care</td>
 							<div class="form-check-input">
-								<td colspan="2"><input type="checkbox" class="form-check" name="M_mouthcare" id="M_mouthcare" value="yes"></td>
-								<td colspan="2"><input type="checkbox" class="form-check" name="E_mouthcare" id="E_mouthcare" value="yes"></td>
-								<td colspan="2"><input type="checkbox" class="form-check" name="N_mouthcare" id="N_mouthcare" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" class="form-check" name="M_mouthcare" id="M_mouthcare" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" class="form-check" name="E_mouthcare" id="E_mouthcare" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" class="form-check" name="N_mouthcare" id="N_mouthcare" value="yes"></td>
 							</div>
 					  </tr>
 
 					  <tr>
 							<td>3. Skin Care/ Back Care </td>
 							<div class="form-group">
-								<td colspan="2"><input type="checkbox" name="M_skincare" id="M_skincare" value="yes"></td>
-								<td colspan="2"><input type="checkbox" name="E_skincare" id="E_skincare" value="yes"></td>
-								<td colspan="2"><input type="checkbox" name="N_skincare" id="N_skincare" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="M_skincare" id="M_skincare" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="E_skincare" id="E_skincare" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="N_skincare" id="N_skincare" value="yes"></td>
 							</div>
 					  </tr>
 
 					  <tr>
 							<td>4. Bedding</td>
 							<div class="form-group">
-								<td colspan="2"><input type="checkbox" name="M_bedding" id="M_bedding" value="yes"></td>
-								<td colspan="2"><input type="checkbox" name="E_bedding" id="E_bedding" value="yes"></td>
-								<td colspan="2"><input type="checkbox" name="N_bedding" id="N_bedding" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="M_bedding" id="M_bedding" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="E_bedding" id="E_bedding" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="N_bedding" id="N_bedding" value="yes"></td>
 							</div>
 					  </tr>
 
 					  <tr>
 							<td>5. Catheter Care</td>
 							<div class="form-group">
-								<td colspan="2"><input type="checkbox" name="M_cathetercare" id="M_cathetercare" value="yes"></td>
-								<td colspan="2"><input type="checkbox" name="E_cathetercare" id="E_cathetercare" value="yes"></td>
-								<td colspan="2"><input type="checkbox" name="N_cathetercare" id="N_cathetercare" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="M_cathetercare" id="M_cathetercare" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="E_cathetercare" id="E_cathetercare" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="N_cathetercare" id="N_cathetercare" value="yes"></td>
 							</div>
 					  </tr>
 
 					  <tr>
 							<td>6. Physiotherapy</td>
 							<div class="form-group">
-								<td colspan="2"><input type="checkbox" name="M_physiotherapy" id="M_physiotherapy" value="yes"></td>
-								<td colspan="2"><input type="checkbox" name="E_physiotherapy" id="E_physiotherapy" value="yes"></td>
-								<td colspan="2"><input type="checkbox" name="N_physiotherapy" id="N_physiotherapy" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="M_physiotherapy" id="M_physiotherapy" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="E_physiotherapy" id="E_physiotherapy" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="N_physiotherapy" id="N_physiotherapy" value="yes"></td>
 							</div>
 					  </tr>
 
 					  <tr>
 							<td>7. Sponge Bath</td>
 							<div class="form-group">
-								<td colspan="2"><input type="checkbox" name="M_spongebath" id="M_spongebath" value="yes"></td>
-								<td colspan="2"><input type="checkbox" name="E_spongebath" id="E_spongebath" value="yes"></td>
-								<td colspan="2"><input type="checkbox" name="N_spongebath" id="N_spongebath" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="M_spongebath" id="M_spongebath" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="E_spongebath" id="E_spongebath" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="N_spongebath" id="N_spongebath" value="yes"></td>
 							</div>
 					  </tr>
 
 					  <tr>
 							<td>8. Any Other </td>
 							<div class="form-group">
-								<td colspan="2"><input type="checkbox" name="M_other" id="M_other" value="yes"></td>
-								<td colspan="2"><input type="checkbox" name="E_other" id="E_other" value="yes"></td>
-								<td colspan="2"><input type="checkbox" name="N_other" id="N_other" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="M_other" id="M_other" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="E_other" id="E_other" value="yes"></td>
+								<td colspan="2" class="text-center"><input type="radio" name="N_other" id="N_other" value="yes"></td>
 							</div>
 						</tr>
 
