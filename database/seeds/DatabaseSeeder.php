@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(bloodtransfusionformseeder::class);
         $this->call(doctorshandoverseeder::class);
         $this->call(drugrequisitionseeder::class);
+        $this->call(doctorsdailynotesseeder::class);
 
     }
 }

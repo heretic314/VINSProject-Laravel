@@ -65,6 +65,45 @@ Route::get('/DoctorsDailyNotes', function(){
     return view('DoctorsDailyNotes');
 });
 
+Route::post('/DoctorsDailyNotes',function(Request $request){
+  $data = $request->validate([
+    'name' => 'required|max:255',
+    'ipd_no' => 'unique|numeric|required|max:255',
+    'sex' => 'required|max:255',
+    'attending_consultant' => 'required|max:255',
+    'age' => 'required|digits_between:1,100|max:255',
+    'date' => 'required|max:255',
+    'c_o_07' => 'required|max:255',
+    'oe_pulse_07' => 'required|max:255',
+    'bp_07' => 'required|max:255',
+    'temp_07' => 'required|max:255',
+    'resp_spo2_07' => 'required|max:255',
+    'pain_07' => 'required|max:255',
+    'c_o_09' => 'required|max:255',
+    'oe_pulse_09' => 'required|max:255',
+    'bp_09' => 'required|max:255',
+    'temp_09' => 'required|max:255',
+    'resp_spo2_09' => 'required|max:255',
+    'pain_09' => 'required|max:255',
+    'c_o_15' => 'required|max:255',
+    'oe_pulse_15' => 'required|max:255',
+    'bp_15' => 'required|max:255',
+    'temp_15' => 'required|max:255',
+    'resp_spo2_15' => 'required|max:255',
+    'pain_15' => 'required|max:255',
+    'c_o_21' => 'required|max:255',
+    'oe_pulse_21' => 'required|max:255',
+    'bp_21' => 'required|max:255',
+    'temp_21' => 'required|max:255',
+    'resp_spo2_21' => 'required|max:255',
+    'pain_21' => 'required|max:255',
+  ]);
+
+  $link = tap(new App\DoctorsDailyNotes($data))->save();
+
+  return view('Index');
+});
+
 Route::get('/DrugRequisition', function(){
     return view('DrugRequisition');
 });
