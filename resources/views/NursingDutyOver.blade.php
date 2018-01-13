@@ -44,7 +44,7 @@
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" >
+					<div class="collapse navbar-collapse" id="collapsed_menu">
 						<ul class="nav navbar-nav">
 							<li><a href="/index">Index</a></li>
 							<li class="dropdown">
@@ -79,6 +79,7 @@
 			</nav>
 
 			<form name="nursingdutyover" action="/NursingDutyOver" method="post">
+				{{csrf_field()}}
 				<div class ="row form-group">
 					<div class="col-md-4">
 						<textarea class="form-control" name="addressograph" rows="3" placeholder="Addressograph Here" value="{{ old('addressograph') }}"></textarea>
@@ -317,13 +318,13 @@
 								Name of Nurse:
 							</th>
 							<td>
-								<input type="text" name="m_nurse_name" class="form-control" value="{{ old('m_nurse_name') }}"/>
+								<input type="text" name="event_m_nurse_name" class="form-control" value="{{ old('event_m_nurse_name') }}"/>
 							</td>
 							<td>
-								<input type="text" name="e_nurse_name" class="form-control" value="{{ old('e_nurse_name') }}"/>
+								<input type="text" name="event_e_nurse_name" class="form-control" value="{{ old('event_e_nurse_name') }}"/>
 							</td>
 							<td>
-								<input type="text" name="n_nurse_name" class="form-control" value="{{ old('n_nurse_name') }}"/>
+								<input type="text" name="event_n_nurse_name" class="form-control" value="{{ old('event_n_nurse_name') }}"/>
 							</td>
 						</tr>
 						<tr>
