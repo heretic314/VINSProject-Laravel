@@ -148,8 +148,11 @@
 			<h1>Appointment Book</h1>
 			</div>
 			<div class="col-md-6">
-				<div class="text-right">
-				<h4>Date:</h4>
+				<div class="col-md-6 text-right">
+					<h4>Date:</h4>
+				</div>
+				<div class="col-md-6">
+					<input type="date" class="form-control" name="date" value="{{ old('date') }}">
 				</div>
 			</div>
 		</div>

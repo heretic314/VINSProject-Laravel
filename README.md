@@ -2,4 +2,35 @@ VINSPRoject-Laravel
 
 Shreya : LabSheet
 
-Nachiket : DrugRequisition (Done)
+Nachiket : DoctorsDailyNotes
+
+Remaining :
+AppointmentBook
+BloodTransfusionForm
+Checklist
+CodeBlueEvaluationForm
+CompleteNursingAssessment
+CounsellingForm
+CPRFormat
+CultureBiopsyForm
+DailyDietForm
+DischargeGatepass
+ERObservation
+Gatepass
+Glassgow
+HistoryForm
+InvestigationSheet1
+InvestigationSheet2
+LabSheet
+MARFlowSheet
+NursingDutyOver
+NutritionalAssessmentForm
+PatientDietRecord
+PatientsDetailForm
+PeripheralLineBundleChecklist
+PlanOfCare
+PreAngiographyAngioplastyChecklist
+RadiologyRequisition
+TransferChecklistForNurses
+VentilatorChargeSheet
+WardProcedureRecord
