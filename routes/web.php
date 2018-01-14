@@ -65,6 +65,45 @@ Route::get('/DoctorsDailyNotes', function(){
     return view('DoctorsDailyNotes');
 });
 
+Route::post('/DoctorsDailyNotes',function(Request $request){
+  $data = $request->validate([
+    'name' => 'required|max:255',
+    'ipd_no' => 'unique|numeric|required|max:255',
+    'sex' => 'required|max:255',
+    'attending_consultant' => 'required|max:255',
+    'age' => 'required|digits_between:1,100|max:255',
+    'date' => 'required|max:255',
+    'c_o_07' => 'required|max:255',
+    'oe_pulse_07' => 'required|max:255',
+    'bp_07' => 'required|max:255',
+    'temp_07' => 'required|max:255',
+    'resp_spo2_07' => 'required|max:255',
+    'pain_07' => 'required|max:255',
+    'c_o_09' => 'required|max:255',
+    'oe_pulse_09' => 'required|max:255',
+    'bp_09' => 'required|max:255',
+    'temp_09' => 'required|max:255',
+    'resp_spo2_09' => 'required|max:255',
+    'pain_09' => 'required|max:255',
+    'c_o_15' => 'required|max:255',
+    'oe_pulse_15' => 'required|max:255',
+    'bp_15' => 'required|max:255',
+    'temp_15' => 'required|max:255',
+    'resp_spo2_15' => 'required|max:255',
+    'pain_15' => 'required|max:255',
+    'c_o_21' => 'required|max:255',
+    'oe_pulse_21' => 'required|max:255',
+    'bp_21' => 'required|max:255',
+    'temp_21' => 'required|max:255',
+    'resp_spo2_21' => 'required|max:255',
+    'pain_21' => 'required|max:255',
+  ]);
+
+  $link = tap(new App\DoctorsDailyNotes($data))->save();
+
+  return view('Index');
+});
+
 Route::get('/DrugRequisition', function(){
     return view('DrugRequisition');
 });
@@ -158,6 +197,107 @@ Route::get('/MARFlowSheet', function(){
 
 Route::get('/NursingDutyOver', function(){
     return view('NursingDutyOver');
+});
+
+Route::post('/NursingDutyOver',function(Request $request){
+  $data = $request->validate([
+    'addressograph' => 'nullable|max:255',
+    'specific_instruction' => 'nullable|max:255',
+    'M_nurse_name' => 'required|max:255',
+    'E_nurse_name' => 'required|max:255',
+    'N_nurse_name' => 'required|max:255',
+    'M_incharge_name' => 'required|max:255',
+    'E_incharge_name' => 'required|max:255',
+    'N_incharge_name' => 'required|max:255',
+    'M_eyecare' => 'nullable|max:255',
+    'E_eyecare' => 'nullable|max:255',
+    'N_eyecare' => 'nullable|max:255',
+    'M_mouthcare' => 'nullable|max:255',
+    'E_mouthcare' => 'nullable|max:255',
+    'N_mouthcare' => 'nullable|max:255',
+    'M_skincare' => 'nullable|max:255',
+    'E_skincare' => 'nullable|max:255',
+    'N_skincare' => 'nullable|max:255',
+    'M_bedding' => 'nullable|max:255',
+    'E_bedding' => 'nullable|max:255',
+    'N_bedding' => 'nullable|max:255',
+    'M_cathetercare' => 'nullable|max:255',
+    'E_cathetercare' => 'nullable|max:255',
+    'N_cathetercare' => 'nullable|max:255',
+    'M_physiotherapy' => 'nullable|max:255',
+    'E_physiotherapy' => 'nullable|max:255',
+    'N_physiotherapy' => 'nullable|max:255',
+    'M_spongebath' => 'nullable|max:255',
+    'E_spongebath' => 'nullable|max:255',
+    'N_spongebath' => 'nullable|max:255',
+    'M_other' => 'nullable|max:255',
+    'E_other' => 'nullable|max:255',
+    'N_other' => 'nullable|max:255',
+    'M_investigations' => 'nullable|max:255',
+    'E_investigations' => 'nullable|max:255',
+    'N_investigations' => 'nullable|max:255',
+    'M_pendingreport' => 'nullable|max:255',
+    'E_pendingreport' => 'nullable|max:255',
+    'N_pendingreport' => 'nullable|max:255',
+    'M_replacementdrug' => 'nullable|max:255',
+    'E_replacementdrug' => 'nullable|max:255',
+    'N_replacementdrug' => 'nullable|max:255',
+    'balance_drugs_00' => 'nullable|max:255',
+    'balance_drugs_01' => 'nullable|max:255',
+    'balance_drugs_02' => 'nullable|max:255',
+    'balance_drugs_03' => 'nullable|max:255',
+    'balance_drugs_04' => 'nullable|max:255',
+    'balance_drugs_05' => 'nullable|max:255',
+    'M_time_00' => 'nullable|max:255',
+    'M_time_01' => 'nullable|max:255',
+    'M_time_02' => 'nullable|max:255',
+    'M_time_03' => 'nullable|max:255',
+    'M_time_04' => 'nullable|max:255',
+    'M_time_05' => 'nullable|max:255',
+    'M_balance_00' => 'nullable|max:255',
+    'M_balance_01' => 'nullable|max:255',
+    'M_balance_02' => 'nullable|max:255',
+    'M_balance_03' => 'nullable|max:255',
+    'M_balance_04' => 'nullable|max:255',
+    'M_balance_05' => 'nullable|max:255',
+    'E_time_00' => 'nullable|max:255',
+    'E_time_01' => 'nullable|max:255',
+    'E_time_02' => 'nullable|max:255',
+    'E_time_03' => 'nullable|max:255',
+    'E_time_04' => 'nullable|max:255',
+    'E_time_05' => 'nullable|max:255',
+    'E_balance_00' => 'nullable|max:255',
+    'E_balance_01' => 'nullable|max:255',
+    'E_balance_02' => 'nullable|max:255',
+    'E_balance_03' => 'nullable|max:255',
+    'E_balance_04' => 'nullable|max:255',
+    'E_balance_05' => 'nullable|max:255',
+    'N_time_00' => 'nullable|max:255',
+    'N_time_01' => 'nullable|max:255',
+    'N_time_02' => 'nullable|max:255',
+    'N_time_03' => 'nullable|max:255',
+    'N_time_04' => 'nullable|max:255',
+    'N_time_05' => 'nullable|max:255',
+    'N_balance_00' => 'nullable|max:255',
+    'N_balance_01' => 'nullable|max:255',
+    'N_balance_02' => 'nullable|max:255',
+    'N_balance_03' => 'nullable|max:255',
+    'N_balance_04' => 'nullable|max:255',
+    'N_balance_05' => 'nullable|max:255',
+    'event_m_nurse_name' => 'nullable|max:255',
+    'event_e_nurse_name' => 'nullable|max:255',
+    'event_n_nurse_name' => 'nullable|max:255',
+    'm_date' => 'nullable|max:255',
+    'e_date' => 'nullable|max:255',
+    'n_date' => 'nullable|max:255',
+    'm_time' => 'nullable|max:255',
+    'e_time' => 'nullable|max:255',
+    'n_time' => 'nullable|max:255',
+  ]);
+
+  $link = tap(new App\NursingDutyOver($data))->save();
+
+  return view('Index');
 });
 
 Route::get('/NutritionalAssessmentForm', function(){
