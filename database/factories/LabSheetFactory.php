@@ -33,6 +33,6 @@ $factory->define(App\LabSheet::class, function (Faker $faker) {
         'remark_04' => $faker->word,
         'remark_05' => $faker->word,
         'remark_06' => $faker->word,
-        'remark_07' => $faker->word
+        'remark_07' => $faker->word,
       ];
   });

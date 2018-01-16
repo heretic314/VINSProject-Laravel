@@ -4,9 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class labsheet extends Model
+class LabSheet extends Model
 {
-    protected $table='labsheet';
+    //
+    protected $table="labsheet";
 
     protected $fillable = [
         'room_no',
@@ -40,4 +41,6 @@ class labsheet extends Model
         'remark_06',
         'remark_07',
     ];
+
+
 }

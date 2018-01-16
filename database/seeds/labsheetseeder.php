@@ -12,6 +12,6 @@ class labsheetseeder extends Seeder
     public function run()
     {
         //
-        factory(App\labsheet::class,4)->create();
+        factory(App\LabSheet::class,4)->create();
     }
 }

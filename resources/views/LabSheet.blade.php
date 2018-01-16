@@ -16,7 +16,7 @@
 			</div>
 		</div>
 	</div>
-	<form action="{{ url('/labsheet') }}" method="post">
+	<form action="{{ url('/LabSheet') }}" method="post">
 		{{ csrf_field() }}
 
 		<div class="row form-group">

@@ -189,48 +189,47 @@ Route::group(['middleware' => ['auth']], function() {
       return view('InvestigationSheet2');
   });
 
-  Route::get('/labsheet', function(){
+  Route::get('/LabSheet', function(){
       return view('LabSheet');
   });
-  Route::post('/labsheet', function(Request $request){
+
+  Route::post('/LabSheet',function(Request $request){
     $data = $request->validate([
-        'room_no' => 'required|max:255',
-        'date' => 'required|max:255',
-        'date-01' => 'required|max:255',
-        'date-02' => 'required|max:255',
-        'date-03' => 'required|max:255',
-        'date-04' => 'required|max:255',
-        'date-05' => 'required|max:255',
-        'date-06' => 'required|max:255',
-        'date-07' => 'required|max:255',
-        'name-01' => 'required|max:255',
-        'name-02' => 'required|max:255',
-        'name-03' => 'required|max:255',
-        'name-04' => 'required|max:255',
-        'name-05' => 'required|max:255',
-        'name-06' => 'required|max:255',
-        'name-07' => 'required|max:255',
-        'investigation_01' => 'required|max:255',
-        'investigation_02' => 'required|max:255',
-        'investigation_03' => 'required|max:255',
-        'investigation_04' => 'required|max:255',
-        'investigation_05' => 'required|max:255',
-        'investigation_06' => 'required|max:255',
-        'investigation_07' => 'required|max:255',
-        'remark_01' => 'required|max:255',
-        'remark_02' => 'required|max:255',
-        'remark_03' => 'required|max:255',
-        'remark_04' => 'required|max:255',
-        'remark_05' => 'required|max:255',
-        'remark_06' => 'required|max:255',
-        'remark_07' => 'required|max:255',
-
-
+      'room_no' => 'max:255',
+      'date' => 'max:255',
+      'date_01' => 'max:255',
+      'date_02' => 'max:255',
+      'date_03' => 'max:255',
+      'date_04' => 'max:255',
+      'date_05' => 'max:255',
+      'date_06' => 'max:255',
+      'date_07' => 'max:255',
+      'name_01' => 'max:255',
+      'name_02' => 'max:255',
+      'name_03' => 'max:255',
+      'name_04' => 'max:255',
+      'name_05' => 'max:255',
+      'name_06' => 'max:255',
+      'name_07' => 'max:255',
+      'investigation_01' => 'max:255',
+      'investigation_02' => 'max:255',
+      'investigation_03' => 'max:255',
+      'investigation_04' => 'max:255',
+      'investigation_05' => 'max:255',
+      'investigation_06' => 'max:255',
+      'investigation_07' => 'max:255',
+      'remark_01' => 'max:255',
+      'remark_02' => 'max:255',
+      'remark_03' => 'max:255',
+      'remark_04' => 'max:255',
+      'remark_05' => 'max:255',
+      'remark_06' => 'max:255',
+      'remark_07' => 'max:255',
     ]);
 
-    $link = tap(new App\labsheet($data))->save();
+    $link = tap(new App\LabSheet($data))->save();
 
-    return view('/index');
+    return view('/Index');
   });
 
   Route::get('/MARFlowSheet', function(){
@@ -243,7 +242,7 @@ Route::group(['middleware' => ['auth']], function() {
 
   Route::post('/NursingDutyOver',function(Request $request){
     $data = $request->validate([
-      'addressograph' => 'nullable|max:255',
+      'addressograph' => 'max:255',
       'specific_instruction' => 'nullable|max:255',
       'M_nurse_name' => 'required|max:255',
       'E_nurse_name' => 'required|max:255',
