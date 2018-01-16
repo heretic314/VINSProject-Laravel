@@ -76,7 +76,7 @@
     </div>
     <div class="col-md-6">
       <div class="col-md-6">
-        <a class="btn btn-default" href="{{ url('/LabSheet') }}">Lab Sheet</a>
+        <a class="btn btn-default" href="{{ url('/labsheet') }}">Lab Sheet</a>
       </div>
       <div class="col-md-6">
         <a class="btn btn-default" href="{{ url('/MARFlowSheet') }}">MAR Flow Sheet</a>

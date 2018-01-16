@@ -189,7 +189,7 @@ Route::group(['middleware' => ['auth']], function() {
       return view('InvestigationSheet2');
   });
 
-  Route::get('/LabSheet', function(){
+  Route::get('/labsheet', function(){
       return view('LabSheet');
   });
   Route::post('/labsheet', function(Request $request){
@@ -230,7 +230,7 @@ Route::group(['middleware' => ['auth']], function() {
 
     $link = tap(new App\labsheet($data))->save();
 
-    return view('Index');
+    return view('/index');
   });
 
   Route::get('/MARFlowSheet', function(){
@@ -339,7 +339,7 @@ Route::group(['middleware' => ['auth']], function() {
 
     $link = tap(new App\NursingDutyOver($data))->save();
 
-    return view('Index');
+    return view('/index');
   });
 
   Route::get('/NutritionalAssessmentForm', function(){

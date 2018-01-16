@@ -16,14 +16,7 @@
 			</div>
 		</div>
 	</div>
-	@if ($errors->any())
-                    <div class="alert alert-danger" role="alert">
-                        Please fix the following errors
-                    </div>
-                @endif
-
-
-	<form action="/labsheet" method="post">
+	<form action="{{ url('/labsheet') }}" method="post">
 		{{ csrf_field() }}
 
 		<div class="row form-group">
@@ -68,51 +61,58 @@
 				<tbody>
 				  <tr>
 						<td>1</td>
-						<td><input class="form-control" type = "text" id = "investigation_01"></td>
-						<td><input class="form-control" type = "date" id = "date_01"></td>
-						<td><input class="form-control" type = "text" id = "name_01"></td>
-						<td><input class="form-control" type = "text" id = "remark_01"></td>
+						<td><input class="form-control" type = "text" name="investigation_01"></td>
+						<td><input class="form-control" type = "date" name="date_01"></td>
+						<td><input class="form-control" type = "text" name="name_01"></td>
+						<td><input class="form-control" type = "text" name="remark_01"></td>
 				  </tr>
 					<tr>
 						<td>2</td>
-						<td><input class="form-control" type = "text" id = "investigation_02"></td>
-						<td><input class="form-control" type = "date" id = "date_02"></td>
-						<td><input class="form-control" type = "text" id = "name_02"></td>
-						<td><input class="form-control" type = "text" id = "remark_02"></td>
+						<td><input class="form-control" type = "text" name="investigation_02"></td>
+						<td><input class="form-control" type = "date" name="date_02"></td>
+						<td><input class="form-control" type = "text" name="name_02"></td>
+						<td><input class="form-control" type = "text" name="remark_02"></td>
 				  </tr>
 					<tr>
 						<td>3</td>
-						<td><input class="form-control" type = "text" id = "investigation_03"></td>
-						<td><input class="form-control" type = "date" id = "date_03"></td>
-						<td><input class="form-control" type = "text" id = "name_03"></td>
-						<td><input class="form-control" type = "text" id = "remark_03"></td>
+						<td><input class="form-control" type = "text" name="investigation_03"></td>
+						<td><input class="form-control" type = "date" name="date_03"></td>
+						<td><input class="form-control" type = "text" name="name_03"></td>
+						<td><input class="form-control" type = "text" name="remark_03"></td>
 				  </tr>
 					<tr>
 						<td>4</td>
-						<td><input class="form-control" type = "text" id = "investigation_04"></td>
-						<td><input class="form-control" type = "date" id = "date_04"></td>
-						<td><input class="form-control" type = "text" id = "name_04"></td>
-						<td><input class="form-control" type = "text" id = "remark_04"></td>
+						<td><input class="form-control" type = "text" name="investigation_04"></td>
+						<td><input class="form-control" type = "date" name="date_04"></td>
+						<td><input class="form-control" type = "text" name="name_04"></td>
+						<td><input class="form-control" type = "text" name="remark_04"></td>
+				  </tr>
+					<tr>
+						<td>5</td>
+						<td><input class="form-control" type = "text" name="investigation_05"></td>
+						<td><input class="form-control" type = "date" name="date_05"></td>
+						<td><input class="form-control" type = "text" name="name_05"></td>
+						<td><input class="form-control" type = "text" name="remark_05"></td>
 				  </tr>
 					<tr>
 						<td>6</td>
-						<td><input class="form-control" type = "text" id = "investigation_06"></td>
-						<td><input class="form-control" type = "date" id = "date_06"></td>
-						<td><input class="form-control" type = "text" id = "name_06"></td>
-						<td><input class="form-control" type = "text" id = "remark_06"></td>
+						<td><input class="form-control" type = "text" name="investigation_06"></td>
+						<td><input class="form-control" type = "date" name="date_06"></td>
+						<td><input class="form-control" type = "text" name="name_06"></td>
+						<td><input class="form-control" type = "text" name="remark_06"></td>
 				  </tr>
 					<tr>
 						<td>7</td>
-						<td><input class="form-control" type = "text" id = "investigation_07"></td>
-						<td><input class="form-control" type = "date" id = "date_07"></td>
-						<td><input class="form-control" type = "text" id = "name_07"></td>
-						<td><input class="form-control" type = "text" id = "remark_07"></td>
+						<td><input class="form-control" type = "text" name="investigation_07"></td>
+						<td><input class="form-control" type = "date" name="date_07"></td>
+						<td><input class="form-control" type = "text" name="name_07"></td>
+						<td><input class="form-control" type = "text" name="remark_07"></td>
 				  </tr>
 			  </tbody>
 		  </table>
 		</div>
 		<div class="row form-group">
-			<input class="btn btn-default" type="submit">
+			<button class="btn btn-default" type="submit">Submit</button>
 		</div>
 	</form>
 </div>
