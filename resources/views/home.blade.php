@@ -15,7 +15,17 @@
                     @endif
 
                     You are logged in!
+
                 </div>
+                <div class="panel-footer">
+                  <a class="btn btn-default" href="{{url('/index')}}">Index</a>
+                  <a class="btn btn-default" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                               document.getElementById('logout-form').submit();">
+                      Logout
+                  </a>
+                </div>
+
             </div>
         </div>
     </div>

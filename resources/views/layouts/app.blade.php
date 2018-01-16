@@ -29,14 +29,14 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'VINS') }}
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li><a href="{{url('index')}}">Index</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -53,6 +53,15 @@
 
                                 <ul class="dropdown-menu">
                                     <li>
+                                        <a href="/index">
+                                            Index
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                    <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -63,6 +72,9 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+
+
+
                                 </ul>
                             </li>
                         @endguest
