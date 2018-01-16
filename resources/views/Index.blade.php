@@ -97,7 +97,7 @@
         <a class="btn btn-default" href="{{ url('/PatientDetailForm') }}">Patient Details Form</a>
       </div>
       <div class="col-md-6">
-        <a class="btn btn-default" href="{{ url('/PatientDietRecordSheet') }}">Patient Diet Record Sheet</a>
+        <a class="btn btn-default" href="{{ url('/PatientDietRecord') }}">Patient Diet Record Sheet</a>
       </div>
     </div>
   </div>
