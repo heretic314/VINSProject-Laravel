@@ -1,17 +1,6 @@
-<html>
-<head>
-	<title>
-		Lab Sheet
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<style>
-	.body{
-	  padding-top: 25px;
-	}
-	</style>
+@extends('layouts.app')
 
-</head>
-<body class="body">
+@section('content')
 <div class="container">
 	<div class="page-header">
 		<div class="row">
@@ -33,7 +22,12 @@
                     </div>
                 @endif
 
-	<nav class="navbar navbar-default navbar-fixed-top">
+
+	<form action="/labsheet" method="post">
+		{{ csrf_field() }}
+
+		<div class="row form-group">
+			<div class="col-md-10"><nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -79,11 +73,6 @@
 
 	</div><!-- /.container-fluid -->
 	</nav>
-	<form action="/labsheet" method="post">
-		{{ csrf_field() }}
-
-		<div class="row form-group">
-			<div class="col-md-10">
 				<div class="row">
 					<div class="col-md-6">
 						<div class="col-md-6">
@@ -172,6 +161,4 @@
 		</div>
 	</form>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-</body>
-</html>
+@endsection
