@@ -105,6 +105,46 @@ Route::get('/InvestigationSheet2', function(){
 Route::get('/LabSheet', function(){
     return view('LabSheet');
 });
+Route::post('/labsheet', function(Request $request){
+  $data = $request->validate([
+      'room_no' => 'required|max:255',
+      'date' => 'required|max:255',
+      'date-01' => 'required|max:255',
+      'date-02' => 'required|max:255',
+      'date-03' => 'required|max:255',
+      'date-04' => 'required|max:255',
+      'date-05' => 'required|max:255',
+      'date-06' => 'required|max:255',
+      'date-07' => 'required|max:255',
+      'name-01' => 'required|max:255',
+        'name-02' => 'required|max:255',
+          'name-03' => 'required|max:255',
+            'name-04' => 'required|max:255',
+              'name-05' => 'required|max:255',
+                'name-06' => 'required|max:255',
+                  'name-07' => 'required|max:255',
+                    'investigation_01' => 'required|max:255',
+                    'investigation_02' => 'required|max:255',
+                    'investigation_03' => 'required|max:255',
+                    'investigation_04' => 'required|max:255',
+                    'investigation_05' => 'required|max:255',
+                    'investigation_06' => 'required|max:255',
+                    'investigation_07' => 'required|max:255',
+                    'remark_01' => 'required|max:255',
+                      'remark_02' => 'required|max:255',
+                        'remark_03' => 'required|max:255',
+                          'remark_04' => 'required|max:255',
+                            'remark_05' => 'required|max:255',
+                              'remark_06' => 'required|max:255',
+                                'remark_07' => 'required|max:255',
+
+
+  ]);
+
+  $link = tap(new App\labsheet($data))->save();
+
+  return view('Index');
+});
 
 Route::get('/MARFlowSheet', function(){
     return view('MARFlowSheet');
