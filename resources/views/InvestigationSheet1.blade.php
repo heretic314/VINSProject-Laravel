@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
+<!-- Pending -->
+
 <div class="container">
 	<div class="page-header">
 		<div class="row">
@@ -443,4 +446,7 @@
 			  <footer><u><b>PAGE-1</b></u></footer>
 			  <div>
 					<button class="btn btn-success btn-bg" type="submit" form="planofcare" value="submit">Submit</button>
-					</div>
+				</div>
+		</form>
+	</div>
+@endsection

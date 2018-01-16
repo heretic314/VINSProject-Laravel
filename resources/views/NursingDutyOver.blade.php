@@ -23,7 +23,7 @@
 		      </div>
 		  @endif
 
-			
+
 
 			<form name="nursingdutyover" action="/NursingDutyOver" method="post">
 				{{csrf_field()}}
@@ -309,5 +309,4 @@
 				</div>
 			</form>
 		</div>
-	</body>
-</html>
+@endsection

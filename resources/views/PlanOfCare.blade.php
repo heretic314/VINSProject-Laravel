@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+<!-- Changed -->
+
 <div class="container">
 	<div class="page-header">
 		<div class="row">
@@ -17,15 +19,7 @@
 		</div>
 	</div>
 
-	<!-- ignore this.
-	<div class="jumbotrom">
-		<a href="" class="btn btn-default btn-lg">asd</a>
-		<a href="" class="btn btn-success btn-lg">asd</a>
-		<a href="" class="btn btn-link btn-lg">asd</a>
-		<a href="" class="btn btn-default btn-lg">asd</a>
-		<a href="" class="btn btn-default btn-lg">asd</a>
-	</div>
-	-->
+
 </div>
 
 <form id="planofcare" method="post" action="">
@@ -57,13 +51,8 @@
 	<div>
 	<button class="btn btn-success btn-bg" type="submit" form="planofcare" value="submit">Submit</button>
 	</div>
+	</form>
 </div>
-</form>
 
 
-
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-</body>
-</html>
+@endsection

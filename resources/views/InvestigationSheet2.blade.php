@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+<!-- Pending -->
 <div class="container">
 	<div class="page-header">
 		<div class="row">

@@ -148,4 +148,4 @@
 
 		</form>
 	</div>
-</body>
+@endsection

@@ -21,7 +21,7 @@
           Please fix the following errors
       </div>
   @endif
-	
+
 <form action="/DoctorsInitialAssessment" method="post">
 	{{ csrf_field() }}
 	<div class="row form-group">
@@ -313,3 +313,5 @@
 </body>
 
 </html>
+
+@endsection

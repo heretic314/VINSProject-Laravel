@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+<!-- CHANGED -->
 <div class="container">
 	<div class="page-header">
 		<div class="row">
@@ -48,7 +50,7 @@
 				<label> at</label>
 				<input type="time" name="time" id="time">
 				<label> Date: </label>
-				<input type="date" name="date id="date">
+				<input type="date" name="date" id="date">
 			<div class="row">
 				<hr>
 
@@ -188,7 +190,18 @@
 					<input type="radio" name="appendicular">
 					Tandem Walking
 					<input type="radio" name="tandem_walking"> </div>
-
+d-3">
+							Name:
+							<input type="text" name="name"></div>
+							<div class="col-md-3">
+							Signature:
+							<input type="text" name="sign"></div>
+							<div class="col-md-3">
+							Date:
+							<input type="text" name="date"></div>
+							<div class="col-md-3">
+							Time:
+							<input type=
 					<div class="row">
 						<div class="col-md-12"><hr>
 						<label> Neck stiffness:</label>
@@ -217,25 +230,18 @@
 							</div></div>
 
 						<div class="row"><hr>
-						<div class="col-md-3">
-						Name:
-						<input type="text" name="name"></div>
-						<div class="col-md-3">
-						Signature:
-						<input type="text" name="sign"></div>
-						<div class="col-md-3">
-						Date:
-						<input type="text" name="date"></div>
-						<div class="col-md-3">
-						Time:
-						<input type="time" name="time"></div></div>
-
-
-
-
-
-
-
-
-
+							<div class="col-md-3">
+							Name:
+							<input type="text" name="name"></div>
+							<div class="col-md-3">
+							Signature:
+							<input type="text" name="sign"></div>
+							<div class="col-md-3">
+							Date:
+							<input type="text" name="date"></div>
+							<div class="col-md-3">
+							Time:
+							<input type="time" name="time"></div>
 					</div>
+					</div>
+@endsection

@@ -646,13 +646,8 @@
 						<td><input class="form-control" type="text" name="rbs_mg_04" /></td>
 						<td><input class="form-control" type="text" name="rbs_mg_06" /></td>
 					</tr>
-
-
-
 				</tbody>
 			</tabel>
-
 		</div>
-
-
 	</form>
+	@endsection

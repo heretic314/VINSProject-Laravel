@@ -598,3 +598,4 @@
 		</div>
 	</form>
 </body>
+@endsection

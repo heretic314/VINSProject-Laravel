@@ -23,7 +23,7 @@
 		      </div>
 		  @endif
 
-			
+
 
 			<form action="/DrugRequisition" method="post">
 				{{csrf_field()}}
@@ -140,3 +140,4 @@
 		</div>
 	</body>
 </html>
+@endsection

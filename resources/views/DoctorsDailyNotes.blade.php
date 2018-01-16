@@ -23,7 +23,7 @@
 		      </div>
 		  @endif
 
-			
+
 			<form action="/DoctorsDailyNotes" method="post">
 				{{csrf_field()}}
 				<div class="row form-group">
@@ -346,3 +346,4 @@
 		</div>
 	</body>
 </html>
+@endsection

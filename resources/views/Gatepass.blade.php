@@ -127,7 +127,8 @@
 
 	</div>
 
-				<div>
-					<button class="btn btn-success btn-bg" type="submit" form="planofcare" value="submit">Submit</button>
-					</div>
-					</html>
+	<div>
+		<button class="btn btn-success btn-bg" type="submit" form="planofcare" value="submit">Submit</button>
+	</div>
+
+@endsection
