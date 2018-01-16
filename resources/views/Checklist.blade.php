@@ -1,13 +1,6 @@
-<html>
-<head>
-	<title>
-		Checklist
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
-</head>
-<!--Test3-->
-<body>
+@extends('layouts.app')
+
+@section('content')
 	<div class="container">
 		<div class="page-header">
 			<div class="row">
@@ -1854,4 +1847,3 @@
 		</div>
 	</form>
 </div>
-</body>

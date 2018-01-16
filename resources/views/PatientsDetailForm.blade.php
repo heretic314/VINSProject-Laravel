@@ -1,11 +1,6 @@
-<html>
-<head>
-	<title>
-		Patient Detail Form
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 	<div class="container">
 		<div class="page-header">
 			<div class="row">

@@ -1,28 +1,23 @@
-<html>
-<head>
-	<title>
-		Glassgow coma sheet
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
-</head>
+@extends('layouts.app')
 
+@section('content')
 <div class="container">
 	<div class="page-header">
 		<div class="row">
 			<div class="col-md-6">
 			<h2> GLASSGOW COMA SHEET	</h2>
-			</div>	
+			</div>
 			<div class="col-md-6">
 				<div class="text-right">
 					DOC NO. FMT/HIC/09 </br>
 					REV. No. 0.1 </br>
 					WEF 10-10-2015
-				</div>	
+				</div>
 			</div>
 		</div></div>
 
-		
-		
+
+
 		<div class="col-md-12 text-right">
 			<textarea class="text-right" id="Addressograph" rows="3" placeholder="Addressograph Here"></textarea>
 		</div>
@@ -30,9 +25,9 @@
 		<hr>
 			<table class="table table-bordered">
 			  <tr>
-				
+
 				<th>Time</th>
-				
+
 				<th>8</th>
 				<th>10</th>
 				<th>12</th>
@@ -49,7 +44,7 @@
 			<tr>
 
 				<th >Pupil R</th>
-								
+
 				<td> <input type="text" name="r1c1" class="form-control"></td>
 				<td><input type="text" name="r1c2" class="form-control"></td>
 				<td><input type="text" name="r1c3" class="form-control"></td>
@@ -66,7 +61,7 @@
 				<tr>
 
 				<th>Pupil L</th>
-								
+
 				<td> <input type="text" name="r2c1" class="form-control"></td>
 				<td><input type="text" name="r2c2" class="form-control"></td>
 				<td><input type="text" name="r2c3" class="form-control"></td>
@@ -83,7 +78,7 @@
 			<tr>
 
 				<th>EYE</th>
-								
+
 				<td> <input type="text" name="r3c1" class="form-control"></td>
 				<td><input type="text" name="r3c2" class="form-control"></td>
 				<td><input type="text" name="r3c3" class="form-control"></td>
@@ -100,7 +95,7 @@
 			<tr>
 
 				<th>VERBAL</th>
-								
+
 				<td> <input type="text" name="r4c1" class="form-control"></td>
 				<td><input type="text" name="r4c2" class="form-control"></td>
 				<td><input type="text" name="r4c3" class="form-control"></td>
@@ -117,7 +112,7 @@
 			<tr>
 
 				<th>MOTOR</th>
-								
+
 				<td> <input type="text" name="r5c1" class="form-control"></td>
 				<td><input type="text" name="r5c2" class="form-control"></td>
 				<td><input type="text" name="r5c3" class="form-control"></td>
@@ -134,7 +129,7 @@
 			<tr>
 
 				<th>TOTAL</th>
-								
+
 				<td> <input type="text" name="r6c1" class="form-control"></td>
 				<td><input type="text" name="r6c2" class="form-control"></td>
 				<td><input type="text" name="r6c3" class="form-control"></td>
@@ -148,11 +143,11 @@
 				<td><input type="text" name="r6c11" class="form-control"></td>
 				<td><input type="text" name="r6c12" class="form-control"></td>
 			</tr>
-				
+
 </table>
 
 
-Date: 
+Date:
 <input type="date" name="date1">
 <hr>
 </div>

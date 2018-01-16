@@ -1,25 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>
-		Code Blue Evaluation Form
-	</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
-</head>
+@extends('layouts.app')
 
+@section('content')
 <div class="container">
 	<div class="page-header">
 		<div class="row">
 			<div class="col-md-6">
 			<h1>Code Blue Evaluation Form</h1>
-			</div>	
+			</div>
 			<div class="col-md-6">
 				<div class="text-right">
 					DOC NO. F/IPD/27 <br>
 					REV. No. 0.0 <br>
 					WEF 01-08-2013
-				</div>	
+				</div>
 			</div>
 		</div>
 	</div>
@@ -47,7 +40,7 @@
 				Code blue / drills are designed to prepare staff in responding to medical emergencies as a part of the staff Competency Curriculum.
 			</div>
 		</div>
-		
+
 		<div class="row">
 		  <table class="table table-bordered">
 		    <thead>
@@ -68,10 +61,10 @@
 						<td><input type="radio" name="00" value="yes"></td>
 						<td><input type="radio" name="00" value="no"></td>
 						<td><input type="radio" name="00" value="na"></td>
-						<td><div class=""><input class="form-control" type="text" id="comm_01" name="comm_01"></div></td> 
+						<td><div class=""><input class="form-control" type="text" id="comm_01" name="comm_01"></div></td>
 					</div>
 			  </tr>
-			  
+
 			  <tr>
 			    <td>2</td>
 				<td>Did CPR begin when the cardiac arrest was indentified?</td>
@@ -79,10 +72,10 @@
 				  <td><input type="radio" name="01" value="yes"></td>
 				  <td><input type="radio" name="01" value="no"></td>
 				  <td><input type="radio" name="01" value="na"></td>
-				  <td><input class="form-control" type="text" id="comm_02" name="comm_02"></td> 
+				  <td><input class="form-control" type="text" id="comm_02" name="comm_02"></td>
 				</div>
 			  </tr>
-			  
+
 			  <tr>
 			    <td>3</td>
 				<td>
@@ -106,10 +99,10 @@
 				  <td><input type="radio" name="02" value="yes"></td>
 				  <td><input type="radio" name="02" value="no"></td>
 				  <td><input type="radio" name="02" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_02" name="comm_02"></div></td> 
+				  <td><div class=""><input class="form-control" type="text" id="comm_02" name="comm_02"></div></td>
 				</div>
 			  </tr>
-			  
+
 			  <tr>
 			    <td>4</td>
 				<td>Did nurse lead the resuscitation effort until the code blue team arrived?</td>
@@ -117,7 +110,7 @@
 				  <td><input type="radio" name="03" value="yes"></td>
 				  <td><input type="radio" name="03" value="no"></td>
 				  <td><input type="radio" name="03" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_03" name="comm_03"></div></td> 
+				  <td><div class=""><input class="form-control" type="text" id="comm_03" name="comm_03"></div></td>
 				</div>
 			  </tr>
 
@@ -128,10 +121,10 @@
 				  <td><input type="radio" name="04" value="yes"></td>
 				  <td><input type="radio" name="04" value="no"></td>
 				  <td><input type="radio" name="04" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_04" name="comm_04"></div></td> 
+				  <td><div class=""><input class="form-control" type="text" id="comm_04" name="comm_04"></div></td>
 				</div>
 			  </tr>
-			 
+
 			  <tr>
 			    <td>6</td>
 				<td>
@@ -158,10 +151,10 @@
 				  <td><input type="radio" name="05" value="yes"></td>
 				  <td><input type="radio" name="05" value="no"></td>
 				  <td><input type="radio" name="05" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_05" name="comm_05"></div></td> 
+				  <td><div class=""><input class="form-control" type="text" id="comm_05" name="comm_05"></div></td>
 				</div>
 			  </tr>
-			 
+
 			  <tr>
 			    <td>7</td>
 				<td>
@@ -174,10 +167,10 @@
 				  <td><input type="radio" name="06" value="yes"></td>
 				  <td><input type="radio" name="06" value="no"></td>
 				  <td><input type="radio" name="06" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_06" name="comm_06"></div></td> 
+				  <td><div class=""><input class="form-control" type="text" id="comm_06" name="comm_06"></div></td>
 				</div>
 			  </tr>
-			 
+
 			  <tr>
 			    <td>8</td>
 				<td>
@@ -204,10 +197,10 @@
 				  <td><input type="radio" name="07" value="yes"></td>
 				  <td><input type="radio" name="07" value="no"></td>
 				  <td><input type="radio" name="07" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_07" name="comm_07"></div></td> 
+				  <td><div class=""><input class="form-control" type="text" id="comm_07" name="comm_07"></div></td>
 				</div>
 			  </tr>
-			 
+
 			  <tr>
 			    <td>9</td>
 				<td>
@@ -237,10 +230,10 @@
 				  <td><input type="radio" name="08" value="yes"></td>
 				  <td><input type="radio" name="08" value="no"></td>
 				  <td><input type="radio" name="08" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_08" name="comm_08"></div></td> 
+				  <td><div class=""><input class="form-control" type="text" id="comm_08" name="comm_08"></div></td>
 				</div>
 			  </tr>
-			 
+
 			  <tr>
 			    <td>10</td>
 				<td>Was documentation complete?</td>
@@ -248,7 +241,7 @@
 				  <td><input type="radio" name="09" value="yes"></td>
 				  <td><input type="radio" name="09" value="no"></td>
 				  <td><input type="radio" name="09" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_09" name="comm_09"></div></td> 
+				  <td><div class=""><input class="form-control" type="text" id="comm_09" name="comm_09"></div></td>
 				</div>
 			  </tr>
 			</tbody>

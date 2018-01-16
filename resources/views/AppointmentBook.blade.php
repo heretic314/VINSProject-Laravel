@@ -1,13 +1,6 @@
+@extends('layouts.app')
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>
-		Appointment Book
-	</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+@section('content')
 	<SCRIPT language="javascript">
 
 		function addRowM(morning_appointmentbook) {

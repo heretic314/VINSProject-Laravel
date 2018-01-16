@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>
-		Counselling Form
-	</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+@extends('layouts.app')
 
+@section('content')
 	<script language="javascript">
-		
+
 		function addRow() {
 			console.log("1");
 			var table = document.getElementById("counselling_form");
@@ -105,7 +99,7 @@
 	</div>
 
 	<div class="col-md-10">
-		
+
 	</div>
 	<div class="row">
 		<div class="col-md-2 text-right">
@@ -138,4 +132,4 @@
 		</div>
 	</form>
 </div>
-</html>	
+</html>

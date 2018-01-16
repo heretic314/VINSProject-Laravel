@@ -1,32 +1,27 @@
-<html>
-<head>
-	<title>
-		Transfer Checklist for Nurses
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
-</head>
+@extends('layouts.app')
 
+@section('content')
 <div class="container">
 	<div class="page-header">
 	<div class="row">
 		<div class="col-md-6">
 		<h1> Transfer Checklist for Nurses</h1>
-		</div>	
+		</div>
 		<div class="col-md-6">
 			<div class="text-right">
 				DOC NO. F/IPD/49 <br>
 				REV. No. 0.0 <br>
 				WEF 25-02-2015
-			</div>	
+			</div>
 		</div>
 	</div>
 	</div>
 </div>
 
-	
+
 <div class="container">
   <form id="transferchecklistnurse" method="post" >
-  
+
   <div class="row">
 	<div class="col-md-10">
 	  <div class="form-group">
@@ -43,7 +38,7 @@
 	</div>
   </div>
   <div class="row">
-	
+
 	<div class="col-md-8">
 	  <table class="table">
 		<thead>
@@ -643,11 +638,11 @@
 				</div>
 			  </td>
 			</tr>
-			
+
 		</tbody>
 	  </table>
 	</div>
-	
+
 	<div class="col-md-4">
 	  <table class="table">
 		<thead>
@@ -813,11 +808,11 @@
 			</td>
 		  </tr>
 		</tbody>
-	
+
 	</div>
-	
+
   </div>
-  
+
   </form>
 </div>
 

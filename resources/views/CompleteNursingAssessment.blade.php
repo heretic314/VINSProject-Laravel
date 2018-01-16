@@ -1,11 +1,6 @@
-<html>
-<head>
-	<title>
-		Complete Nursing Assessment
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 	<div class="container">
 		<form name="completenursingassessment">
 			<div class="page-header">
@@ -603,4 +598,3 @@
 		</div>
 	</form>
 </body>
-</html>

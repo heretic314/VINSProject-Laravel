@@ -1,11 +1,6 @@
-<html>
-<head>
-	<title>
-		ER Observation
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
+@extends('layouts.app')
 
+@section('content')
 <div class="container">
 	<div class="page-header">
 		<div class="row">

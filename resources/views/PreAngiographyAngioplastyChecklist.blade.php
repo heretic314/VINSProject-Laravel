@@ -1,38 +1,33 @@
-<html>
-<head>
-	<title>
-		Pre-Angiography Angioplasty Checklist
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 <div class="container">
 	<div class="page-header">
 		<div class="row">
 			<div class="col-md-6">
 			<h1>Pre-Angiography Angioplasty Checklist</h1>
-			</div>	
+			</div>
 			<div class="col-md-6">
 				<div class="text-right">
 					DOC NO. F/CTH/01 <br>
 					REV. No. 0.0 <br>
 					WEF 01-09-2014
-				</div>	
+				</div>
 			</div>
 		</div>
 	</div>
-	
+
 <form name="angiography_angioplasty_checklist">
-	
+
 	<div class="row form-group">
-		<div class="col-md-8">			
-			Consultant's Name : 
+		<div class="col-md-8">
+			Consultant's Name :
 			<input class="form-control" type="text" name="consultant_name">
-			Time of Arrival on Floor: 
+			Time of Arrival on Floor:
 			<input class="form-control" type="time" name="time_arrival">
-			Time when cath Preparation is complete : 
+			Time when cath Preparation is complete :
 			<input class="form-control" type="time" name="time_prep_complete">
-			Time of shifting for cath : 
+			Time of shifting for cath :
 			<input class="form-control" type="time" name="time_shifting">
 		</div>
 		<div class="col-md-4 text-right">
@@ -40,7 +35,7 @@
 			<textarea class="form-control" placeholder="Addressograph"></textarea>
 		</div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
@@ -55,7 +50,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
@@ -70,7 +65,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
@@ -85,9 +80,9 @@
 			</div>
 		</div>
 	</div>
-			
-	<div class="row form-group">	
-		<div class="col-md-8">	
+
+	<div class="row form-group">
+		<div class="col-md-8">
 			<div class="col-md-2">
 				<label>Allergies : </label>
 			</div>
@@ -102,11 +97,11 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="row">
 		<h3>Vital Signs : </h3>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-8">
 			<div class="col-md-6">
@@ -127,7 +122,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-8">
 			<div class="col-md-6">
@@ -148,7 +143,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
@@ -173,7 +168,7 @@
 			</div>
 		</div>
 	</div>
-		
+
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
@@ -200,7 +195,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
@@ -219,7 +214,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
@@ -238,7 +233,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
@@ -248,7 +243,7 @@
 				<select class="form-control" name="id_band">
 					<option>NA</option>
 					<option>Left</option>
-					<option>Right</option>	
+					<option>Right</option>
 				</select>
 			</div>
 		</div>
@@ -260,12 +255,12 @@
 				<select class="form-control" name="jewellery_removed">
 					<option>NA</option>
 					<option>Yes</option>
-					<option>No</option>		
+					<option>No</option>
 				</select>
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
@@ -275,16 +270,16 @@
 				<select class="form-control" name="dentures">
 					<option>NA</option>
 					<option>Left</option>
-					<option>Right</option>	
+					<option>Right</option>
 				</select>
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="row">
 		<h3>Investigations : </h3>
 	</div>
-	
+
 	<div class="row form-group">
 		<table class="table table-bordered">
 			<thead>
@@ -338,12 +333,12 @@
 					<td></td>
 					<td></td>
 				</tr>
-				
+
 			</tbody>
 		</table>
 	</div>
-	
-	
+
+
 </form>
 </div>
 

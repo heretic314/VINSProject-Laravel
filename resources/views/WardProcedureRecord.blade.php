@@ -1,28 +1,23 @@
-<html>
-<head>
-	<title>
-		Ward Procedure Record
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 <div class="container">
 	<div class="page-header">
 		<div class="row">
 			<div class="col-md-6">
 			<h1>Ward Procedure Record</h1>
-			</div>	
+			</div>
 			<div class="col-md-6">
 				<div class="text-right">
 					DOC NO. F/IPD/19 <br>
 					REV. No. --- <br>
 					WEF ----------
-				</div>	
+				</div>
 			</div>
 		</div>
 	</div>
-	
-	
+
+
 <form name="wardprocedurerecord">
 	<div class="row form-group">
 		<div class="col-md-8">
@@ -32,7 +27,7 @@
 			<textarea class="form-control text-right" placeholder="Addressograph here" ></textarea>
 		</div>
 	</div>
-	
+
 	<div class="row form-group">
 		<table class="table table-bordered">
 			<thead>
@@ -40,7 +35,7 @@
 					<th>No.</th>
 					<th>Procedure Name</th>
 					<th>
-					
+
 						<select class="form-control" name="time">
 							<option>Select Time (Hrs)</option>
 							<option>0400 - 0600</option>
@@ -54,7 +49,7 @@
 							<option>2000 - 2200</option>
 							<option>2200 - 0000</option>
 						</select>
-					
+
 					</th>
 					<th>No.</th>
 					<th>Procedure Name</th>
@@ -230,11 +225,11 @@
 					<td>Physio Therapy</td>
 					<td><input class="form-control" type="text" name="physiotherapy"></td>
 				</tr>
-				
+
 			</tbody>
 		</table>
 	</div>
-	
+
 </form>
 
 </div>

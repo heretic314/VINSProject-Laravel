@@ -1,23 +1,18 @@
-<html>
-<head>
-	<title>
-		History form
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
-</head>
+@extends('layouts.app')
 
+@section('content')
 <div class="container">
 	<div class="page-header">
 		<div class="row">
 			<div class="col-md-6">
 			<h2>HISTORY FORM	</h2>
-			</div>	
+			</div>
 			<div class="col-md-6">
 				<div class="text-right">
 					DOC NO. FMT/HIC/09 </br>
 					REV. No. 0.1 </br>
 					WEF 10-10-2015
-				</div>	
+				</div>
 			</div>
 		</div></div>
 
@@ -25,7 +20,7 @@
 		<div class="col-md-10">
 		Cheif Complaints:
 			<textarea class="form-control" name="cheif_complaints" rows="3"> </textarea></div>
-		Addressograph: 
+		Addressograph:
 		<div class="col-md-2 text-right">
 			<textarea class="text-right" id="Addressograph" rows="3" placeholder="Addressograph Here"></textarea>
 		</div></div>
@@ -66,7 +61,7 @@
 						<input type="radio" name="h/o_seizures_n">no</label></br>
 			<label>H/O Vomiting :</br><input type="radio" name="h/o_vomiting_y">yes
 							<input type="radio" name="h/o_vomiting_n">no</label></br>
-			
+
 			<div class="row">
 				<hr>
 				<div class="col-md-6">
@@ -77,7 +72,7 @@
 				<label> PULSE:</label>
 					<input type="text" class="form-control" name="pulse"></div>
 					<div class="col-md-6">
-					
+
 					<label>   BP:</label>
 					<input type="text" class="form-control" name="bp"></div>
 					<div class="col-md-6">
@@ -91,13 +86,13 @@
 					<label> PAIN:</label></br>
 					<input type="radio" name="pain_y">yes
 						<input type="radio"  name="pain_n">no
-						
+
 						</br></div>
 
 					<div class="row">
 		<div class="col-md-12">
 		<hr>
-		<b>GCS:</b> 
+		<b>GCS:</b>
 		</div></div>
 		<div class="col-md-4">
 		<label> E </label>
@@ -122,18 +117,18 @@
 				<label> CRANIAL NERVES:</label>
 					<input type="text" class="form-control" name="cranial_nerves"></div>
 
-					
+
 						*image*
 
 						</br></br>
 						<label> Reflexes: </label>
 						<table class="table table-bordered">
 			 				 <tr>
-			 				 	
+
 			 				 	<th></th>
-				
+
 								<th>Biceps</th>
-				
+
 								<th>Triceps</th>
 								<th>Supinator</th>
 								<th>Knee</th>
@@ -143,7 +138,7 @@
 							</tr>
 							<tr>
 								<td>Right</td>
-								<td><input type="text" name="r2c2" class="form-control"></td>	
+								<td><input type="text" name="r2c2" class="form-control"></td>
 								<td><input type="text" name="r2c3" class="form-control"></td>
 								<td><input type="text" name="r2c4" class="form-control"></td>
 								<td><input type="text" name="r2c5" class="form-control"></td>
@@ -154,14 +149,14 @@
 
 							<tr>
 								<td>Left</td>
-								<td><input type="text" name="r3c2" class="form-control"></td>	
+								<td><input type="text" name="r3c2" class="form-control"></td>
 								<td><input type="text" name="r3c3" class="form-control"></td>
 								<td><input type="text" name="r3c4" class="form-control"></td>
 								<td><input type="text" name="r3c5" class="form-control"></td>
 								<td><input type="text" name="r3c6" class="form-control"></td>
 								<td><input type="text" name="r3c7" class="form-control"></td>
 								<td><input type="text" name="r3c8" class="form-control"></td>
-								
+
 							</tr>
 						</table>
 					</div>
@@ -188,9 +183,9 @@
 					<div class="col-md-12"></br></br>
 					<label>Celleberal signs: </label></br>
 					Truncal
-					<input type="radio" name="truncal"> 
+					<input type="radio" name="truncal">
 					Appendicular
-					<input type="radio" name="appendicular"> 
+					<input type="radio" name="appendicular">
 					Tandem Walking
 					<input type="radio" name="tandem_walking"> </div>
 
@@ -198,10 +193,10 @@
 						<div class="col-md-12"><hr>
 						<label> Neck stiffness:</label>
 						<textarea class="form-control" name="neck_stiffness"></textarea></div>
-						<div class="col-md-12"> 
+						<div class="col-md-12">
 						<label> Diagnosis</label>
 
-							<textarea class="form-control " name="diagnosis" ></textarea> 
+							<textarea class="form-control " name="diagnosis" ></textarea>
 							</div></div>
 
 
@@ -209,16 +204,16 @@
 						<div class="col-md-12"><hr>
 						<label> Plan Of Care:</label>
 						<textarea class="form-control" name="plan_of_care" rows="10"></textarea></div>
-						<div class="col-md-12"> 
+						<div class="col-md-12">
 						<label> Pre-Operative Assessment</label>
 
-							<textarea class="form-control " name="pre-operative_assessment" rows="3" ></textarea> 
+							<textarea class="form-control " name="pre-operative_assessment" rows="3" ></textarea>
 							</div>
 
-							<div class="col-md-12"> 
+							<div class="col-md-12">
 						<label> Operative Plan</label>
 
-							<textarea class="form-control " name="operative_plan" rows="3" ></textarea> 
+							<textarea class="form-control " name="operative_plan" rows="3" ></textarea>
 							</div></div>
 
 						<div class="row"><hr>
@@ -242,5 +237,5 @@
 
 
 
-						
+
 					</div>

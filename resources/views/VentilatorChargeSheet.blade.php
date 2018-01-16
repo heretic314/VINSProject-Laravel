@@ -1,17 +1,12 @@
-<html>
-<head>
-	<title>
-		Ventilator Charge Sheet
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 <div class="container">
 	<div class="page-header">
 		<div class="row">
 			<div class="col-md-6">
 			<h1>Ventilator Charge Sheet</h1>
-			</div>	
+			</div>
 			<div class="col-md-6">
 				<div class="text-right">
 					DOC NO. F/IPD/12 <br>
@@ -21,12 +16,12 @@
 			</div>
 		</div>
 	</div>
-	
+
 <form name="ventilatorchargesheet">
-	
+
 	<div class="row form-group">
 		<div class="col-md-8">
-			
+
 			<div class="row form-group">
 				<div class="col-md-6">
 					<div class="col-md-6">
@@ -45,7 +40,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="row form-group">
 				<div class="col-md-6">
 					<div class="col-md-6">
@@ -68,7 +63,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="row form-group">
 				<div class="col-md-6">
 					<div class="col-md-6">
@@ -87,21 +82,21 @@
 					</div>
 				</div>
 			</div>
-		
+
 		</div>
 		<div class="col-md-4 text-right">
 			<label>Addressograph : </label>
 			<textarea class="form-control text-right" placeholder="Addressograph" ></textarea>
 		</div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-6">
 			<table class="table table-bordered">
 				<thead>
 					<tr>
 						<th>Settings (GREEN)</th>
-						<th class="form-inline">Hour : 
+						<th class="form-inline">Hour :
 							<select class="form-control" name="time_slot">
 								<option>Select Hour</option>
 								<option>0</option>
@@ -172,13 +167,13 @@
 				</tbody>
 			</table>
 		</div>
-		
+
 		<div class="col-md-6">
 			<table class="table table-bordered">
 				<thead>
 					<tr>
 						<th>Measured (RED)</th>
-						<th class="form-inline">Hour : 
+						<th class="form-inline">Hour :
 							<!--
 							<select class="form-control" name="time_slot">
 								<option>Select Hour</option>
@@ -233,7 +228,7 @@
 					</tr>
 					<tr>
 						<th colspan="2">B. Pressure</th>
-					
+
 					</tr>
 					<tr>
 						<td>Peak Pressure</td>
@@ -249,16 +244,16 @@
 					</tr>
 				</tbody>
 			</table>
-		</div>	
+		</div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-6">
 			<table class="table table-bordered">
 				<thead>
 					<tr>
 						<th>C. Alarms</th>
-						<th class="form-inline">Hour : 
+						<th class="form-inline">Hour :
 							<select class="form-control" name="time_slot">
 								<option>Select Hour</option>
 								<option>0</option>
@@ -333,13 +328,13 @@
 				</tbody>
 			</table>
 		</div>
-		
+
 		<div class="col-md-6">
 			<table class="table table-bordered">
 				<thead>
 					<tr>
 						<th>F. Chest Physiotherapy</th>
-						<th class="form-inline">Hour : 
+						<th class="form-inline">Hour :
 							<!--
 							<select class="form-control" name="time_slot">
 								<option>Select Hour</option>
@@ -415,9 +410,9 @@
 					</tr>
 				</tbody>
 			</table>
-		</div>	
+		</div>
 	</div>
-	
+
 </form>
 
 </div>

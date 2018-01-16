@@ -1,12 +1,6 @@
-<html>
-<head>
-	<title>
-		CPR Format
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
+@extends('layouts.app')
 
-<body>
+@section('content')
 <div class="container">
 	<form name="bloodtransfusion">
 		<div class="page-header">

@@ -1,15 +1,6 @@
-<html>
-<head>
-	<title>
-		Peripheral Line Bundle Checklist
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<style>
-.small{
-font-size : 9px
-}
-</style>
+@extends('layouts.app')
+
+@section('content')
 <div class="container">
 	<div class="page-header">
 		<div class="row">

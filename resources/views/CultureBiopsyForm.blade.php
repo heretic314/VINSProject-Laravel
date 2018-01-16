@@ -1,11 +1,6 @@
-<html>
-<head>
-	<title>
-		Culture Biopsy Form
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 <div class="container">
 	<div class="page-header">
 		<div class="row">
@@ -85,7 +80,7 @@
 		</div>
 
 		<hr>
-		
+
 		<table class="table table-bordered">
 		    <thead>
 			  <tr>
@@ -203,4 +198,4 @@
 		  </div>
 	</form>
 </div>
-</body>
+@endsection

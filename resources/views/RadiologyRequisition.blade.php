@@ -1,29 +1,24 @@
-<html>
-<head>
-	<title>
-		Radiology Requisition Form
-	</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 <div class="container">
 	<div class="page-header">
 		<div class="row">
 			<div class="col-md-6">
 			<h1>Radiology Requisition Form</h1>
-			</div>	
+			</div>
 			<div class="col-md-6">
 				<div class="text-right">
 					DOC NO. F/RL/01 <br>
 					REV. No. 0.0 <br>
 					WEF 15-04-2017
-				</div>	
+				</div>
 			</div>
 		</div>
 	</div>
-	
+
 <form name="radiologyrequisitionform">
-	
+
 	<div class="row form-group">
 		<div class="col-md-8">
 			<label>Provisional Diagnosis : </label>
@@ -34,11 +29,11 @@
 			<textarea class="form-control text-right" placeholder="Addressograph"></textarea>
 		</div>
 	</div>
-	
+
 	<div class="row form-group">
 		<h4><u>Computed Tomography (CT) Scan</u></h4>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-1"></div>
 		<div class="col-md-5">
@@ -53,7 +48,7 @@
 		</div>
 		<div class="col-md-1"></div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-1"></div>
 		<div class="col-md-5">
@@ -68,7 +63,7 @@
 		</div>
 		<div class="col-md-1"></div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-1"></div>
 		<div class="col-md-5">
@@ -83,7 +78,7 @@
 		</div>
 		<div class="col-md-1"></div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-1"></div>
 		<div class="col-md-5">
@@ -98,7 +93,7 @@
 		</div>
 		<div class="col-md-1"></div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-1"></div>
 		<div class="col-md-5">
@@ -113,7 +108,7 @@
 		</div>
 		<div class="col-md-1"></div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-1"></div>
 		<div class="col-md-5">
@@ -128,7 +123,7 @@
 		</div>
 		<div class="col-md-1"></div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-1"></div>
 		<div class="col-md-5">
@@ -140,7 +135,7 @@
 		</div>
 		<div class="col-md-1"></div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-1"></div>
 		<div class="col-md-3">
@@ -157,7 +152,7 @@
 	<div class="row form-group">
 		<h4><u>X-Ray</u></h4>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-1"></div>
 		<div class="col-md-5">
@@ -172,7 +167,7 @@
 		</div>
 		<div class="col-md-1"></div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-1"></div>
 		<div class="col-md-10">
@@ -188,7 +183,7 @@
 			<input class="form-control" type="date" name="date">
 		</div>
 	</div>
-	
+
 	<div class="row form-group">
 		<div class="col-md-2">
 			<label>Time : </label>
@@ -197,7 +192,7 @@
 			<input class="form-control" type="time" name="time">
 		</div>
 	</div>
-	
+
 </form>
 
 
