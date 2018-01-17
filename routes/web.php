@@ -357,6 +357,7 @@ Route::group(['middleware' => ['auth']], function() {
     $data = $request->validate([
         'date' => 'required|max:255',
         'time' => 'required|max:255',
+        'first_name' => 'required|max:255',
         'middle_name' => 'required|max:255',
         'last_name' => 'required|max:255',
         'date_of_birth' => 'required|max:255',
