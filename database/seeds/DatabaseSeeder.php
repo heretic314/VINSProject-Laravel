@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(doctorsdailynotesseeder::class);
         $this->call(nursingdutyoverseeder::class);
         $this->call(labsheetseeder::class);
+        $this->call(PatientDetailForm::class);
 
     }
 }

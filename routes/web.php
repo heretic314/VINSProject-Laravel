@@ -349,9 +349,31 @@ Route::group(['middleware' => ['auth']], function() {
       return view('PatientDietRecord');
   });
 
-  Route::get('/PatientDetailForm', function(){
+  Route::get('/PatientsDetailForm', function(){
       return view('PatientsDetailForm');
   });
+
+  Route::post('/PatientsDetailForm', function(Request $request){
+    $data = $request->validate([
+        'date' => 'required|max:255',
+        'time' => 'required|max:255',
+        'middle_name' => 'required|max:255',
+        'last_name' => 'required|max:255',
+        'date_of_birth' => 'required|max:255',
+        'sex' => 'required|max:255',
+        'address' => 'required|max:255',
+        'phone_no' => 'required|max:255',
+        'mobile_no' => 'required|max:255',
+        'reference_dr' => 'required|max:255',
+        'consulting_dr' => 'required|max:255',
+        'case' => 'required|max:255',
+    ]);
+
+    $link = tap(new App\PatientDetailForm($data))->save();
+
+    return view('Index');
+  });
+
 
   Route::get('/PeripheralLineBundleChecklist', function(){
       return view('PeripheralLineBundleChecklist');

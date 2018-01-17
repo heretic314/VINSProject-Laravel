@@ -100,7 +100,7 @@
     </div>
     <div class="col-md-6">
       <div class="col-md-6">
-        <a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PatientDetailForm') }}">Patient Details Form</a>
+        <a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PatientsDetailForm') }}">Patients Details Form</a>
       </div>
       <div class="col-md-6">
         <a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PatientDietRecord') }}">Patient Diet Record Sheet</a>
