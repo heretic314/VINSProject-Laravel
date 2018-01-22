@@ -220,6 +220,66 @@ Route::group(['middleware' => ['auth']], function() {
       return view('InvestigationSheet2');
   });
 
+  Route::get('/InfusionTherapyChart', function(){
+      return view('InfusionTherapyChart');
+  });
+
+  Route::post('/InfusionTherapyChart',function(Request $request){
+    $data = $request->validate([
+        'patient_name' => 'max:255|required',
+        'ipd_no' => 'max:255|required',
+        'age' => 'max:255|required',
+        'sex' => 'max:255|required',
+        'attending_consultant' => 'max:255|required',
+        'date_01' => 'max:255|required',
+        'name_str_01' => 'max:255|required',
+        'volume_01' => 'max:255|required',
+        'additions_01' => 'max:255|required',
+        'rate_01' => 'max:255|required',
+        'timestart_01' => 'max:255|required',
+        'timeend_01' => 'max:255|required',
+        'date_02' => 'max:255',
+        'name_str_02' => 'max:255',
+        'volume_02' => 'max:255',
+        'additions_02' => 'max:255',
+        'rate_02' => 'max:255',
+        'timestart_02' => 'max:255',
+        'timeend_02' => 'max:255',
+        'date_03' => 'max:255',
+        'name_str_03' => 'max:255',
+        'volume_03' => 'max:255',
+        'additions_03' => 'max:255',
+        'rate_03' => 'max:255',
+        'timestart_03' => 'max:255',
+        'timeend_03' => 'max:255',
+        'date_04' => 'max:255',
+        'name_str_04' => 'max:255',
+        'volume_04' => 'max:255',
+        'additions_04' => 'max:255',
+        'rate_04' => 'max:255',
+        'timestart_04' => 'max:255',
+        'timeend_04' => 'max:255',
+        'date_05' => 'max:255',
+        'name_str_05' => 'max:255',
+        'volume_05' => 'max:255',
+        'additions_05' => 'max:255',
+        'rate_05' => 'max:255',
+        'timestart_05' => 'max:255',
+        'timeend_05' => 'max:255',
+        'date_06' => 'max:255',
+        'name_str_06' => 'max:255',
+        'volume_06' => 'max:255',
+        'additions_06' => 'max:255',
+        'rate_06' => 'max:255',
+        'timestart_06' => 'max:255',
+        'timeend_06' => 'max:255'
+    ]);
+
+    $link = tap(new App\InfusionTherapyChart($data))->save();
+
+    return view('/Index');
+  });
+
   Route::get('/LabSheet', function(){
       return view('LabSheet');
   });
