@@ -1,6 +1,6 @@
 <?php
 /*
-  Use for Amazon Hosting -- --
+  Use for Amazon Hosting -- -- */
 if (!defined('RDS_HOSTNAME')) {
   define('RDS_HOSTNAME', $_SERVER['RDS_HOSTNAME']);
   define('RDS_USERNAME', $_SERVER['RDS_USERNAME']);
@@ -8,7 +8,7 @@ if (!defined('RDS_HOSTNAME')) {
   define('RDS_DB_NAME', $_SERVER['RDS_DB_NAME']);
   define('RDS_PORT', $_SERVER['RDS_PORT']);
 }
-*/
+
 return [
 
     /*
@@ -47,8 +47,9 @@ return [
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
         ],
-        /*
-          Use for Amazon Hosting -- --
+
+
+        //Use for Amazon Hosting -- --
         'mysql' => [
             'driver' => 'mysql',
             'host' => RDS_HOSTNAME,
@@ -63,7 +64,9 @@ return [
             'strict' => false,
             'engine' => null,
         ],
-        */
+
+
+        /*
 
         'mysql' => [
             'driver' => 'mysql',
@@ -80,6 +83,7 @@ return [
             'engine' => null,
         ],
 
+        */
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
