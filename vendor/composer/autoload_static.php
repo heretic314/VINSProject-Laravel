@@ -312,6 +312,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
 
     public static $classMap = array (
         'App\\BloodTransfusionForm' => __DIR__ . '/../..' . '/app/BloodTransfusionForm.php',
+        'App\\CodeBlueEvaluationForm' => __DIR__ . '/../..' . '/app/CodeBlueEvaluationForm.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\DoctorsDailyNotes' => __DIR__ . '/../..' . '/app/DoctorsDailyNotes.php',
         'App\\DoctorsHandover' => __DIR__ . '/../..' . '/app/DoctorsHandover.php',
@@ -3568,6 +3569,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
         'bloodtransfusionformseeder' => __DIR__ . '/../..' . '/database/seeds/bloodtransfusionformseeder.php',
+        'codeblueevaluationformseeder' => __DIR__ . '/../..' . '/database/seeds/codeblueevaluationformseeder.php',
         'doctorsdailynotesseeder' => __DIR__ . '/../..' . '/database/seeds/doctorsdailynotesseeder.php',
         'doctorshandoverseeder' => __DIR__ . '/../..' . '/database/seeds/doctorshandoverseeder.php',
         'doctorsinitialassessmentseeder' => __DIR__ . '/../..' . '/database/seeds/doctorsinitialassessmentseeder.php',

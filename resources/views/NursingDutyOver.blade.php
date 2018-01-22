@@ -26,7 +26,7 @@
 
 
 			<form name="nursingdutyover" action="/NursingDutyOver" method="post">
-				{{csrf_field()}}
+				{{csrf_field()}} 
 				<div class ="row form-group">
 					<div class="col-md-4">
 						<textarea class="form-control" name="addressograph" rows="3" placeholder="Addressograph Here" value="{{ old('addressograph') }}"></textarea>
@@ -163,7 +163,7 @@
 									<td colspan="2"><input type = "text" class = "form-control" class="N_replacementdrug" value="{{ old('N_replacementdrug') }}"/></td>
 								</div>
 						  </tr>
-
+							<tr><td  colspan="6"></td></tr>
 						  <tr>
 								<th>Balance Drugs in Stock</th>
 								<th>Time</th>
@@ -249,7 +249,7 @@
 					<hr/>
 					<div class="row form-group text-center">
 							<h2> <small>Events if any:</small></h2>
-						</div>
+					</div>
 					<div class="row form-group">
 							<div class="col-md-3">
 							</div>

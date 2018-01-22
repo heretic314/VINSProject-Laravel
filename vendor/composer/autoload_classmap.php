@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\BloodTransfusionForm' => $baseDir . '/app/BloodTransfusionForm.php',
+    'App\\CodeBlueEvaluationForm' => $baseDir . '/app/CodeBlueEvaluationForm.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\DoctorsDailyNotes' => $baseDir . '/app/DoctorsDailyNotes.php',
     'App\\DoctorsHandover' => $baseDir . '/app/DoctorsHandover.php',
@@ -3263,6 +3264,7 @@ return array(
     'Whoops\\Util\\TemplateHelper' => $vendorDir . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
     'XdgBaseDir\\Xdg' => $vendorDir . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
     'bloodtransfusionformseeder' => $baseDir . '/database/seeds/bloodtransfusionformseeder.php',
+    'codeblueevaluationformseeder' => $baseDir . '/database/seeds/codeblueevaluationformseeder.php',
     'doctorsdailynotesseeder' => $baseDir . '/database/seeds/doctorsdailynotesseeder.php',
     'doctorshandoverseeder' => $baseDir . '/database/seeds/doctorshandoverseeder.php',
     'doctorsinitialassessmentseeder' => $baseDir . '/database/seeds/doctorsinitialassessmentseeder.php',

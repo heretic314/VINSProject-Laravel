@@ -43,6 +43,37 @@ Route::group(['middleware' => ['auth']], function() {
       return view('CodeBlueEvaluationForm');
   });
 
+  Route::post('/CodeBlueEvaluationForm',function(Request $request){
+    $data = $request->validate([
+      'drill' => 'required|max:255',
+      'actual_code_blue' => 'required|max:255',
+      '00' => 'required|max:255',
+      'comm_00' => 'max:255',
+      '01' => 'required|max:255',
+      'comm_01' => 'max:255',
+      '02' => 'required|max:255',
+      'comm_02' => 'max:255',
+      '03' => 'required|max:255',
+      'comm_03' => 'max:255',
+      '04' => 'required|max:255',
+      'comm_04' => 'max:255',
+      '05' => 'required|max:255',
+      'comm_05' => 'max:255',
+      '06' => 'required|max:255',
+      'comm_06' => 'max:255',
+      '07' => 'required|max:255',
+      'comm_07' => 'max:255',
+      '08' => 'required|max:255',
+      'comm_08' => 'max:255',
+      '09' => 'required|max:255',
+      'comm_09' => 'max:255'
+    ]);
+
+    $link = tap(new App\CodeBlueEvaluationForm($data))->save();
+
+    return view('Index');
+  });
+
   Route::get('/CompleteNursingAssessment', function(){
       return view('CompleteNursingAssessment');
   });
