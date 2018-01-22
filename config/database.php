@@ -1,6 +1,5 @@
 <?php
 /*
-  Use for Amazon Hosting -- -- */
 if (!defined('RDS_HOSTNAME')) {
   define('RDS_HOSTNAME', $_SERVER['RDS_HOSTNAME']);
   define('RDS_USERNAME', $_SERVER['RDS_USERNAME']);
@@ -8,6 +7,7 @@ if (!defined('RDS_HOSTNAME')) {
   define('RDS_DB_NAME', $_SERVER['RDS_DB_NAME']);
   define('RDS_PORT', $_SERVER['RDS_PORT']);
 }
+Use for Amazon Hosting -- -- */
 
 return [
 
@@ -49,6 +49,7 @@ return [
         ],
 
 
+        /*
         //Use for Amazon Hosting -- --
         'mysql' => [
             'driver' => 'mysql',
@@ -65,8 +66,8 @@ return [
             'engine' => null,
         ],
 
+        */
 
-        /*
 
         'mysql' => [
             'driver' => 'mysql',
@@ -83,7 +84,6 @@ return [
             'engine' => null,
         ],
 
-        */
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
