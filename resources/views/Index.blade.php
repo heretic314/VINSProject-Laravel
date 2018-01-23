@@ -84,7 +84,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PlanOfCare') }}" > Plan Of Care </a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~historyform~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/HistoryForm') }}" > History Form </a>
 		</div>
 	</div>
 

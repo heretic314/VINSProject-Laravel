@@ -289,8 +289,6 @@ Route::group(['middleware' => ['auth']], function() {
       'r6c11' => 'required|max:255',
       'r6c12' => 'required|max:255',
 
-  
-
     ]);
 
     $link = tap(new App\GlassGow($data))->save();
@@ -301,6 +299,57 @@ Route::group(['middleware' => ['auth']], function() {
   Route::get('/HistoryForm', function(){
       return view('HistoryForm');
   });
+
+  Route::post('/HistoryForm', function(Request $request){
+    $data = $request->validate([
+      'chief_complaints' => 'max:255|required',
+      'patient_history' => 'max:255|required',
+      'past_history' => 'max:255|required',
+      'allergic_history' => 'max:255|required',
+      'road_accident' => 'max:255|required',
+      'alleged_roadtrafficaccident' => 'max:255|required',
+      'place' => 'max:255|required',
+      'time' => 'max:255|required',
+      'date' => 'max:255|required',
+      'ho_loc' => 'max:255|required',
+      'ho_entbleeding' => 'max:255|required',
+      'ho_seizures' => 'max:255|required',
+      'ho_vomiting' => 'max:255|required',
+      'pulse' => 'max:255|required',
+      'bp' => 'max:255|required',
+      'temp' => 'max:255|required',
+      'resp' => 'max:255|required',
+      'pain' => 'max:255|required',
+      'right_biceps' => 'max:255|required',
+      'right_triceps' => 'max:255|required',
+      'right_supinator' => 'max:255|required',
+      'right_knee' => 'max:255|required',
+      'right_ankle' => 'max:255|required',
+      'right_hoffmann' => 'max:255|required',
+      'right_ff' => 'max:255|required',
+      'left_biceps' => 'max:255|required',
+      'left_triceps' => 'max:255|required',
+      'left_supinator' => 'max:255|required',
+      'left_knee' => 'max:255|required',
+      'left_ankle' => 'max:255|required',
+      'left_hoffmann' => 'max:255|required',
+      'left_ff' => 'max:255|required',
+      'plantars' => 'max:255|required',
+      'romberg' => 'max:255|required',
+      'gait' => 'max:255|required',
+      'cerebellar' => 'max:255|required',
+      'neck_stiffness' => 'max:255|required',
+      'diagnosis' => 'max:255|required',
+
+    ]);
+
+    $link = tap(new App\HistoryForm($data))->save();
+
+    return view('Index');
+  });
+
+
+
 
   Route::get('/InvestigationSheet1', function(){
       return view('InvestigationSheet1');

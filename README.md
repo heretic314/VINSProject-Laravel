@@ -5,7 +5,10 @@ Completed :
 -Drug Requisition
 -Code Blue Evaluation Form
 -Plan Of Care
+-History Form [ error section remaining ]
 
+
+//code snippets
 
 DB Read :
 <?php
