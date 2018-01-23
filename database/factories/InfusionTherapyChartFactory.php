@@ -1,0 +1,56 @@
+<?php
+
+use Faker\Generator as Faker;
+
+$factory->define(App\InfusionTherapyChart::class, function (Faker $faker) {
+    return [
+        //
+          'patient_name' => $faker->word,
+          'ipd_no' => $faker->word,
+          'age' => $faker->numberBetween($min='1',$max='80'),
+          'sex' => $faker->word,
+          'attending_consultant' => $faker->word,
+          'date_01' => $faker->date,
+          'name_str_01' => $faker->word,
+          'volume_01' => $faker->word,
+          'additions_01' => $faker->word,
+          'rate_01' => $faker->word,
+          'timestart_01' => $faker->time,
+          'timeend_01' => $faker->time,
+          'date_02' => $faker->date,
+          'name_str_02' => $faker->word,
+          'volume_02' => $faker->word,
+          'additions_02' => $faker->word,
+          'rate_02' => $faker->word,
+          'timestart_02' => $faker->time,
+          'timeend_02' => $faker->time,
+          'date_03' => $faker->date,
+          'name_str_03' => $faker->word,
+          'volume_03' => $faker->word,
+          'additions_03' => $faker->word,
+          'rate_03' => $faker->word,
+          'timestart_03' => $faker->time,
+          'timeend_03' => $faker->time,
+          'date_04' => $faker->date,
+          'name_str_04' => $faker->word,
+          'volume_04' => $faker->word,
+          'additions_04' => $faker->word,
+          'rate_04' => $faker->word,
+          'timestart_04' => $faker->time,
+          'timeend_04' => $faker->time,
+          'date_05' => $faker->date,
+          'name_str_05' => $faker->word,
+          'volume_05' => $faker->word,
+          'additions_05' => $faker->word,
+          'rate_05' => $faker->word,
+          'timestart_05' => $faker->time,
+          'timeend_05' => $faker->time,
+          'date_06' => $faker->date,
+          'name_str_06' => $faker->word,
+          'volume_06' => $faker->word,
+          'additions_06' => $faker->word,
+          'rate_06' => $faker->word,
+          'timestart_06' => $faker->time,
+          'timeend_06' => $faker->time
+    ];
+});

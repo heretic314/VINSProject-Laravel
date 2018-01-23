@@ -45,6 +45,7 @@ $factory->define(App\NursingDutyOver::class, function (Faker $faker) {
       'M_replacementdrug' => $faker->word,
       'E_replacementdrug' => $faker->word,
       'N_replacementdrug' => $faker->word,
+      
       'balance_drugs_00' => $faker->word,
       'balance_drugs_01' => $faker->word,
       'balance_drugs_02' => $faker->word,

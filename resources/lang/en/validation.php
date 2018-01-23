@@ -100,6 +100,36 @@ return [
     */
 
     'custom' => [
+        '00' => [
+            'required' => 'This field is Required.',
+        ],
+        '01' => [
+            'required' => 'This field is Required.',
+        ],
+        '02' => [
+            'required' => 'This field is Required.',
+        ],
+        '03' => [
+            'required' => 'This field is Required.',
+        ],
+        '04' => [
+            'required' => 'This field is Required.',
+        ],
+        '05' => [
+            'required' => 'This field is Required.',
+        ],
+        '06' => [
+            'required' => 'This field is Required.',
+        ],
+        '07' => [
+            'required' => 'This field is Required.',
+        ],
+        '08' => [
+            'required' => 'This field is Required.',
+        ],
+        '09' => [
+            'required' => 'This field is Required.',
+        ],
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
