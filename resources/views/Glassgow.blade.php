@@ -158,9 +158,9 @@ Date:
 <hr>
 </div>
 		 <div></br>
-			<button class="btn btn-success btn-bg" type="submit" form="GlassGow" value="submit">Submit</button>
+			<button class="btn btn-success " type="submit" >Submit</button>
 		</div>
-
+</form>
 </div>
 </html>
 @endsection
