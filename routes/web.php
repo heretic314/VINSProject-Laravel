@@ -176,6 +176,96 @@ Route::group(['middleware' => ['auth']], function() {
   Route::get('/Glassgow', function(){
       return view('Glassgow');
   });
+  Route::post('/GlassGow',function(Request $request){
+    $data = $request->validate([
+
+      'date1' => 'required|max:255',
+      'r1c1' => 'required|max:255',
+      'r1c2' => 'required|max:255',
+      'r1c3' => 'required|max:255',
+      'r1c4' => 'required|max:255',
+      'r1c5' => 'required|max:255',
+      'r1c6' => 'required|max:255',
+      'r1c7' => 'required|max:255',
+      'r1c8' => 'required|max:255',
+      'r1c9' => 'required|max:255',
+      'r1c10' => 'required|max:255',
+      'r1c11' => 'required|max:255',
+      'r1c12' => 'required|max:255',
+
+      'r2c1' => 'required|max:255',
+      'r2c2' => 'required|max:255',
+      'r2c3' => 'required|max:255',
+      'r2c4' => 'required|max:255',
+      'r2c5' => 'required|max:255',
+      'r2c6' => 'required|max:255',
+      'r2c7' => 'required|max:255',
+      'r2c8' => 'required|max:255',
+      'r2c9' => 'required|max:255',
+      'r2c10' => 'required|max:255',
+      'r2c11' => 'required|max:255',
+      'r2c12' => 'required|max:255',
+
+      'r3c1' => 'required|max:255',
+      'r3c2' => 'required|max:255',
+      'r3c3' => 'required|max:255',
+      'r3c4' => 'required|max:255',
+      'r3c5' => 'required|max:255',
+      'r3c6' => 'required|max:255',
+      'r3c7' => 'required|max:255',
+      'r3c8' => 'required|max:255',
+      'r3c9' => 'required|max:255',
+      'r3c10' => 'required|max:255',
+      'r3c11' => 'required|max:255',
+      'r3c12' => 'required|max:255',
+
+      'r4c1' => 'required|max:255',
+      'r4c2' => 'required|max:255',
+      'r4c3' => 'required|max:255',
+      'r4c4' => 'required|max:255',
+      'r4c5' => 'required|max:255',
+      'r4c6' => 'required|max:255',
+      'r4c7' => 'required|max:255',
+      'r4c8' => 'required|max:255',
+      'r4c9' => 'required|max:255',
+      'r4c10' => 'required|max:255',
+      'r4c11' => 'required|max:255',
+      'r4c12' => 'required|max:255',
+
+      'r5c1' => 'required|max:255',
+      'r5c2' => 'required|max:255',
+      'r5c3' => 'required|max:255',
+      'r5c4' => 'required|max:255',
+      'r5c5' => 'required|max:255',
+      'r5c6' => 'required|max:255',
+      'r5c7' => 'required|max:255',
+      'r5c8' => 'required|max:255',
+      'r5c9' => 'required|max:255',
+      'r5c10' => 'required|max:255',
+      'r5c11' => 'required|max:255',
+      'r5c12' => 'required|max:255',
+
+      'r6c1' => 'required|max:255',
+      'r6c2' => 'required|max:255',
+      'r6c3' => 'required|max:255',
+      'r6c4' => 'required|max:255',
+      'r6c5' => 'required|max:255',
+      'r6c6' => 'required|max:255',
+      'r6c7' => 'required|max:255',
+      'r6c8' => 'required|max:255',
+      'r6c9' => 'required|max:255',
+      'r6c10' => 'required|max:255',
+      'r6c11' => 'required|max:255',
+      'r6c12' => 'required|max:255',
+
+  
+
+    ]);
+
+    $link = tap(new App\GlassGow($data))->save();
+
+    return view('Index');
+  });
 
   Route::get('/HistoryForm', function(){
       return view('HistoryForm');
