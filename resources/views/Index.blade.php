@@ -81,7 +81,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/DoctorsDailyNotes') }}">Doctor's Daily Notes</a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~planofcare~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PlanOfCare') }}" > Plan Of Care </a>
 		</div>
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~historyform~~~ </a>
@@ -192,7 +192,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/BloodTransfusionForm') }}">Blood Transfusion Form</a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Daily Billing Sheet~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/DoctorsHandover') }}">Doctors Handover</a>
 		</div>
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Visiting Charge Sheet~~~ </a>
@@ -228,7 +228,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Transfusion Reaction~~~ </a>
 		</div>
 		<div class="col-md-4 top-buffer">
-
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Daily Billing Sheet~~~ </a>
 		</div>
 	</div>
 

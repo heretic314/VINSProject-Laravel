@@ -336,6 +336,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'App\\MARFlowSheet' => __DIR__ . '/../..' . '/app/MARFlowSheet.php',
         'App\\NursingDutyOver' => __DIR__ . '/../..' . '/app/NursingDutyOver.php',
         'App\\PatientDetailForm' => __DIR__ . '/../..' . '/app/PatientDetailForm.php',
+        'App\\PlanOfCare' => __DIR__ . '/../..' . '/app/PlanOfCare.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -3646,6 +3647,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'phpDocumentor\\Reflection\\Types\\String_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/String_.php',
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
+        'planofcareseeder' => __DIR__ . '/../..' . '/database/seeds/planofcareseeder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

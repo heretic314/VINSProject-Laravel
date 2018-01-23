@@ -474,6 +474,36 @@ Route::group(['middleware' => ['auth']], function() {
       return view('PlanOfCare');
   });
 
+  Route::post('/PlanOfCare', function(Request $request){
+    $data = $request->validate([
+      'diagnosis' => 'max:255|required',
+      'needs_goals' => 'max:255|required',
+      'treatment_plan' => 'max:255|required',
+      'preventive_aspects' => 'max:255|required',
+      'progress_00' => 'max:255',
+      'date_00' => 'max:255',
+      'progress_01' => 'max:255',
+      'date_01' => 'max:255',
+      'progress_02' => 'max:255',
+      'date_02' => 'max:255',
+      'progress_03' => 'max:255',
+      'date_03' => 'max:255',
+      'progress_04' => 'max:255',
+      'date_04' => 'max:255',
+      'progress_05' => 'max:255',
+      'date_05' => 'max:255',
+      'progress_06' => 'max:255',
+      'date_06' => 'max:255',
+      'progress_07' => 'max:255',
+      'date_07' => 'max:255',
+      'note_discharge' => 'max:255|required',
+    ]);
+
+    $link = tap(new App\PlanOfCare($data))->save();
+
+    return view('Index');
+  });
+
   Route::get('/PreAngiographyAngioplastyChecklist', function(){
       return view('PreAngiographyAngioplastyChecklist');
   });
