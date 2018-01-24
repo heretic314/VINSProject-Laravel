@@ -84,7 +84,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PlanOfCare') }}" > Plan Of Care </a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~historyform~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/HistoryForm') }}" > History Form </a>
 		</div>
 	</div>
 
@@ -112,7 +112,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/VentilatorChargeSheet') }}">Ventilator Charge Sheet</a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Investigation Sheet~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/OperativeDetailSheet') }}" > Operative Detail Sheet </a>
 		</div>
 	</div>
 	<div class="row">
@@ -139,7 +139,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Operative Detail Sheet~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Investigation Sheet~~~ </a>
 		</div>
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Post Anesthesia Evaluation~~~ </a>

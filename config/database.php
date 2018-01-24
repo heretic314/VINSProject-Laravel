@@ -49,8 +49,7 @@ return [
         ],
 
 
-        /*
-        //Use for Amazon Hosting -- --
+        /*Use for Amazon Hosting -- --
         'mysql' => [
             'driver' => 'mysql',
             'host' => RDS_HOSTNAME,

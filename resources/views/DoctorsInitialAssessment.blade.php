@@ -33,7 +33,7 @@
 			<div class="col-md-8">
 				<input class="form-control" type="text" name="history" value="{{ old('history') }}" />
 				@if($errors->has('history'))
-						<span class="help-block">{{ $errors->first('history') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('history') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -47,7 +47,7 @@
 			<div class="col-md-8">
 				<input class="form-control" type="text" name="past_history" value="{{ old('past_history') }}"/>
 				@if($errors->has('past_history'))
-						<span class="help-block">{{ $errors->first('past_history') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('past_history') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -61,7 +61,7 @@
 			<div class="col-md-8">
 				<input class="form-control" type="text" name="allergic_history" value="{{ old('allergic_history') }}"/>
 				@if($errors->has('allergic_history'))
-						<span class="help-block">{{ $errors->first('allergic_history') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('allergic_history') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -79,7 +79,7 @@
 			<div class="col-md-6">
 	      <input class="form-control" type="text" name="name_informant" value="{{ old('name_informant') }}"/>
 				@if($errors->has('name_informant'))
-						<span class="help-block">{{ $errors->first('name_informant') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('name_informant') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -90,7 +90,7 @@
 			<div class="col-md-6">
 	      <input class="form-control" type="text" name="brought_by" value="{{ old('brought_by') }}"/>
 				@if($errors->has('brought_by'))
-						<span class="help-block">{{ $errors->first('brought_by') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('brought_by') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -104,7 +104,7 @@
 			<div class="col-md-6">
 	      <input class="form-control" type="text" name="place_of_accident" value="{{ old('place_of_accident') }}" />
 				@if($errors->has('place_of_accident'))
-						<span class="help-block">{{ $errors->first('place_of_accident') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('place_of_accident') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -115,7 +115,7 @@
 			<div class="col-md-6">
 	      <input class="form-control" type="time" name="current_time" value="{{ old('current_time') }}"/>
 				@if($errors->has('current_time'))
-						<span class="help-block">{{ $errors->first('current_time') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('current_time') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -129,7 +129,7 @@
 			<div class="col-md-6">
 	      <input class="form-control" type="date" name="current_date" value="{{ old('current_date') }}"/>
 				@if($errors->has('current_date'))
-						<span class="help-block">{{ $errors->first('current_date') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('current_date') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -143,7 +143,7 @@
 					<option value="yes">Yes</option>
 				</select>
 				@if($errors->has('mlc'))
-						<span class="help-block">{{ $errors->first('mlc') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('mlc') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -165,7 +165,7 @@
 					<option value="yes">Yes</option>
 				</select>
 				@if($errors->has('loc'))
-						<span class="help-block">{{ $errors->first('loc') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('loc') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -179,7 +179,7 @@
 					<option value="yes">Yes</option>
 				</select>
 				@if($errors->has('ent_bleeding'))
-						<span class="help-block">{{ $errors->first('ent_bleeding') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('ent_bleeding') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -196,7 +196,7 @@
 					<option value="yes">Yes</option>
 				</select>
 				@if($errors->has('seizures'))
-						<span class="help-block">{{ $errors->first('seizures') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('seizures') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -210,7 +210,7 @@
 					<option value="yes">Yes</option>
 				</select>
 				@if($errors->has('vomiting'))
-						<span class="help-block">{{ $errors->first('vomiting') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('vomiting') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -229,7 +229,7 @@
 			<div class="col-md-6">
 	      <input class="form-control" type="text" name="pulse" value="{{ old('pulse') }}"/>
 				@if($errors->has('pulse'))
-						<span class="help-block">{{ $errors->first('pulse') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('pulse') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -240,7 +240,7 @@
 			<div class="col-md-6">
 	      <input class="form-control" type="text" name="temp" value="{{ old('temp') }}" />
 				@if($errors->has('temp'))
-						<span class="help-block">{{ $errors->first('temp') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('temp') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -254,7 +254,7 @@
 			<div class="col-md-6">
 	      <input class="form-control" type="text" name="bp" value="{{ old('bp') }}"/>
 				@if($errors->has('bp'))
-						<span class="help-block">{{ $errors->first('bp') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('bp') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -265,7 +265,7 @@
 			<div class="col-md-6">
 	      <input class="form-control" type="text" name="spo2" value="{{ old('spo2') }}"/>
 				@if($errors->has('spo2'))
-						<span class="help-block">{{ $errors->first('spo2') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('spo2') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -279,7 +279,7 @@
 			<div class="col-md-6">
 				<input class="form-control" type="text" name="rbs" value="{{ old('rbs') }}"/>
 				@if($errors->has('rbs'))
-						<span class="help-block">{{ $errors->first('rbs') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('rbs') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -293,7 +293,7 @@
 					<option value="yes">Yes</option>
 				</select>
 				@if($errors->has('pain'))
-						<span class="help-block">{{ $errors->first('pain') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('pain') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -307,7 +307,7 @@
 			<div class="col-md-6">
 	      <input class="form-control" type="text" name="gcs_e" value="{{ old('gcs_e') }}"/>
 				@if($errors->has('gcs_e'))
-						<span class="help-block">{{ $errors->first('gcs_e') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('gcs_e') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -315,13 +315,13 @@
 			<div class="col-md-6">
 	      <input class="form-control" type="text" name="gcs_m" value="{{ old('gcs_m') }}"/>
 				@if($errors->has('gcs_m'))
-						<span class="help-block">{{ $errors->first('gcs_m') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('gcs_m') }}</div></span>
 				@endif
 			</div>
 			<div class="col-md-6">
 	      <input class="form-control" type="text" name="gcs_v" value="{{ old('gcs_v') }}"/>
 				@if($errors->has('gcs_v'))
-						<span class="help-block">{{ $errors->first('gcs_v') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('gcs_v') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -335,7 +335,7 @@
 			<div class="col-md-6">
 				<input class="form-control" type="text" name="systematic_examination" value="{{ old('systematic_examination') }}"/>
 				@if($errors->has('systematic_examination'))
-						<span class="help-block">{{ $errors->first('systematic_examination') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('systematic_examination') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -346,7 +346,7 @@
 			<div class="col-md-6">
 				<input class="form-control" type="text" name="any_other" value="{{ old('any_other') }}"/>
 				@if($errors->has('any_other'))
-						<span class="help-block">{{ $errors->first('any_other') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('any_other') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -360,7 +360,7 @@
 			<div class="col-md-6">
 				<input class="form-control" type="text" name="treated_on_admission" value="{{ old('treated_on_admission') }}"/>
 				@if($errors->has('treated_on_admission'))
-						<span class="help-block">{{ $errors->first('treated_on_admission') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('treated_on_admission') }}</div></span>
 				@endif
 			</div>
 		</div>
@@ -371,7 +371,7 @@
 			<div class="col-md-6">
 				<input class="form-control" type="text" name="shifted_to" value="{{ old('shifted_to') }}"/>
 				@if($errors->has('shifted_to'))
-						<span class="help-block">{{ $errors->first('shifted_to') }}</span>
+						<span class="help-block"><div class="text-danger">{{ $errors->first('shifted_to') }}</div></span>
 				@endif
 			</div>
 		</div>

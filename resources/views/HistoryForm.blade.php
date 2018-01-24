@@ -2,12 +2,12 @@
 
 @section('content')
 
-<!-- CHANGED -->
+
 <div class="container">
 	<div class="page-header">
 		<div class="row">
 			<div class="col-md-6">
-			<h2>HISTORY FORM	</h2>
+				<h1>History Form</h1>
 			</div>
 			<div class="col-md-6">
 				<div class="text-right">
@@ -16,232 +16,372 @@
 					WEF 10-10-2015
 				</div>
 			</div>
-		</div></div>
+		</div>
+	</div>
+	@if ($errors->any())
+			<div class="alert alert-danger" role="alert">
+					Please fix the following errors
+			</div>
+	@endif
+	<form action="{{ url('/HistoryForm') }}" method="post">
+    {{ csrf_field() }}
+		<div class="row form-group">
+			<div class="col-md-6">
+				<label>Chief Complaints : </label>
+			</div>
+			<div class="col-md-6">
+				<input class="form-control" type="text" name="chief_complaints" value="{{ old('chief_complaints')}}"/>
 
-		<div class="row">
-		<div class="col-md-10">
-		Cheif Complaints:
-			<textarea class="form-control" name="cheif_complaints" rows="3"> </textarea></div>
-		Addressograph:
-		<div class="col-md-2 text-right">
-			<textarea class="text-right" id="Addressograph" rows="3" placeholder="Addressograph Here"></textarea>
-		</div></div>
+			</div>
+		</div>
 
-				<div class="row">
-			<hr>
-			<div class="col-md-12">
-		Pateint's History:
-			<textarea class="form-control" name="Pateint's History" rows="3"> </textarea></div></div>
+		<div class="row form-group">
+			<div class="col-md-6">
+				<label>Patient History</label>
+			</div>
+			<div class="col-md-6">
+				<textarea class="form-control" name="patient_history" value="{{ old('patient_history') }}"></textarea>
 
-		<div class="row">
-			<hr>
-			<div class="col-md-12">
-		Past History:
-			<textarea class="form-control" name="past_history" rows="3"> </textarea></div></div>
+			</div>
+		</div>
 
-			<div class="row">
-				<hr>
-				<b>In case of road traffic accidents:
-			</br>
-				History of Road Traffic Accidents at:</b></br></br>
+		<div class="row form-group">
+			<div class="col-md-6">
+				<label>Past History</label>
+			</div>
+			<div class="col-md-6">
+				<textarea class="form-control" name="past_history" value="{{ old('past_history') }}"></textarea>
+			</div>
+		</div>
 
-				<label> Place:</label>
-				<input type="text" name="place">
-				<label> at</label>
-				<input type="time" name="time" id="time">
-				<label> Date: </label>
-				<input type="date" name="date" id="date">
-			<div class="row">
-				<hr>
+		<div class="row form-group">
+			<div class="col-md-6">
+				<label>Allergic History</label>
+			</div>
+			<div class="col-md-6">
+				<input class="form-control" type="text" name="allergic_history" value="{{ old('allergic_history') }}" />
+			</div>
+		</div>
 
-			<label>H/O LOC :</br> <input type="radio" name="h/o_loc_y">yes
-					<input type="radio" name="h/o_loc_n">no</label></br>
+		<hr />
 
-			<label>H/O ENT bleeding: </br> <input type="radio" name="h/o_ent_y">yes
-							<input type="radio" name="h/o_ent_n">no</label></br>
-			<label>H/O Seizures: </br> <input type="radio" name="h/o_seizures_y">yes
-						<input type="radio" name="h/o_seizures_n">no</label></br>
-			<label>H/O Vomiting :</br><input type="radio" name="h/o_vomiting_y">yes
-							<input type="radio" name="h/o_vomiting_n">no</label></br>
+		<div class="row form-group">
+			<div class="col-md-6">
+				<label>In Case of Road Traffic Accident : </label>
+			</div>
+			<div class="col-md-6">
+				<input class="form-control" name="road_accident" value="{{ old('road_accident') }}"/>
+			</div>
+		</div>
 
-			<div class="row">
-				<hr>
+		<div class="row form-group">
+			<div class="col-md-6">
+				<label>Alleged History of Road Traffic Accident at : </label>
+			</div>
+			<div class="col-md-6">
+				<input class="form-control" type="text" name="alleged_roadtrafficaccident" value="{{ old('alleged_roadtrafficaccident') }}" />
+			</div>
+		</div>
+
+		<div class="row form-group">
+			<div class="col-md-4">
 				<div class="col-md-6">
-				<label> VITALS:</label>
-					<input type="text" class="form-control" name="vitals"></div>
-					<div class="col-md-6">
+					<label>Place : </label>
+				</div>
+				<div class="col-md-6">
+					<input class="form-control" type="text" name="place" value="{{ old('place') }}" />
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="col-md-6">
+					<label>At : </label>
+				</div>
+				<div class="col-md-6">
+					<input class="form-control" type="time" name="time" value="{{ old('time') }}" />
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="col-md-6">
+					<label>Date : </label>
+				</div>
+				<div class="col-md-6">
+					<input class="form-control" type="date" name="date" value="{{ old('date') }}" />
+				</div>
+			</div>
+		</div>
 
-				<label> PULSE:</label>
-					<input type="text" class="form-control" name="pulse"></div>
-					<div class="col-md-6">
+		<div class="row form-group">
+			<div class="col-md-6">
+				<div class="col-md-6">
+					<label>H/O LOC</label>
+				</div>
+				<div class="col-md-6">
+					<select class="form-control" name="ho_loc">
+						<option value="no">No</option>
+						<option value="yes">Yes</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="col-md-6">
+					<label>H/O ENT Bleeding</label>
+				</div>
+				<div class="col-md-6">
+					<select class="form-control" name="ho_entbleeding">
+						<option value="no">No</option>
+						<option value="yes">Yes</option>
+					</select>
+				</div>
+			</div>
+		</div>
 
-					<label>   BP:</label>
-					<input type="text" class="form-control" name="bp"></div>
-					<div class="col-md-6">
-					<label> TEMP:</label>
-					<input type="text" class="form-control" name="temp"></div>
-					<div class="col-md-6">
-					<label> RESP/SPO2:</label>
-					<input type="text" class="form-control" name="resp/spo2"></div>
-					<div class="col-md-6">
+		<div class="row form-group">
+			<div class="col-md-6">
+				<div class="col-md-6">
+					<label>H/O Seizures</label>
+				</div>
+				<div class="col-md-6">
+					<select class="form-control" name="ho_seizures">
+						<option value="no">No</option>
+						<option value="yes">Yes</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="col-md-6">
+					<label>H/O Vomiting</label>
+				</div>
+				<div class="col-md-6">
+					<select class="form-control" name="ho_vomiting">
+						<option value="no">No</option>
+						<option value="yes">Yes</option>
+					</select>
+				</div>
+			</div>
+		</div>
 
-					<label> PAIN:</label></br>
-					<input type="radio" name="pain_y">yes
-						<input type="radio"  name="pain_n">no
+		<div class="row form-group">
+			<div class="col-md-6">
+				<div class="col-md-6">
+					<label>Pulse : </label>
+				</div>
+				<div class="col-md-6">
+					<input class="form-control" type="text" name="pulse" value="{{ old('pulse') }}" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="col-md-6">
+					<label>BP : </label>
+				</div>
+				<div class="col-md-6">
+					<input class="form-control" type="text" name="bp" value="{{ old('bp') }}" />
+				</div>
+			</div>
+		</div>
 
-						</br></div>
+		<div class="row form-group">
+			<div class="col-md-6">
+				<div class="col-md-6">
+					<label>Temp : </label>
+				</div>
+				<div class="col-md-6">
+					<input class="form-control" type="text" name="temp" value="{{ old('temp') }}" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="col-md-6">
+					<label>RESP : </label>
+				</div>
+				<div class="col-md-6">
+					<input class="form-control" type="text" name="resp" value="{{ old('resp') }}" />
+				</div>
+			</div>
+		</div>
 
-					<div class="row">
-		<div class="col-md-12">
-		<hr>
-		<b>GCS:</b>
-		</div></div>
-		<div class="col-md-4">
-		<label> E </label>
-				<textarea class="form-control" id="e" rows="1"  placeholder="" name="e" ></textarea></div>
-				<div class="col-md-4">
-				<label> M: </label>
-				<textarea class="form-control" id="m" rows="1"  placeholder="" name="m" ></textarea></div>
-				<div class="col-md-4">
-				<label> V: </label>
-				<textarea class="form-control" id="v" rows="1"  placeholder="" name="v" ></textarea></div>
+		<div class="row form-group">
+			<div class="col-md-6">
+				<label>Pain Assessment : </label>
+			</div>
+			<div class="col-md-6">
+				<select class="form-control" name="pain">
+					<option value="0">0 - No Pain</option>
+					<option value="2">2 - Pain Little Bit</option>
+					<option value="4">4 - Pain Little More</option>
+					<option value="6">6 - Pain Even More</option>
+					<option value="8">8 - Pain Wholelot</option>
+					<option value="10">10 - Pain Worst</option>
+				</select>
+			</div>
+		</div>
 
-				<div class="col-md-6"></br>
-				<label> CNS:</label>
-					<input type="text" class="form-control" name="cns"></div>
-					<div class="col-md-6"></br>
+    <div class="row form-group">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Biceps</th>
+            <th>Triceps</th>
+            <th>Supinator</th>
+            <th>Knee</th>
+            <th>Ankle</th>
+            <th>Hoffmann</th>
+            <th>FF</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Right</th>
+            <td><input class="form-control" type="text" name="right_biceps" value="{{ old('right_biceps') }}" /></td>
+            <td><input class="form-control" type="text" name="right_triceps" value="{{ old('right_triceps') }}" /></td>
+            <td><input class="form-control" type="text" name="right_supinator" value="{{ old('right_supinator') }}" /></td>
+            <td><input class="form-control" type="text" name="right_knee" value="{{ old('right_knee') }}" /></td>
+            <td><input class="form-control" type="text" name="right_ankle" value="{{ old('right_ankle') }}" /></td>
+            <td><input class="form-control" type="text" name="right_hoffmann" value="{{ old('right_hoffmann') }}" /></td>
+            <td><input class="form-control" type="text" name="right_ff" value="{{ old('right_ff') }}" /></td>
+          </tr>
+          <tr>
+            <th>Left</th>
+            <td><input class="form-control" type="text" name="left_biceps" value="{{ old('left_biceps') }}" /></td>
+            <td><input class="form-control" type="text" name="left_triceps" value="{{ old('left_triceps') }}" /></td>
+            <td><input class="form-control" type="text" name="left_supinator" value="{{ old('left_supinator') }}" /></td>
+            <td><input class="form-control" type="text" name="left_knee" value="{{ old('left_knee') }}" /></td>
+            <td><input class="form-control" type="text" name="left_ankle" value="{{ old('left_ankle') }}" /></td>
+            <td><input class="form-control" type="text" name="left_hoffmann" value="{{ old('left_hoffmann') }}" /></td>
+            <td><input class="form-control" type="text" name="left_ff" value="{{ old('left_ff') }}" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-				<label> PUPILS:</label>
-					<input type="text" class="form-control" name="pupils"></div>
+    <div class="row form-group">
+      <div class="col-md-6">
+        <div class="col-md-6">
+          <label>Plantars : </label>
+        </div>
+        <div class="col-md-6">
+          <input class="form-control" type="text" name="plantars" value="{{ old('plantars') }}"/>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="col-md-6">
+          <label>Romberg's : </label>
+        </div>
+        <div class="col-md-6">
+          <input class="form-control" type="text" name="romberg" value="{{ old('romberg') }}" />
+        </div>
+      </div>
+    </div>
 
-				<div class="col-md-12"></br>
+    <div class="row form-group">
+      <div class="col-md-6">
+        <div class="col-md-6">
+          <label>Gait</label>
+        </div>
+        <div class="col-md-6">
+          <input class="form-control" type="text" name="gait" value="{{ old('gait') }}" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="col-md-6">
+          <label>Cerebellar Signs : </label>
+        </div>
+        <div class="col-md-6">
+          <select class="form-control" name="cerebellar">
+            <option value="truncal">Truncal</option>
+            <option value="appendicular">Appendicular</option>
+            <option value="tandemwalking">Tandem Walking</option>
+          </select>
+        </div>
+      </div>
+    </div>
 
-				<label> CRANIAL NERVES:</label>
-					<input type="text" class="form-control" name="cranial_nerves"></div>
+    <div class="row form-group">
+      <div class="col-md-6">
+        <div class="col-md-6">
+          <label>Neck Stiffness</label>
+        </div>
+        <div class="col-md-6">
+          <input class="form-control" type="text" name="neck_stiffness" value="{{ old('neck_stiffness') }}"/>
+        </div>
+      </div>
+    </div>
 
+    <div class="row form-group">
+      <div class="col-md-6">
+        <div class="col-md-6">
+          <label>Diagnosis</label>
+        </div>
+        <div class="col-md-6">
+          <input class="form-control" type="text" name="diagnosis" value="{{ old('diagnosis') }}"/>
+        </div>
+      </div>
+    </div>
 
-						*image*
+		<div class="row">
+		    <div id="sketch1">
+		      <canvas id="paint1" style="background: url('https://i.imgur.com/1bvTivk.png');"></canvas>
 
-						</br></br>
-						<label> Reflexes: </label>
-						<table class="table table-bordered">
-			 				 <tr>
-
-			 				 	<th></th>
-
-								<th>Biceps</th>
-
-								<th>Triceps</th>
-								<th>Supinator</th>
-								<th>Knee</th>
-								<th>Ankle</th>
-								<th>Hoffman</th>
-								<th>FF</th>
-							</tr>
-							<tr>
-								<td>Right</td>
-								<td><input type="text" name="r2c2" class="form-control"></td>
-								<td><input type="text" name="r2c3" class="form-control"></td>
-								<td><input type="text" name="r2c4" class="form-control"></td>
-								<td><input type="text" name="r2c5" class="form-control"></td>
-								<td><input type="text" name="r2c6" class="form-control"></td>
-								<td><input type="text" name="r2c7" class="form-control"></td>
-								<td><input type="text" name="r2c8" class="form-control"></td>
-							</tr>
-
-							<tr>
-								<td>Left</td>
-								<td><input type="text" name="r3c2" class="form-control"></td>
-								<td><input type="text" name="r3c3" class="form-control"></td>
-								<td><input type="text" name="r3c4" class="form-control"></td>
-								<td><input type="text" name="r3c5" class="form-control"></td>
-								<td><input type="text" name="r3c6" class="form-control"></td>
-								<td><input type="text" name="r3c7" class="form-control"></td>
-								<td><input type="text" name="r3c8" class="form-control"></td>
-
-							</tr>
-						</table>
-					</div>
-
-					<div class="row">
-						<hr>
-						<div class="form-grooup">
-
-
-							<div class="col-md-12"></br>
-
-				<label> PLANTARS:</label>
-					<input type="text" class="form-control" name="plantars"></div>
-
-						<div class="col-md-12"></br>
-
-				<label> ROMBERG:</label>
-					<input type="text" class="form-control" name="romberg"></div>
-
-					<div class="col-md-12"></br>
-
-				<label> GAIT:</label>
-					<input type="text" class="form-control" name="gait"></div>
-					<div class="col-md-12"></br></br>
-					<label>Celleberal signs: </label></br>
-					Truncal
-					<input type="radio" name="truncal">
-					Appendicular
-					<input type="radio" name="appendicular">
-					Tandem Walking
-					<input type="radio" name="tandem_walking"> </div>
-d-3">
-							Name:
-							<input type="text" name="name"></div>
-							<div class="col-md-3">
-							Signature:
-							<input type="text" name="sign"></div>
-							<div class="col-md-3">
-							Date:
-							<input type="text" name="date"></div>
-							<div class="col-md-3">
-							Time:
-							<input type=
-					<div class="row">
-						<div class="col-md-12"><hr>
-						<label> Neck stiffness:</label>
-						<textarea class="form-control" name="neck_stiffness"></textarea></div>
-						<div class="col-md-12">
-						<label> Diagnosis</label>
-
-							<textarea class="form-control " name="diagnosis" ></textarea>
-							</div></div>
+		</div>
 
 
-							<div class="row">
-						<div class="col-md-12"><hr>
-						<label> Plan Of Care:</label>
-						<textarea class="form-control" name="plan_of_care" rows="10"></textarea></div>
-						<div class="col-md-12">
-						<label> Pre-Operative Assessment</label>
+		<script type="text/javascript">
+		    document.addEventListener("DOMContentLoaded", function(){
 
-							<textarea class="form-control " name="pre-operative_assessment" rows="3" ></textarea>
-							</div>
+		      var canvas = document.getElementById('paint1');
+		      var ctx = canvas.getContext('2d');
 
-							<div class="col-md-12">
-						<label> Operative Plan</label>
+		      var sketch1 = document.getElementById('sketch1');
+		      var sketch1_style = getComputedStyle(sketch1);
+		      canvas.width = 600;
+		      canvas.height = 475;
 
-							<textarea class="form-control " name="operative_plan" rows="3" ></textarea>
-							</div></div>
+		      var mouse = {x: 0, y: 0};
 
-						<div class="row"><hr>
-							<div class="col-md-3">
-							Name:
-							<input type="text" name="name"></div>
-							<div class="col-md-3">
-							Signature:
-							<input type="text" name="sign"></div>
-							<div class="col-md-3">
-							Date:
-							<input type="text" name="date"></div>
-							<div class="col-md-3">
-							Time:
-							<input type="time" name="time"></div>
-					</div>
-					</div>
+		      /* Mouse Capturing Work */
+		      canvas.addEventListener('mousemove', function(e) {
+		      mouse.x = e.pageX - this.offsetLeft;
+		      mouse.y = e.pageY - this.offsetTop;
+		      }, false);
+
+		      /* Drawing on paint1 App */
+		      ctx.lineJoin = 'round';
+		      ctx.lineCap = 'round';
+
+		      ctx.strokeStyle = "red";
+		      function getColor(colour){ctx.strokeStyle = colour;}
+
+		      function getSize(size){ctx.lineWidth = size;}
+
+
+		      //ctx.strokeStyle =
+		      //ctx.strokeStyle = document.settings.colour[1].value;
+
+		      canvas.addEventListener('mousedown', function(e) {
+		        ctx.beginPath();
+		        ctx.moveTo(mouse.x, mouse.y);
+
+		        canvas.addEventListener('mousemove', onpaint1, false);
+		      }, false);
+
+		      canvas.addEventListener('mouseup', function() {
+		        canvas.removeEventListener('mousemove', onpaint1, false);
+		      }, false);
+
+		      var onpaint1 = function() {
+		        ctx.lineTo(mouse.x, mouse.y);
+		        ctx.stroke();
+		      };
+		    });
+		</script>
+
+
+
+		<div class="row form-group">
+			<button class="form-control btn btn-success" type="submit">Submit</button>
+		</div>
+
+	</form>
+
+</div>
+
 @endsection

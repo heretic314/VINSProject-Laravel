@@ -289,8 +289,6 @@ Route::group(['middleware' => ['auth']], function() {
       'r6c11' => 'required|max:255',
       'r6c12' => 'required|max:255',
 
-
-
     ]);
 
     $link = tap(new App\GlassGow($data))->save();
@@ -301,6 +299,57 @@ Route::group(['middleware' => ['auth']], function() {
   Route::get('/HistoryForm', function(){
       return view('HistoryForm');
   });
+
+  Route::post('/HistoryForm', function(Request $request){
+    $data = $request->validate([
+      'chief_complaints' => 'max:255|required',
+      'patient_history' => 'max:255|required',
+      'past_history' => 'max:255|required',
+      'allergic_history' => 'max:255|required',
+      'road_accident' => 'max:255|required',
+      'alleged_roadtrafficaccident' => 'max:255|required',
+      'place' => 'max:255|required',
+      'time' => 'max:255|required',
+      'date' => 'max:255|required',
+      'ho_loc' => 'max:255|required',
+      'ho_entbleeding' => 'max:255|required',
+      'ho_seizures' => 'max:255|required',
+      'ho_vomiting' => 'max:255|required',
+      'pulse' => 'max:255|required',
+      'bp' => 'max:255|required',
+      'temp' => 'max:255|required',
+      'resp' => 'max:255|required',
+      'pain' => 'max:255|required',
+      'right_biceps' => 'max:255|required',
+      'right_triceps' => 'max:255|required',
+      'right_supinator' => 'max:255|required',
+      'right_knee' => 'max:255|required',
+      'right_ankle' => 'max:255|required',
+      'right_hoffmann' => 'max:255|required',
+      'right_ff' => 'max:255|required',
+      'left_biceps' => 'max:255|required',
+      'left_triceps' => 'max:255|required',
+      'left_supinator' => 'max:255|required',
+      'left_knee' => 'max:255|required',
+      'left_ankle' => 'max:255|required',
+      'left_hoffmann' => 'max:255|required',
+      'left_ff' => 'max:255|required',
+      'plantars' => 'max:255|required',
+      'romberg' => 'max:255|required',
+      'gait' => 'max:255|required',
+      'cerebellar' => 'max:255|required',
+      'neck_stiffness' => 'max:255|required',
+      'diagnosis' => 'max:255|required',
+
+    ]);
+
+    $link = tap(new App\HistoryForm($data))->save();
+
+    return view('Index');
+  });
+
+
+
 
   Route::get('/InvestigationSheet1', function(){
       return view('InvestigationSheet1');
@@ -572,6 +621,58 @@ Route::group(['middleware' => ['auth']], function() {
     $link = tap(new App\NutritionalAssessmentForm($data))->save();
 
     return view('/Index');
+  });
+
+
+  Route::get('/OperativeDetailSheet', function(){
+      return view('OperativeDetailSheet');
+  });
+
+  Route::post('/OperativeDetailSheet', function(Request $request){
+    $data = $request->validate([
+      'ot_no' => 'max:255|required',
+      'date' => 'max:255|required',
+      'wheel_in' => 'max:255|required',
+      'wheel_out' => 'max:255|required',
+      'anesthesa_induction_time' => 'max:255|required',
+      'reversal_time' => 'max:255|required',
+      'antibiotic1' => 'max:255|required',
+      'antibiotic1_time' => 'max:255|required',
+      'antibiotic2' => 'max:255',
+      'antibiotic2_time' => 'max:255',
+      'surgical_time_from' => 'max:255|required',
+      'surgical_time_to' => 'max:255|required',
+      'surgery_type' => 'max:255|required',
+      'surgeon1' => 'max:255|required',
+      'surgeon2' => 'max:255',
+      'surgeon3' => 'max:255',
+      'anesthetist1' => 'max:255|required',
+      'anesthetist2' => 'max:255',
+      'anesthetist3' => 'max:255',
+      'iitv' => 'max:255',
+      'fentanyl' => 'max:255',
+      'drill' => 'max:255',
+      'sevoflurane_desflurane' => 'max:255',
+      'microscope' => 'max:255',
+      'endoscope' => 'max:255',
+      'cussa' => 'max:255',
+      'implants' => 'max:255',
+      'vendor' => 'max:255',
+      'diagnosis' => 'max:255|required',
+      'operation_performed' => 'max:255|required',
+      'mediclaim' => 'max:255|required',
+      'name_tpa' => 'max:255|required',
+      'company_thirdparty' => 'max:255|required',
+      'name_party' => 'max:255|required',
+      'amount' => 'max:255|required',
+      'surgery_only' => 'max:255|required',
+      'package_surgical' => 'max:255|required',
+      'package_total' => 'max:255|required',
+    ]);
+
+    $link = tap(new App\OperativeDetailSheet($data))->save();
+
+    return view('Index');
   });
 
 
