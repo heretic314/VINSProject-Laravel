@@ -289,7 +289,7 @@ Route::group(['middleware' => ['auth']], function() {
       'r6c11' => 'required|max:255',
       'r6c12' => 'required|max:255',
 
-  
+
 
     ]);
 
@@ -525,6 +525,55 @@ Route::group(['middleware' => ['auth']], function() {
   Route::get('/NutritionalAssessmentForm', function(){
       return view('NutritionalAssessmentForm');
   });
+  Route::post('/NutritionalAssessmentForm',function(Request $request){
+    $data = $request->validate([
+      'diagnosis'=> 'max:255',
+      'calorie_required'=> 'max:255',
+      'protein_required'=> 'max:255',
+      'calorie_intake'=> 'max:255',
+      'protein_intake'=> 'max:255',
+      'diet'=> 'max:255',
+      'vomiting'=> 'max:255',
+      'constipation'=> 'max:255',
+      'diarrhea'=> 'max:255',
+      'mouth_ulcer'=> 'max:255',
+      'food_intake'=> 'max:255',
+      'fluid_intake'=> 'max:255',
+      'nutritional_need'=> 'max:255',
+      'mode_of_feed'=> 'max:255',
+      'height'=> 'max:255',
+      'life_style'=> 'max:255',
+      'weight'=> 'max:255',
+      'bmi'=> 'max:255',
+      'diet_recall'=> 'max:255',
+      'food_intake_decline'=> 'max:255',
+      'food_intake_decline_reason'=> 'max:255',
+      'blood_pressure'=> 'max:255',
+      'diabetes'=> 'max:255',
+      'old_operated_patient'=> 'max:255',
+      'cardiac_diseases'=> 'max:255',
+      'liver_diseases'=> 'max:255',
+      'renal_failure'=> 'max:255',
+      'cancer'=> 'max:255',
+      'trauma_burn'=> 'max:255',
+      'gout'=> 'max:255',
+      'any_other'=> 'max:255',
+      'risk_type'=> 'max:255',
+      'risk_reason'=> 'max:255',
+      'diet_suggested'=> 'max:255',
+
+      'remarks'=> 'max:255',
+      'date_table'=> 'max:255',
+      'diet_table'=> 'max:255',
+      'remarks_table'=> 'max:255',
+      'name_table'=> 'max:255',
+]);
+
+    $link = tap(new App\NutritionalAssessmentForm($data))->save();
+
+    return view('/Index');
+  });
+
 
   Route::get('/PatientDietRecord', function(){
       return view('PatientDietRecord');
