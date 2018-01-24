@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call(infusiontherapychart::class);
         $this->call(planofcareseeder::class);
         $this->call(historyformseeder::class);
+        $this->call(operativedetailsheetseeder::class);
 
     }
 }

@@ -5,6 +5,7 @@ Completed :
 -Drug Requisition
 -Code Blue Evaluation Form
 -Plan Of Care
+-Operative Detail Sheet
 -History Form [ error section remaining ]
 
 

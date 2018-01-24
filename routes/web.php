@@ -575,6 +575,58 @@ Route::group(['middleware' => ['auth']], function() {
       return view('NutritionalAssessmentForm');
   });
 
+  Route::get('/OperativeDetailSheet', function(){
+      return view('OperativeDetailSheet');
+  });
+
+  Route::post('/OperativeDetailSheet', function(Request $request){
+    $data = $request->validate([
+      'ot_no' => 'max:255|required',
+      'date' => 'max:255|required',
+      'wheel_in' => 'max:255|required',
+      'wheel_out' => 'max:255|required',
+      'anesthesa_induction_time' => 'max:255|required',
+      'reversal_time' => 'max:255|required',
+      'antibiotic1' => 'max:255|required',
+      'antibiotic1_time' => 'max:255|required',
+      'antibiotic2' => 'max:255',
+      'antibiotic2_time' => 'max:255',
+      'surgical_time_from' => 'max:255|required',
+      'surgical_time_to' => 'max:255|required',
+      'surgery_type' => 'max:255|required',
+      'surgeon1' => 'max:255|required',
+      'surgeon2' => 'max:255',
+      'surgeon3' => 'max:255',
+      'anesthetist1' => 'max:255|required',
+      'anesthetist2' => 'max:255',
+      'anesthetist3' => 'max:255',
+      'iitv' => 'max:255',
+      'fentanyl' => 'max:255',
+      'drill' => 'max:255',
+      'sevoflurane_desflurane' => 'max:255',
+      'microscope' => 'max:255',
+      'endoscope' => 'max:255',
+      'cussa' => 'max:255',
+      'implants' => 'max:255',
+      'vendor' => 'max:255',
+      'diagnosis' => 'max:255|required',
+      'operation_performed' => 'max:255|required',
+      'mediclaim' => 'max:255|required',
+      'name_tpa' => 'max:255|required',
+      'company_thirdparty' => 'max:255|required',
+      'name_party' => 'max:255|required',
+      'amount' => 'max:255|required',
+      'surgery_only' => 'max:255|required',
+      'package_surgical' => 'max:255|required',
+      'package_total' => 'max:255|required',
+    ]);
+
+    $link = tap(new App\OperativeDetailSheet($data))->save();
+
+    return view('Index');
+  });
+
+
   Route::get('/PatientDietRecord', function(){
       return view('PatientDietRecord');
   });
