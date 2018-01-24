@@ -26,7 +26,7 @@
 				<div class="col-md-6">
 					<input class="form-control" type="text" name="drill">
 					@if($errors->has('drill'))
-							<span class="help-block">{{ $errors->first('drill') }}</span>
+							<span class="help-block"><div class="text-danger">{{ $errors->first('drill') }}</div></span>
 					@endif
 				</div>
 		  </div>
@@ -37,7 +37,7 @@
 				<div class="col-md-6">
 					<input class="form-control" type="text" name="actual_code_blue">
 					@if($errors->has('actual_code_blue'))
-							<span class="help-block">{{ $errors->first('actual_code_blue') }}</span>
+							<span class="help-block"><div class="text-danger">{{ $errors->first('actual_code_blue') }}</div></span>
 					@endif
 				</div>
 			</div>
@@ -63,13 +63,13 @@
 			    <td>1</td>
 					<td>Was staff able to identify cardiac arrest?
 						@if($errors->has('00'))
-								<span class="help-block alert alert-warning">{{ $errors->first('00') }}</span>
+								<span class="help-block"><div class="text-danger">{{ $errors->first('00') }}</div></span>
 						@endif
 					</td>
 					<td>
 						<div class="form-group">
-							<select required class="form-control" name="00">
-								<option selected disabled hidden> --- </option>
+							<select class="form-control" name="00">
+
 								<option value="Na" >NA</option>
 								<option value="Yes" >Yes</option>
 								<option value="No" >No</option>
@@ -83,14 +83,14 @@
 			    <td>2</td>
 				<td>Did CPR begin when the cardiac arrest was indentified?
 					@if($errors->has('01'))
-							<span class="help-block alert alert-warning">{{ $errors->first('01') }}</span>
+							<span class="help-block"><div class="text-danger">{{ $errors->first('01') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
 							<select class="form-control" name="01" >
-								<option selected disabled hidden> --- </option>
+
 								<option value="NA" >NA</option>
 								<option value="Yes" >Yes</option>
 								<option value="No" >No</option>
@@ -120,14 +120,14 @@
 						</li>
 					</ul>
 					@if($errors->has('02'))
-							<span class="help-block alert alert-warning">{{ $errors->first('02') }}</span>
+							<span class="help-block"><div class="text-danger">{{ $errors->first('02') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
 							<select class="form-control" name="02" >
-								<option selected disabled hidden> --- </option>
+
 								<option value="NA" >NA</option>
 								<option value="Yes" >Yes</option>
 								<option value="No" >No</option>
@@ -142,14 +142,14 @@
 			    <td>4</td>
 				<td>Did nurse lead the resuscitation effort until the code blue team arrived?
 					@if($errors->has('03'))
-							<span class="help-block alert alert-warning">{{ $errors->first('03') }}</span>
+							<span class="help-block"><div class="text-danger">{{ $errors->first('03') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
 							<select class="form-control" name="03" >
-								<option selected disabled hidden> --- </option>
+
 								<option value="NA" >NA</option>
 								<option value="Yes" >Yes</option>
 								<option value="No" >No</option>
@@ -164,14 +164,14 @@
 			    <td>5</td>
 				<td>Was chest compression perfomed uninterruptedly until code blue team arrived?
 					@if($errors->has('04'))
-							<span class="help-block alert alert-warning">{{ $errors->first('04') }}</span>
+							<span class="help-block"><div class="text-danger">{{ $errors->first('04') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
 							<select class="form-control" name="04" >
-								<option selected disabled hidden> --- </option>
+
 								<option value="NA" >NA</option>
 								<option value="Yes" >Yes</option>
 								<option value="No" >No</option>
@@ -204,14 +204,14 @@
 						</li>
 					</ul>
 					@if($errors->has('05'))
-							<span class="help-block alert alert-warning">{{ $errors->first('05') }}</span>
+							<span class="help-block"><div class="text-danger">{{ $errors->first('05') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
 							<select class="form-control" name="05" >
-								<option selected disabled hidden> --- </option>
+
 								<option value="NA" >NA</option>
 								<option value="Yes" >Yes</option>
 								<option value="No" >No</option>
@@ -230,14 +230,14 @@
 					<div class="">2 min - Acceptable</div>
 					<div class="">>3 min - Unacceptable</div>
 					@if($errors->has('06'))
-							<span class="help-block alert alert-warning">{{ $errors->first('06') }}</span>
+							<span class="help-block"><div class="text-danger">{{ $errors->first('06') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
 							<select class="form-control" name="06" >
-								<option selected disabled hidden> --- </option>
+
 								<option value="NA" >NA</option>
 								<option value="Yes" >Yes</option>
 								<option value="No" >No</option>
@@ -270,14 +270,14 @@
 						</li>
 					</ul>
 					@if($errors->has('07'))
-							<span class="help-block alert alert-warning">{{ $errors->first('07') }}</span>
+							<span class="help-block"><div class="text-danger">{{ $errors->first('07') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
 							<select class="form-control" name="07" >
-								<option selected disabled hidden> --- </option>
+
 								<option value="NA" >NA</option>
 								<option value="Yes" >Yes</option>
 								<option value="No" >No</option>
@@ -313,14 +313,14 @@
 						</li>
 					</ul>
 					@if($errors->has('08'))
-							<span class="help-block alert alert-warning">{{ $errors->first('08') }}</span>
+							<span class="help-block"><div class="text-danger">{{ $errors->first('08') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
 							<select class="form-control" name="08" >
-								<option selected disabled hidden> --- </option>
+
 								<option value="NA" >NA</option>
 								<option value="Yes" >Yes</option>
 								<option value="No" >No</option>
@@ -335,14 +335,14 @@
 			    <td>10</td>
 				<td>Was documentation complete?
 					@if($errors->has('09'))
-							<span class="help-block alert alert-warning">{{ $errors->first('09') }}</span>
+							<span class="help-block"><div class="text-danger">{{ $errors->first('09') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
 							<select class="form-control" name="09" >
-								<option selected disabled hidden> --- </option>
+
 								<option value="NA" >NA</option>
 								<option value="Yes" >Yes</option>
 								<option value="No" >No</option>

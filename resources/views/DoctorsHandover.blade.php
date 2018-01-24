@@ -32,7 +32,7 @@
 					<div class="col-md-8">
 						<textarea name="diagnosis"  rows="3" class="form-control"></textarea>
 						@if($errors->has('diagnosis'))
-								<span class="help-block">{{ $errors->first('diagnosis') }}</span>
+								<span class="help-block"><div class="text-danger">{{ $errors->first('diagnosis') }}</div></span>
 						@endif
 					</div>
 				</div>
@@ -51,7 +51,7 @@
 						<option value="night">Night</option>
 					</select>
 					@if($errors->has('day_night'))
-							<span class="help-block">{{ $errors->first('day_night') }}</span>
+							<span class="help-block"><div class="text-danger">{{ $errors->first('day_night') }}</div></span>
 					@endif
 				</div>
 			</div>
@@ -217,7 +217,7 @@
 							<td>16.1 Name</td>
 							<td><input type="text" class="form-control" name="name_given"  />
 								@if($errors->has('name_given'))
-										<span class="help-block">{{ $errors->first('name_given') }}</span>
+										<span class="help-block"><div class="text-danger">{{ $errors->first('name_given') }}</div></span>
 								@endif
 							</td>
 						</tr>
@@ -226,7 +226,7 @@
 							<td>16.2 Date</td>
 							<td><input type="date" class="form-control" name="date_given"  />
 								@if($errors->has('date_given'))
-										<span class="help-block">{{ $errors->first('date_given') }}</span>
+										<span class="help-block"><div class="text-danger">{{ $errors->first('date_given') }}</div></span>
 								@endif
 							</td>
 						</tr>
@@ -235,7 +235,7 @@
 							<td>16.3 Time</td>
 							<td><input type="time" class="form-control" name="time_given"  />
 								@if($errors->has('time_given'))
-										<span class="help-block">{{ $errors->first('time_given') }}</span>
+										<span class="help-block"><div class="text-danger">{{ $errors->first('time_given') }}</div></span>
 								@endif
 							</td>
 						</tr>
@@ -250,7 +250,7 @@
 							<td>17.1 Name</td>
 							<td><input type="text" class="form-control" name="name_taken"  />
 								@if($errors->has('name_taken'))
-										<span class="help-block">{{ $errors->first('name_taken') }}</span>
+										<span class="help-block"><div class="text-danger">{{ $errors->first('name_taken') }}</div></span>
 								@endif
 							</td>
 						</tr>
@@ -259,7 +259,7 @@
 							<td>17.2 Date</td>
 							<td><input type="date" class="form-control" name="date_taken"  />
 								@if($errors->has('date_taken'))
-										<span class="help-block">{{ $errors->first('date_taken') }}</span>
+										<span class="help-block"><div class="text-danger">{{ $errors->first('date_taken') }}</div></span>
 								@endif
 							</td>
 						</tr>
@@ -268,7 +268,7 @@
 							<td>17.3 Time</td>
 							<td><input type="time" class="form-control" name="time_taken"  />
 								@if($errors->has('time_taken'))
-										<span class="help-block">{{ $errors->first('time_taken') }}</span>
+										<span class="help-block"><div class="text-danger">{{ $errors->first('time_taken') }}</div></span>
 								@endif
 							</td>
 						</tr>
