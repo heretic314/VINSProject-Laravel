@@ -337,6 +337,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'App\\LabSheet' => __DIR__ . '/../..' . '/app/LabSheet.php',
         'App\\MARFlowSheet' => __DIR__ . '/../..' . '/app/MARFlowSheet.php',
         'App\\NursingDutyOver' => __DIR__ . '/../..' . '/app/NursingDutyOver.php',
+        'App\\NutritionalAssessmentForm' => __DIR__ . '/../..' . '/app/NutritionalAssessmentForm.php',
         'App\\OperativeDetailSheet' => __DIR__ . '/../..' . '/app/OperativeDetailSheet.php',
         'App\\PatientDetailForm' => __DIR__ . '/../..' . '/app/PatientDetailForm.php',
         'App\\PlanOfCare' => __DIR__ . '/../..' . '/app/PlanOfCare.php',
@@ -345,6 +346,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\RadiologyRequisition' => __DIR__ . '/../..' . '/app/RadiologyRequisition.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
@@ -1961,6 +1963,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'Monolog\\Processor\\UidProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/UidProcessor.php',
         'Monolog\\Processor\\WebProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/WebProcessor.php',
         'Monolog\\Registry' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Registry.php',
+        'NutritionalAssessmentFormSeeder' => __DIR__ . '/../..' . '/database/seeds/NutritionalAssessmentFormSeeder.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/AssertionFailedError.php',
@@ -3654,6 +3657,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
         'planofcareseeder' => __DIR__ . '/../..' . '/database/seeds/planofcareseeder.php',
+        'radiologyrequisitionseeder' => __DIR__ . '/../..' . '/database/seeds/radiologyrequisitionseeder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

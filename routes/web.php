@@ -574,55 +574,6 @@ Route::group(['middleware' => ['auth']], function() {
   Route::get('/NutritionalAssessmentForm', function(){
       return view('NutritionalAssessmentForm');
   });
-  Route::post('/NutritionalAssessmentForm',function(Request $request){
-    $data = $request->validate([
-      'diagnosis'=> 'max:255',
-      'calorie_required'=> 'max:255',
-      'protein_required'=> 'max:255',
-      'calorie_intake'=> 'max:255',
-      'protein_intake'=> 'max:255',
-      'diet'=> 'max:255',
-      'vomiting'=> 'max:255',
-      'constipation'=> 'max:255',
-      'diarrhea'=> 'max:255',
-      'mouth_ulcer'=> 'max:255',
-      'food_intake'=> 'max:255',
-      'fluid_intake'=> 'max:255',
-      'nutritional_need'=> 'max:255',
-      'mode_of_feed'=> 'max:255',
-      'height'=> 'max:255',
-      'life_style'=> 'max:255',
-      'weight'=> 'max:255',
-      'bmi'=> 'max:255',
-      'diet_recall'=> 'max:255',
-      'food_intake_decline'=> 'max:255',
-      'food_intake_decline_reason'=> 'max:255',
-      'blood_pressure'=> 'max:255',
-      'diabetes'=> 'max:255',
-      'old_operated_patient'=> 'max:255',
-      'cardiac_diseases'=> 'max:255',
-      'liver_diseases'=> 'max:255',
-      'renal_failure'=> 'max:255',
-      'cancer'=> 'max:255',
-      'trauma_burn'=> 'max:255',
-      'gout'=> 'max:255',
-      'any_other'=> 'max:255',
-      'risk_type'=> 'max:255',
-      'risk_reason'=> 'max:255',
-      'diet_suggested'=> 'max:255',
-
-      'remarks'=> 'max:255',
-      'date_table'=> 'max:255',
-      'diet_table'=> 'max:255',
-      'remarks_table'=> 'max:255',
-      'name_table'=> 'max:255',
-]);
-
-    $link = tap(new App\NutritionalAssessmentForm($data))->save();
-
-    return view('/Index');
-  });
-
 
   Route::get('/OperativeDetailSheet', function(){
       return view('OperativeDetailSheet');
@@ -740,6 +691,41 @@ Route::group(['middleware' => ['auth']], function() {
     ]);
 
     $link = tap(new App\PlanOfCare($data))->save();
+
+    return view('Index');
+  });
+
+  Route::get('/RadiologyRequisition', function(){
+    return view('RadiologyRequisition');
+  });
+
+  Route::post('/RadiologyRequisition', function(Request $request){
+    $data = $request->validate([
+      'provisional_diagnosis' => 'max:255|required',
+      'brain_plain' => 'max:255',
+      'ct_pmns' => 'max:255',
+      'brain_plain_contrast' => 'max:255',
+      'ct_head_face' => 'max:255',
+      'ct_face_plain' => 'max:255',
+      'ct_3d' => 'max:255',
+      'ct_cv_junction_flex' => 'max:255',
+      'ct_cv_junction_ext' => 'max:255',
+      'ct_chest_plain' => 'max:255',
+      'ct_dorsal_spine' => 'max:255',
+      'ct_cervical_spine' => 'max:255',
+      'ct_abdomen_plain' => 'max:255',
+      'ct_lumbar_spine' => 'max:255',
+      'other' => 'max:255',
+      'anyother' => 'max:255',
+      'xray_fixed' => 'max:255',
+      'xray_portable' => 'max:255',
+      'other_xray' => 'max:255',
+      'xray_other' => 'max:255',
+      'date' => 'max:255|required',
+      'time' => 'max:255|required',
+    ]);
+
+    $link = tap(new App\RadiologyRequisition($data))->save();
 
     return view('Index');
   });

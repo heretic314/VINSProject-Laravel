@@ -119,6 +119,7 @@
                             <a href="{{ url('/index') }}">Index</a>
                         @else
                             <a href="{{route('login')}}">LOGIN</a>
+                            <a href="{{route('register')}}">REGISTER</a>
                         @endauth
                     </div>
                 @endif

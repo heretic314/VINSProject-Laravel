@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(planofcareseeder::class);
         $this->call(historyformseeder::class);
         $this->call(operativedetailsheetseeder::class);
+        $this->call(radiologyrequisitionseeder::class);
 
     }
 }
