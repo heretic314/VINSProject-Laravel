@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\BloodTransfusionForm' => $baseDir . '/app/BloodTransfusionForm.php',
+    'App\\CPRFormat' => $baseDir . '/app/CPRFormat.php',
     'App\\CodeBlueEvaluationForm' => $baseDir . '/app/CodeBlueEvaluationForm.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\DoctorsDailyNotes' => $baseDir . '/app/DoctorsDailyNotes.php',
@@ -32,6 +33,7 @@ return array(
     'App\\LabSheet' => $baseDir . '/app/LabSheet.php',
     'App\\MARFlowSheet' => $baseDir . '/app/MARFlowSheet.php',
     'App\\NursingDutyOver' => $baseDir . '/app/NursingDutyOver.php',
+    'App\\NutritionalAssessmentForm' => $baseDir . '/app/NutritionalAssessmentForm.php',
     'App\\OperativeDetailSheet' => $baseDir . '/app/OperativeDetailSheet.php',
     'App\\PatientDetailForm' => $baseDir . '/app/PatientDetailForm.php',
     'App\\PlanOfCare' => $baseDir . '/app/PlanOfCare.php',
@@ -43,6 +45,7 @@ return array(
     'App\\User' => $baseDir . '/app/User.php',
     'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
     'AssertionError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+    'CPRFormatSeeder' => $baseDir . '/database/seeds/CPRFormatSeeder.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'Carbon\\Exceptions\\InvalidDateException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
@@ -1656,6 +1659,7 @@ return array(
     'Monolog\\Processor\\UidProcessor' => $vendorDir . '/monolog/monolog/src/Monolog/Processor/UidProcessor.php',
     'Monolog\\Processor\\WebProcessor' => $vendorDir . '/monolog/monolog/src/Monolog/Processor/WebProcessor.php',
     'Monolog\\Registry' => $vendorDir . '/monolog/monolog/src/Monolog/Registry.php',
+    'NutritionalAssessmentFormSeeder' => $baseDir . '/database/seeds/NutritionalAssessmentFormSeeder.php',
     'PHPUnit\\Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert.php',
     'PHPUnit\\Framework\\AssertionFailedError' => $vendorDir . '/phpunit/phpunit/src/Framework/AssertionFailedError.php',

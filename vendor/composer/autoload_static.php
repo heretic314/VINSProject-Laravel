@@ -312,6 +312,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
 
     public static $classMap = array (
         'App\\BloodTransfusionForm' => __DIR__ . '/../..' . '/app/BloodTransfusionForm.php',
+        'App\\CPRFormat' => __DIR__ . '/../..' . '/app/CPRFormat.php',
         'App\\CodeBlueEvaluationForm' => __DIR__ . '/../..' . '/app/CodeBlueEvaluationForm.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\DoctorsDailyNotes' => __DIR__ . '/../..' . '/app/DoctorsDailyNotes.php',
@@ -337,6 +338,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'App\\LabSheet' => __DIR__ . '/../..' . '/app/LabSheet.php',
         'App\\MARFlowSheet' => __DIR__ . '/../..' . '/app/MARFlowSheet.php',
         'App\\NursingDutyOver' => __DIR__ . '/../..' . '/app/NursingDutyOver.php',
+        'App\\NutritionalAssessmentForm' => __DIR__ . '/../..' . '/app/NutritionalAssessmentForm.php',
         'App\\OperativeDetailSheet' => __DIR__ . '/../..' . '/app/OperativeDetailSheet.php',
         'App\\PatientDetailForm' => __DIR__ . '/../..' . '/app/PatientDetailForm.php',
         'App\\PlanOfCare' => __DIR__ . '/../..' . '/app/PlanOfCare.php',
@@ -348,6 +350,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+        'CPRFormatSeeder' => __DIR__ . '/../..' . '/database/seeds/CPRFormatSeeder.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
@@ -1961,6 +1964,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'Monolog\\Processor\\UidProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/UidProcessor.php',
         'Monolog\\Processor\\WebProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/WebProcessor.php',
         'Monolog\\Registry' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Registry.php',
+        'NutritionalAssessmentFormSeeder' => __DIR__ . '/../..' . '/database/seeds/NutritionalAssessmentFormSeeder.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/AssertionFailedError.php',
