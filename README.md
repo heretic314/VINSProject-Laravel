@@ -8,7 +8,7 @@ Completed :
 -Operative Detail Sheet
 -Radiology Requisition
 -NutritionalAssessmentForm [ pending-shreya ]
--History Form [ error section remaining ]
+-History Form
 
 
 //code snippets
