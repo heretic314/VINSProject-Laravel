@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-	<form name="bloodtransfusion">
+
 		<div class="page-header">
 			<div class="row">
 				<div class="col-md-6">
@@ -18,6 +18,13 @@
 				</div>
 			</div>
 		</div>
+		<form action="{{ url('/CPRFormat') }}" method="post">
+			{{ csrf_field() }}
+			@if ($errors->any())
+					<div class="alert alert-danger" role="alert">
+							Please fix the following errors
+					</div>
+			@endif
 
 		<div class="row form-group">
 			<div class="col-md-10"></div>
@@ -62,10 +69,10 @@
 					<label>Sex:</label>
 				</div>
 				<div class="col-md-6">
-					<select class="form-control" name="sex">
-						<option>NA</option>
-						<option>Male</option>
-						<option>Female</option>
+					<select class="form-control" name="sex" value="{{ old('sex') }}">
+						<option value="NA">NA</option>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
 					</select>
 				</div>
 			</div>
@@ -181,42 +188,42 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="text" class="form-control" name="medication_time_0" id="medication_time_0">
+					<input type="time" class="form-control" name="medication_time_00" id="medication_time_00">
 				</td>
 				<td colspan="5">
-					<input type="text" class="form-control" name="medication_name_0" id="medication_name_0">
+					<input type="text" class="form-control" name="medication_name_01" id="medication_name_01">
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<input type="text" class="form-control" name="medication_time_1" id="medication_time_1">
+					<input type="time" class="form-control" name="medication_time_10" id="medication_time_10">
 				</td>
 				<td colspan="5">
-					<input type="text" class="form-control" name="medication_name_1" id="medication_name_1">
+					<input type="text" class="form-control" name="medication_name_11" id="medication_name_11">
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<input type="text" class="form-control" name="medication_time_2" id="medication_time_2">
+					<input type="time" class="form-control" name="medication_time_20" id="medication_time_20">
 				</td>
 				<td colspan="5">
-					<input type="text" class="form-control" name="medication_name_2" id="medication_name_2">
+					<input type="text" class="form-control" name="medication_name_21" id="medication_name_21">
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<input type="text" class="form-control" name="medication_time_3" id="medication_time_3">
+					<input type="time" class="form-control" name="medication_time_30" id="medication_time_30">
 				</td>
 				<td colspan="5">
-					<input type="text" class="form-control" name="medication_name_3" id="medication_name_3">
+					<input type="text" class="form-control" name="medication_name_31" id="medication_name_31">
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<input type="text" class="form-control" name="medication_time_4" id="medication_time_4">
+					<input type="time" class="form-control" name="medication_time_40" id="medication_time_40">
 				</td>
 				<td colspan="5">
-					<input type="text" class="form-control" name="medication_name_4" id="medication_name_4">
+					<input type="text" class="form-control" name="medication_name_41" id="medication_name_41">
 				</td>
 			</tr>
 			<tr>
@@ -394,6 +401,10 @@
 
 				</tbody>
 			</table>
+		</div>
+
+		<div class="row form-group">
+			<button class="btn btn-success" type="submit">Submit</button>
 		</div>
 	</form>
 </div>

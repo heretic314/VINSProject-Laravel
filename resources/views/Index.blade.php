@@ -195,7 +195,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/DoctorsHandover') }}">Doctors Handover</a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Visiting Charge Sheet~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PatientDietRecord') }}">Patient Diet Record</a>
 		</div>
 	</div>
 	<div class="row">
@@ -229,6 +229,11 @@
 		</div>
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Daily Billing Sheet~~~ </a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 top-buffer">
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Visiting Charge Sheet~~~ </a>
 		</div>
 	</div>
 

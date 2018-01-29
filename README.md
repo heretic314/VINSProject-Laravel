@@ -8,7 +8,7 @@ Completed :
 -Operative Detail Sheet
 -Radiology Requisition
 -NutritionalAssessmentForm [ pending-shreya ]
--History Form [ error section remaining ]
+-History Form
 
 
 //code snippets
@@ -20,3 +20,5 @@ DB Read :
  <?php foreach ($users as $key): ?>
    <p>Name : "{{ $key->name }}" & Email : "{{ $key->email }}"</p>
  <?php endforeach; ?>
+
+please check why its still showing errors in transferchecklistfor nurse.

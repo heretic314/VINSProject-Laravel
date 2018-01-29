@@ -31,7 +31,9 @@
 			</div>
 			<div class="col-md-6">
 				<input class="form-control" type="text" name="chief_complaints" value="{{ old('chief_complaints')}}"/>
-
+				@if($errors->has('chief_complaints'))
+						<span class="help-block"><div class="text-danger">{{ $errors->first('chief_complaints') }}</div></span>
+				@endif
 			</div>
 		</div>
 
@@ -41,7 +43,9 @@
 			</div>
 			<div class="col-md-6">
 				<textarea class="form-control" name="patient_history" value="{{ old('patient_history') }}"></textarea>
-
+				@if($errors->has('patient_history'))
+						<span class="help-block"><div class="text-danger">{{ $errors->first('patient_history') }}</div></span>
+				@endif
 			</div>
 		</div>
 
@@ -51,6 +55,9 @@
 			</div>
 			<div class="col-md-6">
 				<textarea class="form-control" name="past_history" value="{{ old('past_history') }}"></textarea>
+				@if($errors->has('past_history'))
+						<span class="help-block"><div class="text-danger">{{ $errors->first('past_history') }}</div></span>
+				@endif
 			</div>
 		</div>
 
@@ -60,6 +67,9 @@
 			</div>
 			<div class="col-md-6">
 				<input class="form-control" type="text" name="allergic_history" value="{{ old('allergic_history') }}" />
+				@if($errors->has('allergic_history'))
+						<span class="help-block"><div class="text-danger">{{ $errors->first('allergic_history') }}</div></span>
+				@endif
 			</div>
 		</div>
 
@@ -71,6 +81,9 @@
 			</div>
 			<div class="col-md-6">
 				<input class="form-control" name="road_accident" value="{{ old('road_accident') }}"/>
+				@if($errors->has('road_accident'))
+						<span class="help-block"><div class="text-danger">{{ $errors->first('road_accident') }}</div></span>
+				@endif
 			</div>
 		</div>
 
@@ -80,6 +93,9 @@
 			</div>
 			<div class="col-md-6">
 				<input class="form-control" type="text" name="alleged_roadtrafficaccident" value="{{ old('alleged_roadtrafficaccident') }}" />
+				@if($errors->has('alleged_roadtrafficaccident'))
+						<span class="help-block"><div class="text-danger">{{ $errors->first('alleged_roadtrafficaccident') }}</div></span>
+				@endif
 			</div>
 		</div>
 
@@ -90,6 +106,9 @@
 				</div>
 				<div class="col-md-6">
 					<input class="form-control" type="text" name="place" value="{{ old('place') }}" />
+					@if($errors->has('place'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('place') }}</div></span>
+					@endif
 				</div>
 			</div>
 			<div class="col-md-4">
@@ -98,6 +117,9 @@
 				</div>
 				<div class="col-md-6">
 					<input class="form-control" type="time" name="time" value="{{ old('time') }}" />
+					@if($errors->has('time'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('time') }}</div></span>
+					@endif
 				</div>
 			</div>
 			<div class="col-md-4">
@@ -106,6 +128,9 @@
 				</div>
 				<div class="col-md-6">
 					<input class="form-control" type="date" name="date" value="{{ old('date') }}" />
+					@if($errors->has('date'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('date') }}</div></span>
+					@endif
 				</div>
 			</div>
 		</div>
@@ -167,6 +192,9 @@
 				</div>
 				<div class="col-md-6">
 					<input class="form-control" type="text" name="pulse" value="{{ old('pulse') }}" />
+					@if($errors->has('pulse'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('pulse') }}</div></span>
+					@endif
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -175,6 +203,9 @@
 				</div>
 				<div class="col-md-6">
 					<input class="form-control" type="text" name="bp" value="{{ old('bp') }}" />
+					@if($errors->has('bp'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('bp') }}</div></span>
+					@endif
 				</div>
 			</div>
 		</div>
@@ -186,6 +217,9 @@
 				</div>
 				<div class="col-md-6">
 					<input class="form-control" type="text" name="temp" value="{{ old('temp') }}" />
+					@if($errors->has('temp'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('temp') }}</div></span>
+					@endif
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -194,6 +228,9 @@
 				</div>
 				<div class="col-md-6">
 					<input class="form-control" type="text" name="resp" value="{{ old('resp') }}" />
+					@if($errors->has('resp'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('resp') }}</div></span>
+					@endif
 				</div>
 			</div>
 		</div>
@@ -231,24 +268,82 @@
         <tbody>
           <tr>
             <th>Right</th>
-            <td><input class="form-control" type="text" name="right_biceps" value="{{ old('right_biceps') }}" /></td>
-            <td><input class="form-control" type="text" name="right_triceps" value="{{ old('right_triceps') }}" /></td>
-            <td><input class="form-control" type="text" name="right_supinator" value="{{ old('right_supinator') }}" /></td>
-            <td><input class="form-control" type="text" name="right_knee" value="{{ old('right_knee') }}" /></td>
-            <td><input class="form-control" type="text" name="right_ankle" value="{{ old('right_ankle') }}" /></td>
-            <td><input class="form-control" type="text" name="right_hoffmann" value="{{ old('right_hoffmann') }}" /></td>
-            <td><input class="form-control" type="text" name="right_ff" value="{{ old('right_ff') }}" /></td>
+            <td><input class="form-control" type="text" name="right_biceps" value="{{ old('right_biceps') }}" />
+							@if($errors->has('right_biceps'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('right_biceps') }}</div></span>
+							@endif
+						</td>
+            <td><input class="form-control" type="text" name="right_triceps" value="{{ old('right_triceps') }}" />
+							@if($errors->has('right_triceps'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('right_triceps') }}</div></span>
+							@endif
+						</td>
+            <td><input class="form-control" type="text" name="right_supinator" value="{{ old('right_supinator') }}" />
+							@if($errors->has('right_supinator'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('right_supinator') }}</div></span>
+							@endif
+						</td>
+            <td><input class="form-control" type="text" name="right_knee" value="{{ old('right_knee') }}" />
+							@if($errors->has('right_knee'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('right_knee') }}</div></span>
+							@endif
+						</td>
+            <td><input class="form-control" type="text" name="right_ankle" value="{{ old('right_ankle') }}" />
+							@if($errors->has('right_ankle'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('right_ankle') }}</div></span>
+							@endif
+						</td>
+            <td><input class="form-control" type="text" name="right_hoffmann" value="{{ old('right_hoffmann') }}" />
+							@if($errors->has('right_hoffmann'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('right_hoffmann') }}</div></span>
+							@endif
+						</td>
+            <td><input class="form-control" type="text" name="right_ff" value="{{ old('right_ff') }}" />
+							@if($errors->has('right_ff'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('right_ff') }}</div></span>
+							@endif
+						</td>
           </tr>
-          <tr>
-            <th>Left</th>
-            <td><input class="form-control" type="text" name="left_biceps" value="{{ old('left_biceps') }}" /></td>
-            <td><input class="form-control" type="text" name="left_triceps" value="{{ old('left_triceps') }}" /></td>
-            <td><input class="form-control" type="text" name="left_supinator" value="{{ old('left_supinator') }}" /></td>
-            <td><input class="form-control" type="text" name="left_knee" value="{{ old('left_knee') }}" /></td>
-            <td><input class="form-control" type="text" name="left_ankle" value="{{ old('left_ankle') }}" /></td>
-            <td><input class="form-control" type="text" name="left_hoffmann" value="{{ old('left_hoffmann') }}" /></td>
-            <td><input class="form-control" type="text" name="left_ff" value="{{ old('left_ff') }}" /></td>
+
+					<tr>
+            <th>left</th>
+            <td><input class="form-control" type="text" name="left_biceps" value="{{ old('left_biceps') }}" />
+							@if($errors->has('left_biceps'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('left_biceps') }}</div></span>
+							@endif
+						</td>
+            <td><input class="form-control" type="text" name="left_triceps" value="{{ old('left_triceps') }}" />
+							@if($errors->has('left_triceps'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('left_triceps') }}</div></span>
+							@endif
+						</td>
+            <td><input class="form-control" type="text" name="left_supinator" value="{{ old('left_supinator') }}" />
+							@if($errors->has('left_supinator'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('left_supinator') }}</div></span>
+							@endif
+						</td>
+            <td><input class="form-control" type="text" name="left_knee" value="{{ old('left_knee') }}" />
+							@if($errors->has('left_knee'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('left_knee') }}</div></span>
+							@endif
+						</td>
+            <td><input class="form-control" type="text" name="left_ankle" value="{{ old('left_ankle') }}" />
+							@if($errors->has('left_ankle'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('left_ankle') }}</div></span>
+							@endif
+						</td>
+            <td><input class="form-control" type="text" name="left_hoffmann" value="{{ old('left_hoffmann') }}" />
+							@if($errors->has('left_hoffmann'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('left_hoffmann') }}</div></span>
+							@endif
+						</td>
+            <td><input class="form-control" type="text" name="left_ff" value="{{ old('left_ff') }}" />
+							@if($errors->has('left_ff'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('left_ff') }}</div></span>
+							@endif
+						</td>
           </tr>
+
         </tbody>
       </table>
     </div>
@@ -260,6 +355,10 @@
         </div>
         <div class="col-md-6">
           <input class="form-control" type="text" name="plantars" value="{{ old('plantars') }}"/>
+					@if($errors->has('plantars'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('plantars') }}</div></span>
+					@endif
+
         </div>
       </div>
       <div class="col-md-6">
@@ -268,6 +367,10 @@
         </div>
         <div class="col-md-6">
           <input class="form-control" type="text" name="romberg" value="{{ old('romberg') }}" />
+					@if($errors->has('romberg'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('romberg') }}</div></span>
+					@endif
+
         </div>
       </div>
     </div>
@@ -279,6 +382,10 @@
         </div>
         <div class="col-md-6">
           <input class="form-control" type="text" name="gait" value="{{ old('gait') }}" />
+					@if($errors->has('gait'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('gait') }}</div></span>
+					@endif
+
         </div>
       </div>
       <div class="col-md-6">
@@ -302,6 +409,10 @@
         </div>
         <div class="col-md-6">
           <input class="form-control" type="text" name="neck_stiffness" value="{{ old('neck_stiffness') }}"/>
+					@if($errors->has('neck_stiffness'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('neck_stiffness') }}</div></span>
+					@endif
+
         </div>
       </div>
     </div>
@@ -313,6 +424,10 @@
         </div>
         <div class="col-md-6">
           <input class="form-control" type="text" name="diagnosis" value="{{ old('diagnosis') }}"/>
+					@if($errors->has('diagnosis'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('diagnosis') }}</div></span>
+					@endif
+
         </div>
       </div>
     </div>

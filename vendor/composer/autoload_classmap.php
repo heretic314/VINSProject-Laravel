@@ -7,7 +7,9 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\BloodTransfusionForm' => $baseDir . '/app/BloodTransfusionForm.php',
+    'App\\CPRFormat' => $baseDir . '/app/CPRFormat.php',
     'App\\CodeBlueEvaluationForm' => $baseDir . '/app/CodeBlueEvaluationForm.php',
+    'App\\CompleteNursingAssessment' => $baseDir . '/app/CompleteNursingAssessment.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\DoctorsDailyNotes' => $baseDir . '/app/DoctorsDailyNotes.php',
     'App\\DoctorsHandover' => $baseDir . '/app/DoctorsHandover.php',
@@ -45,6 +47,7 @@ return array(
     'App\\User' => $baseDir . '/app/User.php',
     'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
     'AssertionError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+    'CPRFormatSeeder' => $baseDir . '/database/seeds/CPRFormatSeeder.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'Carbon\\Exceptions\\InvalidDateException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
@@ -3274,6 +3277,7 @@ return array(
     'XdgBaseDir\\Xdg' => $vendorDir . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
     'bloodtransfusionformseeder' => $baseDir . '/database/seeds/bloodtransfusionformseeder.php',
     'codeblueevaluationformseeder' => $baseDir . '/database/seeds/codeblueevaluationformseeder.php',
+    'completenursingassessmentseeder' => $baseDir . '/database/seeds/completenursingassessmentseeder.php',
     'doctorsdailynotesseeder' => $baseDir . '/database/seeds/doctorsdailynotesseeder.php',
     'doctorshandoverseeder' => $baseDir . '/database/seeds/doctorshandoverseeder.php',
     'doctorsinitialassessmentseeder' => $baseDir . '/database/seeds/doctorsinitialassessmentseeder.php',

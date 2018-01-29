@@ -1,0 +1,116 @@
+<?php
+
+use Faker\Generator as Faker;
+
+$factory->define(App\CPRFormat::class, function (Faker $faker) {
+    return [
+
+      'patient_name'=> $faker->word,
+      'ipd_no'=> $faker->word,
+
+      'age'=> $faker->word,
+      'sex'=> $faker->word,
+      'date'=> $faker->date,
+      'start_time'=> $faker->time,
+      'bed_no'=> $faker->word,
+      'diagnosis'=> $faker->word,
+      'name_doctor'=> $faker->word,
+      'cpr_team'=> $faker->word,
+      'intubation_time'=> $faker->time,
+      'defib_rhythm_00'=> $faker->word,
+      'defib_rhythm_01'=> $faker->word,
+      'defib_rhythm_02'=> $faker->word,
+      'defib_rhythm_03'=> $faker->word,
+      'defib_rhythm_04'=> $faker->word,
+
+      'defib_dc_00'=> $faker->word,
+      'defib_dc_01'=> $faker->word,
+      'defib_dc_02'=> $faker->word,
+      'defib_dc_03'=> $faker->word,
+      'defib_dc_04'=> $faker->word,
+
+      'medication_time_00'=> $faker->time,
+      'medication_name_01'=> $faker->word,
+      'medication_time_10'=> $faker->time,
+      'medication_name_11'=> $faker->word,
+      'medication_time_20'=> $faker->time,
+      'medication_name_21'=> $faker->word,
+      'medication_time_30'=> $faker->time,
+      'medication_name_31'=> $faker->word,
+      'medication_time_40'=> $faker->time,
+      'medication_name_41'=> $faker->word,
+
+      'total_time'=> $faker->time,
+      'outcome'=> $faker->word,
+      'doctor_name'=> $faker->word,
+      'remarks'=> $faker->word,
+
+      'consultant_counseled'=> $faker->word,
+      'relative_name'=> $faker->word,
+      'initial_time'=>$faker->time,
+      '00_01'=> $faker->word,
+      '00_02'=> $faker->word,
+      '00_03'=> $faker->word,
+      '00_04'=> $faker->word,
+      '00_05'=> $faker->word,
+      '00_06'=> $faker->word,
+      '00_07'=> $faker->word,
+      '00_08'=> $faker->word,
+
+      '01_01'=> $faker->word,
+      '01_02'=> $faker->word,
+      '01_03'=> $faker->word,
+      '01_04'=> $faker->word,
+      '01_05'=> $faker->word,
+      '01_06'=> $faker->word,
+      '01_07'=> $faker->word,
+      '01_08'=> $faker->word,
+
+      '02_01'=> $faker->word,
+      '02_02'=> $faker->word,
+      '02_03'=> $faker->word,
+      '02_04'=> $faker->word,
+      '02_05'=> $faker->word,
+      '02_06'=> $faker->word,
+      '02_07'=> $faker->word,
+      '02_08'=> $faker->word,
+
+      '03_01'=> $faker->word,
+      '03_02'=> $faker->word,
+      '03_03'=> $faker->word,
+      '03_04'=> $faker->word,
+      '03_05'=> $faker->word,
+      '03_06'=> $faker->word,
+      '03_07'=> $faker->word,
+      '03_08'=> $faker->word,
+
+      '04_01'=> $faker->word,
+      '04_02'=> $faker->word,
+      '04_03'=> $faker->word,
+      '04_04'=> $faker->word,
+      '04_05'=> $faker->word,
+      '04_06'=> $faker->word,
+      '04_07'=> $faker->word,
+      '04_08'=> $faker->word,
+
+      '05_01'=> $faker->word,
+      '05_02'=> $faker->word,
+      '05_03'=> $faker->word,
+      '05_04'=> $faker->word,
+      '05_05'=> $faker->word,
+      '05_06'=> $faker->word,
+      '05_07'=> $faker->word,
+      '05_08'=> $faker->word,
+
+      '06_01'=> $faker->word,
+      '06_02'=> $faker->word,
+      '06_03'=> $faker->word,
+      '06_04'=> $faker->word,
+      '06_05'=> $faker->word,
+      '06_06'=> $faker->word,
+      '06_07'=> $faker->word,
+      '06_08'=> $faker->word,
+    ];
+
+
+});

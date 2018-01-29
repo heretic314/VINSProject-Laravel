@@ -312,7 +312,9 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
 
     public static $classMap = array (
         'App\\BloodTransfusionForm' => __DIR__ . '/../..' . '/app/BloodTransfusionForm.php',
+        'App\\CPRFormat' => __DIR__ . '/../..' . '/app/CPRFormat.php',
         'App\\CodeBlueEvaluationForm' => __DIR__ . '/../..' . '/app/CodeBlueEvaluationForm.php',
+        'App\\CompleteNursingAssessment' => __DIR__ . '/../..' . '/app/CompleteNursingAssessment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\DoctorsDailyNotes' => __DIR__ . '/../..' . '/app/DoctorsDailyNotes.php',
         'App\\DoctorsHandover' => __DIR__ . '/../..' . '/app/DoctorsHandover.php',
@@ -350,6 +352,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
+        'CPRFormatSeeder' => __DIR__ . '/../..' . '/database/seeds/CPRFormatSeeder.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
@@ -3579,6 +3582,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
         'bloodtransfusionformseeder' => __DIR__ . '/../..' . '/database/seeds/bloodtransfusionformseeder.php',
         'codeblueevaluationformseeder' => __DIR__ . '/../..' . '/database/seeds/codeblueevaluationformseeder.php',
+        'completenursingassessmentseeder' => __DIR__ . '/../..' . '/database/seeds/completenursingassessmentseeder.php',
         'doctorsdailynotesseeder' => __DIR__ . '/../..' . '/database/seeds/doctorsdailynotesseeder.php',
         'doctorshandoverseeder' => __DIR__ . '/../..' . '/database/seeds/doctorshandoverseeder.php',
         'doctorsinitialassessmentseeder' => __DIR__ . '/../..' . '/database/seeds/doctorsinitialassessmentseeder.php',
