@@ -16,6 +16,12 @@
 			</div>
 		</div>
 	</div>
+
+	@if ($errors->any())
+			<div class="alert alert-danger" role="alert">
+					Please fix the following errors
+			</div>
+	@endif
 	<form action="{{ url('/LabSheet') }}" method="post">
 		{{ csrf_field() }}
 

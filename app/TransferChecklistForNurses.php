@@ -1,0 +1,127 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class TransferChecklistForNurses extends Model
+{
+  protected $table = 'transferchecklistfornurses';
+
+  protected $fillable = [
+
+    'transfer_to',
+
+      'transfer_from',
+      'no01',
+      'ch01',
+      'no02',
+      'ch02',
+      'no03',
+      'ch03',
+      'no04',
+      'ch04',
+      'no05',
+      'ch05',
+      'no06',
+      'ch06',
+      'no07',
+      'ch07',
+      'no08',
+      'ch08',
+      'no09',
+      'ch09',
+      'no10',
+      'ch10',
+
+      'no11',
+      'ch11',
+      'no12',
+      'ch12',
+      'no13',
+      'ch13',
+      'no14',
+      'ch14',
+      'no15',
+      'ch15',
+      'no16',
+      'ch16',
+      'no17',
+      'ch17',
+      'no18',
+      'ch18',
+      'no19',
+      'ch19',
+      'no20',
+      'ch20',
+
+      'no21',
+      'ch21',
+      'no22',
+      'ch22',
+      'no23',
+      'ch23',
+      'no24',
+      'ch24',
+      'no25',
+      'ch25',
+      'no26',
+      'ch26',
+      'no27',
+      'ch27',
+      'no28',
+      'ch28',
+      'no29',
+      'ch29',
+      'no30',
+      'ch30',
+
+
+
+      'ch31',
+      'no32',
+      'ch32',
+      'no33',
+      'ch33',
+      'no34',
+      'ch34',
+      'no35',
+      'ch35',
+      'no36',
+      'ch36',
+      'no37',
+      'ch37',
+      'no38',
+      'ch38',
+      'no39',
+      'ch39',
+      'no40',
+      'ch40',
+
+
+      'no41',
+      'ch41',
+      'no42',
+      'ch42',
+
+      'pod01',
+      'pod02',
+      'pod03',
+      'pod04',
+      'pod05',
+      'pod06',
+      'pod07',
+      'pod08',
+      'pod09',
+      'pod010',
+      'pod011',
+      'pod012',
+      'pod013',
+      'tn01',
+      'tn02',
+      'tn03',
+      'rn01',
+      'rn02',
+      'rn03'
+    ];
+}

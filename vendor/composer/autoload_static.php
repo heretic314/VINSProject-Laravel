@@ -347,6 +347,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\RadiologyRequisition' => __DIR__ . '/../..' . '/app/RadiologyRequisition.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
@@ -3658,6 +3659,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
         'planofcareseeder' => __DIR__ . '/../..' . '/database/seeds/planofcareseeder.php',
+        'radiologyrequisitionseeder' => __DIR__ . '/../..' . '/database/seeds/radiologyrequisitionseeder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

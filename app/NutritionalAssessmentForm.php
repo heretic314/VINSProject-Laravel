@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class NutritionalAssessmentForm extends Model
 {
-  protected $table="nutritionalassessmentform";
+  protected $table = 'nutritionalassessmentform';
 
   protected $fillable = [
 

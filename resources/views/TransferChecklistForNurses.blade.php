@@ -16,26 +16,31 @@
 		</div>
 	</div>
 	</div>
-</div>
+
+	@if ($errors->any())
+			<div class="alert alert-danger" role="alert">
+					Please fix the following errors
+			</div>
+	@endif
 
 
 <div class="container">
-  <form id="transferchecklistnurse" method="post" >
+	<form action="{{ url('/TransferChecklistForNurses') }}" method="post">
+		{{ csrf_field() }}
+
 
   <div class="row">
 	<div class="col-md-10">
 	  <div class="form-group">
 		<label>Transfer To :</label>
-		<input class="form-control " type="textbox" id="transfer_to" placeholder="Transfer To">
+		<input class="form-control " type="textbox" name="transfer_to" placeholder="Transfer To">
 	  </div>
 	  <div class="form-group">
 		<label>Transfer From :</label>
-		<input class="form-control" type="textbox" id="transfer_from" placeholder="Transfer From">
+		<input class="form-control" type="textbox" name="transfer_from" placeholder="Transfer From">
 	  </div>
 	</div>
-	<div class="col-md-2 text-right">
-		<textarea class="form-control text-right" id="Addressograph" rows="3" placeholder="Addressograph Here"></textarea>
-	</div>
+
   </div>
   <div class="row">
 
@@ -55,12 +60,12 @@
 			  <td>Main Front Sheet</td>
 			  <td>
 			    <div class="form-group">
-				<input class="form-control" type="textbox" id="no01">
+				<input class="form-control" type="textbox" name="no01">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch01">
+				<input type="textbox" class="form-control" name="ch01">
 				</div>
 			  </td>
 			</tr>
@@ -69,12 +74,12 @@
 			  <td>Patient Information Form</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no02">
+				<input type="textbox" class="form-control" name="no02">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch02">
+				<input type="textbox" class="form-control" name="ch02">
 				</div>
 			  </td>
 			</tr>
@@ -83,12 +88,12 @@
 			  <td>Complete Nursing Assessment Form</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no03">
+				<input type="textbox" class="form-control" name="no03">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch03">
+				<input type="textbox" class="form-control" name="ch03">
 				</div>
 			  </td>
 			</tr>
@@ -97,12 +102,12 @@
 			  <td>If MLC, PS, FIR/no., MLC Cons</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no04">
+				<input type="textbox" class="form-control" name="no04">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch04">
+				<input type="textbox" class="form-control" name="ch04">
 				</div>
 			  </td>
 			</tr>
@@ -111,12 +116,12 @@
 			  <td>Ref Dr. Sheet</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no05">
+				<input type="textbox" class="form-control" name="no05">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch05">
+				<input type="textbox" class="form-control" name="ch05">
 				</div>
 			  </td>
 			</tr>
@@ -125,12 +130,12 @@
 			  <td>History Sheet</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no06">
+				<input type="textbox" class="form-control" name="no06">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch06">
+				<input type="textbox" class="form-control" name="ch06">
 				</div>
 			  </td>
 			</tr>
@@ -139,12 +144,12 @@
 			  <td>Consultant's Note</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no07">
+				<input type="textbox" class="form-control" name="no07">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch07">
+				<input type="textbox" class="form-control" name="ch07">
 				</div>
 			  </td>
 			</tr>
@@ -153,12 +158,12 @@
 			  <td>General Informed consent</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no08">
+				<input type="textbox" class="form-control" name="no08">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch08">
+				<input type="textbox" class="form-control" name="ch08">
 				</div>
 			  </td>
 			</tr>
@@ -167,12 +172,12 @@
 			  <td>Consent for Valuable</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no09">
+				<input type="textbox" class="form-control" name="no09">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch09">
+				<input type="textbox" class="form-control" name="ch09">
 				</div>
 			  </td>
 			</tr>
@@ -181,12 +186,12 @@
 			  <td>Restrain Consent</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no10">
+				<input type="textbox" class="form-control" name="no10">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch10">
+				<input type="textbox" class="form-control" name="ch10">
 				</div>
 			  </td>
 			</tr>
@@ -195,12 +200,12 @@
 			  <td>Information And Anesthesia Consent</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no11">
+				<input type="textbox" class="form-control" name="no11">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch11">
+				<input type="textbox" class="form-control" name="ch11">
 				</div>
 			  </td>
 			</tr>
@@ -209,12 +214,12 @@
 			  <td>Consent for Surgery/Procedure</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no12">
+				<input type="textbox" class="form-control" name="no12">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch12">
+				<input type="textbox" class="form-control" name="ch12">
 				</div>
 			  </td>
 			</tr>
@@ -223,12 +228,12 @@
 			  <td>High Risk Consent</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no13">
+				<input type="textbox" class="form-control" name="no13">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch13">
+				<input type="textbox" class="form-control" name="ch13">
 				</div>
 			  </td>
 			</tr>
@@ -237,12 +242,12 @@
 			  <td>Consent for Special Procedure</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no14">
+				<input type="textbox" class="form-control" name="no14">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch14">
+				<input type="textbox" class="form-control" name="ch14">
 				</div>
 			  </td>
 			</tr>
@@ -251,12 +256,12 @@
 			  <td>Patient Transfer Checklist</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no15">
+				<input type="textbox" class="form-control" name="no15">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch15">
+				<input type="textbox" class="form-control" name="ch15">
 				</div>
 			  </td>
 			</tr>
@@ -265,12 +270,12 @@
 			  <td>Pre Angio Checklist</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no16">
+				<input type="textbox" class="form-control" name="no16">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch16">
+				<input type="textbox" class="form-control" name="ch16">
 				</div>
 			  </td>
 			</tr>
@@ -279,12 +284,12 @@
 			  <td>PAC & ANesthesia Notes</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no17">
+				<input type="textbox" class="form-control" name="no17">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch17">
+				<input type="textbox" class="form-control" name="ch17">
 				</div>
 			  </td>
 			</tr>
@@ -293,12 +298,12 @@
 			  <td>Pre-OT Checklist</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no18">
+				<input type="textbox" class="form-control" name="no18">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch18">
+				<input type="textbox" class="form-control" name="ch18">
 				</div>
 			  </td>
 			</tr>
@@ -307,12 +312,12 @@
 			  <td>Anesthesia Record</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no19">
+				<input type="textbox" class="form-control" name="no19">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch19">
+				<input type="textbox" class="form-control" name="ch19">
 				</div>
 			  </td>
 			</tr>
@@ -321,12 +326,12 @@
 			  <td>Doctor's Daily Record</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no20">
+				<input type="textbox" class="form-control" name="no20">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch20">
+				<input type="textbox" class="form-control" name="ch20">
 				</div>
 			  </td>
 			</tr>
@@ -335,12 +340,12 @@
 			  <td>Treatment/MAR/Flow Sheet</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no21">
+				<input type="textbox" class="form-control" name="no21">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch21">
+				<input type="textbox" class="form-control" name="ch21">
 				</div>
 			  </td>
 			</tr>
@@ -349,12 +354,12 @@
 			  <td>Glasgow Coma Scale Charting</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no22">
+				<input type="textbox" class="form-control" name="no22">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch22">
+				<input type="textbox" class="form-control" name="ch22">
 				</div>
 			  </td>
 			</tr>
@@ -363,12 +368,12 @@
 			  <td>Ventilator Chart</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no23">
+				<input type="textbox" class="form-control" name="no23">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch23">
+				<input type="textbox" class="form-control" name="ch23">
 				</div>
 			  </td>
 			</tr>
@@ -377,12 +382,12 @@
 			  <td>Infusion Therapy Chart</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no24">
+				<input type="textbox" class="form-control" name="no24">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch24">
+				<input type="textbox" class="form-control" name="ch24">
 				</div>
 			  </td>
 			</tr>
@@ -391,12 +396,12 @@
 			  <td>Blood Monitoring Sheet</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no25">
+				<input type="textbox" class="form-control" name="no25">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch25">
+				<input type="textbox" class="form-control" name="ch25">
 				</div>
 			  </td>
 			</tr>
@@ -405,12 +410,12 @@
 			  <td>Nursing Duty Over</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no26">
+				<input type="textbox" class="form-control" name="no26">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch26">
+				<input type="textbox" class="form-control" name="ch26">
 				</div>
 			  </td>
 			</tr>
@@ -419,12 +424,12 @@
 			  <td>RBS Charting</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no27">
+				<input type="textbox" class="form-control" name="no27">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch27">
+				<input type="textbox" class="form-control" name="ch27">
 				</div>
 			  </td>
 			</tr>
@@ -433,12 +438,12 @@
 			  <td>Investigation Sheet</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no28">
+				<input type="textbox" class="form-control" name="no28">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch28">
+				<input type="textbox" class="form-control" name="ch28">
 				</div>
 			  </td>
 			</tr>
@@ -447,12 +452,12 @@
 			  <td>Lab Sheet</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no29">
+				<input type="textbox" class="form-control" name="no29">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch29">
+				<input type="textbox" class="form-control" name="ch29">
 				</div>
 			  </td>
 			</tr>
@@ -461,12 +466,12 @@
 			  <td>Pathlology Investigation Reports</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no30">
+				<input type="textbox" class="form-control" name="no30">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch30">
+				<input type="textbox" class="form-control" name="ch30">
 				</div>
 			  </td>
 			</tr>
@@ -475,12 +480,12 @@
 			  <td>Radiology Investigation Reports</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no31">
+				<input type="textbox" class="form-control" name="no31">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch31">
+				<input type="textbox" class="form-control" name="ch31">
 				</div>
 			  </td>
 			</tr>
@@ -489,12 +494,12 @@
 			  <td>X-RAY</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no32">
+				<input type="textbox" class="form-control" name="no32">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch32">
+				<input type="textbox" class="form-control" name="ch32">
 				</div>
 			  </td>
 			</tr>
@@ -503,12 +508,12 @@
 			  <td>MRI</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no33">
+				<input type="textbox" class="form-control" name="no33">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch33">
+				<input type="textbox" class="form-control" name="ch33">
 				</div>
 			  </td>
 			</tr>
@@ -517,12 +522,12 @@
 			  <td>CT Scan</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no34">
+				<input type="textbox" class="form-control" name="no34">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch34">
+				<input type="textbox" class="form-control" name="ch34">
 				</div>
 			  </td>
 			</tr>
@@ -531,12 +536,12 @@
 			  <td>ECG</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no35">
+				<input type="textbox" class="form-control" name="no35">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch35">
+				<input type="textbox" class="form-control" name="ch35">
 				</div>
 			  </td>
 			</tr>
@@ -545,12 +550,12 @@
 			  <td>USG</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no36">
+				<input type="textbox" class="form-control" name="no36">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch36">
+				<input type="textbox" class="form-control" name="ch36">
 				</div>
 			  </td>
 			</tr>
@@ -559,12 +564,12 @@
 			  <td>Physiotherapy Notes</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no37">
+				<input type="textbox" class="form-control" name="no37">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch37">
+				<input type="textbox" class="form-control" name="ch37">
 				</div>
 			  </td>
 			</tr>
@@ -573,12 +578,12 @@
 			  <td>Nutritional Assessment</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no38">
+				<input type="textbox" class="form-control" name="no38">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch38">
+				<input type="textbox" class="form-control" name="ch38">
 				</div>
 			  </td>
 			</tr>
@@ -587,12 +592,12 @@
 			  <td>Bills of Pharmacy Implant etc.</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no39">
+				<input type="textbox" class="form-control" name="no39">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch39">
+				<input type="textbox" class="form-control" name="ch39">
 				</div>
 			  </td>
 			</tr>
@@ -601,12 +606,12 @@
 			  <td>Ward Procedure Record</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no40">
+				<input type="textbox" class="form-control" name="no40">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch40">
+				<input type="textbox" class="form-control" name="ch40">
 				</div>
 			  </td>
 			</tr>
@@ -615,12 +620,12 @@
 			  <td>Visiting Charge Sheet</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no41">
+				<input type="textbox" class="form-control" name="no41">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch41">
+				<input type="textbox" class="form-control" name="ch41">
 				</div>
 			  </td>
 			</tr>
@@ -629,12 +634,12 @@
 			  <td>Other</td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="no42">
+				<input type="textbox" class="form-control" name="no42">
 				</div>
 			  </td>
 			  <td>
 			    <div class="form-group">
-				<input type="textbox" class="form-control" id="ch42">
+				<input type="textbox" class="form-control" name="ch42">
 				</div>
 			  </td>
 			</tr>
@@ -642,7 +647,9 @@
 		</tbody>
 	  </table>
 	</div>
+</div>
 
+	<div class="row">
 	<div class="col-md-4">
 	  <table class="table">
 		<thead>
@@ -655,7 +662,7 @@
 		    <td>Foley's</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="textbox" id="pod01">
+				<input class="form-control" type="textbox" name="pod01">
 				</div>
 			</td>
 		  </tr>
@@ -663,7 +670,7 @@
 		    <td>CVC</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="textbox" id="pod02">
+				<input class="form-control" type="textbox" name="pod02">
 				</div>
 			</td>
 		  </tr>
@@ -671,7 +678,7 @@
 		    <td>IV Line</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="textbox" id="pod03">
+				<input class="form-control" type="textbox" name="pod03">
 				</div>
 			</td>
 		  </tr>
@@ -679,7 +686,7 @@
 		    <td>TT</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="textbox" id="pod04">
+				<input class="form-control" type="textbox" name="pod04">
 				</div>
 			</td>
 		  </tr>
@@ -687,7 +694,7 @@
 		    <td>RT/PEG</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="textbox" id="pod05">
+				<input class="form-control" type="textbox" name="pod05">
 				</div>
 			</td>
 		  </tr>
@@ -695,7 +702,7 @@
 		    <td>Drain</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="textbox" id="pod06">
+				<input class="form-control" type="textbox" name="pod06">
 				</div>
 			</td>
 		  </tr>
@@ -703,7 +710,7 @@
 		    <td>Temp</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="textbox" id="pod07">
+				<input class="form-control" type="textbox" name="pod07">
 				</div>
 			</td>
 		  </tr>
@@ -711,7 +718,7 @@
 		    <td>Pulse</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="textbox" id="pod08">
+				<input class="form-control" type="textbox" name="pod08">
 				</div>
 			</td>
 		  </tr>
@@ -719,7 +726,7 @@
 		    <td>Resp</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="textbox" id="pod09">
+				<input class="form-control" type="textbox" name="pod09">
 				</div>
 			</td>
 		  </tr>
@@ -727,7 +734,7 @@
 		    <td>BP</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="textbox" id="pod10">
+				<input class="form-control" type="textbox" name="pod10">
 				</div>
 			</td>
 		  </tr>
@@ -735,7 +742,7 @@
 		    <td>SPO2</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="textbox" id="pod11">
+				<input class="form-control" type="textbox" name="pod11">
 				</div>
 			</td>
 		  </tr>
@@ -743,7 +750,7 @@
 		    <td>Diet</td>
 			<td>
 			    <div class="form-group">
-				<textarea class="form-control" id="pod12" placeholder="Diet" rows="3"></textarea>
+				<textarea class="form-control" name="pod12" placeholder="Diet" rows="3"></textarea>
 				</div>
 			</td>
 		  </tr>
@@ -751,17 +758,19 @@
 		    <td>Other Note</td>
 			<td>
 			    <div class="form-group">
-				<textarea class="form-control" id="pod13" placeholder="Other Notes" rows="4"></textarea>
+				<textarea class="form-control" name="pod13" placeholder="Other Notes" rows="4"></textarea>
 				</div>
 			</td>
-		  </tr>
+		</tr></div></div>
+			<div class="row">
+				<div class="col-md-6">
 		  <tr>
 			<th colspan="2">Transferred Nurse</th>
 		  <tr>
 		    <td>Name & ID</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="textbox" id="tn01">
+				<input class="form-control" type="textbox" name="tn01">
 				</div>
 			</td>
 		  </tr>
@@ -769,7 +778,7 @@
 		    <td>Date</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="date" id="tn02">
+				<input class="form-control" type="date" name="tn02">
 				</div>
 			</td>
 		  </tr>
@@ -777,17 +786,19 @@
 		    <td>Time</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="time" id="tn03">
+				<input class="form-control" type="time" name="tn03">
 				</div>
 			</td>
 		  </tr>
+		</div>
+		<div class="col-md-06">
 		  <tr>
 			<th colspan="2">Recieved Nurse</th>
 		  <tr>
 		    <td>Name & ID</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="textbox" id="rn01">
+				<input class="form-control" type="textbox" name="rn01">
 				</div>
 			</td>
 		  </tr>
@@ -795,7 +806,7 @@
 		    <td>Date</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="date" id="rn02">
+				<input class="form-control" type="date" name="rn02">
 				</div>
 			</td>
 		  </tr>
@@ -803,16 +814,19 @@
 		    <td>Time</td>
 			<td>
 			    <div class="form-group">
-				<input class="form-control" type="time" id="rn03">
+				<input class="form-control" type="time" name="rn03">
 				</div>
 			</td>
 		  </tr>
 		</tbody>
-
+	</table>
+	</div>
+</div>
+	<div class="row form-group">
+		<button class="btn btn-success" type="submit">Submit</button>
 	</div>
 
-  </div>
-
   </form>
+
 </div>
 @endsection

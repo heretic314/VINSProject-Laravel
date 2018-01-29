@@ -861,12 +861,170 @@ Route::group(['middleware' => ['auth']], function() {
     return view('Index');
   });
 
+  Route::get('/RadiologyRequisition', function(){
+    return view('RadiologyRequisition');
+  });
+
+  Route::post('/RadiologyRequisition', function(Request $request){
+    $data = $request->validate([
+      'provisional_diagnosis' => 'max:255|required',
+      'brain_plain' => 'max:255',
+      'ct_pmns' => 'max:255',
+      'brain_plain_contrast' => 'max:255',
+      'ct_head_face' => 'max:255',
+      'ct_face_plain' => 'max:255',
+      'ct_3d' => 'max:255',
+      'ct_cv_junction_flex' => 'max:255',
+      'ct_cv_junction_ext' => 'max:255',
+      'ct_chest_plain' => 'max:255',
+      'ct_dorsal_spine' => 'max:255',
+      'ct_cervical_spine' => 'max:255',
+      'ct_abdomen_plain' => 'max:255',
+      'ct_lumbar_spine' => 'max:255',
+      'other' => 'max:255',
+      'anyother' => 'max:255',
+      'xray_fixed' => 'max:255',
+      'xray_portable' => 'max:255',
+      'other_xray' => 'max:255',
+      'xray_other' => 'max:255',
+      'date' => 'max:255|required',
+      'time' => 'max:255|required',
+    ]);
+
+    $link = tap(new App\RadiologyRequisition($data))->save();
+
+    return view('Index');
+  });
+
   Route::get('/PreAngiographyAngioplastyChecklist', function(){
       return view('PreAngiographyAngioplastyChecklist');
   });
 
   Route::get('/TransferChecklistForNurses', function(){
       return view('TransferChecklistForNurses');
+  });
+  Route::post('/TransferChecklistForNurses', function(Request $request){
+    $data = $request->validate([
+
+      'transfer_to'=> 'max:255|required',
+
+      'transfer_from'=> 'max:255|required',
+      'no01'=> 'max:255|required',
+      'ch01'=> 'max:255|required',
+      'no02'=> 'max:255|required',
+      'ch02'=> 'max:255|required',
+      'no03'=> 'max:255|required',
+      'ch03'=> 'max:255|required',
+      'no04'=> 'max:255|required',
+      'ch04'=> 'max:255|required',
+      'no05'=> 'max:255|required',
+      'ch05'=> 'max:255|required',
+      'no06'=> 'max:255|required',
+      'ch06'=> 'max:255|required',
+      'no07'=> 'max:255|required',
+      'ch07'=> 'max:255|required',
+      'no08'=> 'max:255|required',
+      'ch08'=> 'max:255|required',
+      'no09'=> 'max:255|required',
+      'ch09'=> 'max:255|required',
+      'no10'=> 'max:255|required',
+      'ch10'=> 'max:255|required',
+
+      'no11'=> 'max:255|required',
+      'ch11'=> 'max:255|required',
+      'no12'=> 'max:255|required',
+      'ch12'=> 'max:255|required',
+      'no13'=> 'max:255|required',
+      'ch13'=> 'max:255|required',
+      'no14'=> 'max:255|required',
+      'ch14'=> 'max:255|required',
+      'no15'=> 'max:255|required',
+      'ch15'=> 'max:255|required',
+      'no16'=> 'max:255|required',
+      'ch16'=> 'max:255|required',
+      'no17'=> 'max:255|required',
+      'ch17'=> 'max:255|required',
+      'no18'=> 'max:255|required',
+      'ch18'=> 'max:255|required',
+      'no19'=> 'max:255|required',
+      'ch19'=> 'max:255|required',
+      'no20'=> 'max:255|required',
+      'ch20'=> 'max:255|required',
+
+      'no21'=> 'max:255|required',
+      'ch21'=> 'max:255|required',
+      'no22'=> 'max:255|required',
+      'ch22'=> 'max:255|required',
+      'no23'=> 'max:255|required',
+      'ch23'=> 'max:255|required',
+      'no24'=> 'max:255|required',
+      'ch24'=> 'max:255|required',
+      'no25'=> 'max:255|required',
+      'ch25'=> 'max:255|required',
+      'no26'=> 'max:255|required',
+      'ch26'=> 'max:255|required',
+      'no27'=> 'max:255|required',
+      'ch27'=> 'max:255|required',
+      'no28'=> 'max:255|required',
+      'ch28'=> 'max:255|required',
+      'no29'=> 'max:255|required',
+      'ch29'=> 'max:255|required',
+      'no30'=> 'max:255|required',
+      'ch30'=> 'max:255|required',
+
+
+
+      'ch31'=> 'max:255|required',
+      'no32'=> 'max:255|required',
+      'ch32'=> 'max:255|required',
+      'no33'=> 'max:255|required',
+      'ch33'=> 'max:255|required',
+      'no34'=> 'max:255|required',
+      'ch34'=> 'max:255|required',
+      'no35'=> 'max:255|required',
+      'ch35'=> 'max:255|required',
+      'no36'=> 'max:255|required',
+      'ch36'=> 'max:255|required',
+      'no37'=> 'max:255|required',
+      'ch37'=> 'max:255|required',
+      'no38'=> 'max:255|required',
+      'ch38'=> 'max:255|required',
+      'no39'=> 'max:255|required',
+      'ch39'=> 'max:255|required',
+      'no40'=> 'max:255|required',
+      'ch40'=> 'max:255|required',
+
+
+      'no41'=> 'max:255|required',
+      'ch41'=> 'max:255|required',
+      'no42'=> 'max:255|required',
+      'ch42'=> 'max:255|required',
+
+      'pod01'=> 'max:255|required',
+      'pod02'=> 'max:255|required',
+      'pod03'=> 'max:255|required',
+      'pod04'=> 'max:255|required',
+      'pod05'=> 'max:255|required',
+      'pod06'=> 'max:255|required',
+      'pod07'=> 'max:255|required',
+      'pod08'=> 'max:255|required',
+      'pod09'=> 'max:255|required',
+      'pod010'=> 'max:255|required',
+      'pod011'=> 'max:255|required',
+      'pod012'=> 'max:255|required',
+      'pod013'=> 'max:255|required',
+      'tn01'=> 'max:255|required',
+      'tn02'=> 'max:255|required',
+      'tn03'=> 'max:255|required',
+      'rn01'=> 'max:255|required',
+      'rn02'=> 'max:255|required',
+      'rn03'=> 'max:255|required',
+
+    ]);
+
+    $link = tap(new App\TransferChecklistForNurses($data))->save();
+
+    return view('Index');
   });
 
   Route::get('/VentilatorChargeSheet', function(){
