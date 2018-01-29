@@ -48,8 +48,8 @@ return [
             'prefix' => '',
         ],
 
-
         /*Use for Amazon Hosting -- --
+
         'mysql' => [
             'driver' => 'mysql',
             'host' => RDS_HOSTNAME,
@@ -64,8 +64,8 @@ return [
             'strict' => false,
             'engine' => null,
         ],
-
         */
+
 
 
         'mysql' => [
