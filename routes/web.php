@@ -797,6 +797,26 @@ Route::group(['middleware' => ['auth']], function() {
       return view('PatientDietRecord');
   });
 
+  Route::post('/PatientDietRecord', function(Request $request){
+    $data = $request->validate([
+        'dietician_name' => 'required|max:255',
+        'date' => 'required|max:255',
+        'time' => 'required|max:255',
+        'bed_no' => 'required|max:255',
+        'uhid_no' => 'required|max:255',
+        'patient_name' => 'required|max:255',
+        'diagnosis' => 'required|max:255',
+        'consultants_name' => 'required|max:255',
+        'diet_to_be_given' => 'required|max:255',
+        'remarks' => 'required|max:255',
+
+    ]);
+
+    $link = tap(new App\PatientDietRecord($data))->save();
+
+    return view('Index');
+  });
+
   Route::get('/PatientsDetailForm', function(){
       return view('PatientsDetailForm');
   });

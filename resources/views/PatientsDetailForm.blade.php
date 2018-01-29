@@ -227,4 +227,3 @@
 
 		</form>
 	</div>
-@endsections

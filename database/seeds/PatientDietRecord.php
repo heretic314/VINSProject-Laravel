@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class MARFlowSheet extends Seeder
+class PatientDietRecord extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,5 +12,6 @@ class MARFlowSheet extends Seeder
     public function run()
     {
         //
+        factory(App\PatientDietRecord::class,4)->create();
     }
 }

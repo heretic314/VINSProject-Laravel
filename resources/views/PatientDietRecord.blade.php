@@ -18,7 +18,8 @@
 			</div>
 		</div>
 
-		<form action="patientdietrecord.php" method="post">
+		<form action="/PatientDietRecord" method="post">
+				{{ csrf_field() }}
 
 			<div class="row form-group">
 				<div class="col-md-6">
@@ -26,7 +27,12 @@
 			      <label>Dietician / Nurses Name : </label>
 					</div>
 					<div class="col-md-6">
-			      <input class="form-control" type = "text" name = "dietician_name">
+			      <input class="form-control" type = "text" name = "dietician_name" value="{{ old('history') }}">
+
+						@if($errors->has('dietician_name'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('dietician_name') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 			</div>
@@ -37,7 +43,12 @@
 			      <label>Date : </label>
 					</div>
 					<div class="col-md-6">
-			      <input class="form-control" type = "date" name = "date" />
+			      <input class="form-control" type = "date" name = "date" value="{{ old('history') }}" />
+
+						@if($errors->has('date'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('date') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -45,7 +56,12 @@
 			      <label>Time : </label>
 					</div>
 					<div class="col-md-6">
-			      <input class="form-control" type="time" name="time" />
+			      <input class="form-control" type="time" name="time" value="{{ old('history') }}" />
+
+						@if($errors->has('time'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('time') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 			</div>
@@ -56,7 +72,12 @@
 			      <label>Bed No : </label>
 					</div>
 					<div class="col-md-6">
-			      <input class="form-control" type="text" name="bed_no" />
+			      <input class="form-control" type="text" name="bed_no" value="{{ old('history') }}"/>
+
+						@if($errors->has('bed_no'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('bed_no') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 			</div>
@@ -67,7 +88,12 @@
 			      <label>UHID No : </label>
 					</div>
 					<div class="col-md-6">
-			      <input class="form-control" type="text" name="uhid_no" />
+			      <input class="form-control" type="text" name="uhid_no" value="{{ old('history') }}"/>
+
+						@if($errors->has('uhid_no'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('uhid_no') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 			</div>
@@ -78,7 +104,12 @@
 			      <label>Patient Name : </label>
 					</div>
 					<div class="col-md-6">
-			      <input class="form-control" type="text" name="patient_name" />
+			      <input class="form-control" type="text" name="patient_name" value="{{ old('history') }}"/>
+
+						@if($errors->has('patient_name'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('patient_name') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 			</div>
@@ -89,7 +120,12 @@
 			      <label>Diagnosis : </label>
 					</div>
 					<div class="col-md-6">
-			      <input class="form-control" type="text" name="diagnosis" />
+			      <input class="form-control" type="text" name="diagnosis" value="{{ old('history') }}" />
+
+						@if($errors->has('diagnosis'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('diagnosis') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -97,7 +133,12 @@
 			      <label>Consultant's Name : </label>
 					</div>
 					<div class="col-md-6">
-			      <input class="form-control" type="text" name="consultants_name" />
+			      <input class="form-control" type="text" name="consultants_name" value="{{ old('history') }}" />
+
+						@if($errors->has('consultants_name'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('consultants_name') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 			</div>
@@ -108,7 +149,12 @@
 			      <label>Diet to be Given : </label>
 					</div>
 					<div class="col-md-6">
-			      <input class="form-control" type="text" name="diet_to_be_given" />
+			      <input class="form-control" type="text" name="diet_to_be_given" value="{{ old('history') }}" />
+
+						@if($errors->has('date'))
+								<span class="help-block"><div class="diet_to_be_given-danger">{{ $errors->first('diet_to_be_given') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -116,7 +162,12 @@
 			      <label>Remarks : </label>
 					</div>
 					<div class="col-md-6">
-			      <input class="form-control" type="text" name="remarks" />
+			      <input class="form-control" type="text" name="remarks" value="{{ old('history') }}"/>
+
+						@if($errors->has('remarks'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('remarks') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 			</div>
@@ -129,4 +180,3 @@
 			</div>
 		</form>
 	</div>
-@endsection
