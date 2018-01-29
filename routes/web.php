@@ -43,6 +43,37 @@ Route::group(['middleware' => ['auth']], function() {
       return view('CodeBlueEvaluationForm');
   });
 
+  Route::post('/CodeBlueEvaluationForm',function(Request $request){
+    $data = $request->validate([
+      'drill' => 'required|max:255',
+      'actual_code_blue' => 'required|max:255',
+      '00' => 'required|max:255',
+      'comm_00' => 'max:255',
+      '01' => 'required|max:255',
+      'comm_01' => 'max:255',
+      '02' => 'required|max:255',
+      'comm_02' => 'max:255',
+      '03' => 'required|max:255',
+      'comm_03' => 'max:255',
+      '04' => 'required|max:255',
+      'comm_04' => 'max:255',
+      '05' => 'required|max:255',
+      'comm_05' => 'max:255',
+      '06' => 'required|max:255',
+      'comm_06' => 'max:255',
+      '07' => 'required|max:255',
+      'comm_07' => 'max:255',
+      '08' => 'required|max:255',
+      'comm_08' => 'max:255',
+      '09' => 'required|max:255',
+      'comm_09' => 'max:255'
+    ]);
+
+    $link = tap(new App\CodeBlueEvaluationForm($data))->save();
+
+    return view('Index');
+  });
+
   Route::get('/CompleteNursingAssessment', function(){
       return view('CompleteNursingAssessment');
   });
@@ -176,10 +207,149 @@ Route::group(['middleware' => ['auth']], function() {
   Route::get('/Glassgow', function(){
       return view('Glassgow');
   });
+  Route::post('/GlassGow',function(Request $request){
+    $data = $request->validate([
+
+      'date1' => 'required|max:255',
+      'r1c1' => 'required|max:255',
+      'r1c2' => 'required|max:255',
+      'r1c3' => 'required|max:255',
+      'r1c4' => 'required|max:255',
+      'r1c5' => 'required|max:255',
+      'r1c6' => 'required|max:255',
+      'r1c7' => 'required|max:255',
+      'r1c8' => 'required|max:255',
+      'r1c9' => 'required|max:255',
+      'r1c10' => 'required|max:255',
+      'r1c11' => 'required|max:255',
+      'r1c12' => 'required|max:255',
+
+      'r2c1' => 'required|max:255',
+      'r2c2' => 'required|max:255',
+      'r2c3' => 'required|max:255',
+      'r2c4' => 'required|max:255',
+      'r2c5' => 'required|max:255',
+      'r2c6' => 'required|max:255',
+      'r2c7' => 'required|max:255',
+      'r2c8' => 'required|max:255',
+      'r2c9' => 'required|max:255',
+      'r2c10' => 'required|max:255',
+      'r2c11' => 'required|max:255',
+      'r2c12' => 'required|max:255',
+
+      'r3c1' => 'required|max:255',
+      'r3c2' => 'required|max:255',
+      'r3c3' => 'required|max:255',
+      'r3c4' => 'required|max:255',
+      'r3c5' => 'required|max:255',
+      'r3c6' => 'required|max:255',
+      'r3c7' => 'required|max:255',
+      'r3c8' => 'required|max:255',
+      'r3c9' => 'required|max:255',
+      'r3c10' => 'required|max:255',
+      'r3c11' => 'required|max:255',
+      'r3c12' => 'required|max:255',
+
+      'r4c1' => 'required|max:255',
+      'r4c2' => 'required|max:255',
+      'r4c3' => 'required|max:255',
+      'r4c4' => 'required|max:255',
+      'r4c5' => 'required|max:255',
+      'r4c6' => 'required|max:255',
+      'r4c7' => 'required|max:255',
+      'r4c8' => 'required|max:255',
+      'r4c9' => 'required|max:255',
+      'r4c10' => 'required|max:255',
+      'r4c11' => 'required|max:255',
+      'r4c12' => 'required|max:255',
+
+      'r5c1' => 'required|max:255',
+      'r5c2' => 'required|max:255',
+      'r5c3' => 'required|max:255',
+      'r5c4' => 'required|max:255',
+      'r5c5' => 'required|max:255',
+      'r5c6' => 'required|max:255',
+      'r5c7' => 'required|max:255',
+      'r5c8' => 'required|max:255',
+      'r5c9' => 'required|max:255',
+      'r5c10' => 'required|max:255',
+      'r5c11' => 'required|max:255',
+      'r5c12' => 'required|max:255',
+
+      'r6c1' => 'required|max:255',
+      'r6c2' => 'required|max:255',
+      'r6c3' => 'required|max:255',
+      'r6c4' => 'required|max:255',
+      'r6c5' => 'required|max:255',
+      'r6c6' => 'required|max:255',
+      'r6c7' => 'required|max:255',
+      'r6c8' => 'required|max:255',
+      'r6c9' => 'required|max:255',
+      'r6c10' => 'required|max:255',
+      'r6c11' => 'required|max:255',
+      'r6c12' => 'required|max:255',
+
+    ]);
+
+    $link = tap(new App\GlassGow($data))->save();
+
+    return view('Index');
+  });
 
   Route::get('/HistoryForm', function(){
       return view('HistoryForm');
   });
+
+  Route::post('/HistoryForm', function(Request $request){
+    $data = $request->validate([
+      'chief_complaints' => 'max:255|required',
+      'patient_history' => 'max:255|required',
+      'past_history' => 'max:255|required',
+      'allergic_history' => 'max:255|required',
+      'road_accident' => 'max:255|required',
+      'alleged_roadtrafficaccident' => 'max:255|required',
+      'place' => 'max:255|required',
+      'time' => 'max:255|required',
+      'date' => 'max:255|required',
+      'ho_loc' => 'max:255|required',
+      'ho_entbleeding' => 'max:255|required',
+      'ho_seizures' => 'max:255|required',
+      'ho_vomiting' => 'max:255|required',
+      'pulse' => 'max:255|required',
+      'bp' => 'max:255|required',
+      'temp' => 'max:255|required',
+      'resp' => 'max:255|required',
+      'pain' => 'max:255|required',
+      'right_biceps' => 'max:255|required',
+      'right_triceps' => 'max:255|required',
+      'right_supinator' => 'max:255|required',
+      'right_knee' => 'max:255|required',
+      'right_ankle' => 'max:255|required',
+      'right_hoffmann' => 'max:255|required',
+      'right_ff' => 'max:255|required',
+      'left_biceps' => 'max:255|required',
+      'left_triceps' => 'max:255|required',
+      'left_supinator' => 'max:255|required',
+      'left_knee' => 'max:255|required',
+      'left_ankle' => 'max:255|required',
+      'left_hoffmann' => 'max:255|required',
+      'left_ff' => 'max:255|required',
+      'plantars' => 'max:255|required',
+      'romberg' => 'max:255|required',
+      'gait' => 'max:255|required',
+      'cerebellar' => 'max:255|required',
+      'neck_stiffness' => 'max:255|required',
+      'diagnosis' => 'max:255|required',
+
+    ]);
+
+    $link = tap(new App\HistoryForm($data))->save();
+
+    return view('Index');
+  });
+
+
+
 
   Route::get('/InvestigationSheet1', function(){
       return view('InvestigationSheet1');
@@ -187,6 +357,66 @@ Route::group(['middleware' => ['auth']], function() {
 
   Route::get('/InvestigationSheet2', function(){
       return view('InvestigationSheet2');
+  });
+
+  Route::get('/InfusionTherapyChart', function(){
+      return view('InfusionTherapyChart');
+  });
+
+  Route::post('/InfusionTherapyChart',function(Request $request){
+    $data = $request->validate([
+        'patient_name' => 'max:255|required',
+        'ipd_no' => 'max:255|required',
+        'age' => 'max:255|required',
+        'sex' => 'max:255|required',
+        'attending_consultant' => 'max:255|required',
+        'date_01' => 'max:255|required',
+        'name_str_01' => 'max:255|required',
+        'volume_01' => 'max:255|required',
+        'additions_01' => 'max:255|required',
+        'rate_01' => 'max:255|required',
+        'timestart_01' => 'max:255|required',
+        'timeend_01' => 'max:255|required',
+        'date_02' => 'max:255',
+        'name_str_02' => 'max:255',
+        'volume_02' => 'max:255',
+        'additions_02' => 'max:255',
+        'rate_02' => 'max:255',
+        'timestart_02' => 'max:255',
+        'timeend_02' => 'max:255',
+        'date_03' => 'max:255',
+        'name_str_03' => 'max:255',
+        'volume_03' => 'max:255',
+        'additions_03' => 'max:255',
+        'rate_03' => 'max:255',
+        'timestart_03' => 'max:255',
+        'timeend_03' => 'max:255',
+        'date_04' => 'max:255',
+        'name_str_04' => 'max:255',
+        'volume_04' => 'max:255',
+        'additions_04' => 'max:255',
+        'rate_04' => 'max:255',
+        'timestart_04' => 'max:255',
+        'timeend_04' => 'max:255',
+        'date_05' => 'max:255',
+        'name_str_05' => 'max:255',
+        'volume_05' => 'max:255',
+        'additions_05' => 'max:255',
+        'rate_05' => 'max:255',
+        'timestart_05' => 'max:255',
+        'timeend_05' => 'max:255',
+        'date_06' => 'max:255',
+        'name_str_06' => 'max:255',
+        'volume_06' => 'max:255',
+        'additions_06' => 'max:255',
+        'rate_06' => 'max:255',
+        'timestart_06' => 'max:255',
+        'timeend_06' => 'max:255'
+    ]);
+
+    $link = tap(new App\InfusionTherapyChart($data))->save();
+
+    return view('/Index');
   });
 
   Route::get('/LabSheet', function(){
@@ -345,6 +575,58 @@ Route::group(['middleware' => ['auth']], function() {
       return view('NutritionalAssessmentForm');
   });
 
+  Route::get('/OperativeDetailSheet', function(){
+      return view('OperativeDetailSheet');
+  });
+
+  Route::post('/OperativeDetailSheet', function(Request $request){
+    $data = $request->validate([
+      'ot_no' => 'max:255|required',
+      'date' => 'max:255|required',
+      'wheel_in' => 'max:255|required',
+      'wheel_out' => 'max:255|required',
+      'anesthesa_induction_time' => 'max:255|required',
+      'reversal_time' => 'max:255|required',
+      'antibiotic1' => 'max:255|required',
+      'antibiotic1_time' => 'max:255|required',
+      'antibiotic2' => 'max:255',
+      'antibiotic2_time' => 'max:255',
+      'surgical_time_from' => 'max:255|required',
+      'surgical_time_to' => 'max:255|required',
+      'surgery_type' => 'max:255|required',
+      'surgeon1' => 'max:255|required',
+      'surgeon2' => 'max:255',
+      'surgeon3' => 'max:255',
+      'anesthetist1' => 'max:255|required',
+      'anesthetist2' => 'max:255',
+      'anesthetist3' => 'max:255',
+      'iitv' => 'max:255',
+      'fentanyl' => 'max:255',
+      'drill' => 'max:255',
+      'sevoflurane_desflurane' => 'max:255',
+      'microscope' => 'max:255',
+      'endoscope' => 'max:255',
+      'cussa' => 'max:255',
+      'implants' => 'max:255',
+      'vendor' => 'max:255',
+      'diagnosis' => 'max:255|required',
+      'operation_performed' => 'max:255|required',
+      'mediclaim' => 'max:255|required',
+      'name_tpa' => 'max:255|required',
+      'company_thirdparty' => 'max:255|required',
+      'name_party' => 'max:255|required',
+      'amount' => 'max:255|required',
+      'surgery_only' => 'max:255|required',
+      'package_surgical' => 'max:255|required',
+      'package_total' => 'max:255|required',
+    ]);
+
+    $link = tap(new App\OperativeDetailSheet($data))->save();
+
+    return view('Index');
+  });
+
+
   Route::get('/PatientDietRecord', function(){
       return view('PatientDietRecord');
   });
@@ -382,6 +664,71 @@ Route::group(['middleware' => ['auth']], function() {
 
   Route::get('/PlanOfCare', function(){
       return view('PlanOfCare');
+  });
+
+  Route::post('/PlanOfCare', function(Request $request){
+    $data = $request->validate([
+      'diagnosis' => 'max:255|required',
+      'needs_goals' => 'max:255|required',
+      'treatment_plan' => 'max:255|required',
+      'preventive_aspects' => 'max:255|required',
+      'progress_00' => 'max:255',
+      'date_00' => 'max:255',
+      'progress_01' => 'max:255',
+      'date_01' => 'max:255',
+      'progress_02' => 'max:255',
+      'date_02' => 'max:255',
+      'progress_03' => 'max:255',
+      'date_03' => 'max:255',
+      'progress_04' => 'max:255',
+      'date_04' => 'max:255',
+      'progress_05' => 'max:255',
+      'date_05' => 'max:255',
+      'progress_06' => 'max:255',
+      'date_06' => 'max:255',
+      'progress_07' => 'max:255',
+      'date_07' => 'max:255',
+      'note_discharge' => 'max:255|required',
+    ]);
+
+    $link = tap(new App\PlanOfCare($data))->save();
+
+    return view('Index');
+  });
+
+  Route::get('/RadiologyRequisition', function(){
+    return view('RadiologyRequisition');
+  });
+
+  Route::post('/RadiologyRequisition', function(Request $request){
+    $data = $request->validate([
+      'provisional_diagnosis' => 'max:255|required',
+      'brain_plain' => 'max:255',
+      'ct_pmns' => 'max:255',
+      'brain_plain_contrast' => 'max:255',
+      'ct_head_face' => 'max:255',
+      'ct_face_plain' => 'max:255',
+      'ct_3d' => 'max:255',
+      'ct_cv_junction_flex' => 'max:255',
+      'ct_cv_junction_ext' => 'max:255',
+      'ct_chest_plain' => 'max:255',
+      'ct_dorsal_spine' => 'max:255',
+      'ct_cervical_spine' => 'max:255',
+      'ct_abdomen_plain' => 'max:255',
+      'ct_lumbar_spine' => 'max:255',
+      'other' => 'max:255',
+      'anyother' => 'max:255',
+      'xray_fixed' => 'max:255',
+      'xray_portable' => 'max:255',
+      'other_xray' => 'max:255',
+      'xray_other' => 'max:255',
+      'date' => 'max:255|required',
+      'time' => 'max:255|required',
+    ]);
+
+    $link = tap(new App\RadiologyRequisition($data))->save();
+
+    return view('Index');
   });
 
   Route::get('/PreAngiographyAngioplastyChecklist', function(){
@@ -482,46 +829,28 @@ Route::group(['middleware' => ['auth']], function() {
   });
   Route::post('/DoctorsHandover', function(Request $request){
     $data = $request->validate([
-      'surgical_day'  => 'required|max:255',
-      'surgical_night'  => 'required|max:255',
-      'tentative_date_of_surgery_day'  => 'required|max:255',
-      'tentative_date_of_surgery_night'  => 'required|max:255',
-      'date_of_surgery_day'  => 'required|max:255',
-      'date_of_surgery_night'  => 'required|max:255',
-      'physician_reference_day'  => 'required|max:255',
-      'physician_reference_night'  => 'required|max:255',
-      'other_physician_reference_day'  => 'required|max:255',
-      'other_physician_reference_night'  => 'required|max:255',
-      'pathological_investigation_done_day'  => 'required|max:255',
-      'pathological_investigation_done_night'  => 'required|max:255',
-      'pathological_investigation_collected_day'  => 'required|max:255',
-      'pathological_investigation_collected_night'  => 'required|max:255',
-      'radiological_investigation_collected_day'  => 'required|max:255',
-      'radiological_investigation_collected_night'  => 'required|max:255',
-      'other_investigation_done_day'  => 'required|max:255',
-      'other_investigation_done_night'  => 'required|max:255',
-      'other_investigation_collected_day'  => 'required|max:255',
-      'other_investigation_collected_night'  => 'required|max:255',
-      'echo_day'  => 'required|max:255',
-      'echo_night'  => 'required|max:255',
-      'physiotherapy_day'  => 'required|max:255',
-      'physiotherapy_night'  => 'required|max:255',
-      'specific_instruction_day'  => 'required|max:255',
-      'specific_instruction_night'  => 'required|max:255',
-      'verified_by_assistant_day'  => 'required|max:255',
-      'verified_by_assistant_night'  => 'required|max:255',
-      'name_given_day'  => 'required|max:255',
-      'name_given_night'  => 'required|max:255',
-      'date_given_day'  => 'required|max:255',
-      'date_given_night'  => 'required|max:255',
-      'time_given_day'  => 'required|max:255',
-      'time_given_night'  => 'required|max:255',
-      'name_taken_day'  => 'required|max:255',
-      'name_taken_night'  => 'required|max:255',
-      'date_taken_day'  => 'required|max:255',
-      'date_taken_night'  => 'required|max:255',
-      'time_taken_day'  => 'required|max:255',
-      'time_taken_night'  => 'required|max:255'
+      'day_night' => 'required|max:255',
+      'surgical'  => 'max:255',
+      'tentative_date_of_surgery'  => 'max:255',
+      'date_of_surgery'  => 'max:255',
+      'physician_reference'  => 'max:255',
+      'other_physician_reference'  => 'max:255',
+      'pathological_investigation_done'  => 'max:255',
+      'pathological_investigation_collected'  => 'max:255',
+      'radiological_investigation_collected'  => 'max:255',
+      'other_investigation_done'  => 'max:255',
+      'other_investigation_collected'  => 'max:255',
+      'echo'  => 'max:255',
+      'physiotherapy'  => 'max:255',
+      'specific_instruction'  => 'max:255',
+      'verified_by_assistant'  => 'max:255',
+      'name_given'  => 'required|max:255',
+      'date_given'  => 'required|max:255',
+      'time_given'  => 'required|max:255',
+      'name_taken'  => 'required|max:255',
+      'date_taken'  => 'required|max:255',
+      'time_taken'  => 'required|max:255',
+
     ]);
     $link3 = tap(new App\DoctorsHandover($data))->save();
 

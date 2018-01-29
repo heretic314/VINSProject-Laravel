@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>VINS Patient Management System</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -45,8 +45,23 @@
                 text-align: center;
             }
 
-            .title {
-                font-size: 84px;
+            @media (min-width: 544px) {
+              .title {font-size:2rem;}
+            }
+
+            /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+            @media (min-width: 768px) {
+              .title {font-size:2.5rem;}
+            }
+
+            /* Large devices (desktops, 992px and up) */
+            @media (min-width: 992px) {
+              .title {font-size:3rem;}
+            }
+
+            /* Extra large devices (large desktops, 1200px and up) */
+            @media (min-width: 1200px) {
+              .title {font-size:4rem;}
             }
 
             .links > a {
@@ -104,6 +119,7 @@
                             <a href="{{ url('/index') }}">Index</a>
                         @else
                             <a href="{{route('login')}}">LOGIN</a>
+                            <a href="{{route('register')}}">REGISTER</a>
                         @endauth
                     </div>
                 @endif

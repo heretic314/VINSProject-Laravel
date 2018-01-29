@@ -16,7 +16,13 @@
 			</div>
 		</div></div>
 
-
+		@if ($errors->any())
+				<div class="alert alert-danger" role="alert">
+						Please fix the following errors
+				</div>
+		@endif
+		<form action="{{ url('/GlassGow') }}" method="post">
+			{{ csrf_field() }}
 
 		<div class="col-md-12 text-right">
 			<textarea class="text-right" id="Addressograph" rows="3" placeholder="Addressograph Here"></textarea>
@@ -152,9 +158,9 @@ Date:
 <hr>
 </div>
 		 <div></br>
-			<button class="btn btn-success btn-bg" type="submit" form="doctors_initial_assessment" value="submit">Submit</button>
+			<button class="btn btn-success " type="submit" >Submit</button>
 		</div>
-
+</form>
 </div>
 </html>
 @endsection

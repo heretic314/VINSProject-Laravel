@@ -68,7 +68,7 @@ return [
     'numeric'              => 'The :attribute must be a number.',
     'present'              => 'The :attribute field must be present.',
     'regex'                => 'The :attribute format is invalid.',
-    'required'             => 'The :attribute field is required.',
+    'required'             => 'This field is required.', //changed from  : 'The :attribute field is required.',
     'required_if'          => 'The :attribute field is required when :other is :value.',
     'required_unless'      => 'The :attribute field is required unless :other is in :values.',
     'required_with'        => 'The :attribute field is required when :values is present.',
@@ -100,6 +100,36 @@ return [
     */
 
     'custom' => [
+        '00' => [
+            'required' => 'This field is Required.',
+        ],
+        '01' => [
+            'required' => 'This field is Required.',
+        ],
+        '02' => [
+            'required' => 'This field is Required.',
+        ],
+        '03' => [
+            'required' => 'This field is Required.',
+        ],
+        '04' => [
+            'required' => 'This field is Required.',
+        ],
+        '05' => [
+            'required' => 'This field is Required.',
+        ],
+        '06' => [
+            'required' => 'This field is Required.',
+        ],
+        '07' => [
+            'required' => 'This field is Required.',
+        ],
+        '08' => [
+            'required' => 'This field is Required.',
+        ],
+        '09' => [
+            'required' => 'This field is Required.',
+        ],
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],

@@ -16,14 +16,18 @@
 			</div>
 		</div>
 	</div>
-	<form id="codeblueevaluationform">
+	<form action="{{ url('/CodeBlueEvaluationForm') }}" method="post">
+		{{ csrf_field() }}
 		<div class="row form-group">
 		  <div class="col-md-6">
 				<div class="col-md-6">
 					<label>Drill : </label>
 				</div>
 				<div class="col-md-6">
-					<input class="form-control" type="text" id="drill" name="drill">
+					<input class="form-control" type="text" name="drill">
+					@if($errors->has('drill'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('drill') }}</div></span>
+					@endif
 				</div>
 		  </div>
 			<div class="col-md-6">
@@ -31,7 +35,10 @@
 					<label>Actual Code Blue : </label>
 				</div>
 				<div class="col-md-6">
-					<input class="form-control" type="text" id="actual_code_blue" name="actual_code_blue">
+					<input class="form-control" type="text" name="actual_code_blue">
+					@if($errors->has('actual_code_blue'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('actual_code_blue') }}</div></span>
+					@endif
 				</div>
 			</div>
 		</div>
@@ -41,38 +48,56 @@
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row form-group">
 		  <table class="table table-bordered">
 		    <thead>
 			  <tr>
 				<th>Sr. No.</th>
 				<th>Contents</th>
-				<th>Yes</th>
-				<th>No</th>
-				<th>N/A</th>
+				<th>Response</th>
 				<th>Comments</th>
 			  </tr>
 			</thead>
 			<tbody>
 			  <tr>
 			    <td>1</td>
-					<td>Was staff able to identify cardiac arrest?</td>
-					<div class="form-group">
-						<td><input type="radio" name="00" value="yes"></td>
-						<td><input type="radio" name="00" value="no"></td>
-						<td><input type="radio" name="00" value="na"></td>
-						<td><div class=""><input class="form-control" type="text" id="comm_01" name="comm_01"></div></td>
-					</div>
+					<td>Was staff able to identify cardiac arrest?
+						@if($errors->has('00'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('00') }}</div></span>
+						@endif
+					</td>
+					<td>
+						<div class="form-group">
+							<select class="form-control" name="00">
+
+								<option value="Na" >NA</option>
+								<option value="Yes" >Yes</option>
+								<option value="No" >No</option>
+							</select>
+						</div>
+					</td>
+					<td><input class="form-control" type="text" name="comm_00"></td>
 			  </tr>
 
 			  <tr>
 			    <td>2</td>
-				<td>Did CPR begin when the cardiac arrest was indentified?</td>
+				<td>Did CPR begin when the cardiac arrest was indentified?
+					@if($errors->has('01'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('01') }}</div></span>
+					@endif
+				</td>
 				<div class="form-group">
-				  <td><input type="radio" name="01" value="yes"></td>
-				  <td><input type="radio" name="01" value="no"></td>
-				  <td><input type="radio" name="01" value="na"></td>
-				  <td><input class="form-control" type="text" id="comm_02" name="comm_02"></td>
+					<td>
+						<div class="form-group">
+							<select class="form-control" name="01" >
+
+								<option value="NA" >NA</option>
+								<option value="Yes" >Yes</option>
+								<option value="No" >No</option>
+							</select>
+						</div>
+					</td>
+				  <td><input class="form-control" type="text" name="comm_01"></td>
 				</div>
 			  </tr>
 
@@ -94,34 +119,66 @@
 							Appropriate People called
 						</li>
 					</ul>
+					@if($errors->has('02'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('02') }}</div></span>
+					@endif
 				</td>
 				<div class="form-group">
-				  <td><input type="radio" name="02" value="yes"></td>
-				  <td><input type="radio" name="02" value="no"></td>
-				  <td><input type="radio" name="02" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_02" name="comm_02"></div></td>
+					<td>
+						<div class="form-group">
+							<select class="form-control" name="02" >
+
+								<option value="NA" >NA</option>
+								<option value="Yes" >Yes</option>
+								<option value="No" >No</option>
+							</select>
+						</div>
+					</td>
+				  <td><div class=""><input class="form-control" type="text" name="comm_02"></div></td>
 				</div>
 			  </tr>
 
 			  <tr>
 			    <td>4</td>
-				<td>Did nurse lead the resuscitation effort until the code blue team arrived?</td>
+				<td>Did nurse lead the resuscitation effort until the code blue team arrived?
+					@if($errors->has('03'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('03') }}</div></span>
+					@endif
+				</td>
 				<div class="form-group">
-				  <td><input type="radio" name="03" value="yes"></td>
-				  <td><input type="radio" name="03" value="no"></td>
-				  <td><input type="radio" name="03" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_03" name="comm_03"></div></td>
+					<td>
+						<div class="form-group">
+							<select class="form-control" name="03" >
+
+								<option value="NA" >NA</option>
+								<option value="Yes" >Yes</option>
+								<option value="No" >No</option>
+							</select>
+						</div>
+					</td>
+				  <td><div class=""><input class="form-control" type="text" name="comm_03"></div></td>
 				</div>
 			  </tr>
 
 			  <tr>
 			    <td>5</td>
-				<td>Was chest compression perfomed uninterruptedly until code blue team arrived?</td>
+				<td>Was chest compression perfomed uninterruptedly until code blue team arrived?
+					@if($errors->has('04'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('04') }}</div></span>
+					@endif
+				</td>
 				<div class="form-group">
-				  <td><input type="radio" name="04" value="yes"></td>
-				  <td><input type="radio" name="04" value="no"></td>
-				  <td><input type="radio" name="04" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_04" name="comm_04"></div></td>
+					<td>
+						<div class="form-group">
+							<select class="form-control" name="04" >
+
+								<option value="NA" >NA</option>
+								<option value="Yes" >Yes</option>
+								<option value="No" >No</option>
+							</select>
+						</div>
+					</td>
+				  <td><div class=""><input class="form-control" type="text" name="comm_04"></div></td>
 				</div>
 			  </tr>
 
@@ -146,12 +203,22 @@
 							Misplaced
 						</li>
 					</ul>
+					@if($errors->has('05'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('05') }}</div></span>
+					@endif
 				</td>
 				<div class="form-group">
-				  <td><input type="radio" name="05" value="yes"></td>
-				  <td><input type="radio" name="05" value="no"></td>
-				  <td><input type="radio" name="05" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_05" name="comm_05"></div></td>
+					<td>
+						<div class="form-group">
+							<select class="form-control" name="05" >
+
+								<option value="NA" >NA</option>
+								<option value="Yes" >Yes</option>
+								<option value="No" >No</option>
+							</select>
+						</div>
+					</td>
+				  <td><div class=""><input class="form-control" type="text" name="comm_05"></div></td>
 				</div>
 			  </tr>
 
@@ -162,12 +229,22 @@
 					<div class="">1 min - Appropriate</div>
 					<div class="">2 min - Acceptable</div>
 					<div class="">>3 min - Unacceptable</div>
+					@if($errors->has('06'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('06') }}</div></span>
+					@endif
 				</td>
 				<div class="form-group">
-				  <td><input type="radio" name="06" value="yes"></td>
-				  <td><input type="radio" name="06" value="no"></td>
-				  <td><input type="radio" name="06" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_06" name="comm_06"></div></td>
+					<td>
+						<div class="form-group">
+							<select class="form-control" name="06" >
+
+								<option value="NA" >NA</option>
+								<option value="Yes" >Yes</option>
+								<option value="No" >No</option>
+							</select>
+						</div>
+					</td>
+				  <td><div class=""><input class="form-control" type="text" name="comm_06"></div></td>
 				</div>
 			  </tr>
 
@@ -192,12 +269,22 @@
 							Chest compression in time
 						</li>
 					</ul>
+					@if($errors->has('07'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('07') }}</div></span>
+					@endif
 				</td>
 				<div class="form-group">
-				  <td><input type="radio" name="07" value="yes"></td>
-				  <td><input type="radio" name="07" value="no"></td>
-				  <td><input type="radio" name="07" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_07" name="comm_07"></div></td>
+					<td>
+						<div class="form-group">
+							<select class="form-control" name="07" >
+
+								<option value="NA" >NA</option>
+								<option value="Yes" >Yes</option>
+								<option value="No" >No</option>
+							</select>
+						</div>
+					</td>
+				  <td><div class=""><input class="form-control" type="text" name="comm_07"></div></td>
 				</div>
 			  </tr>
 
@@ -225,27 +312,51 @@
 							Drugs
 						</li>
 					</ul>
+					@if($errors->has('08'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('08') }}</div></span>
+					@endif
 				</td>
 				<div class="form-group">
-				  <td><input type="radio" name="08" value="yes"></td>
-				  <td><input type="radio" name="08" value="no"></td>
-				  <td><input type="radio" name="08" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_08" name="comm_08"></div></td>
+					<td>
+						<div class="form-group">
+							<select class="form-control" name="08" >
+
+								<option value="NA" >NA</option>
+								<option value="Yes" >Yes</option>
+								<option value="No" >No</option>
+							</select>
+						</div>
+					</td>
+				  <td><div class=""><input class="form-control" type="text" name="comm_08"></div></td>
 				</div>
 			  </tr>
 
 			  <tr>
 			    <td>10</td>
-				<td>Was documentation complete?</td>
+				<td>Was documentation complete?
+					@if($errors->has('09'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('09') }}</div></span>
+					@endif
+				</td>
 				<div class="form-group">
-				  <td><input type="radio" name="09" value="yes"></td>
-				  <td><input type="radio" name="09" value="no"></td>
-				  <td><input type="radio" name="09" value="na"></td>
-				  <td><div class=""><input class="form-control" type="text" id="comm_09" name="comm_09"></div></td>
+					<td>
+						<div class="form-group">
+							<select class="form-control" name="09" >
+
+								<option value="NA" >NA</option>
+								<option value="Yes" >Yes</option>
+								<option value="No" >No</option>
+							</select>
+						</div>
+					</td>
+				  <td><div class=""><input class="form-control" type="text" name="comm_09"></div></td>
 				</div>
 			  </tr>
 			</tbody>
 		  </table>
+		</div>
+		<div class="row form-group text-center">
+			<button class="form-group btn btn-success" type="submit">Submit</button>
 		</div>
 	</form>
 </div>

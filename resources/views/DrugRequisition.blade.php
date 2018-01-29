@@ -43,12 +43,36 @@
 						<tbody>
 						  <tr>
 						    <td class="text-center">1</td>
-								<td><input type="text" name="name_of_drug_01" id="name_of_drug_01" class="form-control" value="{{ old('name_of_drug_01') }}"/></td>
-								<td><input type="text" name="quantity_01" id="quantity_01" class="form-control" value="{{ old('quantity_01') }}"/></td>
-								<td><input type="text" name="batch_no_01" id="batch_no_01" class="form-control" value="{{ old('batch_no_01') }}"/></td>
-								<td><input type="date" name="expiry_date_01" id="expiry_date_01" class="form-control" value="{{ old('expiry_date_01') }}"/></td>
-								<td><input type="text" name="issued_by_01" id="issued_by_01" class="form-control" value="{{ old('issued_by_01') }}"/></td>
-								<td><input type="text" name="received_by_01" id="received_by_01" class="form-control" value="{{ old('received_by_01') }}"/></td>
+								<td><input type="text" name="name_of_drug_01" id="name_of_drug_01" class="form-control" value="{{ old('name_of_drug_01') }}"/>
+									@if($errors->has('name_of_drug_01'))
+											<span class="help-block"><div class="text-danger">{{ $errors->first('name_of_drug_01') }}</div></span>
+									@endif
+								</td>
+								<td><input type="text" name="quantity_01" id="quantity_01" class="form-control" value="{{ old('quantity_01') }}"/>
+									@if($errors->has('quantity_01'))
+											<span class="help-block"><div class="text-danger">{{ $errors->first('quantity_01') }}</div></span>
+									@endif
+								</td>
+								<td><input type="text" name="batch_no_01" id="batch_no_01" class="form-control" value="{{ old('batch_no_01') }}"/>
+									@if($errors->has('batch_no_01'))
+											<span class="help-block"><div class="text-danger">{{ $errors->first('batch_no_01') }}</div></span>
+									@endif
+								</td>
+								<td><input type="date" name="expiry_date_01" id="expiry_date_01" class="form-control" value="{{ old('expiry_date_01') }}"/>
+									@if($errors->has('expiry_date'))
+											<span class="help-block"><div class="text-danger">{{ $errors->first('expiry_date') }}</div></span>
+									@endif
+								</td>
+								<td><input type="text" name="issued_by_01" id="issued_by_01" class="form-control" value="{{ old('issued_by_01') }}"/>
+									@if($errors->has('issued_by_01'))
+											<span class="help-block"><div class="text-danger">{{ $errors->first('issued_by_01') }}</div></span>
+									@endif
+								</td>
+								<td><input type="text" name="received_by_01" id="received_by_01" class="form-control" value="{{ old('received_by_01') }}"/>
+									@if($errors->has('received_by_01'))
+											<span class="help-block"><div class="text-danger">{{ $errors->first('received_by_01') }}</div></span>
+									@endif
+								</td>
 							</tr>
 							<tr>
 						    <td class="text-center">2</td>

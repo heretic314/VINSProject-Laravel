@@ -18,41 +18,193 @@
 			</div>
 		</div>
 	</div>
+	@if ($errors->any())
+			<div class="alert alert-danger" role="alert">
+					Please fix the following errors
+			</div>
+	@endif
 
+	<form action="{{ url('/PlanOfCare') }}" method="post">
+		{{ csrf_field() }}
+		<div class="row form-group">
+			<div class="col-md-6">
+				<label>Diagnosis</label>
+			</div>
+			<div class="col-md-6">
+				<input class="form-control" type="text" name="diagnosis" value="{{ old('diagnosis') }}" />
+				@if($errors->has('diagnosis'))
+						<span class="help-block"><div class="text-danger">{{ $errors->first('diagnosis') }}</div></span>
+				@endif
+			</div>
+		</div>
 
-</div>
+		<div class="row form-group">
+			<div class="col-md-6">
+				<label>Patient's Needs and Treatment Goals : </label>
+			</div>
+			<div class="col-md-6">
+				<input class="form-control" type="text" name="needs_goals" value="{{ old('needs_goals') }}"/>
+				@if($errors->has('needs_goals'))
+						<span class="help-block"><div class="text-danger">{{ $errors->first('needs_goals') }}</div></span>
+				@endif
+			</div>
+		</div>
 
-<form id="planofcare" method="post" action="">
-<div class="container">
-	<div class="text-right">
-	 <p class="text-right">Addressograph :</p>
-	 <textarea class=" text-right" id="Addressograph" rows="2" placeholder="Addressograph Here" ></textarea>
-	</div>
+		<div class="row form-group">
+			<div class="col-md-6">
+				<label>Treatment Plan : </label>
+			</div>
+			<div class="col-md-6">
+				<input class="form-control" type="text" name="treatment_plan" value="{{ old('treatment_plan') }}"/>
+				@if($errors->has('treatment_plan'))
+						<span class="help-block"><div class="text-danger">{{ $errors->first('treatment_plan') }}</div></span>
+				@endif
+			</div>
+		</div>
 
-	<div class="form-group">
-	 <label>Diagnosis :</label>
-	 <textarea class="form-control" id="diagnosis" rows="3" placeholder="Diagnosis of the Patient" ></textarea>
-	</div>
+		<div class="row form-group">
+			<div class="col-md-6">
+				<label>Preventive Aspects : </label>
+			</div>
+			<div class="col-md-6">
+				<textarea class="form-control" name="preventive_aspects" value="{{ old('preventive_aspects') }}"></textarea>
+				@if($errors->has('preventive_aspects'))
+						<span class="help-block"><div class="text-danger">{{ $errors->first('preventive_aspects') }}</div></span>
+				@endif
+			</div>
+		</div>
 
-	<div class="form-group">
-	 <label>Patient's Needs and Treatment Goal :</label>
-	 <textarea class="form-control" id="need_treatment_goal" rows="3" placeholder="To be filled by consultant"></textarea>
-	</div>
+		<div class="row form-group">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Progress</th>
+						<th>Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<input class="form-control" type="text" name="progress_00" value="{{ old('progress_00') }}"/>
+							@if($errors->has('progress_00'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('progress_00') }}</div></span>
+							@endif
+					</td>
+						<td><input class="form-control" type="date" name="date_00" value="{{ old('date_00') }}"/>
+							@if($errors->has('date_00'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('date_00') }}</div></span>
+							@endif
+						</td>
+					</tr>
+					<tr>
+						<td><input class="form-control" type="text" name="progress_01" value="{{ old('progress_01') }}"/>
+							@if($errors->has('progress_01'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('progress_01') }}</div></span>
+							@endif
+						</td>
+						<td><input class="form-control" type="date" name="date_01" value="{{ old('date_01') }}"/>
+							@if($errors->has('date_01'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('date_01') }}</div></span>
+							@endif
+						</td>
+					</tr>
+					<tr>
+						<td><input class="form-control" type="text" name="progress_02" value="{{ old('progress_02') }}"/>
+							@if($errors->has('progress_02'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('progress_02') }}</div></span>
+							@endif
+						</td>
+						<td><input class="form-control" type="date" name="date_02" value="{{ old('date_02') }}"/>
+							@if($errors->has('date_02'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('date_02') }}</div></span>
+							@endif
+						</td>
+					</tr>
+					<tr>
+						<td><input class="form-control" type="text" name="progress_03" value="{{ old('progress_03') }}"/>
+							@if($errors->has('progress_03'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('progress_03') }}</div></span>
+							@endif
+						</td>
+						<td><input class="form-control" type="date" name="date_03" value="{{ old('date_03') }}"/>
+							@if($errors->has('date_03'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('date_03') }}</div></span>
+							@endif
+						</td>
+					</tr>
+					<tr>
+						<td><input class="form-control" type="text" name="progress_04" value="{{ old('progress_04') }}"/>
+							@if($errors->has('progress_04'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('progress_04') }}</div></span>
+							@endif
+						</td>
+						<td><input class="form-control" type="date" name="date_04" value="{{ old('date_04') }}"/>
+							@if($errors->has('date_04'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('date_04') }}</div></span>
+							@endif
+						</td>
+					</tr>
+					<tr>
+						<td><input class="form-control" type="text" name="progress_05" value="{{ old('progress_05') }}"/>
+							@if($errors->has('progress_05'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('progress_05') }}</div></span>
+							@endif
+						</td>
+						<td><input class="form-control" type="date" name="date_05" value="{{ old('date_05') }}"/>
+							@if($errors->has('date_05'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('date_05') }}</div></span>
+							@endif
+						</td>
+					</tr>
+					<tr>
+						<td><input class="form-control" type="text" name="progress_06" value="{{ old('progress_06') }}"/>
+							@if($errors->has('progress_06'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('progress_06') }}</div></span>
+							@endif
+						</td>
+						<td><input class="form-control" type="date" name="date_06" value="{{ old('date_06') }}"/>
+							@if($errors->has('date_06'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('date_06') }}</div></span>
+							@endif
+						</td>
+					</tr>
+					<tr>
+						<td><input class="form-control" type="text" name="progress_07" value="{{ old('progress_07') }}"/>
+							@if($errors->has('progress_07'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('progress_07') }}</div></span>
+							@endif
+						</td>
+						<td><input class="form-control" type="date" name="date_07" value="{{ old('date_07') }}"/>
+							@if($errors->has('date_07'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('date_07') }}</div></span>
+							@endif
+						</td>
+					</tr>
+				</tbody>
+			</table>
 
-	<div class="form-group">
-	 <label>Treatment Plan :</label>
-	 <textarea class="form-control" id="treatment_plan" rows="2" placeholder="To be filled by consultant" ></textarea>
-	</div>
+			<div class="row form-group">
+				<div class="col-md-6">
+					<label>Note on Discharge : </label>
+				</div>
+				<div class="col-md-6">
+					<textarea class="form-control" name="note_discharge" value="{{ old('note_discharge') }}"></textarea>
+					@if($errors->has('note_discharge'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('note_discharge') }}</div></span>
+					@endif
+				</div>
+			</div>
+		</div>
 
-	<div class="form-group">
-	 <label>Preventive Aspects :</label>
-	 <textarea class="form-control" id="preventive_aspects" rows="4" placeholder="To be filled by consultant"></textarea>
-	</div>
-	<div>
-	<button class="btn btn-success btn-bg" type="submit" form="planofcare" value="submit">Submit</button>
-	</div>
+		<div class="row form-group">
+			<button class="form-control btn btn-success" type="submit" >Submit</button>
+		</div>
 	</form>
+
+
 </div>
+
+
 
 
 @endsection

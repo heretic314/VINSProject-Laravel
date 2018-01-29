@@ -20,6 +20,12 @@ class DatabaseSeeder extends Seeder
         $this->call(nursingdutyoverseeder::class);
         $this->call(labsheetseeder::class);
         $this->call(PatientDetailForm::class);
+        $this->call(codeblueevaluationformseeder::class);
+        $this->call(infusiontherapychart::class);
+        $this->call(planofcareseeder::class);
+        $this->call(historyformseeder::class);
+        $this->call(operativedetailsheetseeder::class);
+        $this->call(radiologyrequisitionseeder::class);
 
     }
 }
