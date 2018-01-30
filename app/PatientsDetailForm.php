@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PatientDetailForm extends Model
+class PatientsDetailForm extends Model
 {
     //
-    protected $table='patientdetailform';
+    protected $table = 'patientsdetailform';
 
-    protected $fillable = [
+    protected $fillable=[
       'date',
       'time',
       'first_name',

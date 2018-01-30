@@ -11,10 +11,8 @@ class NutritionalAssessmentFormSeeder extends Seeder
      */
     public function run()
     {
-      public function run()
-      {
           //
           factory(App\NutritionalAssessmentForm::class,6)->create();
-      }
+
     }
 }

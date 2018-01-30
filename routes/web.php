@@ -656,6 +656,7 @@ Route::group(['middleware' => ['auth']], function() {
     $data = $request->validate([
         'date' => 'required|max:255',
         'time' => 'required|max:255',
+        'first_name' => 'required:max:255',
         'middle_name' => 'required|max:255',
         'last_name' => 'required|max:255',
         'date_of_birth' => 'required|max:255',
@@ -668,7 +669,7 @@ Route::group(['middleware' => ['auth']], function() {
         'case' => 'required|max:255',
     ]);
 
-    $link = tap(new App\PatientDetailForm($data))->save();
+    $link = tap(new App\PatientsDetailForm($data))->save();
 
     return view('Index');
   });

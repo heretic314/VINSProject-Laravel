@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PatientDetailForm extends Seeder
+class patientsdetailformseeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,6 @@ class PatientDetailForm extends Seeder
     public function run()
     {
         //
-        factory(App\PatientDetailForm::class,4)->create();
+        factory(App\PatientsDetailForm::class,6)->create();
     }
 }

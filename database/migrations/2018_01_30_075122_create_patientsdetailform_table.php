@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class PatientDetailForm extends Migration
+class CreatePatientsdetailformTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class PatientDetailForm extends Migration
      */
     public function up()
     {
-        Schema::create('PatientDetailForm', function (Blueprint $table) {
+        Schema::create('patientsdetailform', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->date('date');
@@ -21,7 +21,7 @@ class PatientDetailForm extends Migration
             $table->string('first_name');
             $table->string('middle_name');
             $table->string('last_name');
-            $table->date('date_of_birth');
+            $table->string('date_of_birth');
             $table->string('sex');
             $table->string('address');
             $table->string('phone_no');
@@ -29,6 +29,7 @@ class PatientDetailForm extends Migration
             $table->string('reference_dr');
             $table->string('consulting_dr');
             $table->string('case');
+
         });
     }
 
@@ -39,6 +40,6 @@ class PatientDetailForm extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('PatientDetailForm');
+        Schema::dropIfExists('patientsdetailform');
     }
 }
