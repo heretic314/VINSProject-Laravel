@@ -19,6 +19,6 @@ $factory->define(App\DailyDietForm::class, function (Faker $faker) {
         'juice' => $faker->word,
         'dinner' => $faker->word,
         'milk' => $faker->word,
-        
+        'remarks' => $faker->word,
     ];
 });

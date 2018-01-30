@@ -23,8 +23,34 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['auth']], function() {
 
-  Route::get('/DailyDietForm', function(){
+Route::get('/DailyDietForm', function(){
       return view('DailyDietForm');
+  });
+
+
+  Route::post('/DailyDietForm',function(Request $request){
+    $data = $request->validate([
+      'floor_name' => 'required|max:255',
+      'cross_verified_by' => 'required|max:255',
+      'date' => 'required|max:255',
+      'room_no' => 'max:255',
+      'patient_name' => 'required|max:255',
+      'diet_suggested_by' => 'max:255',
+      'm_tea' => 'required|max:255',
+      'm_breakfast' => 'max:255',
+      'soup' => 'required|max:255',
+      'lunch' => 'max:255',
+      'e_snacks' => 'required|max:255',
+      'juice' => 'max:255',
+      'dinner' => 'required|max:255',
+      'milk' => 'max:255',
+      'remarks' => 'max:255',
+
+    ]);
+
+    $link = tap(new App\DailyDietForm($data))->save();
+
+    return view('Index');
   });
 
   Route::get('/index', function(){

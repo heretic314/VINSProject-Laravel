@@ -22,14 +22,15 @@ class CreateDailyDietForm extends Migration
             $table->string('room_no');
             $table->string('patient_name');
             $table->string('diet_suggested_by');
-            $table->string('m_tea');
-            $table->string('m_breakfast');
-            $table->string('soup');
-            $table->string('lunch');
-            $table->string('e_snacks');
-            $table->string('juice');
-            $table->string('dinner');
-            $table->string('milk');
+            $table->string('m_tea')->nullable();
+            $table->string('m_breakfast')->nullable();
+            $table->string('soup')->nullable();
+            $table->string('lunch')->nullable();
+            $table->string('e_snacks')->nullable();
+            $table->string('juice')->nullable();
+            $table->string('dinner')->nullable();
+            $table->string('milk')->nullable();
+            $table->string('remarks');
 
 
         });
