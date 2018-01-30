@@ -17,7 +17,13 @@
 		</div>
 	</div>
 
-<form name="ventilatorchargesheet">
+	@if ($errors->any())
+			<div class="alert alert-danger" role="alert">
+					Please fix the following errors
+			</div>
+	@endif
+	<form action="{{ url('/VentilatorChargeSheet') }}" method="post">
+		{{ csrf_field() }}
 
 	<div class="row form-group">
 		<div class="col-md-8">
@@ -47,10 +53,10 @@
 						<label>Sex : </label>
 					</div>
 					<div class="col-md-6">
-						<select class="form-control" name="sex">
-							<option>NA</option>
-							<option>Male</option>
-							<option>Female</option>
+						<select class="form-control" name="sex" value="{{ old('sex') }}">
+							<option value="NA">NA</option>
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
 						</select>
 					</div>
 				</div>
@@ -97,32 +103,32 @@
 					<tr>
 						<th>Settings (GREEN)</th>
 						<th class="form-inline">Hour :
-							<select class="form-control" name="time_slot">
+							<select class="form-control" name="time_slot01" value="{{ old('time_slot01') }}">
 								<option>Select Hour</option>
-								<option>0</option>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-								<option>6</option>
-								<option>7</option>
-								<option>8</option>
-								<option>9</option>
-								<option>10</option>
-								<option>11</option>
-								<option>12</option>
-								<option>13</option>
-								<option>14</option>
-								<option>15</option>
-								<option>16</option>
-								<option>17</option>
-								<option>18</option>
-								<option>19</option>
-								<option>20</option>
-								<option>21</option>
-								<option>22</option>
-								<option>23</option>
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
 							</select>
 						</th>
 					</tr>
@@ -174,35 +180,35 @@
 					<tr>
 						<th>Measured (RED)</th>
 						<th class="form-inline">Hour :
-							<!--
-							<select class="form-control" name="time_slot">
+
+							<select class="form-control" name="time_slot02" value="{{ old('time_slot02') }}">
 								<option>Select Hour</option>
-								<option>0</option>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-								<option>6</option>
-								<option>7</option>
-								<option>8</option>
-								<option>9</option>
-								<option>10</option>
-								<option>11</option>
-								<option>12</option>
-								<option>13</option>
-								<option>14</option>
-								<option>15</option>
-								<option>16</option>
-								<option>17</option>
-								<option>18</option>
-								<option>19</option>
-								<option>20</option>
-								<option>21</option>
-								<option>22</option>
-								<option>23</option>
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
 							</select>
-							-->
+
 						</th>
 					</tr>
 				</thead>
@@ -254,32 +260,32 @@
 					<tr>
 						<th>C. Alarms</th>
 						<th class="form-inline">Hour :
-							<select class="form-control" name="time_slot">
+							<select class="form-control" name="time_slot03" value="{{ old('time_slot03') }}">
 								<option>Select Hour</option>
-								<option>0</option>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-								<option>6</option>
-								<option>7</option>
-								<option>8</option>
-								<option>9</option>
-								<option>10</option>
-								<option>11</option>
-								<option>12</option>
-								<option>13</option>
-								<option>14</option>
-								<option>15</option>
-								<option>16</option>
-								<option>17</option>
-								<option>18</option>
-								<option>19</option>
-								<option>20</option>
-								<option>21</option>
-								<option>22</option>
-								<option>23</option>
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
 							</select>
 						</th>
 					</tr>
@@ -335,35 +341,34 @@
 					<tr>
 						<th>F. Chest Physiotherapy</th>
 						<th class="form-inline">Hour :
-							<!--
-							<select class="form-control" name="time_slot">
-								<option>Select Hour</option>
-								<option>0</option>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-								<option>6</option>
-								<option>7</option>
-								<option>8</option>
-								<option>9</option>
-								<option>10</option>
-								<option>11</option>
-								<option>12</option>
-								<option>13</option>
-								<option>14</option>
-								<option>15</option>
-								<option>16</option>
-								<option>17</option>
-								<option>18</option>
-								<option>19</option>
-								<option>20</option>
-								<option>21</option>
-								<option>22</option>
-								<option>23</option>
+
+							<select class="form-control"  name="time_slot04" value="{{ old('time_slot04') }}">
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
 							</select>
-							-->
+
 						</th>
 					</tr>
 				</thead>
@@ -412,7 +417,9 @@
 			</table>
 		</div>
 	</div>
-
+	<div class="row form-group">
+		<button class="btn btn-success" type="submit">Submit</button>
+	</div>
 </form>
 
 </div>
