@@ -85,123 +85,6 @@ Route::group(['middleware' => ['auth']], function() {
   Route::get('/CPRFormat', function(){
       return view('CPRFormat');
   });
-  Route::post('/CPRFormat',function(Request $request){
-    $data = $request->validate([
-      'patient_name'=>'max:255',
-      'ipd_no'=>'max:255',
-
-      'age'=>'max:255',
-      'sex'=>'max:255',
-      'date'=>'max:255',
-      'start_time'=>'max:255',
-      'bed_no'=>'max:255',
-      'diagnosis'=>'max:255',
-      'name_doctor'=>'max:255',
-      'cpr_team'=>'max:255',
-      'intubation_time'=>'max:255',
-      'defib_rhythm_00'=>'max:255',
-      'defib_rhythm_01'=>'max:255',
-      'defib_rhythm_02'=>'max:255',
-      'defib_rhythm_03'=>'max:255',
-      'defib_rhythm_04'=>'max:255',
-
-      'defib_dc_00'=>'max:255',
-      'defib_dc_01'=>'max:255',
-      'defib_dc_02'=>'max:255',
-      'defib_dc_03'=>'max:255',
-      'defib_dc_04'=>'max:255',
-
-      'medication_time_00'=>'max:255',
-      'medication_name_01'=>'max:255',
-      'medication_time_10'=>'max:255',
-      'medication_name_11'=>'max:255',
-      'medication_time_20'=>'max:255',
-      'medication_name_21'=>'max:255',
-      'medication_time_30'=>'max:255',
-      'medication_name_31'=>'max:255',
-      'medication_time_40'=>'max:255',
-      'medication_name_41'=>'max:255',
-
-      'total_time'=>'max:255',
-      'outcome'=>'max:255',
-      'doctor_name'=>'max:255',
-      'remarks'=>'max:255',
-
-      'consultant_counseled'=>'max:255',
-      'relative_name'=>'max:255',
-
-      '00_01'=>'max:255',
-      '00_02'=>'max:255',
-      '00_03'=>'max:255',
-      '00_04'=>'max:255',
-      '00_05'=>'max:255',
-      '00_06'=>'max:255',
-      '00_07'=>'max:255',
-      '00_08'=>'max:255',
-
-      '01_01'=>'max:255',
-      '01_02'=>'max:255',
-      '01_03'=>'max:255',
-      '01_04'=>'max:255',
-      '01_05'=>'max:255',
-      '01_06'=>'max:255',
-      '01_07'=>'max:255',
-      '01_08'=>'max:255',
-
-      '02_01'=>'max:255',
-      '02_02'=>'max:255',
-      '02_03'=>'max:255',
-      '02_04'=>'max:255',
-      '02_05'=>'max:255',
-      '02_06'=>'max:255',
-      '02_07'=>'max:255',
-      '02_08'=>'max:255',
-
-      '03_01'=>'max:255',
-      '03_02'=>'max:255',
-      '03_03'=>'max:255',
-      '03_04'=>'max:255',
-      '03_05'=>'max:255',
-      '03_06'=>'max:255',
-      '03_07'=>'max:255',
-      '03_08'=>'max:255',
-
-      '04_01'=>'max:255',
-      '04_02'=>'max:255',
-      '04_03'=>'max:255',
-      '04_04'=>'max:255',
-      '04_05'=>'max:255',
-      '04_06'=>'max:255',
-      '04_07'=>'max:255',
-      '04_08'=>'max:255',
-
-      '05_01'=>'max:255',
-      '05_02'=>'max:255',
-      '05_03'=>'max:255',
-      '05_04'=>'max:255',
-      '05_05'=>'max:255',
-      '05_06'=>'max:255',
-      '05_07'=>'max:255',
-      '05_08'=>'max:255',
-
-      '06_01'=>'max:255',
-      '06_02'=>'max:255',
-      '06_03'=>'max:255',
-      '06_04'=>'max:255',
-      '06_05'=>'max:255',
-      '06_06'=>'max:255',
-      '06_07'=>'max:255',
-      '06_08'=>'max:255',
-      'initial_time'=>'max:255',
-
-
-    ]);
-
-    $link = tap(new App\CPRFormat($data))->save();
-
-    return view('Index');
-  });
-
 
   Route::get('/CultureBiopsyForm', function(){
       return view('CultureBiopsyForm');
@@ -324,6 +207,7 @@ Route::group(['middleware' => ['auth']], function() {
   Route::get('/Glassgow', function(){
       return view('Glassgow');
   });
+
   Route::post('/GlassGow',function(Request $request){
     $data = $request->validate([
 
@@ -464,9 +348,6 @@ Route::group(['middleware' => ['auth']], function() {
 
     return view('Index');
   });
-
-
-
 
   Route::get('/InvestigationSheet1', function(){
       return view('InvestigationSheet1');
@@ -691,55 +572,6 @@ Route::group(['middleware' => ['auth']], function() {
   Route::get('/NutritionalAssessmentForm', function(){
       return view('NutritionalAssessmentForm');
   });
-  Route::post('/NutritionalAssessmentForm',function(Request $request){
-    $data = $request->validate([
-      'diagnosis'=> 'max:255|required',
-      'calorie_required'=> 'max:255|required',
-      'protein_required'=> 'max:255|required',
-      'calorie_intake'=> 'max:255|required',
-      'protein_intake'=> 'max:255|required',
-      'diet'=> 'max:255|required',
-      'vomiting'=> 'max:255|required',
-      'constipation'=> 'max:255|required',
-      'diarrhea'=> 'max:255|required',
-      'mouth_ulcer'=> 'max:255|required',
-      'food_intake'=> 'max:255|required',
-      'fluid_intake'=> 'max:255|required',
-      'nutritional_need'=> 'max:255|required',
-      'mode_of_feed'=> 'max:255|required',
-      'height'=> 'max:255|required',
-      'life_style'=> 'max:255|required',
-      'weight'=> 'max:255|required',
-      'bmi'=> 'max:255|required',
-      'diet_recall'=> 'max:255|required',
-      'food_intake_decline'=> 'max:255|required',
-      'food_intake_decline_reason'=> 'max:255|required',
-      'blood_pressure'=> 'max:255',
-      'diabetes'=> 'max:255',
-      'old_operated_patient'=> 'max:255',
-      'cardiac_diseases'=> 'max:255',
-      'liver_diseases'=> 'max:255',
-      'renal_failure'=> 'max:255',
-      'cancer'=> 'max:255',
-      'trauma_burn'=> 'max:255',
-      'gout'=> 'max:255',
-      'any_other'=> 'max:255',
-      'risk_type'=> 'max:255',
-      'risk_reason'=> 'max:255|required',
-      'diet_suggested'=> 'max:255|required',
-
-      'remarks'=> 'max:255|required',
-      'date_table'=> 'max:255|required',
-      'diet_table'=> 'max:255|required',
-      'remarks_table'=> 'max:255|required',
-      'name_table'=> 'max:255|required'
-]);
-
-    $link = tap(new App\NutritionalAssessmentForm($data))->save();
-
-    return view('/Index');
-  });
-
 
   Route::get('/OperativeDetailSheet', function(){
       return view('OperativeDetailSheet');
@@ -799,17 +631,16 @@ Route::group(['middleware' => ['auth']], function() {
 
   Route::post('/PatientDietRecord', function(Request $request){
     $data = $request->validate([
-        'dietician_name' => 'required|max:255',
-        'date' => 'required|max:255',
-        'time' => 'required|max:255',
-        'bed_no' => 'required|max:255',
-        'uhid_no' => 'required|max:255',
-        'patient_name' => 'required|max:255',
-        'diagnosis' => 'required|max:255',
-        'consultants_name' => 'required|max:255',
-        'diet_to_be_given' => 'required|max:255',
-        'remarks' => 'required|max:255',
-
+      'dietician_name' => 'max:255|required',
+      'date' => 'max:255|required',
+      'time' => 'max:255|required',
+      'bed_no' => 'max:255|required',
+      'uhid_no' => 'max:255|required',
+      'patient_name' => 'max:255|required',
+      'diagnosis' => 'max:255|required',
+      'consultants_name' => 'max:255|required',
+      'diet_to_be_given' => 'max:255|required',
+      'remarks' => 'max:255|required',
     ]);
 
     $link = tap(new App\PatientDietRecord($data))->save();
@@ -825,7 +656,6 @@ Route::group(['middleware' => ['auth']], function() {
     $data = $request->validate([
         'date' => 'required|max:255',
         'time' => 'required|max:255',
-        'first_name' => 'required|max:255',
         'middle_name' => 'required|max:255',
         'last_name' => 'required|max:255',
         'date_of_birth' => 'required|max:255',
@@ -923,129 +753,6 @@ Route::group(['middleware' => ['auth']], function() {
 
   Route::get('/TransferChecklistForNurses', function(){
       return view('TransferChecklistForNurses');
-  });
-  Route::post('/TransferChecklistForNurses', function(Request $request){
-    $data = $request->validate([
-
-      'transfer_to'=> 'max:255|required',
-
-      'transfer_from'=> 'max:255|required',
-      'no01'=> 'max:255|required',
-      'ch01'=> 'max:255|required',
-      'no02'=> 'max:255|required',
-      'ch02'=> 'max:255|required',
-      'no03'=> 'max:255|required',
-      'ch03'=> 'max:255|required',
-      'no04'=> 'max:255|required',
-      'ch04'=> 'max:255|required',
-      'no05'=> 'max:255|required',
-      'ch05'=> 'max:255|required',
-      'no06'=> 'max:255|required',
-      'ch06'=> 'max:255|required',
-      'no07'=> 'max:255|required',
-      'ch07'=> 'max:255|required',
-      'no08'=> 'max:255|required',
-      'ch08'=> 'max:255|required',
-      'no09'=> 'max:255|required',
-      'ch09'=> 'max:255|required',
-      'no10'=> 'max:255|required',
-      'ch10'=> 'max:255|required',
-
-      'no11'=> 'max:255|required',
-      'ch11'=> 'max:255|required',
-      'no12'=> 'max:255|required',
-      'ch12'=> 'max:255|required',
-      'no13'=> 'max:255|required',
-      'ch13'=> 'max:255|required',
-      'no14'=> 'max:255|required',
-      'ch14'=> 'max:255|required',
-      'no15'=> 'max:255|required',
-      'ch15'=> 'max:255|required',
-      'no16'=> 'max:255|required',
-      'ch16'=> 'max:255|required',
-      'no17'=> 'max:255|required',
-      'ch17'=> 'max:255|required',
-      'no18'=> 'max:255|required',
-      'ch18'=> 'max:255|required',
-      'no19'=> 'max:255|required',
-      'ch19'=> 'max:255|required',
-      'no20'=> 'max:255|required',
-      'ch20'=> 'max:255|required',
-
-      'no21'=> 'max:255|required',
-      'ch21'=> 'max:255|required',
-      'no22'=> 'max:255|required',
-      'ch22'=> 'max:255|required',
-      'no23'=> 'max:255|required',
-      'ch23'=> 'max:255|required',
-      'no24'=> 'max:255|required',
-      'ch24'=> 'max:255|required',
-      'no25'=> 'max:255|required',
-      'ch25'=> 'max:255|required',
-      'no26'=> 'max:255|required',
-      'ch26'=> 'max:255|required',
-      'no27'=> 'max:255|required',
-      'ch27'=> 'max:255|required',
-      'no28'=> 'max:255|required',
-      'ch28'=> 'max:255|required',
-      'no29'=> 'max:255|required',
-      'ch29'=> 'max:255|required',
-      'no30'=> 'max:255|required',
-      'ch30'=> 'max:255|required',
-
-
-
-      'ch31'=> 'max:255|required',
-      'no32'=> 'max:255|required',
-      'ch32'=> 'max:255|required',
-      'no33'=> 'max:255|required',
-      'ch33'=> 'max:255|required',
-      'no34'=> 'max:255|required',
-      'ch34'=> 'max:255|required',
-      'no35'=> 'max:255|required',
-      'ch35'=> 'max:255|required',
-      'no36'=> 'max:255|required',
-      'ch36'=> 'max:255|required',
-      'no37'=> 'max:255|required',
-      'ch37'=> 'max:255|required',
-      'no38'=> 'max:255|required',
-      'ch38'=> 'max:255|required',
-      'no39'=> 'max:255|required',
-      'ch39'=> 'max:255|required',
-      'no40'=> 'max:255|required',
-      'ch40'=> 'max:255|required',
-
-
-      'no41'=> 'max:255|required',
-      'ch41'=> 'max:255|required',
-      'no42'=> 'max:255|required',
-      'ch42'=> 'max:255|required',
-
-      'pod01'=> 'max:255|required',
-      'pod02'=> 'max:255|required',
-      'pod03'=> 'max:255|required',
-      'pod04'=> 'max:255|required',
-      'pod05'=> 'max:255|required',
-      'pod06'=> 'max:255|required',
-      'pod07'=> 'max:255|required',
-      'pod08'=> 'max:255|required',
-      'pod09'=> 'max:255|required',
-      'pod010'=> 'max:255|required',
-      'pod011'=> 'max:255|required',
-      'pod012'=> 'max:255|required',
-      'pod013'=> 'max:255|required',
-      'tn01'=> 'max:255|required',
-      'tn02'=> 'max:255|required',
-      'tn03'=> 'max:255|required',
-      'rn01'=> 'max:255|required',
-      'rn02'=> 'max:255|required',
-      'rn03'=> 'max:255|required',
-
-    ]);
-
-    $link = tap(new App\TransferChecklistForNurses($data))->save();
-
-    return view('Index');
   });
 
   Route::get('/VentilatorChargeSheet', function(){
