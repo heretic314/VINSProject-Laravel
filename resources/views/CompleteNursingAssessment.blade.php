@@ -55,10 +55,10 @@
 				</div>
 				<div class="col-md-6">
 					<div class="col-md-6">
-						<label class="control-label col-md-6" for="idband_no">ID Band No.:</label>
+						<label class="control-label col-md-6" for="idbandno">ID Band No.:</label>
 					</div>
 					<div class="col-md-6">
-						<input type="text" class="form-control" name="idband_no" id="idband_no" value="{{ old('idband_no') }}" />
+						<input type="text" class="form-control" name="idbandno" id="idbandno" value="{{ old('idbandno') }}" />
 					</div>
 				</div>
 			</div>
@@ -97,7 +97,7 @@
 					</div>
 					<div class="col-md-6">
 						<select class="form-control" name="allergies">
-							<option selected default value="no">NO</option>
+							<option value="no">NO</option>
 							<option value="yes">YES</option>
 							<option value="other">Other</option>
 						</select>
