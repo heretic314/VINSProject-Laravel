@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
         $this->call(radiologyrequisitionseeder::class);
         $this->call(completenursingassessmentseeder::class);
         $this->call(patientdietrecordseeder::class);
+        $this->call(TransferChecklistForNursesSeeder::class);
 
     }
 }

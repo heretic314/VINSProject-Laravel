@@ -27,7 +27,6 @@ $factory->define(App\TransferChecklistForNurses::class, function (Faker $faker) 
       'ch09'=>$faker->word,
       'no10'=>$faker->word,
       'ch10'=>$faker->word,
-
       'no11'=>$faker->word,
       'ch11'=>$faker->word,
       'no12'=>$faker->word,
@@ -48,7 +47,6 @@ $factory->define(App\TransferChecklistForNurses::class, function (Faker $faker) 
       'ch19'=>$faker->word,
       'no20'=>$faker->word,
       'ch20'=>$faker->word,
-
       'no21'=>$faker->word,
       'ch21'=>$faker->word,
       'no22'=>$faker->word,
@@ -69,9 +67,6 @@ $factory->define(App\TransferChecklistForNurses::class, function (Faker $faker) 
       'ch29'=>$faker->word,
       'no30'=>$faker->word,
       'ch30'=>$faker->word,
-
-
-
       'ch31'=>$faker->word,
       'no32'=>$faker->word,
       'ch32'=>$faker->word,
@@ -91,13 +86,10 @@ $factory->define(App\TransferChecklistForNurses::class, function (Faker $faker) 
       'ch39'=>$faker->word,
       'no40'=>$faker->word,
       'ch40'=>$faker->word,
-
-
       'no41'=>$faker->word,
       'ch41'=>$faker->word,
       'no42'=>$faker->word,
       'ch42'=>$faker->word,
-
       'pod01'=>$faker->word,
       'pod02'=>$faker->word,
       'pod03'=>$faker->word,
