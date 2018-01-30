@@ -1050,6 +1050,7 @@ Route::group(['middleware' => ['auth']], function() {
       'bed_no'=> 'max:255|required',
       'time'=> 'max:255|required',
       'date'=> 'max:255|required',
+      'mean_pressure'=>'max:255|required',
       'time_slot01'=> 'max:255|required',
       'time_slot02'=> 'max:255|required',
       'time_slot03'=> 'max:255|required',

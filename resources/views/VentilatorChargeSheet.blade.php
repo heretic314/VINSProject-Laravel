@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
 	<div class="page-header">
 		<div class="row">
@@ -17,14 +18,14 @@
 		</div>
 	</div>
 
-	@if ($errors->any())
-			<div class="alert alert-danger" role="alert">
-					Please fix the following errors
-			</div>
-	@endif
+
 	<form action="{{ url('/VentilatorChargeSheet') }}" method="post">
 		{{ csrf_field() }}
-
+		@if ($errors->any())
+				<div class="alert alert-danger" role="alert">
+						Please fix the following errors
+				</div>
+		@endif
 	<div class="row form-group">
 		<div class="col-md-8">
 
@@ -72,10 +73,10 @@
 
 			<div class="row form-group">
 				<div class="col-md-6">
-					<div class="col-md-6">
+					<div class="col-md-4">
 						<label>Time : </label>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-8">
 						<input class="form-control" type="time" name="time">
 					</div>
 				</div>
@@ -343,6 +344,7 @@
 						<th class="form-inline">Hour :
 
 							<select class="form-control"  name="time_slot04" value="{{ old('time_slot04') }}">
+								<option>Select Hour</option>
 								<option value="0">0</option>
 								<option value="1">1</option>
 								<option value="2">2</option>

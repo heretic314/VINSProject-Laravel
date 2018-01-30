@@ -5,8 +5,6 @@ use Faker\Generator as Faker;
 $factory->define(App\VentilatorChargeSheet::class, function (Faker $faker) {
     return [
 
-      $table->increments('id'
-      $table->timestamps(
       'name'=> $faker->word,
       'age'=> $faker->word,
       'sex'=> $faker->word,
@@ -31,6 +29,7 @@ $factory->define(App\VentilatorChargeSheet::class, function (Faker $faker) {
       'exp_mv'=> $faker->word,
       'measured_freq'=> $faker->word,
       'peak_pressure'=> $faker->word,
+      'mean_pressure'=>$faker->word,
       'end_exp'=> $faker->word,
       'pressure_low'=> $faker->word,
       'volume_high_mv'=> $faker->word,
