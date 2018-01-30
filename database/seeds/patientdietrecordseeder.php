@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PatientDietRecord extends Seeder
+class patientdietrecordseeder extends Seeder
 {
     /**
      * Run the database seeds.

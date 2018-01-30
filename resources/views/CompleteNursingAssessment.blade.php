@@ -2,7 +2,14 @@
 
 @section('content')
 	<div class="container">
-		<form name="completenursingassessment">
+		@if ($errors->any())
+				<div class="alert alert-danger" role="alert">
+						Please fix the following errors
+				</div>
+		@endif
+
+		<form action="{{ url('/CompleteNursingAssessment') }}" method="post" >
+			{{ csrf_field() }}
 			<div class="page-header">
 				<div class="row">
 					<div class="col-md-6">
@@ -17,42 +24,53 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="row form-group">
-				<div class="col-md-4">
-					<div class="form-group">
+				<div class="col-md-6">
+					<div class="col-md-6">
 						<label class="control-label col-md-4" for="unit">Unit:</label>
-						<div class="col-md-8">
-							<input type="text" class="form-control" name="unit" id="unit">
-						</div>
-						<br><br>
+					</div>
+					<div class="col-md-6">
+						<input type="text" class="form-control" name="unit" id="unit">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="col-md-6">
 						<label class="control-label col-md-4" for="date">Date:</label>
-						<div class="col-md-8">
-							<input type="date" class="form-control" name="date" id="date">
-						</div>
-						<br><br>
+					</div>
+					<div class="col-md-6">
+						<input type="date" class="form-control" name="date" id="date">
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-group">
+				<div class="col-md-6">
+					<div class="col-md-6">
 						<label class="control-label col-md-4" for="time">Time:</label>
-						<div class="col-md-8">
-							<input type="time" class="form-control" name="time" id="time">
-						</div>
+					</div>
+					<div class="col-md-6">
+						<input type="time" class="form-control" name="time" id="time">
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="form-group">
+				<div class="col-md-6">
+					<div class="col-md-6">
 						<label class="control-label col-md-6" for="idband_no">ID Band No.:</label>
-						<div class="col-md-6">
-							<input type="radio" class="radio-inline" name="idband_no" id="idband_no" value="yes"> Yes
-							<input type="radio" class="radio-inline" name="idband_no" id="idband_no" value="no"> No
-						</div>
-						<br><br>
-						<label class="control-label col-md-6" for="call_bell">Call Bell in Reach:</label>
-						<div class="col-md-6">
-							<input type="radio" class="radio-inline" name="call_bell" id="call_bell" value="yes"> Yes
-							<input type="radio" class="radio-inline" name="call_bell" id="call_bell" value="no"> No
-						</div>
+					</div>
+					<div class="col-md-6">
+						<input type="text" class="form-control" name="idband_no" id="idband_no" value="{{ old('idband_no') }}" />
 					</div>
 				</div>
-				<div class="text-right col-md-4">
-					<textarea class="form-control" rows="3" placeholder="Addressograph here"></textarea>
+			</div>
+
+			<div class="row form-group">
+				<div class="col-md-6" >
+					<div class="col-md-6">
+						<label class="control-label col-md-6" for="call_bell">Call Bell in Reach:</label>
+					</div>
+					<div class="col-md-6">
+						<input class="form-control" type="text" name="call_bell" value="{{ old('call_bell') }}" />
+					</div>
 				</div>
 			</div>
 
@@ -60,12 +78,12 @@
 				<div class="col-md-4">
 						<label class="control-label col-md-3" for="height">Height:</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control" name="height" id="height" placeholder="Height(in cms)">
+							<input type="text" class="form-control" name="height" id="height" placeholder="Height(in cms)" value="{{ old('height') }}">
 						</div>
 						<br><br>
 						<label class="control-label col-md-3" for="weight">Weight:</label>
 						<div class="col-md-9">
-							<input type="text" class="form-control" name="weight" id="weight" placeholder="Weight(in KGs)">
+							<input type="text" class="form-control" name="weight" id="weight" placeholder="Weight(in KGs)" value="{{ old('weight') }}">
 						</div>
 				</div>
 			</div>
@@ -79,9 +97,9 @@
 					</div>
 					<div class="col-md-6">
 						<select class="form-control" name="allergies">
-							<option>NO</option>
-							<option>YES</option>
-							<option>Other</option>
+							<option selected default value="no">NO</option>
+							<option value="yes">YES</option>
+							<option value="other">Other</option>
 						</select>
 					</div>
 				</div>
@@ -102,8 +120,8 @@
 					</div>
 					<div class="col-md-6">
 						<select class="form-control" name="history_informant">
-							<option>Patient</option>
-							<option>Other</option>
+							<option value="patient">Patient</option>
+							<option value="other">Other</option>
 						</select>
 					</div>
 				</div>
@@ -124,10 +142,10 @@
 					</div>
 					<div class="col-md-6">
 						<select class="form-control" name="patient_arrived">
-							<option>Ambulatory</option>
-							<option>Wheelchair</option>
-							<option>Stretcher</option>
-							<option>Other</option>
+							<option value="ambulatory">Ambulatory</option>
+							<option value="wheelchair">Wheelchair</option>
+							<option value="stretcher">Stretcher</option>
+							<option value="other">Other</option>
 						</select>
 					</div>
 				</div>
@@ -148,10 +166,10 @@
 					</div>
 					<div class="col-md-6">
 						<select class="form-control" name="patient_arrived_from">
-							<option>Home</option>
-							<option>OPD</option>
-							<option>Other Hospital</option>
-							<option>Other</option>
+							<option value="home">Home</option>
+							<option value="opd">OPD</option>
+							<option value="other_hospital">Other Hospital</option>
+							<option value="other">Other</option>
 						</select>
 					</div>
 				</div>
@@ -180,10 +198,10 @@
 					</div>
 					<div class="col-md-4">
 						<select class="form-control" id="temperature_type" name="temperature_type">
-							<option> Oral </option>
-							<option> Rectal </option>
-							<option> Auxillary </option>
-							<option> Tympanic </option>
+							<option value="oral"> Oral </option>
+							<option value="rectal"> Rectal </option>
+							<option value="auxillary"> Auxillary </option>
+							<option value="tympanic"> Tympanic </option>
 						</select>
 					</div>
 				</div>
@@ -193,8 +211,8 @@
 					</div>
 					<div class="col-md-6">
 						<select class="form-control" name="pain">
-							<option>OPD</option>
-							<option>Home</option>
+							<option value="opd">OPD</option>
+							<option value="home">Home</option>
 						</select>
 					</div>
 				</div>
@@ -256,18 +274,18 @@
 							<th>Feeding</th>
 							<td>
 								<select class="form-control" name="feeding_usual">
-									<option>Level 0</option>
-									<option>Level 1</option>
-									<option>Level 2</option>
-									<option>Level 3</option>
+									<option value="0">Level 0</option>
+									<option value="1">Level 1</option>
+									<option value="2">Level 2</option>
+									<option value="3">Level 3</option>
 								</select>
 							</td>
 							<td>
 								<select class="form-control" name="feeding_admission">
-									<option>Level 0</option>
-									<option>Level 1</option>
-									<option>Level 2</option>
-									<option>Level 3</option>
+									<option value="0">Level 0</option>
+									<option value="1">Level 1</option>
+									<option value="2">Level 2</option>
+									<option value="3">Level 3</option>
 								</select>
 							</td>
 							<td rowspan="5">
@@ -281,18 +299,18 @@
 							<th>Bathing</th>
 							<td>
 								<select class="form-control" name="bathing_usual">
-									<option>Level 0</option>
-									<option>Level 1</option>
-									<option>Level 2</option>
-									<option>Level 3</option>
+									<option value="0">Level 0</option>
+									<option value="1">Level 1</option>
+									<option value="2">Level 2</option>
+									<option value="3">Level 3</option>
 								</select>
 							</td>
 							<td>
 								<select class="form-control" name="bathing_admission">
-									<option>Level 0</option>
-									<option>Level 1</option>
-									<option>Level 2</option>
-									<option>Level 3</option>
+									<option value="0">Level 0</option>
+									<option value="1">Level 1</option>
+									<option value="2">Level 2</option>
+									<option value="3">Level 3</option>
 								</select>
 							</td>
 						</tr>
@@ -300,18 +318,18 @@
 							<th>Toileting</th>
 							<td>
 								<select class="form-control" name="toileting_usual">
-									<option>Level 0</option>
-									<option>Level 1</option>
-									<option>Level 2</option>
-									<option>Level 3</option>
+									<option value="0">Level 0</option>
+									<option value="1">Level 1</option>
+									<option value="2">Level 2</option>
+									<option value="3">Level 3</option>
 								</select>
 							</td>
 							<td>
 								<select class="form-control" name="toileting_admission">
-									<option>Level 0</option>
-									<option>Level 1</option>
-									<option>Level 2</option>
-									<option>Level 3</option>
+									<option value="0">Level 0</option>
+									<option value="1">Level 1</option>
+									<option value="2">Level 2</option>
+									<option value="3">Level 3</option>
 								</select>
 							</td>
 						</tr>
@@ -319,18 +337,18 @@
 							<th>General Mobility / Gait</th>
 							<td>
 								<select class="form-control" name="mobility_usual">
-									<option>Level 0</option>
-									<option>Level 1</option>
-									<option>Level 2</option>
-									<option>Level 3</option>
+									<option value="0">Level 0</option>
+									<option value="1">Level 1</option>
+									<option value="2">Level 2</option>
+									<option value="3">Level 3</option>
 								</select>
 							</td>
 							<td>
 								<select class="form-control" name="mobility_admission">
-									<option>Level 0</option>
-									<option>Level 1</option>
-									<option>Level 2</option>
-									<option>Level 3</option>
+									<option value="0">Level 0</option>
+									<option value="1">Level 1</option>
+									<option value="2">Level 2</option>
+									<option value="3">Level 3</option>
 								</select>
 							</td>
 						</tr>
@@ -338,18 +356,18 @@
 							<th>Dressing / Grooming</th>
 							<td>
 								<select class="form-control" name="dressing_usual">
-									<option>Level 0</option>
-									<option>Level 1</option>
-									<option>Level 2</option>
-									<option>Level 3</option>
+									<option value="0">Level 0</option>
+									<option value="1">Level 1</option>
+									<option value="2">Level 2</option>
+									<option value="3">Level 3</option>
 								</select>
 							</td>
 							<td>
 								<select class="form-control" name="dressing_admission">
-									<option>Level 0</option>
-									<option>Level 1</option>
-									<option>Level 2</option>
-									<option>Level 3</option>
+									<option value="0">Level 0</option>
+									<option value="1">Level 1</option>
+									<option value="2">Level 2</option>
+									<option value="3">Level 3</option>
 								</select>
 							</td>
 						</tr>
@@ -446,9 +464,12 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="row form-group">
+					<button class="form-control btn btn-success" type="submit">Submit</button>
+				</div>
 		</form>
 	</div>
 </body>
-	<hr>
 
 @endsection

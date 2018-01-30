@@ -13,7 +13,7 @@ class CreatePatientDietRecord extends Migration
      */
     public function up()
     {
-        Schema::create('PatientDietRecord', function (Blueprint $table) {
+        Schema::create('patientdietrecord', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('dietician_name');

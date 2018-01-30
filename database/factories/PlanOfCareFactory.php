@@ -5,7 +5,7 @@ use Faker\Generator as Faker;
 $factory->define(App\PlanOfCare::class, function (Faker $faker) {
     return [
         //
-        'diagnosis' => $$faker->word,
+        'diagnosis' => $faker->word,
         'needs_goals' => $faker->word,
         'treatment_plan' => $faker->word,
         'preventive_aspects' => $faker->word,
