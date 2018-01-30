@@ -41,7 +41,7 @@ $factory->define(App\VentilatorChargeSheet::class, function (Faker $faker) {
       'oral'=> $faker->word,
       'chest_physio'=> $faker->word,
       'abg'=> $faker->word,
-      'x-xray_chest'=> $faker->word,
+      'xray_chest'=> $faker->word,
       'catheter_mount'=> $faker->word,
       'filter'=> $faker->word,
       'ventilator_circuit'=> $faker->word,

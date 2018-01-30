@@ -52,7 +52,7 @@ class CreateVentilatorchargesheetTable extends Migration
             $table->string('oral');
             $table->string('chest_physio');
             $table->string('abg');
-            $table->string('x-xray_chest');
+            $table->string('xray_chest');
             $table->string('catheter_mount');
             $table->string('filter');
             $table->string('ventilator_circuit');

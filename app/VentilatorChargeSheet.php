@@ -45,7 +45,7 @@ class VentilatorChargeSheet extends Model
     'oral',
     'chest_physio',
     'abg',
-    'x-xray_chest',
+    'xray_chest',
     'catheter_mount',
     'filter',
     'ventilator_circuit',
