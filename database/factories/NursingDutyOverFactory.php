@@ -5,7 +5,7 @@ use Faker\Generator as Faker;
 $factory->define(App\NursingDutyOver::class, function (Faker $faker) {
     return [
       'addressograph' => $faker->text,
-      'specific_instruction' => $faker->text,
+      'specific_instruction' => $faker->word,
       'M_nurse_name' => $faker->word,
       'E_nurse_name' => $faker->word,
       'N_nurse_name' => $faker->word,
@@ -45,7 +45,7 @@ $factory->define(App\NursingDutyOver::class, function (Faker $faker) {
       'M_replacementdrug' => $faker->word,
       'E_replacementdrug' => $faker->word,
       'N_replacementdrug' => $faker->word,
-      
+
       'balance_drugs_00' => $faker->word,
       'balance_drugs_01' => $faker->word,
       'balance_drugs_02' => $faker->word,

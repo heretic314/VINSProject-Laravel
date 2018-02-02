@@ -25,7 +25,7 @@ $factory->define(App\RadiologyRequisition::class, function (Faker $faker) {
         'xray_portable' => $faker->word,
         'other_xray' => $faker->word,
         'xray_other' => $faker->word,
-        'date' => $faker->word,
-        'time' => $faker->word,
+        'date' => $faker->date,
+        'time' => $faker->time,
     ];
 });
