@@ -19,9 +19,9 @@ class DatabaseSeeder extends Seeder
         $this->call(doctorsdailynotesseeder::class);
         $this->call(nursingdutyoverseeder::class);
         $this->call(labsheetseeder::class);
-        $this->call(PatientDetailForm::class);
+        $this->call(patientsdetailformseeder::class);
         $this->call(codeblueevaluationformseeder::class);
-        $this->call(infusiontherapychart::class);
+        $this->call(infusiontherapychartseeder::class);
         $this->call(planofcareseeder::class);
         $this->call(historyformseeder::class);
         $this->call(operativedetailsheetseeder::class);
@@ -32,6 +32,7 @@ class DatabaseSeeder extends Seeder
         $this->call(completenursingassessmentseeder::class);
         $this->call(DailyDietFormSeeder::class);
         $this->call(VentilatorChargeSheetSeeder::class);
+        $this->call(erobservationseeder::class);
 
 
     }
