@@ -31,6 +31,8 @@ class DatabaseSeeder extends Seeder
         $this->call(TransferChecklistForNursesSeeder::class);
         $this->call(completenursingassessmentseeder::class);
         $this->call(DailyDietFormSeeder::class);
+        $this->call(VentilatorChargeSheetSeeder::class);
+
 
     }
 }

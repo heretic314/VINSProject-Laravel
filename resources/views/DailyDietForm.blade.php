@@ -47,9 +47,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-2">
-			<textarea class="form-control" name="addressograph" placeholder="Addressograph Here"></textarea>
-		</div>
+
 	</div>
 	<hr>
 

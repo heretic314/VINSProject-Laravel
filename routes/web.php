@@ -1067,6 +1067,60 @@ Route::get('/DailyDietForm', function(){
   Route::get('/VentilatorChargeSheet', function(){
       return view('VentilatorChargeSheet');
   });
+  Route::post('/VentilatorChargeSheet', function(Request $request){
+    $data = $request->validate([
+
+      'name'=> 'max:255|required',
+      'age'=> 'max:255|required',
+      'sex'=> 'max:255|required',
+      'bed_no'=> 'max:255|required',
+      'time'=> 'max:255|required',
+      'date'=> 'max:255|required',
+      'mean_pressure'=>'max:255|required',
+      'time_slot01'=> 'max:255|required',
+      'time_slot02'=> 'max:255|required',
+      'time_slot03'=> 'max:255|required',
+      'time_slot04'=> 'max:255|required',
+      'mode' => 'max:255|required',
+      'tidal_volume' => 'max:255|required',
+      'freq_controlled' => 'max:255|required',
+      'freq-simv' => 'max:255|required',
+      'pressure_control' => 'max:255|required',
+      'pressure_support' => 'max:255|required',
+      'peep_cpap' => 'max:255|required',
+      'flo2' => 'max:255|required',
+      'triggering' => 'max:255|required',
+      'inp_tv' => 'max:255|required',
+      'exp_tv' => 'max:255|required',
+      'exp_mv' => 'max:255|required',
+      'measured_freq' => 'max:255|required',
+      'peak_pressure' => 'max:255|required',
+      'end_exp' => 'max:255|required',
+      'pressure_low' => 'max:255|required',
+      'volume_high_mv' => 'max:255|required',
+      'volume_low_mv' => 'max:255|required',
+      'gas_supply' => 'max:255|required',
+      'power_failure' => 'max:255|required',
+      'position' => 'max:255|required',
+      'et_tstomy' => 'max:255|required',
+      'oral' => 'max:255|required',
+      'chest_physio' => 'max:255|required',
+      'abg' => 'max:255|required',
+      'xray_chest' => 'max:255|required',
+      'catheter_mount' => 'max:255|required',
+      'filter' => 'max:255|required',
+      'ventilator_circuit' => 'max:255|required',
+      'et_tube' => 'max:255|required',
+
+
+
+    ]);
+
+    $link = tap(new App\VentilatorChargeSheet($data))->save();
+
+    return view('Index');
+  });
+
 
   Route::get('/WardProcedureRecord', function(){
       return view('WardProcedureRecord');
