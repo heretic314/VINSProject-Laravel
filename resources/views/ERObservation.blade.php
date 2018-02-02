@@ -23,41 +23,30 @@
 			</div>
 	@endif
 
-	<form action="ERObservation" method="post">
+	<form action="{{ url('/ERObservation') }}" method="post">
 		{{ csrf_field() }}
 		<div class="row form-group">
-			<div class="col-md-10">
-				<div class="row form-group">
-					<div class="col-md-6">
-						<div class="col-md-6">
-				      <label>Date : </label>
-						</div>
-						<div class="col-md-6">
-				      <input class="form-control" type="date" name="date" value="{{ old('date') }}" />
-							@if($errors->has('date'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('date') }}</div></span>
-							@endif
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="col-md-6">
-				      <label>Triage Category : </label>
-						</div>
-						<div class="col-md-6">
-				      <input class="form-control" type="text" name="triage_category" value="{{ old('triage_category') }}" />
-							@if($errors->has('triage_category'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('triage_category') }}</div></span>
-							@endif
-						</div>
-					</div>
+			<div class="col-md-6">
+				<div class="col-md-6">
+		      <label>Date : </label>
 				</div>
-
+				<div class="col-md-6">
+		      <input class="form-control" type="date" name="date" value="{{ old('date') }}" />
+					@if($errors->has('date'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('date') }}</div></span>
+					@endif
+				</div>
 			</div>
-			<div class="col-md-2">
-				<textarea class="form-control" name="addressograph" placeholder="Addressograph" value="{{ old('addressograph') }}"></textarea>
-				@if($errors->has('addressograph'))
-						<span class="help-block"><div class="text-danger">{{ $errors->first('addressograph') }}</div></span>
-				@endif
+			<div class="col-md-6">
+				<div class="col-md-6">
+		      <label>Triage Category : </label>
+				</div>
+				<div class="col-md-6">
+		      <input class="form-control" type="text" name="triage_category" value="{{ old('triage_category') }}" />
+					@if($errors->has('triage_category'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('triage_category') }}</div></span>
+					@endif
+				</div>
 			</div>
 		</div>
 
@@ -388,9 +377,9 @@
 									<span class="help-block"><div class="text-danger">{{ $errors->first('administration_by_01') }}</div></span>
 							@endif
 						 </td>
-						<td><input type="time" name="time_01" class="form-control" value="{{ old('time_01') }}">
-							@if($errors->has('time_01'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('time_01') }}</div></span>
+						<td><input type="time" name="medication_time_01" class="form-control" value="{{ old('medication_time_01') }}">
+							@if($errors->has('medication_time_01'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('medication_time_01') }}</div></span>
 							@endif
 						 </td>
 				  </tr>
@@ -415,9 +404,9 @@
 									<span class="help-block"><div class="text-danger">{{ $errors->first('administration_by_02') }}</div></span>
 							@endif
 						 </td>
-						<td><input type="time" name="time_02" class="form-control" value="{{ old('time_02') }}">
-							@if($errors->has('time_02'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('time_02') }}</div></span>
+						<td><input type="time" name="medication_time_02" class="form-control" value="{{ old('medication_time_02') }}">
+							@if($errors->has('medication_time_02'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('medication_time_02') }}</div></span>
 							@endif
 						 </td>
 				  </tr>
@@ -442,9 +431,9 @@
 									<span class="help-block"><div class="text-danger">{{ $errors->first('administration_by_03') }}</div></span>
 							@endif
 						 </td>
-						<td><input type="time" name="time_03" class="form-control" value="{{ old('time_03') }}">
-							@if($errors->has('time_03'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('time_03') }}</div></span>
+						<td><input type="time" name="medication_time_03" class="form-control" value="{{ old('medication_time_03') }}">
+							@if($errors->has('medication_time_03'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('medication_time_03') }}</div></span>
 							@endif
 						 </td>
 				  </tr>
@@ -469,9 +458,9 @@
 									<span class="help-block"><div class="text-danger">{{ $errors->first('administration_by_04') }}</div></span>
 							@endif
 						 </td>
-						<td><input type="time" name="time_04" class="form-control" value="{{ old('time_04') }}">
-							@if($errors->has('time_04'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('time_04') }}</div></span>
+						<td><input type="time" name="medication_time_04" class="form-control" value="{{ old('medication_time_04') }}">
+							@if($errors->has('medication_time_04'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('medication_time_04') }}</div></span>
 							@endif
 						 </td>
 				  </tr>
@@ -496,9 +485,9 @@
 									<span class="help-block"><div class="text-danger">{{ $errors->first('administration_by_05') }}</div></span>
 							@endif
 						 </td>
-						<td><input type="time" name="time_05" class="form-control" value="{{ old('time_05') }}">
-							@if($errors->has('time_05'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('time_05') }}</div></span>
+						<td><input type="time" name="medication_time_05" class="form-control" value="{{ old('medication_time_05') }}">
+							@if($errors->has('medication_time_05'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('medication_time_05') }}</div></span>
 							@endif
 						 </td>
 				  </tr>

@@ -22,7 +22,7 @@ class VentilatorChargeSheet extends Model
     'mode',
     'tidal_volume',
     'freq_controlled',
-    'freq-simv',
+    'freq_simv',
     'pressure_control',
     'pressure_support',
     'peep_cpap',

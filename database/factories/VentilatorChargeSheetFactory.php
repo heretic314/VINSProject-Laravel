@@ -18,7 +18,7 @@ $factory->define(App\VentilatorChargeSheet::class, function (Faker $faker) {
       'mode'=> $faker->word,
       'tidal_volume'=> $faker->word,
       'freq_controlled'=> $faker->word,
-      'freq-simv'=> $faker->word,
+      'freq_simv'=> $faker->word,
       'pressure_control'=> $faker->word,
       'pressure_support'=> $faker->word,
       'peep_cpap'=> $faker->word,

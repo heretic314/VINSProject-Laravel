@@ -18,7 +18,6 @@ class CreateErobservationTable extends Migration
             $table->timestamps();
             $table->date('date');
             $table->string('triage_category');
-            $table->string('addressograph')->nullable();
             $table->string('diagnosis');
             $table->string('investigation');
             $table->time('time_01');
@@ -42,11 +41,12 @@ class CreateErobservationTable extends Migration
             $table->string('temp_01');
             $table->string('temp_02');
             $table->string('temp_03');
+
             $table->string('iv_infusion_01');
             $table->string('qty_01');
             $table->time('time_start_01');
             $table->time('time_end_01');
-            $table->string('remarks_01');
+            $table->string('remarks_01')->nullable();
             $table->string('iv_infusion_02')->nullable();
             $table->string('qty_02')->nullable();
             $table->time('time_start_02')->nullable();
@@ -62,6 +62,7 @@ class CreateErobservationTable extends Migration
             $table->time('time_start_04')->nullable();
             $table->time('time_end_04')->nullable();
             $table->string('remarks_04')->nullable();
+
             $table->string('name_drug_01');
             $table->string('dosage_01');
             $table->string('routine_01');

@@ -30,7 +30,7 @@ class CreateDailyDietForm extends Migration
             $table->string('juice')->nullable();
             $table->string('dinner')->nullable();
             $table->string('milk')->nullable();
-            $table->string('remarks');
+            $table->string('remarks')->nullable();
 
 
         });

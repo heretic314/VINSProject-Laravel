@@ -22,7 +22,6 @@ class CreateVentilatorchargesheetTable extends Migration
             $table->string('bed_no');
             $table->time('time');
             $table->date('date');
-            $table->string('mean_pressure');
             $table->string('time_slot01');
             $table->string('time_slot02');
             $table->string('time_slot03');
@@ -30,7 +29,7 @@ class CreateVentilatorchargesheetTable extends Migration
             $table->string('mode');
             $table->string('tidal_volume');
             $table->string('freq_controlled');
-            $table->string('freq-simv');
+            $table->string('freq_simv');
             $table->string('pressure_control');
             $table->string('pressure_support');
             $table->string('peep_cpap');
@@ -41,6 +40,7 @@ class CreateVentilatorchargesheetTable extends Migration
             $table->string('exp_mv');
             $table->string('measured_freq');
             $table->string('peak_pressure');
+            $table->string('mean_pressure');
             $table->string('end_exp');
             $table->string('pressure_low');
             $table->string('volume_high_mv');
@@ -57,9 +57,6 @@ class CreateVentilatorchargesheetTable extends Migration
             $table->string('filter');
             $table->string('ventilator_circuit');
             $table->string('et_tube');
-
-
-
 
         });
     }
