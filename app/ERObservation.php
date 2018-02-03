@@ -11,7 +11,6 @@ class ERObservation extends Model
   protected $fillable = [
     'date',
     'triage_category',
-    'addressograph',
     'diagnosis',
     'investigation',
     'time_01',

@@ -1206,6 +1206,55 @@ Route::get('/DailyDietForm', function(){
       return view('WardProcedureRecord');
   });
 
+  Route::post('/WardProcedureRecord',function(Request $request){
+    $data = $request->validate([
+      'time' => 'required|max:255',
+      'multipara_monitoring_less6' => 'required|max:255',
+      'multipara_monitoring_more6' => 'required|max:255',
+      'oxygen_upto12' => 'required|max:255',
+      'oxygen_more12' => 'required|max:255',
+      'pulse_intermittent' => 'required|max:255',
+      'pulse_continuous' => 'required|max:255',
+      'ventilator_bipap' => 'required|max:255',
+      'nebulization' => 'required|max:255',
+      'blood_transfusion' => 'required|max:255',
+      'rbs' => 'required|max:255',
+      'ecg' => 'required|max:255',
+      'bed_charges' => 'required|max:255',
+      'traction' => 'required|max:255',
+      'dressing' => 'required|max:255',
+      'spcl_dressing' => 'required|max:255',
+      'tube_insertion' => 'required|max:255',
+      'catheterisation' => 'required|max:255',
+      'suture_removal' => 'required|max:255',
+      'clw_suturing' => 'required|max:255',
+      'diet_consultation' => 'required|max:255',
+      'enema' => 'required|max:255',
+      'syringe_pump' => 'required|max:255',
+      'echo' => 'required|max:255',
+      'urine_sugar' => 'required|max:255',
+      'peripheral_line' => 'required|max:255',
+      'central_line' => 'required|max:255',
+      'lumbar_puncture' => 'required|max:255',
+      'csf_manometry' => 'required|max:255',
+      'intubation' => 'required|max:255',
+      'code_blue' => 'required|max:255',
+      'resuscitation' => 'required|max:255',
+      'ambulance_charges' => 'required|max:255',
+      'escort_ventilator' => 'required|max:255',
+      'escort_without' => 'required|max:255',
+      'mlc_inside_city' => 'required|max:255',
+      'mlc_outside_city' => 'required|max:255',
+      'defibrillator_charges' => 'required|max:255',
+      'physiotherapy' => 'required|max:255',
+
+    ]);
+
+    $link = tap(new App\WardProcedureRecord($data))->save();
+
+    return view('Index');
+  });
+
   Route::get('/submit_doctors_handover', function(){
     return redirect('/index');
   } ) ;

@@ -17,11 +17,15 @@
 		</div>
 	</div>
 
-	@if ($errors->any())
+	@if ($errors->first())
 			<div class="alert alert-danger" role="alert">
 					Please fix the following errors
+					<?php foreach ($errors->all() as $message) {
+						echo "$message";
+					} ?>
 			</div>
 	@endif
+
 
 	<form action="{{ url('/ERObservation') }}" method="post">
 		{{ csrf_field() }}

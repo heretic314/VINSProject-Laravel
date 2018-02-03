@@ -88,6 +88,7 @@ class CreateErobservationTable extends Migration
             $table->string('routine_05')->nullable();
             $table->string('administration_by_05')->nullable();
             $table->time('medication_time_05')->nullable();
+            
             $table->string('patient_shifted_to');
             $table->string('er_nurse');
         });

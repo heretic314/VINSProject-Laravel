@@ -1,0 +1,47 @@
+<?php
+
+use Faker\Generator as Faker;
+
+$factory->define(App\WardProcedureRecord::class, function (Faker $faker) {
+    return [
+      'time' => $faker->time,
+      'multipara_monitoring_less6' => $faker->word,
+      'multipara_monitoring_more6' => $faker->word,
+      'oxygen_upto12' => $faker->word,
+      'oxygen_more12' => $faker->word,
+      'pulse_intermittent' => $faker->word,
+      'pulse_continuous' => $faker->word,
+      'ventilator_bipap' => $faker->word,
+      'nebulization' => $faker->word,
+      'blood_transfusion' => $faker->word,
+      'rbs' => $faker->word,
+      'ecg' => $faker->word,
+      'bed_charges' => $faker->word,
+      'traction' => $faker->word,
+      'dressing' => $faker->word,
+      'spcl_dressing' => $faker->word,
+      'tube_insertion' => $faker->word,
+      'catheterisation' => $faker->word,
+      'suture_removal' => $faker->word,
+      'clw_suturing' => $faker->word,
+      'diet_consultation' => $faker->word,
+      'enema' => $faker->word,
+      'syringe_pump' => $faker->word,
+      'echo' => $faker->word,
+      'urine_sugar' => $faker->word,
+      'peripheral_line' => $faker->word,
+      'central_line' => $faker->word,
+      'lumbar_puncture' => $faker->word,
+      'csf_manometry' => $faker->word,
+      'intubation' => $faker->word,
+      'code_blue' => $faker->word,
+      'resuscitation' => $faker->word,
+      'ambulance_charges' => $faker->word,
+      'escort_ventilator' => $faker->word,
+      'escort_without' => $faker->word,
+      'mlc_inside_city' => $faker->word,
+      'mlc_outside_city' => $faker->word,
+      'defibrillator_charges' => $faker->word,
+      'physiotherapy' => $faker->word,
+    ];
+});

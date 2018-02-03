@@ -6,7 +6,6 @@ $factory->define(App\ERObservation::class, function (Faker $faker) {
     return [
       'date' => $faker->date,
       'triage_category' => $faker->word,
-      'addressograph' => $faker->word,
       'diagnosis' => $faker->word,
       'investigation' => $faker->word,
       'time_01' => $faker->time,

@@ -49,6 +49,7 @@ return array(
     'App\\TransferChecklistForNurses' => $baseDir . '/app/TransferChecklistForNurses.php',
     'App\\User' => $baseDir . '/app/User.php',
     'App\\VentilatorChargeSheet' => $baseDir . '/app/VentilatorChargeSheet.php',
+    'App\\WardProcedureRecord' => $baseDir . '/app/WardProcedureRecord.php',
     'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
     'AssertionError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
     'CPRFormatSeeder' => $baseDir . '/database/seeds/CPRFormatSeeder.php',
@@ -3703,4 +3704,5 @@ return array(
     'phpDocumentor\\Reflection\\Types\\Void_' => $vendorDir . '/phpdocumentor/type-resolver/src/Types/Void_.php',
     'planofcareseeder' => $baseDir . '/database/seeds/planofcareseeder.php',
     'radiologyrequisitionseeder' => $baseDir . '/database/seeds/radiologyrequisitionseeder.php',
+    'wardprocedurerecordseeder' => $baseDir . '/database/seeds/wardprocedurerecordseeder.php',
 );
