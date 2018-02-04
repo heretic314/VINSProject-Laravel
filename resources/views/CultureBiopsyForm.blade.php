@@ -17,7 +17,14 @@
 		</div>
 	</div>
 
-	<form id="culturebiopsyform">
+	@if ($errors->any())
+			<div class="alert alert-danger" role="alert">
+					Please fix the following errors
+			</div>
+	@endif
+
+	<form name="{{ url('/CultureBiopsyForm') }}" method="post">
+		{{ csrf_field() }}
 		<div class="row form-group">
 			<div class="col-md-8">
 				<div class="row">
@@ -36,7 +43,7 @@
 							<label>Time :</label>
 						</div>
 						<div class="col-md-6">
-							<input type="date" class="form-control" name="date" id="date">
+							<input type="time" class="form-control" name="date" id="date">
 						</div>
 					</div>
 				</div>
@@ -98,8 +105,8 @@
 			    </td>
 				<td>
 					<div class="">
-						<input type="radio" class="radio-inline" name="cytology_00" id="cytology_00" value="Culture"> Culture <br>
-						<input type="radio" class="radio-inline" name="cytology_00" id="cytology_00" value="Sensitivity"> Sensitivity
+						<input type="radio" class="radio-inline" name="cytology_000" id="cytology_00" value="Culture"> Culture <br>
+						<input type="radio" class="radio-inline" name="cytology_001" id="cytology_01" value="Sensitivity"> Sensitivity
 					</div>
 				</td>
 			  </tr>
@@ -112,15 +119,15 @@
 					</div>
 					<br>
 					<div class="">
-						<input type="radio" class="radio-inline" name="histopathology_01" id="histopathology_01" value="gram_stain"> Gram Stain <br>
+						<input type="radio" class="radio-inline" name="histopathology_00" id="histopathology_00" value="gram_stain"> Gram Stain <br>
 						<input type="radio" class="radio-inline" name="histopathology_01" id="histopathology_01" value="zn_stain"> ZN Stain
 					</div>
 			    </td>
 				<td>
 					<div class="">
-						<input type="radio" class="radio-inline" name="cytology_01" id="cytology_01" value="myco_tb"> Myco TB <br>
+						<input type="radio" class="radio-inline" name="cytology_00" id="cytology_00" value="myco_tb"> Myco TB <br>
 						<input type="radio" class="radio-inline" name="cytology_01" id="cytology_01" value="aerobic"> Aerobic <br>
-						<input type="radio" class="radio-inline" name="cytology_01" id="cytology_01" value="anaerobic"> Anaerobic
+						<input type="radio" class="radio-inline" name="cytology_02" id="cytology_02" value="anaerobic"> Anaerobic
 					</div>
 				</td>
 			  </tr>
@@ -139,16 +146,16 @@
 			    <td>
 			    	<label class="control-label" for="type_of_biopsy">Surgical Excision:</label>
 					<div class="">
-						<input type="radio" class="radio-inline" name="type_of_biopsy" id="type_of_biopsy" value="Culture"> Complete <br>
-						<input type="radio" class="radio-inline" name="type_of_biopsy" id="type_of_biopsy" value="Sensitivity"> Partial <br>
-						<input type="radio" class="radio-inline" name="type_of_biopsy" id="type_of_biopsy" value="Culture"> Punch <br>
-						<input type="radio" class="radio-inline" name="type_of_biopsy" id="type_of_biopsy" value="Sensitivity"> Needle <br>
-						<input type="radio" class="radio-inline" name="type_of_biopsy" id="type_of_biopsy" value="Culture"> Endoscopic
+						<input type="radio" class="radio-inline" name="type_of_biopsy_01" value="Culture"> Complete <br>
+						<input type="radio" class="radio-inline" name="type_of_biopsy_02" value="Sensitivity"> Partial <br>
+						<input type="radio" class="radio-inline" name="type_of_biopsy_03" value="Culture"> Punch <br>
+						<input type="radio" class="radio-inline" name="type_of_biopsy_04" value="Sensitivity"> Needle <br>
+						<input type="radio" class="radio-inline" name="type_of_biopsy_05" value="Culture"> Endoscopic
 					</div>
 			    </td>
 				<td>
 					<div class="">
-						<textarea class="form-control" rows="6" placeholder="Specimen info here"></textarea>
+						<textarea class="form-control" rows="6" name="specimen_info" placeholder="Specimen info here"></textarea>
 					</div>
 				</td>
 			  </tr>
@@ -173,8 +180,8 @@
 		  		<div class="col-md-4">
 		  			<label class="control-label" for="send_to"><h3>Send to:</h3></label>
 					<div class="">
-						<input type="radio" class="radio-inline" name="send_to" id="send_to" value="toprani_lab"> Toprani Lab <br>
-						<input type="radio" class="radio-inline" name="send_to" id="send_to" value="kadakiya_lab"> Kadakiya Lab
+						<input type="radio" class="radio-inline" name="send_to_00" id="send_to" value="toprani_lab"> Toprani Lab <br>
+						<input type="radio" class="radio-inline" name="send_to_01" id="send_to" value="kadakiya_lab"> Kadakiya Lab
 					</div>
 		  		</div>
 		  		<div class="col-md-8">
@@ -196,6 +203,9 @@
 					</div>
 		  		</div>
 		  </div>
+			<div class="row form-group">
+				<button class="btn btn-success" type="submit">Submit</button>
+			</div>
 	</form>
 </div>
 @endsection
