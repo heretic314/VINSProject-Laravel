@@ -21,120 +21,121 @@
 			<div class="alert alert-danger" role="alert">
 					Please fix the following errors
 			</div>
+			@foreach ($errors->keys() as $error)
+						 <li>{{ $error }}</li>
+				 @endforeach
 	@endif
 
 	<form name="{{ url('/CultureBiopsyForm') }}" method="post">
 		{{ csrf_field() }}
 		<div class="row form-group">
-			<div class="col-md-8">
-				<div class="row">
+			<div class="col-md-4">
+				<div class="row form-group">
 					<div class="col-md-6">
-						<div class="col-md-6">
-							<label>Date:</label>
-						</div>
-						<div class="col-md-6">
-							<input type="date" class="form-control" name="date" id="date">
-						</div>
+						<label>Date:</label>
+					</div>
+					<div class="col-md-6">
+						<input type="date" class="form-control" name="date" id="date">
 					</div>
 				</div>
-				<div class="row">
+				<div class="row form-group">
 					<div class="col-md-6">
-						<div class="col-md-6">
-							<label>Time :</label>
-						</div>
-						<div class="col-md-6">
-							<input type="time" class="form-control" name="date" id="date">
-						</div>
+						<label>Time :</label>
+					</div>
+					<div class="col-md-6">
+						<input type="time" class="form-control" name="date" id="date">
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
-				<textarea class="form-control" placeholder="Addressograph here"></textarea>
+				<div class="row form-group">
+					<div class="col-md-6">
+						<label>Doctor's Name : </label>
+					</div>
+					<div class="col-md-6">
+						<input type="text" class="form-control" name="doctors_name" id="doctors_name">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="row form-group">
+					<div class="col-md-6">
+						<label>Given By : </label>
+					</div>
+					<div class="col-md-6">
+						<input type="text" class="form-control" name="given_by" id="given_by">
+					</div>
+				</div>
+
+				<div class="row form-group">
+					<div class="col-md-6">
+						<label>Recieved By : </label>
+					</div>
+					<div class="col-md-6">
+						<input type="text" class="form-control" name="received_by" id="received_by">
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<div class="row form-group">
-			<div class="col-md-6">
-				<div class="col-md-6">
-					<label>Doctor's Name : </label>
-				</div>
-				<div class="col-md-6">
-					<input type="text" class="form-control" name="doctors_name" id="doctors_name">
-				</div>
-			</div>
-		</div>
-
-		<div class="row form-group">
-			<div class="col-md-6">
-				<div class="col-md-6">
-					<label>Given By : </label>
-				</div>
-				<div class="col-md-6">
-					<input type="text" class="form-control" name="given_by" id="given_by">
-				</div>
-			</div>
-		</div>
-
-		<div class="row form-group">
-			<div class="col-md-6">
-				<div class="col-md-6">
-					<label>Recieved By : </label>
-				</div>
-				<div class="col-md-6">
-					<input type="text" class="form-control" name="received_by" id="received_by">
-				</div>
-			</div>
-		</div>
 
 		<hr>
 
-		<table class="table table-bordered">
+		<table class="table table-bordered table-responsive">
 		    <thead>
-			  <tr>
-				<th>Histopathology</th>
-				<th>Cytology</th>
-			  </tr>
-			</thead>
-			<tbody>
-			  <tr>
-			    <td>
-			    	<label class="control-label" for="ihc">IHC:</label>
-					<div class="">
-						<input type="text" class="form-control" name="ihc" id="ihc">
-					</div>
-			    </td>
-				<td>
-					<div class="">
-						<input type="radio" class="radio-inline" name="cytology_000" id="cytology_00" value="Culture"> Culture <br>
-						<input type="radio" class="radio-inline" name="cytology_001" id="cytology_01" value="Sensitivity"> Sensitivity
-					</div>
-				</td>
-			  </tr>
-
-			  <tr>
-			    <td>
-			    	<label class="control-label" for="others">Others:</label>
-					<div class="">
-						<input type="text" class="form-control" name="others" id="others">
-					</div>
-					<br>
-					<div class="">
-						<input type="radio" class="radio-inline" name="histopathology_00" id="histopathology_00" value="gram_stain"> Gram Stain <br>
-						<input type="radio" class="radio-inline" name="histopathology_01" id="histopathology_01" value="zn_stain"> ZN Stain
-					</div>
-			    </td>
-				<td>
-					<div class="">
-						<input type="radio" class="radio-inline" name="cytology_00" id="cytology_00" value="myco_tb"> Myco TB <br>
-						<input type="radio" class="radio-inline" name="cytology_01" id="cytology_01" value="aerobic"> Aerobic <br>
-						<input type="radio" class="radio-inline" name="cytology_02" id="cytology_02" value="anaerobic"> Anaerobic
-					</div>
-				</td>
-			  </tr>
-			</tbody>
+				  <tr>
+					<th>Histopathology</th>
+					<th>Cytology</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+				    <td>
+							<div class="col-md-6">
+								<label class="control-label" for="ihc">IHC:</label>
+							</div>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="ihc" id="ihc">
+							</div>
+				    </td>
+						<td>
+							<div class="">
+								<select class="form-control" name="cytology">
+									<option value="culture">Culture</option>
+									<option value="sensitivity">Sensitivity</option>
+								</select>
+							</div>
+						</td>
+				  </tr>
+				  <tr>
+				    <td>
+							<div class="col-md-6">
+								<label class="control-label" for="others">Others:</label>
+							</div>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="others" id="others">
+							</div>
+							<div class="">
+								<select class="form-control" name="histopathology">
+									<option value="gram_stain">Gram Stain</option>
+									<option value="zn_stain">ZN Stain</option>
+								</select>
+							</div>
+				    </td>
+						<td>
+							<div class="">
+								<select class="form-control" name="cytology">
+									<option value="myco_tb">Myco TB</option>
+									<option value="aerobic">Aerobic</option>
+									<option value="anaerobic">Anaerobic</option>
+								</select>
+							</div>
+						</td>
+				  </tr>
+				</tbody>
 		  </table>
 
-		  <table class="table table-bordered">
+		  <table class="table table-bordered table-responsive">
 		    <thead>
 			  <tr>
 				<th>Type of Biopsy</th>
@@ -145,13 +146,15 @@
 			  <tr>
 			    <td>
 			    	<label class="control-label" for="type_of_biopsy">Surgical Excision:</label>
-					<div class="">
-						<input type="radio" class="radio-inline" name="type_of_biopsy_01" value="Culture"> Complete <br>
-						<input type="radio" class="radio-inline" name="type_of_biopsy_02" value="Sensitivity"> Partial <br>
-						<input type="radio" class="radio-inline" name="type_of_biopsy_03" value="Culture"> Punch <br>
-						<input type="radio" class="radio-inline" name="type_of_biopsy_04" value="Sensitivity"> Needle <br>
-						<input type="radio" class="radio-inline" name="type_of_biopsy_05" value="Culture"> Endoscopic
-					</div>
+						<div class="">
+							<select class="form-control" name="type_of_biopsy">
+								<option value="complete">Complete</option>
+								<option value="partial">Partial</option>
+								<option value="punch">Punch</option>
+								<option value="needle">Needle</option>
+								<option value="endoscopic">Endoscopic</option>
+							</select>
+						</div>
 			    </td>
 				<td>
 					<div class="">
@@ -179,31 +182,35 @@
 		  <div class="form-group">
 		  		<div class="col-md-4">
 		  			<label class="control-label" for="send_to"><h3>Send to:</h3></label>
-					<div class="">
-						<input type="radio" class="radio-inline" name="send_to_00" id="send_to" value="toprani_lab"> Toprani Lab <br>
-						<input type="radio" class="radio-inline" name="send_to_01" id="send_to" value="kadakiya_lab"> Kadakiya Lab
-					</div>
+						<div class="">
+							<select class="form-control" name="send_to">
+								<option value="toprani_lab">Toprani Lab</option>
+								<option value="kadakiya_lab">Kadakiya Lab</option>
+							</select>
+						</div>
 		  		</div>
-		  		<div class="col-md-8">
+		  		<div class="col-md-4">
 		  			<label class="control-label" for="consultant_sign">Consultant's Sign:</label>
-					<div class="">
-						<input type="text" class="form-control" name="consultant_sign" id="consultant_sign">
+						<div class="">
+							<input type="text" class="form-control" name="consultant_sign" id="consultant_sign">
+						</div>
+						<label class="control-label" for="consultant_name">Consultant's Name:</label>
+						<div class="">
+							<input type="text" class="form-control" name="consultant_name" id="consultant_name">
+						</div>
 					</div>
-					<label class="control-label" for="consultant_name">Consultant's Name:</label>
-					<div class="">
-						<input type="text" class="form-control" name="consultant_name" id="consultant_name">
-					</div>
-					<label class="control-label" for="date_for_sign">Date:</label>
-					<div class="">
-						<input type="date" class="form-control" name="date_for_sign" id="date_for_sign">
-					</div>
-					<label class="control-label" for="time_for_sign">Time:</label>
-					<div class="">
-						<input type="time" class="form-control" name="time_for_sign" id="time_for_sign">
-					</div>
+					<div class="col-md-4">
+						<label class="control-label" for="date_for_sign">Date:</label>
+						<div class="">
+							<input type="date" class="form-control" name="date_for_sign" id="date_for_sign">
+						</div>
+						<label class="control-label" for="time_for_sign">Time:</label>
+						<div class="">
+							<input type="time" class="form-control" name="time_for_sign" id="time_for_sign">
+						</div>
 		  		</div>
 		  </div>
-			<div class="row form-group">
+			<div class="text-center form-group">
 				<button class="btn btn-success" type="submit">Submit</button>
 			</div>
 	</form>

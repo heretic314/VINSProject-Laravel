@@ -17,7 +17,7 @@ class CreateCulturebiopsyformTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->date('date');
-            $table->time('time');
+            $table->datetime('time');
             $table->string('doctors_name');
             $table->string('given_by');
             $table->string('received_by');
