@@ -1,0 +1,45 @@
+<?php
+
+use Faker\Generator as Faker;
+
+$factory->define(App\PreAngiographyAngioplastyChecklist::class, function (Faker $faker) {
+    return [
+      'time_arrival'=> $faker->time,
+      'time_prep_complete'=> $faker->time,
+      'time_shifting'=> $faker->time,
+      'consultant_name'=> $faker->word,
+      'angiography_consent'=> $faker->word,
+      'angioplasty_consent'=> $faker->word,
+      'pacemaker'=> $faker->word,
+      'allergies'=> $faker->word,
+      'allergies_list'=> $faker->word,
+      'pulse'=> $faker->word,
+      'bp'=> $faker->word,
+      'resp'=> $faker->word,
+      'temp'=> $faker->word,
+      'part_prep'=> $faker->word,
+      'pre_med'=> $faker->word,
+      'ecosprin'=> $faker->word,
+      'clopidogrel'=> $faker->word,
+      'blood_arranged'=> $faker->word,
+      'ivcannula_puton'=> $faker->word,
+      'height'=> $faker->word,
+      'weight'=> $faker->word,
+      'id_band'=> $faker->word,
+      'jewellery_removed'=> $faker->word,
+      'dentures'=> $faker->word,
+      'cbc'=> $faker->word,
+      'blood_urea'=> $faker->word,
+      'blood_group'=> $faker->word,
+      'hbsag'=> $faker->word,
+      'serum_creatinine'=> $faker->word,
+      'hep_c'=> $faker->word,
+      'random_blood_sugar'=> $faker->word,
+      'hiv'=> $faker->word,
+      'pt'=> $faker->word,
+      'chest_xray'=> $faker->word,
+      'serum_electrolytes'=> $faker->word,
+      'ecg'=> $faker->word,
+      'lft'=> $faker->word,
+    ];
+});

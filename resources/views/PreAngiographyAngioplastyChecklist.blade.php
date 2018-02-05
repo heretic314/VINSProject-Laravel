@@ -17,7 +17,17 @@
 		</div>
 	</div>
 
-<form name="angiography_angioplasty_checklist">
+	@if ($errors->any())
+			<div class="alert alert-danger" role="alert">
+					Please fix the following errors
+			</div>
+			@foreach ($errors->keys() as $error)
+						 <li>{{ $error }}</li>
+				 @endforeach
+	@endif
+
+	<form name="{{ url('PreAngioigraphyAngioplastyChecklist') }}" method="post">
+		{{ csrf_field() }}
 
 	<div class="row form-group">
 		<div class="col-md-8">
@@ -30,10 +40,7 @@
 			Time of shifting for cath :
 			<input class="form-control" type="time" name="time_shifting">
 		</div>
-		<div class="col-md-4 text-right">
-			Addressograph : <br>
-			<textarea class="form-control" placeholder="Addressograph"></textarea>
-		</div>
+
 	</div>
 
 	<div class="row form-group">
@@ -42,10 +49,10 @@
 				<label>Angiography Consent</label>
 			</div>
 			<div class="col-md-6">
-				<select class="form-control" name="angiography_consent">
-					<option>NA</option>
-					<option>Yes</option>
-					<option>No</option>
+				<select class="form-control" name="angiography_consent" value="{{ old('angiography_consent') }}">
+					<option value="NA">NA</option>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
 				</select>
 			</div>
 		</div>
@@ -57,10 +64,10 @@
 				<label>Angioplasty Consent</label>
 			</div>
 			<div class="col-md-6">
-				<select class="form-control" name="angioplasty_consent">
-					<option>NA</option>
-					<option>Yes</option>
-					<option>No</option>
+				<select class="form-control" name="angioplasty_consent" value="{{ old('angioplasty_consent') }}">
+					<option value="NA"> NA</option>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
 				</select>
 			</div>
 		</div>
@@ -72,10 +79,10 @@
 				<label>Pacemaker Implant</label>
 			</div>
 			<div class="col-md-6">
-				<select class="form-control" name="pacemaker">
-					<option>NA</option>
-					<option>Yes</option>
-					<option>No</option>
+				<select class="form-control" name="pacemaker" value="{{ old('pacemaker') }}" >
+					<option value="NA"> NA</option>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
 				</select>
 			</div>
 		</div>
@@ -87,9 +94,10 @@
 				<label>Allergies : </label>
 			</div>
 			<div class="col-md-5">
-				<select class="form-control" name="allergies">
-					<option>No</option>
-					<option>Yes</option>
+				<select class="form-control" name="allergies" value="{{ old('allergies') }}">
+
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
 				</select>
 			</div>
 			<div class="col-md-5">
@@ -150,9 +158,9 @@
 				<label>Part Preparation : </label>
 			</div>
 			<div class="col-md-6">
-				<select class="form-control" name="part_prep">
-					<option>Right radial and right groin</option>
-					<option>Left Brachial and left groin</option>
+				<select class="form-control" name="part_prep"  value="{{ old('part_prep') }}">
+					<option value="Right radial and right groin">Right radial and right groin</option>
+					<option value="Left Brachial and left groin">Left Brachial and left groin</option>
 				</select>
 			</div>
 		</div>
@@ -161,9 +169,9 @@
 				<label>Pre Medication : </label>
 			</div>
 			<div class="col-md-6">
-				<select class="form-control" name="pre-med">
-					<option>Loading Dose - Tab clopidogrel 75mg x 4 + Tab Avil x 1 stat</option>
-					<option>Continuing Dose - Tab clopidogrel 75mg (10D or BD)</option>
+				<select class="form-control" name="pre_med"  value="{{ old('pre_med') }}">
+					<option value="Loading Dose - Tab clopidogrel 75mg x 4 + Tab Avil x 1 stat">Loading Dose - Tab clopidogrel 75mg x 4 + Tab Avil x 1 stat</option>
+					<option value="Continuing Dose - Tab clopidogrel 75mg (10D or BD)">Continuing Dose - Tab clopidogrel 75mg (10D or BD)</option>
 				</select>
 			</div>
 		</div>
@@ -175,10 +183,10 @@
 				<label>Ecosprin : </label>
 			</div>
 			<div class="col-md-6">
-				<select class="form-control" name="ecosprin">
-					<option>NA</option>
-					<option>Yes</option>
-					<option>No</option>
+				<select class="form-control" name="ecosprin" value="{{ old('ecosprin') }}" >
+					<option value="NA"> NA</option>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
 				</select>
 			</div>
 		</div>
@@ -187,10 +195,10 @@
 				<label>Clopidogrel : </label>
 			</div>
 			<div class="col-md-6">
-				<select class="form-control" name="ecosprin">
-					<option>NA</option>
-					<option>Yes</option>
-					<option>No</option>
+				<select class="form-control" name="clopidogrel" value="{{ old('clopidogrel') }}" >
+					<option value="NA"> NA</option>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
 				</select>
 			</div>
 		</div>
@@ -240,10 +248,10 @@
 				<label>ID Band Applied : </label>
 			</div>
 			<div class="col-md-6">
-				<select class="form-control" name="id_band">
-					<option>NA</option>
-					<option>Left</option>
-					<option>Right</option>
+				<select class="form-control" name="id_band" value="{{ old('id_band') }}" >
+					<option value="NA"> NA</option>
+					<option value="Left">Left</option>
+					<option value="Right">Right</option>
 				</select>
 			</div>
 		</div>
@@ -252,10 +260,10 @@
 				<label>Jewellery Removed : </label>
 			</div>
 			<div class="col-md-6">
-				<select class="form-control" name="jewellery_removed">
-					<option>NA</option>
-					<option>Yes</option>
-					<option>No</option>
+				<select class="form-control" name="jewellery_removed" value="{{ old('jewellery_removed') }}" >
+					<option value="NA"> NA</option>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
 				</select>
 			</div>
 		</div>
@@ -267,10 +275,10 @@
 				<label>Dentures Removed : </label>
 			</div>
 			<div class="col-md-6">
-				<select class="form-control" name="dentures">
-					<option>NA</option>
-					<option>Left</option>
-					<option>Right</option>
+				<select class="form-control" name="dentures" value="{{ old('dentures') }}" >
+					<option value="NA"> NA</option>
+					<option value="Left">Left</option>
+					<option value="Right">Right</option>
 				</select>
 			</div>
 		</div>
@@ -337,8 +345,9 @@
 			</tbody>
 		</table>
 	</div>
-
-
+	<div class="row form-group">
+		<button class="btn btn-success" type="submit">Submit</button>
+	</div>
 </form>
 </div>
 

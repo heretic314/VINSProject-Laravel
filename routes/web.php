@@ -1057,6 +1057,54 @@ Route::get('/DailyDietForm', function(){
   Route::get('/PreAngiographyAngioplastyChecklist', function(){
       return view('PreAngiographyAngioplastyChecklist');
   });
+  Route::post('/PreAngiographyAngioplastyChecklist', function(Request $request){
+    $data = $request->validate([
+
+      'time_arrival'=> 'max:255|required',
+      'time_prep_complete'=> 'max:255|required',
+      'time_shifting'=> 'max:255|required',
+      'consultant_name'=> 'max:255|required',
+      'angiography_consent'=> 'max:255|required',
+      'angioplasty_consent'=> 'max:255|required',
+      'pacemaker'=> 'max:255|required',
+      'allergies'=> 'max:255|required',
+      'allergies_list'=> 'max:255',
+      'pulse'=> 'max:255|required',
+      'bp'=> 'max:255|required',
+      'resp'=> 'max:255|required',
+      'temp'=> 'max:255|required',
+      'part_prep'=> 'max:255|required',
+      'pre_med'=> 'max:255|required',
+      'ecosprin'=> 'max:255|required',
+      'clopidogrel'=> 'max:255|required',
+      'blood_arranged'=> 'max:255|required',
+      'ivcannula_puton'=> 'max:255|required',
+      'height'=> 'max:255|required',
+      'weight'=> 'max:255|required',
+      'id_band'=> 'max:255|required',
+      'jewellery_removed'=> 'max:255|required',
+      'dentures'=> 'max:255|required',
+      'cbc'=> 'max:255|required',
+      'blood_urea'=> 'max:255|required',
+      'blood_group'=> 'max:255|required',
+      'hbsag'=> 'max:255|required',
+      'serum_creatinine'=> 'max:255|required',
+      'hep_c'=> 'max:255|required',
+      'random_blood_sugar'=> 'max:255|required',
+      'hiv'=> 'max:255|required',
+      'pt'=> 'max:255|required',
+      'chest_xray'=> 'max:255|required',
+      'serum_electrolytes'=> 'max:255|required',
+      'ecg'=> 'max:255|required',
+      'lft' =>'max:255|required'
+
+    ]);
+
+    $link = tap(new App\PreAngiographyAngioplastyChecklist($data))->save();
+
+    return view('Index');
+  });
+
 
   Route::get('/TransferChecklistForNurses', function(){
       return view('TransferChecklistForNurses');
