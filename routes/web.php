@@ -437,7 +437,6 @@ Route::get('/DailyDietForm', function(){
     $data = $request->validate([
       'date' => 'max:255|required',
       'triage_category' => 'max:255|required',
-      'addressograph' => 'max:255|required',
       'diagnosis' => 'max:255|required',
       'investigation' => 'max:255|required',
       'time_01' => 'max:255|required',

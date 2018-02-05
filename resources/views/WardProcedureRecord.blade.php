@@ -41,18 +41,18 @@
 						<th>Procedure Name</th>
 						<th>
 
-							<select class="form-control" name="time" value="{{ old('time') }}">
-								<option>Select Time (Hrs)</option>
-								<option>0400 - 0600</option>
-								<option>0600 - 0800</option>
-								<option>0800 - 1000</option>
-								<option>1000 - 1200</option>
-								<option>1200 - 1400</option>
-								<option>1400 - 1600</option>
-								<option>1600 - 1800</option>
-								<option>1800 - 2000</option>
-								<option>2000 - 2200</option>
-								<option>2200 - 0000</option>
+							<select required class="form-control" name="time" value="{{ old('time') }}">
+								<option  disabled selected hidden>Select Time (Hrs)</option>
+								<option value="4_6">0400 - 0600</option>
+								<option value="6_8">0600 - 0800</option>
+								<option value="8_10">0800 - 1000</option>
+								<option value="10_12">1000 - 1200</option>
+								<option value="12_14">1200 - 1400</option>
+								<option value="14_16">1400 - 1600</option>
+								<option value="16_18">1600 - 1800</option>
+								<option value="18_20">1800 - 2000</option>
+								<option value="20_22">2000 - 2200</option>
+								<option value="22_24">2200 - 0000</option>
 							</select>
 							@if($errors->has('time'))
 							    <span class="help-block"><div class="text-danger">{{ $errors->first('time') }}</div></span>
