@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
         $this->call(VentilatorChargeSheetSeeder::class);
         $this->call(erobservationseeder::class);
         $this->call(wardprocedurerecordseeder::class);
+        $this->call(CultureBiopsyFormSeeder::class);
 
     }
 }

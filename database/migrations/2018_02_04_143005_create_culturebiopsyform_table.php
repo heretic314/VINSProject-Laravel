@@ -17,29 +17,23 @@ class CreateCulturebiopsyformTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->date('date');
-            $table->datetime('time');
+            $table->time('time');
             $table->string('doctors_name');
             $table->string('given_by');
             $table->string('received_by');
             $table->string('ihc');
-            $table->string('cytology_000')->nullable();
-            $table->string('cytology_001')->nullable();
+
+            $table->string('cytology');
             $table->string('others');
-            $table->string('histopathology_00')->nullable();
-            $table->string('histopathology_01')->nullable();
-            $table->string('cytology_00')->nullable();
-            $table->string('cytology_01')->nullable();
-            $table->string('cytology_02')->nullable();
-            $table->string('type_of_biopsy_01')->nullable();
-            $table->string('type_of_biopsy_02')->nullable();
-            $table->string('type_of_biopsy_03')->nullable();
-            $table->string('type_of_biopsy_04')->nullable();
-            $table->string('type_of_biopsy_05')->nullable();
+            $table->string('histopathology');
+
+            $table->string('cytology_01');
+
+            $table->string('type_of_biopsy');
             $table->string('specimen_info');
             $table->string('imaging_details');
             $table->string('clinical_details');
-            $table->string('send_to_00')->nullable();
-            $table->string('send_to_01')->nullable();
+            $table->string('send_to');
             $table->string('consultant_sign');
             $table->string('consultant_name');
             $table->date('date_for_sign');

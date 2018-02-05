@@ -43,7 +43,7 @@
 						<label>Time :</label>
 					</div>
 					<div class="col-md-6">
-						<input type="time" class="form-control" name="date" id="date">
+						<input type="time" class="form-control" name="time" id="time">
 					</div>
 				</div>
 			</div>
@@ -100,7 +100,7 @@
 				    </td>
 						<td>
 							<div class="">
-								<select class="form-control" name="cytology">
+								<select class="form-control" name="cytology"  value="{{ old('cytology') }}">
 									<option value="culture">Culture</option>
 									<option value="sensitivity">Sensitivity</option>
 								</select>
@@ -116,7 +116,7 @@
 								<input type="text" class="form-control" name="others" id="others">
 							</div>
 							<div class="">
-								<select class="form-control" name="histopathology">
+								<select class="form-control" name="histopathology"  value="{{ old('histopathology') }}">
 									<option value="gram_stain">Gram Stain</option>
 									<option value="zn_stain">ZN Stain</option>
 								</select>
@@ -124,7 +124,7 @@
 				    </td>
 						<td>
 							<div class="">
-								<select class="form-control" name="cytology">
+								<select class="form-control" name="cytology_01"  value="{{ old('cytology_01') }}">
 									<option value="myco_tb">Myco TB</option>
 									<option value="aerobic">Aerobic</option>
 									<option value="anaerobic">Anaerobic</option>
@@ -147,7 +147,7 @@
 			    <td>
 			    	<label class="control-label" for="type_of_biopsy">Surgical Excision:</label>
 						<div class="">
-							<select class="form-control" name="type_of_biopsy">
+							<select class="form-control" name="type_of_biopsy"  value="{{ old('type_of_biopsy') }}">
 								<option value="complete">Complete</option>
 								<option value="partial">Partial</option>
 								<option value="punch">Punch</option>
@@ -183,7 +183,7 @@
 		  		<div class="col-md-4">
 		  			<label class="control-label" for="send_to"><h3>Send to:</h3></label>
 						<div class="">
-							<select class="form-control" name="send_to">
+							<select class="form-control" name="send_to"   value="{{ old('send_to') }}">
 								<option value="toprani_lab">Toprani Lab</option>
 								<option value="kadakiya_lab">Kadakiya Lab</option>
 							</select>

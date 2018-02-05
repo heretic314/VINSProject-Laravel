@@ -6,8 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CultureBiopsyForm extends Model
 {
-  class DailyDietForm extends Model
-  {
+
       //
       protected $table='culturebiopsyform';
 
@@ -18,24 +17,17 @@ class CultureBiopsyForm extends Model
         'given_by',
         'received_by',
         'ihc',
-        'cytology_000',
-        'cytology_001',
+        'cytology',
         'others',
-        'histopathology_00',
-        'histopathology_01',
-        'cytology_00',
+        'histopathology',
+
         'cytology_01',
-        'cytology_02',
-        'type_of_biopsy_01',
-        'type_of_biopsy_02',
-        'type_of_biopsy_03',
-        'type_of_biopsy_04',
-        'type_of_biopsy_05',
+
+        'type_of_biopsy',
         'specimen_info',
         'imaging_details',
         'clinical_details',
-        'send_to_00',
-        'send_to_01',
+        'send_to',
         'consultant_sign',
         'consultant_name',
         'date_for_sign',
