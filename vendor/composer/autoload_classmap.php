@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\AppointmentBook' => $baseDir . '/app/AppointmentBook.php',
     'App\\BloodTransfusionForm' => $baseDir . '/app/BloodTransfusionForm.php',
     'App\\CPRFormat' => $baseDir . '/app/CPRFormat.php',
     'App\\CodeBlueEvaluationForm' => $baseDir . '/app/CodeBlueEvaluationForm.php',
@@ -2651,7 +2652,6 @@ return array(
     'PhpParser\\Serializer\\XML' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Serializer/XML.php',
     'PhpParser\\Unserializer' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Unserializer.php',
     'PhpParser\\Unserializer\\XML' => $vendorDir . '/nikic/php-parser/lib/PhpParser/Unserializer/XML.php',
-    'PreAngiographyAngioplastyChecklist' => $baseDir . '/database/seeds/PreAngiographyAngioplastyChecklist.php',
     'PreAngiographyAngioplastyChecklistSeeder' => $baseDir . '/database/seeds/PreAngiographyAngioplastyChecklistSeeder.php',
     'Prophecy\\Argument' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument.php',
     'Prophecy\\Argument\\ArgumentsWildcard' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Argument/ArgumentsWildcard.php',
@@ -3624,6 +3624,7 @@ return array(
     'Whoops\\Util\\SystemFacade' => $vendorDir . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
     'Whoops\\Util\\TemplateHelper' => $vendorDir . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
     'XdgBaseDir\\Xdg' => $vendorDir . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+    'appointmentbookseeder' => $baseDir . '/database/seeds/appointmentbookseeder.php',
     'bloodtransfusionformseeder' => $baseDir . '/database/seeds/bloodtransfusionformseeder.php',
     'codeblueevaluationformseeder' => $baseDir . '/database/seeds/codeblueevaluationformseeder.php',
     'completenursingassessmentseeder' => $baseDir . '/database/seeds/completenursingassessmentseeder.php',

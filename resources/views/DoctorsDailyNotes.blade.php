@@ -24,7 +24,7 @@
 		  @endif
 
 
-			<form action="/DoctorsDailyNotes" method="post">
+			<form action="{{ url('/DoctorsDailyNotes') }}" method="post">
 				{{csrf_field()}}
 				<div class="row form-group">
 					<div class="col-md-4">

@@ -20,11 +20,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+  Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['middleware' => ['auth']], function() {
+  Route::group(['middleware' => ['auth']], function() {
 
-Route::get('/DailyDietForm', function(){
+  Route::get('/DailyDietForm', function(){
       return view('DailyDietForm');
   });
 
@@ -60,6 +60,20 @@ Route::get('/DailyDietForm', function(){
 
   Route::get('/AppointmentBook', function(){
       return view('AppointmentBook');
+  });
+
+  Route::post('/AppointmentBook',function(Request $request){
+    $data = $request->validate([
+      'date' => 'required|max:255',
+      'name_of_patient' => 'required|max:255',
+      'contact_no' => 'required|max:255',
+      'appointment_time' => 'required|max:255',
+      'consultant_name' => 'required|max:255',
+    ]);
+
+    $link = tap(new App\AppointmentBook($data))->save();
+
+    return view('Index');
   });
 
   Route::get('/Checklist', function(){

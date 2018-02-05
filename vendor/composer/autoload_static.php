@@ -334,6 +334,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
     );
 
     public static $classMap = array (
+        'App\\AppointmentBook' => __DIR__ . '/../..' . '/app/AppointmentBook.php',
         'App\\BloodTransfusionForm' => __DIR__ . '/../..' . '/app/BloodTransfusionForm.php',
         'App\\CPRFormat' => __DIR__ . '/../..' . '/app/CPRFormat.php',
         'App\\CodeBlueEvaluationForm' => __DIR__ . '/../..' . '/app/CodeBlueEvaluationForm.php',
@@ -2979,7 +2980,6 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'PhpParser\\Serializer\\XML' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Serializer/XML.php',
         'PhpParser\\Unserializer' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Unserializer.php',
         'PhpParser\\Unserializer\\XML' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Unserializer/XML.php',
-        'PreAngiographyAngioplastyChecklist' => __DIR__ . '/../..' . '/database/seeds/PreAngiographyAngioplastyChecklist.php',
         'PreAngiographyAngioplastyChecklistSeeder' => __DIR__ . '/../..' . '/database/seeds/PreAngiographyAngioplastyChecklistSeeder.php',
         'Prophecy\\Argument' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument.php',
         'Prophecy\\Argument\\ArgumentsWildcard' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument/ArgumentsWildcard.php',
@@ -3952,6 +3952,7 @@ class ComposerStaticInit42b08f2b3e5feefa3ebb3d2216b1c852
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'appointmentbookseeder' => __DIR__ . '/../..' . '/database/seeds/appointmentbookseeder.php',
         'bloodtransfusionformseeder' => __DIR__ . '/../..' . '/database/seeds/bloodtransfusionformseeder.php',
         'codeblueevaluationformseeder' => __DIR__ . '/../..' . '/database/seeds/codeblueevaluationformseeder.php',
         'completenursingassessmentseeder' => __DIR__ . '/../..' . '/database/seeds/completenursingassessmentseeder.php',

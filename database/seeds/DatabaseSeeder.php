@@ -36,6 +36,7 @@ class DatabaseSeeder extends Seeder
         $this->call(wardprocedurerecordseeder::class);
         $this->call(CultureBiopsyFormSeeder::class);
         $this->call(PreAngiographyAngioplastyChecklistSeeder::class);
+        $this->call(appointmentbookseeder::class);
 
     }
 }
