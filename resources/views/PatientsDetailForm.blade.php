@@ -22,7 +22,7 @@
 		@endif
 
 
-		<form action="{{ url"/PatientsDetailForm" }} method = "post">
+		<form action="{{ url('/PatientsDetailForm') }}" method = "post">
 			{{ csrf_field() }}
 
 			<div class="row form-group">
@@ -133,12 +133,10 @@
 			      <label for="address">Address: </label>
 					</div>
 					<div class="col-md-6">
-			      <textarea class="form-control" type="text" id="address" name="address" >
-							 {{old('address')}}
 						@if($errors->has('address'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('address') }}</div></span>
 						@endif
-					</textarea>
+			      <input class="form-control" type="text" id="address" name="address" value="{{ old('address') }}" />
 					</div>
 				</div>
 			</div>

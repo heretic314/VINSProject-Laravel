@@ -6,9 +6,6 @@
 				<div class="alert alert-danger" role="alert">
 						Please fix the following errors
 				</div>
-				@foreach ($errors->keys() as $error)
-							 <li>{{ $error }}</li>
-					 @endforeach
 		@endif
 
 		<form action="{{ url('/CompleteNursingAssessment') }}" method="post" >
@@ -34,7 +31,10 @@
 						<label class="control-label col-md-4" for="unit">Unit:</label>
 					</div>
 					<div class="col-md-6">
-						<input type="text" class="form-control" name="unit" id="unit">
+						@if($errors->has('unit'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('unit') }}</div></span>
+						@endif
+						<input type="text" class="form-control" name="unit" value="{{ old('unit') }}">
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -42,7 +42,10 @@
 						<label class="control-label col-md-4" for="date">Date:</label>
 					</div>
 					<div class="col-md-6">
-						<input type="date" class="form-control" name="date" id="date">
+						@if($errors->has('date'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('date') }}</div></span>
+						@endif
+						<input type="date" class="form-control" name="date" value="{{ old('date') }}">
 					</div>
 				</div>
 			</div>
@@ -53,7 +56,10 @@
 						<label class="control-label col-md-4" for="time">Time:</label>
 					</div>
 					<div class="col-md-6">
-						<input type="time" class="form-control" name="time" id="time">
+						@if($errors->has('time'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('time') }}</div></span>
+						@endif
+						<input type="time" class="form-control" name="time" value="{{ old('time') }}">
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -61,6 +67,9 @@
 						<label class="control-label col-md-6" for="idbandno">ID Band No.:</label>
 					</div>
 					<div class="col-md-6">
+						@if($errors->has('idbandno'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('idbandno') }}</div></span>
+						@endif
 						<input type="text" class="form-control" name="idbandno" id="idbandno" value="{{ old('idbandno') }}" />
 					</div>
 				</div>
@@ -72,6 +81,9 @@
 						<label class="control-label col-md-6" for="call_bell">Call Bell in Reach:</label>
 					</div>
 					<div class="col-md-6">
+						@if($errors->has('call_bell'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('call_bell') }}</div></span>
+						@endif
 						<input class="form-control" type="text" name="call_bell" value="{{ old('call_bell') }}" />
 					</div>
 				</div>
@@ -81,11 +93,17 @@
 				<div class="col-md-4">
 						<label class="control-label col-md-3" for="height">Height:</label>
 						<div class="col-md-9">
+							@if($errors->has('height'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('height') }}</div></span>
+							@endif
 							<input type="text" class="form-control" name="height" id="height" placeholder="Height(in cms)" value="{{ old('height') }}">
 						</div>
 						<br><br>
 						<label class="control-label col-md-3" for="weight">Weight:</label>
 						<div class="col-md-9">
+							@if($errors->has('weight'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('weight') }}</div></span>
+							@endif
 							<input type="text" class="form-control" name="weight" id="weight" placeholder="Weight(in KGs)" value="{{ old('weight') }}">
 						</div>
 				</div>
@@ -111,6 +129,9 @@
 						<label>If other:</label>
 					</div>
 					<div class="col-md-6">
+						@if($errors->has('allergies_other'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('allergies_other') }}</div></span>
+						@endif
 						<input type="text" name="allergies_other" id="allergies_other" class="form-control" value="{{ old('allergies_other') }}">
 					</div>
 				</div>
@@ -133,6 +154,9 @@
 						<label>If other:</label>
 					</div>
 					<div class="col-md-6">
+						@if($errors->has('history_informant_other'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('history_informant_other') }}</div></span>
+						@endif
 						<input type="text" name="history_informant_other" id="history_informant_other" class="form-control">
 					</div>
 				</div>
@@ -157,6 +181,9 @@
 						<label>If other:</label>
 					</div>
 					<div class="col-md-6">
+						@if($errors->has('patient_arrived_other'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('patient_arrived_other') }}</div></span>
+						@endif
 						<input type="text" name="patient_arrived_other" id="patient_arrived_other" class="form-control">
 					</div>
 				</div>
@@ -181,6 +208,9 @@
 						<label>If other:</label>
 					</div>
 					<div class="col-md-6">
+						@if($errors->has('patient_arrived_from_other'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('patient_arrived_from_other') }}</div></span>
+						@endif
 						<input type="text" name="patient_arrived_from_other" id="patient_arrived_from_other" class="form-control">
 					</div>
 				</div>
@@ -197,7 +227,10 @@
 						<label>Temperature:</label>
 					</div>
 					<div class="col-md-4">
-						<input type="text" name="temperature" id="temperature" class="form-control">
+						@if($errors->has('temperature'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('temperature') }}</div></span>
+						@endif
+						<input type="text" name="temperature" value="{{ old('temprature') }}" class="form-control">
 					</div>
 					<div class="col-md-4">
 						<select class="form-control" id="temperature_type" name="temperature_type" value="{{ old('temperature_type') }}">
@@ -227,7 +260,10 @@
 						<label>Pulse:</label>
 					</div>
 					<div class="col-md-6">
-						<input type="text" class="form-control" name="pulse" id="pulse" placeholder="(per minute)" >
+						@if($errors->has('pulse'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('pulse') }}</div></span>
+						@endif
+						<input type="text" class="form-control" name="pulse" placeholder="(per minute)" value="{{ old('pulse') }}">
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -235,7 +271,10 @@
 						<label>RR : </label>
 					</div>
 					<div class="col-md-6">
-						<input type="text" class="form-control" name="rr" id="rr" placeholder="(per minute)">
+						@if($errors->has('rr'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('rr') }}</div></span>
+						@endif
+						<input type="text" class="form-control" name="rr" value="{{ old('rr') }}" placeholder="(per minute)">
 					</div>
 				</div>
 			</div>
@@ -246,7 +285,10 @@
 						<label>Blood Pressure:</label>
 					</div>
 					<div class="col-md-6">
-						<input type="text" class="form-control" name="blood_pressure" id="blood_pressure" placeholder="(in mm Hg)">
+						@if($errors->has('blood_pressure'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('blood_pressure') }}</div></span>
+						@endif
+						<input type="text" class="form-control" name="blood_pressure" value="{{ old('blood_pressure') }}" placeholder="(in mm Hg)">
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -254,7 +296,10 @@
 						<label>SpO<sub>2</sub> :</label>
 					</div>
 					<div class="col-md-6">
-						<input type="text" class="form-control" name="spo2" id="spo2">
+						@if($errors->has('spo2'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('spo2') }}</div></span>
+						@endif
+						<input type="text" class="form-control" name="spo2" value="{{ old('spo2') }}">
 					</div>
 				</div>
 			</div>
@@ -455,7 +500,10 @@
 							<label class="control-label col-md-6" for="relative_name">Relative Name:</label>
 						</div>
 						<div class="col-md-6">
-							<input type="text" name="relative_name" id="relative_name" class="form-control" >
+							@if($errors->has('relative_name'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('relative_name') }}</div></span>
+							@endif
+							<input type="text" name="relative_name" value="{{ old('relative_name') }}" class="form-control" >
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -463,7 +511,10 @@
 							<label class="control-label col-md-6" for="relation">Relation:</label>
 						</div>
 						<div class="col-md-6">
-							<input type="text" name="relation" id="relation" class="form-control">
+							@if($errors->has('relation'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('relation') }}</div></span>
+							@endif
+							<input type="text" name="relation" value="{{ old('relation') }}" class="form-control">
 						</div>
 					</div>
 				</div>
