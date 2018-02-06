@@ -6,6 +6,9 @@
 				<div class="alert alert-danger" role="alert">
 						Please fix the following errors
 				</div>
+				@foreach ($errors->keys() as $error)
+							 <li>{{ $error }}</li>
+					 @endforeach
 		@endif
 
 		<form action="{{ url('/CompleteNursingAssessment') }}" method="post" >
@@ -96,7 +99,7 @@
 						<label>Allergies:</label>
 					</div>
 					<div class="col-md-6">
-						<select class="form-control" name="allergies">
+						<select class="form-control" name="allergies" value="{{ old('allergies') }}">
 							<option value="no">NO</option>
 							<option value="yes">YES</option>
 							<option value="other">Other</option>
@@ -108,7 +111,7 @@
 						<label>If other:</label>
 					</div>
 					<div class="col-md-6">
-						<input type="text" name="allergies_other" id="allergies_other" class="form-control">
+						<input type="text" name="allergies_other" id="allergies_other" class="form-control" value="{{ old('allergies_other') }}">
 					</div>
 				</div>
 			</div>
@@ -119,7 +122,7 @@
 						<label>History Informant:</label>
 					</div>
 					<div class="col-md-6">
-						<select class="form-control" name="history_informant">
+						<select class="form-control" name="history_informant" value="{{ old('history_informant') }}">
 							<option value="patient">Patient</option>
 							<option value="other">Other</option>
 						</select>
@@ -141,7 +144,7 @@
 						<label>Patient Arrived:</label>
 					</div>
 					<div class="col-md-6">
-						<select class="form-control" name="patient_arrived">
+						<select class="form-control" name="patient_arrived" value="{{ old('patient_arrived') }}">
 							<option value="ambulatory">Ambulatory</option>
 							<option value="wheelchair">Wheelchair</option>
 							<option value="stretcher">Stretcher</option>
@@ -165,7 +168,7 @@
 						<label>Patient Arrived From:</label>
 					</div>
 					<div class="col-md-6">
-						<select class="form-control" name="patient_arrived_from">
+						<select class="form-control" name="patient_arrived_from" value="{{ old('patient_arrived_from') }}">
 							<option value="home">Home</option>
 							<option value="opd">OPD</option>
 							<option value="other_hospital">Other Hospital</option>
@@ -197,7 +200,7 @@
 						<input type="text" name="temperature" id="temperature" class="form-control">
 					</div>
 					<div class="col-md-4">
-						<select class="form-control" id="temperature_type" name="temperature_type">
+						<select class="form-control" id="temperature_type" name="temperature_type" value="{{ old('temperature_type') }}">
 							<option value="oral"> Oral </option>
 							<option value="rectal"> Rectal </option>
 							<option value="auxillary"> Auxillary </option>
@@ -210,7 +213,7 @@
 						<label>Pain:</label>
 					</div>
 					<div class="col-md-6">
-						<select class="form-control" name="pain">
+						<select class="form-control" name="pain" value="{{ old('pain') }}">
 							<option value="opd">OPD</option>
 							<option value="home">Home</option>
 						</select>
@@ -224,7 +227,7 @@
 						<label>Pulse:</label>
 					</div>
 					<div class="col-md-6">
-						<input type="text" class="form-control" name="pulse" id="pulse" placeholder="(per minute)">
+						<input type="text" class="form-control" name="pulse" id="pulse" placeholder="(per minute)" >
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -273,7 +276,7 @@
 						<tr>
 							<th>Feeding</th>
 							<td>
-								<select class="form-control" name="feeding_usual">
+								<select class="form-control" name="feeding_usual" value="{{ old('feeding_usual') }}">
 									<option value="0">Level 0</option>
 									<option value="1">Level 1</option>
 									<option value="2">Level 2</option>
@@ -281,7 +284,7 @@
 								</select>
 							</td>
 							<td>
-								<select class="form-control" name="feeding_admission">
+								<select class="form-control" name="feeding_admission" value="{{ old('feeding_admission') }}">
 									<option value="0">Level 0</option>
 									<option value="1">Level 1</option>
 									<option value="2">Level 2</option>
@@ -298,7 +301,7 @@
 						<tr>
 							<th>Bathing</th>
 							<td>
-								<select class="form-control" name="bathing_usual">
+								<select class="form-control" name="bathing_usual" value="{{ old('bathing_usual') }}">
 									<option value="0">Level 0</option>
 									<option value="1">Level 1</option>
 									<option value="2">Level 2</option>
@@ -306,7 +309,7 @@
 								</select>
 							</td>
 							<td>
-								<select class="form-control" name="bathing_admission">
+								<select class="form-control" name="bathing_admission" value="{{ old('bathing_admission') }}">
 									<option value="0">Level 0</option>
 									<option value="1">Level 1</option>
 									<option value="2">Level 2</option>
@@ -317,7 +320,7 @@
 						<tr>
 							<th>Toileting</th>
 							<td>
-								<select class="form-control" name="toileting_usual">
+								<select class="form-control" name="toileting_usual" value="{{ old('toileting_usual') }}">
 									<option value="0">Level 0</option>
 									<option value="1">Level 1</option>
 									<option value="2">Level 2</option>
@@ -325,7 +328,7 @@
 								</select>
 							</td>
 							<td>
-								<select class="form-control" name="toileting_admission">
+								<select class="form-control" name="toileting_admission" value="{{ old('toileting_admission') }}">
 									<option value="0">Level 0</option>
 									<option value="1">Level 1</option>
 									<option value="2">Level 2</option>
@@ -336,7 +339,7 @@
 						<tr>
 							<th>General Mobility / Gait</th>
 							<td>
-								<select class="form-control" name="mobility_usual">
+								<select class="form-control" name="mobility_usual" value="{{ old('mobility_usual') }}">
 									<option value="0">Level 0</option>
 									<option value="1">Level 1</option>
 									<option value="2">Level 2</option>
@@ -344,7 +347,7 @@
 								</select>
 							</td>
 							<td>
-								<select class="form-control" name="mobility_admission">
+								<select class="form-control" name="mobility_admission" value="{{ old('mobility_admission') }}">
 									<option value="0">Level 0</option>
 									<option value="1">Level 1</option>
 									<option value="2">Level 2</option>
@@ -355,7 +358,7 @@
 						<tr>
 							<th>Dressing / Grooming</th>
 							<td>
-								<select class="form-control" name="dressing_usual">
+								<select class="form-control" name="dressing_usual" value="{{ old('dressing_usual') }}" >
 									<option value="0">Level 0</option>
 									<option value="1">Level 1</option>
 									<option value="2">Level 2</option>
@@ -363,7 +366,7 @@
 								</select>
 							</td>
 							<td>
-								<select class="form-control" name="dressing_admission">
+								<select class="form-control" name="dressing_admission" value="{{ old('dressing_admission') }}">
 									<option value="0">Level 0</option>
 									<option value="1">Level 1</option>
 									<option value="2">Level 2</option>
@@ -385,51 +388,51 @@
 					<tbody>
 						<tr>
 							<th>Confused-disoriented / Hallucinating</th>
-							<td><input type="checkbox" name="hallucinating" id="hallucinating" class="form-control" value="20"></td>
+							<td><input type="checkbox" name="hallucinating" id="hallucinating"  value="20"></td>
 							<th>Post-op Condition - Sedated</th>
-							<td><input type="checkbox" name="post_op_condition" id="post_op_condition" class="form-control" value="10"></td>
+							<td><input type="checkbox" name="post_op_condition" id="post_op_condition"  value="10"></td>
 							<th>Narcotics / Diuretics</th>
-							<td><input type="checkbox" name="narcotics" id="narcotics" class="form-control" value="10"></td>
+							<td><input type="checkbox" name="narcotics" id="narcotics"  value="10"></td>
 						</tr>
 						<tr>
 							<th>Unstable Gait / Weakness</th>
-							<td><input type="checkbox" name="weakness" id="weakness" class="form-control" value="20"></td>
+							<td><input type="checkbox" name="weakness" id="weakness"  value="20"></td>
 							<th>Drug or Alcohol Withdrawal</th>
-							<td><input type="checkbox" name="drug_or_alcohol_withdrawal" id="drug_or_alcohol_withdrawal" class="form-control" value="10"></td>
+							<td><input type="checkbox" name="drug_or_alcohol_withdrawal" id="drug_or_alcohol_withdrawal"  value="10"></td>
 							<th>Bowel, bladder urgency, incontinence</th>
-							<td><input type="checkbox" name="bowel_bladder" id="bowel_bladder" class="form-control" value="10"></td>
+							<td><input type="checkbox" name="bowel_bladder" id="bowel_bladder"  value="10"></td>
 						</tr>
 						<tr>
 							<th>History of Syncope or Seizures</th>
-							<td><input type="checkbox" name="seizures" id="seizures" class="form-control" value="15"></td>
+							<td><input type="checkbox" name="seizures" id="seizures"  value="15"></td>
 							<th>Use of Walker, Cane Crutches etc</th>
-							<td><input type="checkbox" name="walker" id="walker" class="form-control" value="15"></td>
+							<td><input type="checkbox" name="walker" id="walker"  value="15"></td>
 							<th>Age 60 more</th>
-							<td><input type="checkbox" name="age_60" id="age_60" class="form-control" value="5"></td>
+							<td><input type="checkbox" name="age_60" id="age_60"  value="5"></td>
 						</tr>
 						<tr>
 							<th>Recent Hx of falls</th>
-							<td><input type="checkbox" name="recent_hx_falls" id="recent_hx_falls" class="form-control" value="15"></td>
+							<td><input type="checkbox" name="recent_hx_falls" id="recent_hx_falls"  value="15"></td>
 							<th>Postural hypo tension</th>
-							<td><input type="checkbox" name="postural_hypo_tension" id="postural_hypo_tension" class="form-control" value="10"></td>
+							<td><input type="checkbox" name="postural_hypo_tension" id="postural_hypo_tension"  value="10"></td>
 							<th>Uncooperative, impaired judgement</th>
-							<td><input type="checkbox" name="uncooperative" id="uncooperative" class="form-control" value="5"></td>
+							<td><input type="checkbox" name="uncooperative" id="uncooperative"  value="5"></td>
 						</tr>
 						<tr>
 							<th>Age 12 or younger</th>
-							<td><input type="checkbox" name="age_12" id="age_12" class="form-control" value="15"></td>
+							<td><input type="checkbox" name="age_12" id="age_12"  value="15"></td>
 							<th>Poor eyesight</th>
-							<td><input type="checkbox" name="poor_eyesight" id="poor_eyesight" class="form-control" value="10"></td>
+							<td><input type="checkbox" name="poor_eyesight" id="poor_eyesight"  value="10"></td>
 							<th>Language barrier</th>
-							<td><input type="checkbox" name="language_barrier" id="language_barrier" class="form-control" value="5"></td>
+							<td><input type="checkbox" name="language_barrier" id="language_barrier"  value="5"></td>
 						</tr>
 						<tr>
 							<th>Paralysis, hemiplegia, Stroke</th>
-							<td><input type="checkbox" name="paralysis_stroke" id="paralysis_stroke" class="form-control" value="15"></td>
+							<td><input type="checkbox" name="paralysis_stroke" id="paralysis_stroke"  value="15"></td>
 							<th>New medications (i.e Sedative antihypertensive)</th>
-							<td><input type="checkbox" name="new_medications" id="new_medications" class="form-control" value="15"></td>
+							<td><input type="checkbox" name="new_medications" id="new_medications"  value="15"></td>
 							<th>Poor Hearing</th>
-							<td><input type="checkbox" name="poor_hearing" id="poor_hearing" class="form-control" value="5"></td>
+							<td><input type="checkbox" name="poor_hearing" id="poor_hearing"  value="5"></td>
 						</tr>
 					</tbody>
 				</table>
@@ -452,7 +455,7 @@
 							<label class="control-label col-md-6" for="relative_name">Relative Name:</label>
 						</div>
 						<div class="col-md-6">
-							<input type="text" name="relative_name" id="relative_name" class="form-control">
+							<input type="text" name="relative_name" id="relative_name" class="form-control" >
 						</div>
 					</div>
 					<div class="col-md-6">
