@@ -22,7 +22,7 @@
 		@endif
 
 
-		<form action="{{ url"/PatientsDetailForm" }} method = "post">
+		<form action="{{ url('/PatientsDetailForm') }}" method = "post">
 			{{ csrf_field() }}
 
 			<div class="row form-group">
@@ -221,7 +221,7 @@
 				</div>
 			</div>
 
-			<div class="row form-group">
+			<div class="form-group text-center">
 				<button class="btn btn-success" type="submit">Submit</button>
 			</div>
 
