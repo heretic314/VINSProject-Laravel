@@ -24,7 +24,7 @@
 					<label>Drill : </label>
 				</div>
 				<div class="col-md-6">
-					<input class="form-control" type="text" name="drill">
+					<input class="form-control" type="text" name="drill" value="{{ old('drill') }}">
 					@if($errors->has('drill'))
 							<span class="help-block"><div class="text-danger">{{ $errors->first('drill') }}</div></span>
 					@endif
@@ -35,7 +35,7 @@
 					<label>Actual Code Blue : </label>
 				</div>
 				<div class="col-md-6">
-					<input class="form-control" type="text" name="actual_code_blue">
+					<input class="form-control" type="text" name="actual_code_blue" value="{{ old('actual_code_blue') }}">
 					@if($errors->has('actual_code_blue'))
 							<span class="help-block"><div class="text-danger">{{ $errors->first('actual_code_blue') }}</div></span>
 					@endif
@@ -70,9 +70,9 @@
 						<div class="form-group">
 							<select class="form-control" name="00">
 
-								<option value="Na" >NA</option>
-								<option value="Yes" >Yes</option>
-								<option value="No" >No</option>
+								<option value="NA" {{ old('00')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('00')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('00')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -91,9 +91,9 @@
 						<div class="form-group">
 							<select class="form-control" name="01" >
 
-								<option value="NA" >NA</option>
-								<option value="Yes" >Yes</option>
-								<option value="No" >No</option>
+								<option value="NA" {{ old('01')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('01')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('01')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -128,9 +128,9 @@
 						<div class="form-group">
 							<select class="form-control" name="02" >
 
-								<option value="NA" >NA</option>
-								<option value="Yes" >Yes</option>
-								<option value="No" >No</option>
+								<option value="NA" {{ old('02')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('02')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('02')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -150,9 +150,9 @@
 						<div class="form-group">
 							<select class="form-control" name="03" >
 
-								<option value="NA" >NA</option>
-								<option value="Yes" >Yes</option>
-								<option value="No" >No</option>
+								<option value="NA" {{ old('03')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('03')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('03')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -172,9 +172,9 @@
 						<div class="form-group">
 							<select class="form-control" name="04" >
 
-								<option value="NA" >NA</option>
-								<option value="Yes" >Yes</option>
-								<option value="No" >No</option>
+								<option value="NA" {{ old('04')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('04')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('04')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -212,9 +212,9 @@
 						<div class="form-group">
 							<select class="form-control" name="05" >
 
-								<option value="NA" >NA</option>
-								<option value="Yes" >Yes</option>
-								<option value="No" >No</option>
+								<option value="NA" {{ old('05')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('05')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('05')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -238,9 +238,9 @@
 						<div class="form-group">
 							<select class="form-control" name="06" >
 
-								<option value="NA" >NA</option>
-								<option value="Yes" >Yes</option>
-								<option value="No" >No</option>
+								<option value="NA" {{ old('06')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('06')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('06')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -278,9 +278,9 @@
 						<div class="form-group">
 							<select class="form-control" name="07" >
 
-								<option value="NA" >NA</option>
-								<option value="Yes" >Yes</option>
-								<option value="No" >No</option>
+								<option value="NA" {{ old('07')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('07')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('07')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -321,9 +321,9 @@
 						<div class="form-group">
 							<select class="form-control" name="08" >
 
-								<option value="NA" >NA</option>
-								<option value="Yes" >Yes</option>
-								<option value="No" >No</option>
+								<option value="NA" {{ old('08')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('08')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('08')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -343,9 +343,9 @@
 						<div class="form-group">
 							<select class="form-control" name="09" >
 
-								<option value="NA" >NA</option>
-								<option value="Yes" >Yes</option>
-								<option value="No" >No</option>
+								<option value="NA" {{ old('09')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('09')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('09')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
