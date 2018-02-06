@@ -219,7 +219,7 @@
 				</div>
 			</div>
 
-			<div class="row form-group">
+			<div class="form-group text-center">
 				<button class="btn btn-success" type="submit">Submit</button>
 			</div>
 
