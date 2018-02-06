@@ -21,6 +21,10 @@
 			<div class="alert alert-danger" role="alert">
 					Please fix the following errors
 			</div>
+			@foreach ($errors->keys() as $error)
+						 <li>{{ $error }}</li>
+				 @endforeach
+	@endif
 	@endif
 	<form action="{{ url('/NurseProgressNotes') }}" method="post">
 		{{ csrf_field() }}
