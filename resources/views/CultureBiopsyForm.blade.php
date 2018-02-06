@@ -117,15 +117,15 @@
 							</div>
 							<div class="">
 								<select class="form-control" name="histopathology"  value="{{ old('histopathology') }}">
-									<option value="gram_stain">Gram Stain</option>
-									<option value="zn_stain">ZN Stain</option>
+									<option value="gram stain">Gram Stain</option>
+									<option value="zn stain">ZN Stain</option>
 								</select>
 							</div>
 				    </td>
 						<td>
 							<div class="">
 								<select class="form-control" name="cytology_01"  value="{{ old('cytology_01') }}">
-									<option value="myco_tb">Myco TB</option>
+									<option value="myco tb">Myco TB</option>
 									<option value="aerobic">Aerobic</option>
 									<option value="anaerobic">Anaerobic</option>
 								</select>
@@ -184,8 +184,8 @@
 		  			<label class="control-label" for="send_to"><h3>Send to:</h3></label>
 						<div class="">
 							<select class="form-control" name="send_to"   value="{{ old('send_to') }}">
-								<option value="toprani_lab">Toprani Lab</option>
-								<option value="kadakiya_lab">Kadakiya Lab</option>
+								<option value="toprani lab">Toprani Lab</option>
+								<option value="kadakiya lab">Kadakiya Lab</option>
 							</select>
 						</div>
 		  		</div>
