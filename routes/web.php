@@ -980,7 +980,7 @@ Auth::routes();
         'middle_name' => 'required|max:255',
         'last_name' => 'required|max:255',
         'date_of_birth' => 'required|max:255',
-        'sex' => 'required|max:255',
+        'sex' => 'required',
         'address' => 'required|max:255',
         'phone_no' => 'required|max:255',
         'mobile_no' => 'required|max:255',
