@@ -25,12 +25,16 @@
 
 
 		<div class="row form-group">
-			<div class="col-md-10">
-				<label>Diagnosis : </label>
-				<input class="form-control " type="textbox" name="diagnosis" placeholder="Diagnosis">
-			</div>
-			<div class="col-md-2 text-right">
-				<textarea class="form-control text-right" id="Addressograph" rows="3" placeholder="Addressograph Here"></textarea>
+			<div class="col-md-6">
+				<div class="col-md-6">
+					<label>Diagnosis : </label>
+				</div>
+				<div class="col-md-6">
+					<input class="form-control " type="textbox" name="diagnosis" placeholder="Diagnosis" value="{{ old('diagnosis') }}">
+					@if($errors->has('diagnosis'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('diagnosis') }}</div></span>
+					@endif
+				</div>
 			</div>
 	  </div>
 
@@ -40,7 +44,10 @@
 		      <label>Calorie Required : </label>
 				</div>
 				<div class="col-md-6">
-					<input class="form-control" type="text" name="calorie_required" />
+					<input class="form-control" type="text" name="calorie_required" value="{{ old('calorie_required') }}"/>
+					@if($errors->has('calorie_required'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('calorie_required') }}</div></span>
+					@endif
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -48,7 +55,10 @@
 		      <label>Protein Required : </label>
 				</div>
 				<div class="col-md-6">
-		      <input class="form-control" type="text" name="protein_required" />
+		      <input class="form-control" type="text" name="protein_required" value="{{ old('protein_required') }}"/>
+					@if($errors->has('protein_required'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('protein_required') }}</div></span>
+					@endif
 				</div>
 			</div>
 		</div>
@@ -59,7 +69,10 @@
 		      <label>Calorie Intake : </label>
 				</div>
 				<div class="col-md-6">
-					<input class="form-control" type="text" name="calorie_intake" />
+					<input class="form-control" type="text" name="calorie_intake" value="{{ old('calorie_intake') }}"/>
+					@if($errors->has('calorie_intake'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('calorie_intake') }}</div></span>
+					@endif
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -67,7 +80,10 @@
 		      <label>Protein Intake : </label>
 				</div>
 				<div class="col-md-6">
-		      <input class="form-control" type="text" name="protein_intake" />
+		      <input class="form-control" type="text" name="protein_intake" value="{{ old('protein_intake') }}"/>
+					@if($errors->has('protein_intake'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('protein_intake') }}</div></span>
+					@endif
 				</div>
 			</div>
 		</div>
@@ -217,7 +233,10 @@
 		      <label>Height : </label>
 				</div>
 				<div class="col-md-6">
-					<input class="form-control" type="text" name="height" />
+					<input class="form-control" type="text" name="height" value="{{ old('height') }}"/>
+					@if($errors->has('height'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('height') }}</div></span>
+					@endif
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -225,7 +244,10 @@
 		      <label>Weight : </label>
 				</div>
 				<div class="col-md-6">
-					<input class="form-control" type="text" name="weight" />
+					<input class="form-control" type="text" name="weight" value="{{ old('weight') }}"/>
+					@if($errors->has('weight'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('weight') }}</div></span>
+					@endif
 				</div>
 			</div>
 		</div>
@@ -297,7 +319,10 @@
 				</div>
 				<div class="col-md-6">
 		      <div class="form-check">
-						<input class="form-check-input" type="checkbox" name="blood_pressure" />
+						<input class="form-check-input" type="checkbox" name="blood_pressure" value="{{ old('blood_pressure') }}"/>
+						@if($errors->has('blood_pressure'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('blood_pressure') }}</div></span>
+						@endif
 					</div>
 				</div>
 			</div>
@@ -307,7 +332,10 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" name="diabetes" />
+						<input class="form-check-input" type="checkbox" name="diabetes" value="{{ old('diabetes') }}"/>
+						@if($errors->has('diabetes'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('diabetes') }}</div></span>
+						@endif
 					</div>
 				</div>
 			</div>
@@ -317,7 +345,10 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" name="old_operated_patient" />
+						<input class="form-check-input" type="checkbox" name="old_operated_patient" value="{{ old('old_operated_patient') }}"/>
+						@if($errors->has('old_operated_patient'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('old_operated_patient') }}</div></span>
+						@endif
 					</div>
 				</div>
 			</div>
@@ -330,7 +361,10 @@
 				</div>
 				<div class="col-md-6">
 		      <div class="form-check">
-						<input class="form-check-input" type="checkbox" name="cardiac_diseases" />
+						<input class="form-check-input" type="checkbox" name="cardiac_diseases" value="{{ old('cardiac_diseases') }}"/>
+						@if($errors->has('cardiac_diseases'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('cardiac_diseases') }}</div></span>
+						@endif
 					</div>
 				</div>
 			</div>
@@ -340,7 +374,10 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" name="liver_diseases" />
+						<input class="form-check-input" type="checkbox" name="liver_diseases" value="{{ old('liver_diseases') }}"/>
+						@if($errors->has('liver_diseases'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('liver_diseases') }}</div></span>
+						@endif
 					</div>
 				</div>
 			</div>
@@ -350,7 +387,10 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" name="renal_failure" />
+						<input class="form-check-input" type="checkbox" name="renal_failure" value="{{ old('renal_failure') }}"/>
+						@if($errors->has('renal_failure'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('renal_failure') }}</div></span>
+						@endif
 					</div>
 				</div>
 			</div>
@@ -363,7 +403,10 @@
 				</div>
 				<div class="col-md-6">
 		      <div class="form-check">
-						<input class="form-check-input" type="checkbox" name="cancer" />
+						<input class="form-check-input" type="checkbox" name="cancer" value="{{ old('cancer') }}"/>
+						@if($errors->has('cancer'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('cancer') }}</div></span>
+						@endif
 					</div>
 				</div>
 			</div>
@@ -373,7 +416,10 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" name="trauma_burn" />
+						<input class="form-check-input" type="checkbox" name="trauma_burn" value="{{ old('trauma_burn') }}"/>
+						@if($errors->has('trauma_burn'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('trauma_burn') }}</div></span>
+						@endif
 					</div>
 				</div>
 			</div>
@@ -383,7 +429,10 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" name="gout" />
+						<input class="form-check-input" type="checkbox" name="gout" value="{{ old('gout') }}"/>
+						@if($errors->has('gout'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('gout') }}</div></span>
+						@endif
 					</div>
 				</div>
 			</div>
@@ -396,12 +445,18 @@
 				</div>
 				<div class="col-md-6">
 		      <div class="form-check">
-						<input class="form-check-input" type="checkbox" name="cancer" />
+						<input class="form-check-input" type="checkbox" name="cancer" value="{{ old('cancer') }}"/>
+						@if($errors->has('cancer'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('cancer') }}</div></span>
+						@endif
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
-				<input class="form-control" type="text" name="any_other" placeholder="If any other" />
+				<input class="form-control" type="text" name="any_other" placeholder="If any other" value="{{ old('any_other') }}"/>
+				@if($errors->has('any_other'))
+						<span class="help-block"><div class="text-danger">{{ $errors->first('any_other') }}</div></span>
+				@endif
 			</div>
 		</div>
 
@@ -423,7 +478,10 @@
 		      <label>Reason for risk : </label>
 				</div>
 				<div class="col-md-6">
-		      <input class="form-control" type="text" name="risk_reason" placeholder="In case of Medium-High risk" />
+		      <input class="form-control" type="text" name="risk_reason" placeholder="In case of Medium-High risk" value="{{ old('risk_reason') }}"/>
+					@if($errors->has('risk_reason'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('risk_reason') }}</div></span>
+					@endif
 				</div>
 			</div>
 		</div>
@@ -455,7 +513,10 @@
 					<label>Remarks : </label>
 				</div>
 				<div class="col-md-6">
-					<input class="form-control" type="text" name="remarks" placeholder="Remarks"/>
+					<input class="form-control" type="text" name="remarks" placeholder="Remarks" value="{{ old('remarks') }}"/>
+					@if($errors->has('remarks'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('remarks') }}</div></span>
+					@endif
 				</div>
 			</div>
 		</div>
@@ -472,10 +533,26 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td><input class="form-control" type="date" name="date_table" /></td>
-						<td><input class="form-control" type="text" name="diet_table" /></td>
-						<td><input class="form-control" type="text" name="remarks_table" /></td>
-						<td><input class="form-control" type="text" name="name_table" /></td>
+						<td><input class="form-control" type="date" name="date_table" value="{{ old('date_table') }}"/>
+							@if($errors->has('date_table'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('date_table') }}</div></span>
+							@endif
+						</td>
+						<td><input class="form-control" type="text" name="diet_table" value="{{ old('diet_table') }}"/>
+							@if($errors->has('diet_table'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('diet_table') }}</div></span>
+							@endif
+						</td>
+						<td><input class="form-control" type="text" name="remarks_table" value="{{ old('remarks_table') }}"/>
+							@if($errors->has('remarks_table'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('remarks_table') }}</div></span>
+							@endif
+						</td>
+						<td><input class="form-control" type="text" name="name_table" value="{{ old('name_table') }}"/>
+							@if($errors->has('name_table'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('name_table') }}</div></span>
+							@endif
+						</td>
 					</tr>
 				</tbody>
 			</table>

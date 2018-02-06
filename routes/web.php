@@ -893,6 +893,55 @@ Auth::routes();
       return view('NutritionalAssessmentForm');
   });
 
+  Route::post('/NutritionalAssessmentForm', function(Request $request){
+    $data = $request->validate([
+      'diagnosis' => 'max:255|required',
+      'calorie_required' => 'max:255|required',
+      'protein_required' => 'max:255|required',
+      'calorie_intake' => 'max:255|required',
+      'protein_intake' => 'max:255|required',
+      'diet' => 'max:255|required',
+      'vomiting' => 'max:255|required',
+      'diarrhea' => 'max:255|required',
+      'constipation' => 'max:255|required',
+      'mouth_ulcer' => 'max:255|required',
+      'food_intake' => 'max:255|required',
+      'fluid_intake' => 'max:255|required',
+      'nutritional_need' => 'max:255|required',
+      'life_style' => 'max:255|required',
+      'mode_of_feed' => 'max:255|required',
+      'height' => 'max:255|required',
+      'weight' => 'max:255|required',
+      'bmi' => 'max:255|required',
+      'diet_recall' => 'max:255|required',
+      'food_intake_decline' => 'max:255|required',
+      'food_intake_decline_reason' => 'max:255|required',
+      'blood_pressure' => 'max:255',
+      'diabetes' => 'max:255',
+      'old_operated_patient' => 'max:255',
+      'cardiac_diseases' => 'max:255',
+      'liver_diseases' => 'max:255',
+      'renal_failure' => 'max:255',
+      'cancer' => 'max:255',
+      'trauma_burn' => 'max:255',
+      'gout' => 'max:255',
+      'any_other' => 'max:255',
+      'risk_type' => 'max:255',
+      'risk_reason' => 'max:255',
+      'diet_suggested' => 'max:255',
+      'remarks' => 'max:255',
+      'date_table' => 'max:255|required',
+      'diet_table' => 'max:255|required',
+      'remarks_table' => 'max:255|required',
+      'name_table' => 'max:255|required',
+
+    ]);
+
+    $link = tap(new App\NutritionalAssessmentForm($data))->save();
+
+    return view('Index');
+  });
+
   Route::get('/OperativeDetailSheet', function(){
       return view('OperativeDetailSheet');
   });

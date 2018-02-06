@@ -13,7 +13,7 @@ class CreateNutritionalassessmenttableTable extends Migration
      */
     public function up()
     {
-        Schema::create('NutritionalAssessmentForm', function (Blueprint $table) {
+        Schema::create('nutritionalassessmentform', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('diagnosis');
@@ -50,8 +50,7 @@ class CreateNutritionalassessmenttableTable extends Migration
             $table->string('risk_type')->nullable();
             $table->string('risk_reason')->nullable();
             $table->string('diet_suggested')->nullable();
-
-            $table->string('remarks');
+            $table->string('remarks')->nullable();
             $table->string('date_table');
             $table->string('diet_table');
             $table->string('remarks_table');

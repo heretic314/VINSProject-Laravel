@@ -44,7 +44,6 @@ class NutritionalAssessmentForm extends Model
     'risk_type',
     'risk_reason',
     'diet_suggested',
-
     'remarks',
     'date_table',
     'diet_table',
