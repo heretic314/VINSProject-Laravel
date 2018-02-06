@@ -28,6 +28,11 @@ class BloodTransfusionForm extends Model
       'checked_by',
       'unit_nurse',
       'start_time',
-      'end_time'
+      'end_time',
+      'minor_reaction',
+      'moderate',
+      'major_reactions',
+      'time_adverse',
+
     ];
 }

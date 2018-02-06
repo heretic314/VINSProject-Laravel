@@ -1464,7 +1464,11 @@ Auth::routes();
       'checked_by'  => 'required|max:255',
       'unit_nurse'  => 'required|max:255',
       'start_time'  => 'required|max:255',
-      'end_time'  => 'required|max:255'
+      'end_time'  => 'required|max:255',
+      'minor_reaction' => 'max:255',
+      'moderate' => 'max:255',
+      'major_reactions' => 'max:255',
+      'time_adverse' => 'max:255',
     ]);
 
     $link2 = tap(new App\BloodTransfusionForm($data))->save();

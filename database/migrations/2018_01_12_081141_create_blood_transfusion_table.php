@@ -34,6 +34,10 @@ class CreateBloodTransfusionTable extends Migration
             $table->string('unit_nurse');
             $table->time('start_time');
             $table->time('end_time');
+            $table->string('minor_reaction')->nullable();
+            $table->string('moderate')->nullable();
+            $table->string('major_reactions')->nullable();
+            $table->string('time_adverse')->nullable();
         });
     }
 

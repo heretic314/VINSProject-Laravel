@@ -22,5 +22,9 @@ $factory->define(App\BloodTransfusionForm::class, function (Faker $faker) {
       'unit_nurse' => $faker->word,
       'start_time' => $faker->time,
       'end_time' => $faker->time,
+      'minor_reaction' => $faker->word,
+      'moderate' => $faker->word,
+      'major_reactions' => $faker->word,
+      'time_adverse' => $faker->word,
     ];
 });

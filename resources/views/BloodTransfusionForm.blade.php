@@ -487,6 +487,61 @@
 					</tr>
 				</tbody>
 			</table>
+
+			<div class="row form-group">
+				<div class="col-md-6">
+					<div class="col-md-6">
+						<label>Minor Reaction : </label>
+					</div>
+					<div class="col-md-6">
+						<select class="form-group" name="minor_reaction">
+							<option value="skin_rash">Skin Rash</option>
+							<option value="urticaria">Urticaria</option>
+							<option value="body_ache">Body Ache</option>
+							<option value="nausea">Nausea</option>
+							<option value="abdominal_pain">Abdominal Pain</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="col-md-6">
+						<label>Moderate : </label>
+					</div>
+					<div class="col-md-6">
+						<select class="form-group" name="moderate">
+							<option value="fever">Fever</option>
+							<option value="vomiting">Vomiting</option>
+							<option value="shivering">Shivering</option>
+							<option value="drowsieness">Drowsieness</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="row form-group">
+				<div class="col-md-6">
+					<div class="col-md-6">
+						<label>Major Reaction : </label>
+					</div>
+					<div class="col-md-6">
+						<select class="form-group" name="major_reactions">
+							<option value="chest_pain">Chest Pain</option>
+							<option value="breathlessness">Breathlessness</option>
+							<option value="decreased_urine_output">Decreased Urine Output</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="col-md-6">
+						<label>Time of onset of Adverse Reactions : </label>
+					</div>
+					<div class="col-md-6">
+						<input class="form-control" type="time" name="time_adverse" value="{{ old('time_adverse') }}"/>
+					</div>
+				</div>
+			</div>
+
+
 		</div>
 		<div class="row form-group">
 			<button class="btn btn-success" type="submit">Submit</button>
