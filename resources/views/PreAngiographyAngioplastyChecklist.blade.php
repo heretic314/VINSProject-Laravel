@@ -21,9 +21,6 @@
 			<div class="alert alert-danger" role="alert">
 					Please fix the following errors
 			</div>
-			@foreach ($errors->keys() as $error)
-						 <li>{{ $error }}</li>
-				 @endforeach
 	@endif
 
 	<form name="{{ url('/PreAngioigraphyAngioplastyChecklist') }}" method="post">
@@ -35,7 +32,11 @@
 						<label for="">Consultant's Name :</label>
 					</div>
 					<div class="col-md-6">
-						<input class="form-control" type="text" name="consultant_name">
+						<input class="form-control" type="text" name="consultant_name" value="{{ old('consultant_name') }}">
+						@if($errors->has('consultant_name'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('consultant_name') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 				<div class="row">
@@ -43,7 +44,11 @@
 						<label for="">Time of Arrival on Floor:</label>
 					</div>
 					<div class="col-md-6">
-						<input class="form-control" type="time" name="time_arrival">
+						<input class="form-control" type="time" name="time_arrival" value="{{ old('time_arrival') }}">
+						@if($errors->has('time_arrival'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('time_arrival') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 			</div>
@@ -53,7 +58,11 @@
 							<label for="">Time when cath Preparation is complete :</label>
 						</div>
 						<div class="col-md-6">
-							<input class="form-control" type="time" name="time_prep_complete">
+							<input class="form-control" type="time" name="time_prep_complete" value="{{ old('time_prep_complete') }}">
+							@if($errors->has('time_prep_complete'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('time_prep_complete') }}</div></span>
+							@endif
+
 						</div>
 					</div>
 					<div class="row">
@@ -61,7 +70,11 @@
 							<label for="">Time of shifting for cath :</label>
 						</div>
 						<div class="col-md-6">
-							<input class="form-control" type="time" name="time_shifting">
+							<input class="form-control" type="time" name="time_shifting" value="{{ old('time_shifting') }}">
+							@if($errors->has('time_shifting'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('time_shifting') }}</div></span>
+							@endif
+
 						</div>
 					</div>
 				</div>
@@ -124,7 +137,11 @@
 						</select>
 					</div>
 					<div class="col-md-5">
-						<input class="form-control" type="text" name="allergies_list" placeholder="If any">
+						<input class="form-control" type="text" name="allergies_list" placeholder="If any" value="{{ old('allergies_list') }}">
+						@if($errors->has('allergies_list'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('allergies_list') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 			</div>
@@ -140,7 +157,11 @@
 						<label>Pulse : </label><br>
 						</div>
 						<div class="col-md-6">
-							<input class="form-control" type="text" name="pulse" placeholder="pulse">
+							<input class="form-control" type="text" name="pulse" placeholder="pulse" value="{{ old('pulse') }}">
+							@if($errors->has('pulse'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('pulse') }}</div></span>
+							@endif
+
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -148,7 +169,11 @@
 						<label>BP : </label><br>
 						</div>
 						<div class="col-md-6">
-							<input class="form-control" type="text" name="bp" placeholder="BP">
+							<input class="form-control" type="text" name="bp" placeholder="BP" value="{{ old('bp') }}">
+							@if($errors->has('bp'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('bp') }}</div></span>
+							@endif
+
 						</div>
 					</div>
 				</div>
@@ -161,7 +186,11 @@
 						<label>Resp : </label><br>
 						</div>
 						<div class="col-md-6">
-							<input class="form-control" type="text" name="resp" placeholder="Resp">
+							<input class="form-control" type="text" name="resp" placeholder="Resp" value="{{ old('resp') }}">
+							@if($errors->has('resp'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('resp') }}</div></span>
+							@endif
+
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -169,7 +198,11 @@
 						<label>Temp : </label><br>
 						</div>
 						<div class="col-md-6">
-							<input class="form-control" type="text" name="temp" placeholder="Temp">
+							<input class="form-control" type="text" name="temp" placeholder="Temp" value="{{ old('temp') }}">
+							@if($errors->has('temp'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('temp') }}</div></span>
+							@endif
+
 						</div>
 					</div>
 				</div>
@@ -233,7 +266,11 @@
 						<label>Blood Arranged : </label>
 					</div>
 					<div class="col-md-6">
-						<input class="form-control" type="text" name="blood_arranged" placeholder="Blood Arranged(in units)">
+						<input class="form-control" type="text" name="blood_arranged" placeholder="Blood Arranged(in units)" value="{{ old('blood_arranged') }}">
+						@if($errors->has('blood_arranged'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('blood_arranged') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -241,7 +278,11 @@
 						<label>I/V Cannula put on : </label>
 					</div>
 					<div class="col-md-6">
-						<input class="form-control" type="text" name="ivcannula_puton" placeholder="I/V Cannula">
+						<input class="form-control" type="text" name="ivcannula_puton" placeholder="I/V Cannula" value="{{ old('ivcannula_puton') }}">
+						@if($errors->has('ivcannula_puton'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('ivcannula_puton') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 			</div>
@@ -252,7 +293,11 @@
 						<label>Height : </label>
 					</div>
 					<div class="col-md-6">
-						<input class="form-control" type="text" name="height" placeholder="Height(in cms)">
+						<input class="form-control" type="text" name="height" placeholder="Height(in cms)" value="{{ old('height') }}">
+						@if($errors->has('height'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('height') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -260,7 +305,11 @@
 						<label>Weight : </label>
 					</div>
 					<div class="col-md-6">
-						<input class="form-control" type="text" name="weight" placeholder="Weight(in kgs)">
+						<input class="form-control" type="text" name="weight" placeholder="Weight(in kgs)" value="{{ old('weight') }}">
+						@if($errors->has('weight'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('weight') }}</div></span>
+						@endif
+
 					</div>
 				</div>
 			</div>
@@ -324,43 +373,95 @@
 					<tbody>
 						<tr>
 							<td>CBC(Hb,TLC,DLC,TLC,PLT,RBc,PCV)</td>
-							<td><input class="form-control" type="text" name="cbc"></td>
+							<td><input class="form-control" type="text" name="cbc" value="{{ old('cbc') }}">
+								@if($errors->has('cbc'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('cbc') }}</div></span>
+								@endif
+							</td>
 							<td>Blood grouping and cross matching</td>
-							<td><input class="form-control" type="text" name="blood_group"></td>
+							<td><input class="form-control" type="text" name="blood_group" value="{{ old('blood_group') }}">
+								@if($errors->has('blood_group'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('blood_group') }}</div></span>
+								@endif
+							</td>
 						</tr>
 						<tr>
 							<td>Blood Urea</td>
-							<td><input class="form-control" type="text" name="blood_urea"></td>
+							<td><input class="form-control" type="text" name="blood_urea" value="{{ old('blood_urea') }}">
+								@if($errors->has('blood_urea'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('blood_urea') }}</div></span>
+								@endif
+							</td>
 							<td>HBsAg</td>
-							<td><input class="form-control" type="text" name="hbsag"></td>
+							<td><input class="form-control" type="text" name="hbsag" value="{{ old('hbsag') }}">
+								@if($errors->has('hbsag'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('hbsag') }}</div></span>
+								@endif
+							</td>
 						</tr>
 						<tr>
 							<td>Serum Creatinine</td>
-							<td><input class="form-control" type="text" name="serum_creatinine"></td>
+							<td><input class="form-control" type="text" name="serum_creatinine" value="{{ old('serum_creatinine') }}">
+								@if($errors->has('serum_creatinine'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('serum_creatinine') }}</div></span>
+								@endif
+							</td>
 							<td>Hepatitis C</td>
-							<td><input class="form-control" type="text" name="hep_c"></td>
+							<td><input class="form-control" type="text" name="hep_c" value="{{ old('hep_c') }}">
+								@if($errors->has('hep_c'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('hep_c') }}</div></span>
+								@endif
+							</td>
 						</tr>
 						<tr>
 							<td>Random Blood Sugar</td>
-							<td><input class="form-control" type="text" name="random_blood_sugar"></td>
+							<td><input class="form-control" type="text" name="random_blood_sugar" value="{{ old('random_blood_sugar') }}">
+								@if($errors->has('random_blood_sugar'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('random_blood_sugar') }}</div></span>
+								@endif
+							</td>
 							<td>HIV</td>
-							<td><input class="form-control" type="text" name="hiv"></td>
+							<td><input class="form-control" type="text" name="hiv" value="{{ old('hiv') }}">
+								@if($errors->has('hiv'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('hiv') }}</div></span>
+								@endif
+							</td>
 						</tr>
 						<tr>
 							<td>PT</td>
-							<td><input class="form-control" type="text" name="pt"></td>
+							<td><input class="form-control" type="text" name="pt" value="{{ old('pt') }}">
+								@if($errors->has('pt'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('pt') }}</div></span>
+								@endif
+							</td>
 							<td>Chest X-Ray</td>
-							<td><input class="form-control" type="text" name="chest_xray"></td>
+							<td><input class="form-control" type="text" name="chest_xray" value="{{ old('chest_xray') }}">
+								@if($errors->has('chest_xray'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('chest_xray') }}</div></span>
+								@endif
+							</td>
 						</tr>
 						<tr>
 							<td>Serum Electrolytes</td>
-							<td><input class="form-control" type="text" name="serum_electrolytes"></td>
+							<td><input class="form-control" type="text" name="serum_electrolytes" value="{{ old('serum_electrolytes') }}">
+								@if($errors->has('serum_electrolytes'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('serum_electrolytes') }}</div></span>
+								@endif
+							</td>
 							<td>ECG</td>
-							<td><input class="form-control" type="text" name="ecg"></td>
+							<td><input class="form-control" type="text" name="ecg" value="{{ old('ecg') }}">
+								@if($errors->has('ecg'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('ecg') }}</div></span>
+								@endif
+							</td>
 						</tr>
 						<tr>
 							<td>LFT</td>
-							<td><input class="form-control" type="text" name="lft"></td>
+							<td><input class="form-control" type="text" name="lft" value="{{ old('lft') }}">
+								@if($errors->has('lft'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('lft') }}</div></span>
+								@endif
+							</td>
 							<td></td>
 							<td></td>
 						</tr>
