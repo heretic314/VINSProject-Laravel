@@ -31,10 +31,10 @@
 						<label class="control-label col-md-4" for="unit">Unit:</label>
 					</div>
 					<div class="col-md-6">
+						<input type="text" class="form-control" name="unit" value="{{ old('unit') }}">
 						@if($errors->has('unit'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('unit') }}</div></span>
 						@endif
-						<input type="text" class="form-control" name="unit" value="{{ old('unit') }}">
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -42,10 +42,10 @@
 						<label class="control-label col-md-4" for="date">Date:</label>
 					</div>
 					<div class="col-md-6">
+						<input type="date" class="form-control" name="date" value="{{ old('date') }}">
 						@if($errors->has('date'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('date') }}</div></span>
 						@endif
-						<input type="date" class="form-control" name="date" value="{{ old('date') }}">
 					</div>
 				</div>
 			</div>
@@ -56,10 +56,10 @@
 						<label class="control-label col-md-4" for="time">Time:</label>
 					</div>
 					<div class="col-md-6">
+						<input type="time" class="form-control" name="time" value="{{ old('time') }}">
 						@if($errors->has('time'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('time') }}</div></span>
 						@endif
-						<input type="time" class="form-control" name="time" value="{{ old('time') }}">
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -67,10 +67,10 @@
 						<label class="control-label col-md-6" for="idbandno">ID Band No.:</label>
 					</div>
 					<div class="col-md-6">
+						<input type="text" class="form-control" name="idbandno" id="idbandno" value="{{ old('idbandno') }}" />
 						@if($errors->has('idbandno'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('idbandno') }}</div></span>
 						@endif
-						<input type="text" class="form-control" name="idbandno" id="idbandno" value="{{ old('idbandno') }}" />
 					</div>
 				</div>
 			</div>
@@ -81,10 +81,10 @@
 						<label class="control-label col-md-6" for="call_bell">Call Bell in Reach:</label>
 					</div>
 					<div class="col-md-6">
+						<input class="form-control" type="text" name="call_bell" value="{{ old('call_bell') }}" />
 						@if($errors->has('call_bell'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('call_bell') }}</div></span>
 						@endif
-						<input class="form-control" type="text" name="call_bell" value="{{ old('call_bell') }}" />
 					</div>
 				</div>
 			</div>
@@ -93,18 +93,18 @@
 				<div class="col-md-4">
 						<label class="control-label col-md-3" for="height">Height:</label>
 						<div class="col-md-9">
+							<input type="text" class="form-control" name="height" id="height" placeholder="Height(in cms)" value="{{ old('height') }}">
 							@if($errors->has('height'))
 									<span class="help-block"><div class="text-danger">{{ $errors->first('height') }}</div></span>
 							@endif
-							<input type="text" class="form-control" name="height" id="height" placeholder="Height(in cms)" value="{{ old('height') }}">
 						</div>
 						<br><br>
 						<label class="control-label col-md-3" for="weight">Weight:</label>
 						<div class="col-md-9">
+							<input type="text" class="form-control" name="weight" id="weight" placeholder="Weight(in KGs)" value="{{ old('weight') }}">
 							@if($errors->has('weight'))
 									<span class="help-block"><div class="text-danger">{{ $errors->first('weight') }}</div></span>
 							@endif
-							<input type="text" class="form-control" name="weight" id="weight" placeholder="Weight(in KGs)" value="{{ old('weight') }}">
 						</div>
 				</div>
 			</div>
@@ -117,10 +117,10 @@
 						<label>Allergies:</label>
 					</div>
 					<div class="col-md-6">
-						<select class="form-control" name="allergies" value="{{ old('allergies') }}">
-							<option value="no">NO</option>
-							<option value="yes">YES</option>
-							<option value="other">Other</option>
+						<select class="form-control" name="allergies" >
+							<option value="no" {{ old('allergies')=='no'?"selected":"" }}>NO</option>
+							<option value="yes" {{ old('allergies')=='yes'?"selected":"" }}>YES</option>
+							<option value="other" {{ old('allergies')=='other'?"selected":"" }}>Other</option>
 						</select>
 					</div>
 				</div>
@@ -129,10 +129,10 @@
 						<label>If other:</label>
 					</div>
 					<div class="col-md-6">
+						<input type="text" name="allergies_other" id="allergies_other" class="form-control" value="{{ old('allergies_other') }}">
 						@if($errors->has('allergies_other'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('allergies_other') }}</div></span>
 						@endif
-						<input type="text" name="allergies_other" id="allergies_other" class="form-control" value="{{ old('allergies_other') }}">
 					</div>
 				</div>
 			</div>
@@ -143,9 +143,9 @@
 						<label>History Informant:</label>
 					</div>
 					<div class="col-md-6">
-						<select class="form-control" name="history_informant" value="{{ old('history_informant') }}">
-							<option value="patient">Patient</option>
-							<option value="other">Other</option>
+						<select class="form-control" name="history_informant" >
+							<option value="patient" {{ old('history_informant')=='patient'?"selected":"" }}>Patient</option>
+							<option value="other" {{ old('history_informant')=='other'?"selected":"" }}>Other</option>
 						</select>
 					</div>
 				</div>
@@ -154,10 +154,10 @@
 						<label>If other:</label>
 					</div>
 					<div class="col-md-6">
+						<input type="text" name="history_informant_other" id="history_informant_other" class="form-control">
 						@if($errors->has('history_informant_other'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('history_informant_other') }}</div></span>
 						@endif
-						<input type="text" name="history_informant_other" id="history_informant_other" class="form-control">
 					</div>
 				</div>
 			</div>
@@ -168,11 +168,11 @@
 						<label>Patient Arrived:</label>
 					</div>
 					<div class="col-md-6">
-						<select class="form-control" name="patient_arrived" value="{{ old('patient_arrived') }}">
-							<option value="ambulatory">Ambulatory</option>
-							<option value="wheelchair">Wheelchair</option>
-							<option value="stretcher">Stretcher</option>
-							<option value="other">Other</option>
+						<select class="form-control" name="patient_arrived" >
+							<option value="ambulatory" {{ old('patient_arrived')=='ambulatory'?"selected":"" }}>Ambulatory</option>
+							<option value="wheelchair" {{ old('patient_arrived')=='wheelchair'?"selected":"" }}>Wheelchair</option>
+							<option value="stretcher" {{ old('patient_arrived')=='stretcher'?"selected":"" }}>Stretcher</option>
+							<option value="other" {{ old('patient_arrived')=='other'?"selected":"" }}>Other</option>
 						</select>
 					</div>
 				</div>
@@ -181,10 +181,10 @@
 						<label>If other:</label>
 					</div>
 					<div class="col-md-6">
+						<input type="text" name="patient_arrived_other" id="patient_arrived_other" class="form-control">
 						@if($errors->has('patient_arrived_other'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('patient_arrived_other') }}</div></span>
 						@endif
-						<input type="text" name="patient_arrived_other" id="patient_arrived_other" class="form-control">
 					</div>
 				</div>
 			</div>
@@ -195,11 +195,11 @@
 						<label>Patient Arrived From:</label>
 					</div>
 					<div class="col-md-6">
-						<select class="form-control" name="patient_arrived_from" value="{{ old('patient_arrived_from') }}">
-							<option value="home">Home</option>
-							<option value="opd">OPD</option>
-							<option value="other_hospital">Other Hospital</option>
-							<option value="other">Other</option>
+						<select class="form-control" name="patient_arrived_from" >
+							<option value="home" {{ old('patient_arrived_from')=='home'?"selected":"" }}>Home</option>
+							<option value="opd" {{ old('patient_arrived_from')=='opd'?"selected":"" }}>OPD</option>
+							<option value="other_hospital" {{ old('patient_arrived_from')=='other_hospital'?"selected":"" }}>Other Hospital</option>
+							<option value="other" {{ old('patient_arrived_from')=='other'?"selected":"" }}>Other</option>
 						</select>
 					</div>
 				</div>
@@ -208,10 +208,10 @@
 						<label>If other:</label>
 					</div>
 					<div class="col-md-6">
+						<input type="text" name="patient_arrived_from_other" id="patient_arrived_from_other" class="form-control">
 						@if($errors->has('patient_arrived_from_other'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('patient_arrived_from_other') }}</div></span>
 						@endif
-						<input type="text" name="patient_arrived_from_other" id="patient_arrived_from_other" class="form-control">
 					</div>
 				</div>
 			</div>
@@ -227,17 +227,17 @@
 						<label>Temperature:</label>
 					</div>
 					<div class="col-md-4">
+						<input type="text" name="temperature" value="{{ old('temprature') }}" class="form-control">
 						@if($errors->has('temperature'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('temperature') }}</div></span>
 						@endif
-						<input type="text" name="temperature" value="{{ old('temprature') }}" class="form-control">
 					</div>
 					<div class="col-md-4">
-						<select class="form-control" id="temperature_type" name="temperature_type" value="{{ old('temperature_type') }}">
-							<option value="oral"> Oral </option>
-							<option value="rectal"> Rectal </option>
-							<option value="auxillary"> Auxillary </option>
-							<option value="tympanic"> Tympanic </option>
+						<select class="form-control" id="temperature_type" name="temperature_type" >
+							<option value="oral" {{ old('temperature_type')=='oral'?"selected":"" }}> Oral </option>
+							<option value="rectal" {{ old('temperature_type')=='rectal'?"selected":"" }}> Rectal </option>
+							<option value="auxillary" {{ old('temperature_type')=='auxillary'?"selected":"" }}> Auxillary </option>
+							<option value="tympanic" {{ old('temperature_type')=='tympanic'?"selected":"" }}> Tympanic </option>
 						</select>
 					</div>
 				</div>
@@ -246,9 +246,9 @@
 						<label>Pain:</label>
 					</div>
 					<div class="col-md-6">
-						<select class="form-control" name="pain" value="{{ old('pain') }}">
-							<option value="opd">OPD</option>
-							<option value="home">Home</option>
+						<select class="form-control" name="pain" >
+							<option value="opd" {{ old('pain')=='opd'?"selected":"" }}>OPD</option>
+							<option value="home" {{ old('pain')=='home'?"selected":"" }}>Home</option>
 						</select>
 					</div>
 				</div>
@@ -260,10 +260,10 @@
 						<label>Pulse:</label>
 					</div>
 					<div class="col-md-6">
+						<input type="text" class="form-control" name="pulse" placeholder="(per minute)" value="{{ old('pulse') }}">
 						@if($errors->has('pulse'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('pulse') }}</div></span>
 						@endif
-						<input type="text" class="form-control" name="pulse" placeholder="(per minute)" value="{{ old('pulse') }}">
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -271,10 +271,10 @@
 						<label>RR : </label>
 					</div>
 					<div class="col-md-6">
+						<input type="text" class="form-control" name="rr" value="{{ old('rr') }}" placeholder="(per minute)">
 						@if($errors->has('rr'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('rr') }}</div></span>
 						@endif
-						<input type="text" class="form-control" name="rr" value="{{ old('rr') }}" placeholder="(per minute)">
 					</div>
 				</div>
 			</div>
@@ -285,10 +285,10 @@
 						<label>Blood Pressure:</label>
 					</div>
 					<div class="col-md-6">
+						<input type="text" class="form-control" name="blood_pressure" value="{{ old('blood_pressure') }}" placeholder="(in mm Hg)">
 						@if($errors->has('blood_pressure'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('blood_pressure') }}</div></span>
 						@endif
-						<input type="text" class="form-control" name="blood_pressure" value="{{ old('blood_pressure') }}" placeholder="(in mm Hg)">
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -296,10 +296,10 @@
 						<label>SpO<sub>2</sub> :</label>
 					</div>
 					<div class="col-md-6">
+						<input type="text" class="form-control" name="spo2" value="{{ old('spo2') }}">
 						@if($errors->has('spo2'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('spo2') }}</div></span>
 						@endif
-						<input type="text" class="form-control" name="spo2" value="{{ old('spo2') }}">
 					</div>
 				</div>
 			</div>
@@ -321,19 +321,19 @@
 						<tr>
 							<th>Feeding</th>
 							<td>
-								<select class="form-control" name="feeding_usual" value="{{ old('feeding_usual') }}">
-									<option value="0">Level 0</option>
-									<option value="1">Level 1</option>
-									<option value="2">Level 2</option>
-									<option value="3">Level 3</option>
+								<select class="form-control" name="feeding_usual" >
+									<option value="0" {{ old('feeding_usual')=='0'?"selected":"" }}>Level 0</option>
+									<option value="1" {{ old('feeding_usual')=='1'?"selected":"" }}>Level 1</option>
+									<option value="2" {{ old('feeding_usual')=='2'?"selected":"" }}>Level 2</option>
+									<option value="3" {{ old('feeding_usual')=='3'?"selected":"" }}>Level 3</option>
 								</select>
 							</td>
 							<td>
-								<select class="form-control" name="feeding_admission" value="{{ old('feeding_admission') }}">
-									<option value="0">Level 0</option>
-									<option value="1">Level 1</option>
-									<option value="2">Level 2</option>
-									<option value="3">Level 3</option>
+								<select class="form-control" name="feeding_admission" >
+									<option value="0" {{ old('feeding_admission')=='0'?"selected":"" }}>Level 0</option>
+									<option value="1" {{ old('feeding_admission')=='1'?"selected":"" }}>Level 1</option>
+									<option value="2" {{ old('feeding_admission')=='2'?"selected":"" }}>Level 2</option>
+									<option value="3" {{ old('feeding_admission')=='3'?"selected":"" }}>Level 3</option>
 								</select>
 							</td>
 							<td rowspan="5">
@@ -346,76 +346,76 @@
 						<tr>
 							<th>Bathing</th>
 							<td>
-								<select class="form-control" name="bathing_usual" value="{{ old('bathing_usual') }}">
-									<option value="0">Level 0</option>
-									<option value="1">Level 1</option>
-									<option value="2">Level 2</option>
-									<option value="3">Level 3</option>
+								<select class="form-control" name="bathing_usual" >
+									<option value="0" {{ old('bathing_usual')=='0'?"selected":"" }}>Level 0</option>
+									<option value="1" {{ old('bathing_usual')=='1'?"selected":"" }}>Level 1</option>
+									<option value="2" {{ old('bathing_usual')=='2'?"selected":"" }}>Level 2</option>
+									<option value="3" {{ old('bathing_usual')=='3'?"selected":"" }}>Level 3</option>
 								</select>
 							</td>
 							<td>
-								<select class="form-control" name="bathing_admission" value="{{ old('bathing_admission') }}">
-									<option value="0">Level 0</option>
-									<option value="1">Level 1</option>
-									<option value="2">Level 2</option>
-									<option value="3">Level 3</option>
+								<select class="form-control" name="bathing_admission" >
+									<option value="0" {{ old('bathing_admission')=='0'?"selected":"" }}>Level 0</option>
+									<option value="1" {{ old('bathing_admission')=='1'?"selected":"" }}>Level 1</option>
+									<option value="2" {{ old('bathing_admission')=='2'?"selected":"" }}>Level 2</option>
+									<option value="3" {{ old('bathing_admission')=='3'?"selected":"" }}>Level 3</option>
 								</select>
 							</td>
 						</tr>
 						<tr>
 							<th>Toileting</th>
 							<td>
-								<select class="form-control" name="toileting_usual" value="{{ old('toileting_usual') }}">
-									<option value="0">Level 0</option>
-									<option value="1">Level 1</option>
-									<option value="2">Level 2</option>
-									<option value="3">Level 3</option>
+								<select class="form-control" name="toileting_usual" >
+									<option value="0" {{ old('toileting_usual')=='0'?"selected":"" }}>Level 0</option>
+									<option value="1" {{ old('toileting_usual')=='1'?"selected":"" }}>Level 1</option>
+									<option value="2" {{ old('toileting_usual')=='2'?"selected":"" }}>Level 2</option>
+									<option value="3" {{ old('toileting_usual')=='3'?"selected":"" }}>Level 3</option>
 								</select>
 							</td>
 							<td>
-								<select class="form-control" name="toileting_admission" value="{{ old('toileting_admission') }}">
-									<option value="0">Level 0</option>
-									<option value="1">Level 1</option>
-									<option value="2">Level 2</option>
-									<option value="3">Level 3</option>
+								<select class="form-control" name="toileting_admission" >
+									<option value="0" {{ old('toileting_admission')=='0'?"selected":"" }}>Level 0</option>
+									<option value="1" {{ old('toileting_admission')=='1'?"selected":"" }}>Level 1</option>
+									<option value="2" {{ old('toileting_admission')=='2'?"selected":"" }}>Level 2</option>
+									<option value="3" {{ old('toileting_admission')=='3'?"selected":"" }}>Level 3</option>
 								</select>
 							</td>
 						</tr>
 						<tr>
 							<th>General Mobility / Gait</th>
 							<td>
-								<select class="form-control" name="mobility_usual" value="{{ old('mobility_usual') }}">
-									<option value="0">Level 0</option>
-									<option value="1">Level 1</option>
-									<option value="2">Level 2</option>
-									<option value="3">Level 3</option>
+								<select class="form-control" name="mobility_usual" >
+									<option value="0" {{ old('mobility_usual')=='0'?"selected":"" }}>Level 0</option>
+									<option value="1" {{ old('mobility_usual')=='1'?"selected":"" }}>Level 1</option>
+									<option value="2" {{ old('mobility_usual')=='2'?"selected":"" }}>Level 2</option>
+									<option value="3" {{ old('mobility_usual')=='3'?"selected":"" }}>Level 3</option>
 								</select>
 							</td>
 							<td>
-								<select class="form-control" name="mobility_admission" value="{{ old('mobility_admission') }}">
-									<option value="0">Level 0</option>
-									<option value="1">Level 1</option>
-									<option value="2">Level 2</option>
-									<option value="3">Level 3</option>
+								<select class="form-control" name="mobility_admission" >
+									<option value="0" {{ old('mobility_admission')=='0'?"selected":"" }}>Level 0</option>
+									<option value="1" {{ old('mobility_admission')=='1'?"selected":"" }}>Level 1</option>
+									<option value="2" {{ old('mobility_admission')=='2'?"selected":"" }}>Level 2</option>
+									<option value="3" {{ old('mobility_admission')=='3'?"selected":"" }}>Level 3</option>
 								</select>
 							</td>
 						</tr>
 						<tr>
 							<th>Dressing / Grooming</th>
 							<td>
-								<select class="form-control" name="dressing_usual" value="{{ old('dressing_usual') }}" >
-									<option value="0">Level 0</option>
-									<option value="1">Level 1</option>
-									<option value="2">Level 2</option>
-									<option value="3">Level 3</option>
+								<select class="form-control" name="dressing_usual"  >
+									<option value="0" {{ old('dressing_usual')=='0'?"selected":"" }}>Level 0</option>
+									<option value="1" {{ old('dressing_usual')=='1'?"selected":"" }}>Level 1</option>
+									<option value="2" {{ old('dressing_usual')=='2'?"selected":"" }}>Level 2</option>
+									<option value="3" {{ old('dressing_usual')=='3'?"selected":"" }}>Level 3</option>
 								</select>
 							</td>
 							<td>
-								<select class="form-control" name="dressing_admission" value="{{ old('dressing_admission') }}">
-									<option value="0">Level 0</option>
-									<option value="1">Level 1</option>
-									<option value="2">Level 2</option>
-									<option value="3">Level 3</option>
+								<select class="form-control" name="dressing_admission" >
+									<option value="0" {{ old('dressing_admission')=='0'?"selected":"" }}>Level 0</option>
+									<option value="1" {{ old('dressing_admission')=='1'?"selected":"" }}>Level 1</option>
+									<option value="2" {{ old('dressing_admission')=='2'?"selected":"" }}>Level 2</option>
+									<option value="3" {{ old('dressing_admission')=='3'?"selected":"" }}>Level 3</option>
 								</select>
 							</td>
 						</tr>
@@ -500,10 +500,10 @@
 							<label class="control-label col-md-6" for="relative_name">Relative Name:</label>
 						</div>
 						<div class="col-md-6">
+							<input type="text" name="relative_name" value="{{ old('relative_name') }}" class="form-control" >
 							@if($errors->has('relative_name'))
 									<span class="help-block"><div class="text-danger">{{ $errors->first('relative_name') }}</div></span>
 							@endif
-							<input type="text" name="relative_name" value="{{ old('relative_name') }}" class="form-control" >
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -511,16 +511,16 @@
 							<label class="control-label col-md-6" for="relation">Relation:</label>
 						</div>
 						<div class="col-md-6">
+							<input type="text" name="relation" value="{{ old('relation') }}" class="form-control">
 							@if($errors->has('relation'))
 									<span class="help-block"><div class="text-danger">{{ $errors->first('relation') }}</div></span>
 							@endif
-							<input type="text" name="relation" value="{{ old('relation') }}" class="form-control">
 						</div>
 					</div>
 				</div>
 
-				<div class="row form-group">
-					<button class="form-control btn btn-success" type="submit">Submit</button>
+				<div class="text-center form-group">
+					<button class="btn btn-success" type="submit">Submit</button>
 				</div>
 		</form>
 	</div>
