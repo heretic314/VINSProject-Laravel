@@ -18,7 +18,7 @@
 			</div>
 		</div>
 
-		<form action="/PatientDietRecord" method="post">
+		<form action="{{ url"/PatientDietRecord"}} method="post">
 				{{ csrf_field() }}
 
 			<div class="row form-group">
