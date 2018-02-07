@@ -30,7 +30,7 @@
 						<label class="control-label" for="diagnosis">Diagnosis :</label>
 					</div>
 					<div class="col-md-8">
-						<textarea name="diagnosis"  rows="3" class="form-control"></textarea>
+						<textarea name="diagnosis"  rows="3" class="form-control" value="{{ old('diagnosis') }}"></textarea>
 						@if($errors->has('diagnosis'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('diagnosis') }}</div></span>
 						@endif
@@ -71,7 +71,7 @@
 					    <td class="text-center">1</td>
 							<td>Patient is surgical/conservative</td>
 							<td class="text-center">
-								<select required class="form-control" name="surgical">
+								<select class="form-control" name="surgical">
 									<option selected hidden disabled>Select</option>
 									<option value="conservative">Conservative</option>
 									<option value="surgical">Surgical</option>
@@ -82,25 +82,25 @@
 					  <tr>
 					    <td class="text-center">2</td>
 							<td>If patient is surgical then tentative date of surgery</td>
-							<td><input type="date"  name="tentative_date_of_surgery" class="form-control"></td>
+							<td><input type="date"  name="tentative_date_of_surgery" class="form-control" value="{{ old('tentative_date_of_surgery') }}"></td>
 
 					  </tr>
 					  <tr>
 					    <td class="text-center">3</td>
 							<td>Please mention date of surgery performed (If surgery performed)</td>
-							<td><input type="date"  name="date_of_surgery" class="form-control"></td>
+							<td><input type="date"  name="date_of_surgery" class="form-control" value="{{ old('date_of_surgery') }}"></td>
 
 					  </tr>
 					  <tr>
 					    <td class="text-center">4</td>
 							<td>Physician's reference</td>
-							<td><input type="text" class="form-control" name="physician_reference" ></td>
+							<td><input type="text" class="form-control" name="physician_reference"  value="{{ old('physician_reference') }}"></td>
 
 					  </tr>
 					  <tr>
 					    <td class="text-center">5</td>
 							<td>Any other specialist's reference</td>
-							<td><input type="text" class="form-control" name="other_physician_reference" ></td>
+							<td><input type="text" class="form-control" name="other_physician_reference" value="{{ old('other_physician_reference') }}" ></td>
 
 					  </tr>
 					  <tr>
@@ -215,7 +215,7 @@
 						<tr>
 							<td class=""></td>
 							<td>16.1 Name</td>
-							<td><input type="text" class="form-control" name="name_given"  />
+							<td><input type="text" class="form-control" name="name_given"  value="{{ old('name_given') }}" />
 								@if($errors->has('name_given'))
 										<span class="help-block"><div class="text-danger">{{ $errors->first('name_given') }}</div></span>
 								@endif
@@ -224,7 +224,7 @@
 						<tr>
 							<td class=""></td>
 							<td>16.2 Date</td>
-							<td><input type="date" class="form-control" name="date_given"  />
+							<td><input type="date" class="form-control" name="date_given"  value="{{ old('date_given') }}" />
 								@if($errors->has('date_given'))
 										<span class="help-block"><div class="text-danger">{{ $errors->first('date_given') }}</div></span>
 								@endif
@@ -233,7 +233,7 @@
 						<tr>
 							<td class=""></td>
 							<td>16.3 Time</td>
-							<td><input type="time" class="form-control" name="time_given"  />
+							<td><input type="time" class="form-control" name="time_given"  value="{{ old('time_given') }}" />
 								@if($errors->has('time_given'))
 										<span class="help-block"><div class="text-danger">{{ $errors->first('time_given') }}</div></span>
 								@endif
@@ -248,7 +248,7 @@
 						<tr>
 							<td class=""></td>
 							<td>17.1 Name</td>
-							<td><input type="text" class="form-control" name="name_taken"  />
+							<td><input type="text" class="form-control" name="name_taken"  value="{{ old('name_taken') }}" />
 								@if($errors->has('name_taken'))
 										<span class="help-block"><div class="text-danger">{{ $errors->first('name_taken') }}</div></span>
 								@endif
@@ -257,7 +257,7 @@
 						<tr>
 							<td class=""></td>
 							<td>17.2 Date</td>
-							<td><input type="date" class="form-control" name="date_taken"  />
+							<td><input type="date" class="form-control" name="date_taken"  value="{{ old('date_taken') }}" />
 								@if($errors->has('date_taken'))
 										<span class="help-block"><div class="text-danger">{{ $errors->first('date_taken') }}</div></span>
 								@endif
@@ -266,7 +266,7 @@
 						<tr>
 							<td class=""></td>
 							<td>17.3 Time</td>
-							<td><input type="time" class="form-control" name="time_taken"  />
+							<td><input type="time" class="form-control" name="time_taken"  value="{{ old('time_taken') }}" />
 								@if($errors->has('time_taken'))
 										<span class="help-block"><div class="text-danger">{{ $errors->first('time_taken') }}</div></span>
 								@endif

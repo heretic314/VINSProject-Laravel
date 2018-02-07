@@ -16,6 +16,7 @@ class CreateDoctorsHandoverTable extends Migration
         Schema::create('doctorshandover', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->string('diagnosis');
             $table->string('day_night');
             $table->string('surgical')->nullable();
             $table->date('tentative_date_of_surgery')->nullable();

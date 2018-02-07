@@ -10,6 +10,7 @@ class DoctorsHandover extends Model
     protected $table="doctorshandover";
 
     protected $fillable = [
+      'diagnosis',
       'day_night',
       'surgical',
       'tentative_date_of_surgery',

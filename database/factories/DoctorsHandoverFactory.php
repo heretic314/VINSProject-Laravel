@@ -5,6 +5,7 @@ use Faker\Generator as Faker;
 $factory->define(App\DoctorsHandover::class, function (Faker $faker) {
     return [
         //
+        'diagnosis' => $faker->word,
         'day_night' => $faker->word,
         'surgical' => $faker->word,
         'tentative_date_of_surgery' => $faker->date,

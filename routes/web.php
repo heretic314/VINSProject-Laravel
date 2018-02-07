@@ -1481,6 +1481,12 @@ Auth::routes();
     return view('Index');
   });
 
+  //Route::resource('DoctorsHandover', 'DoctorsHandoverController');
+
+  Route::get('DoctorsHandover','DoctorsHandoverController@create');
+
+  Route::post('DoctorsHandover','DoctorsHandoverController@store');
+/*
   Route::get('/DoctorsHandover', function(){
       return view('DoctorsHandover');
   });
@@ -1513,6 +1519,8 @@ Auth::routes();
 
     return view('Index');
   });
+
+*/
 
   Route::get('/NurseProgressNotes', function(){
       return view('NurseProgressNotes');
