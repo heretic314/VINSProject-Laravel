@@ -24,10 +24,13 @@ Auth::routes();
 
   Route::group(['middleware' => ['auth']], function() {
 
+  Route::get('/TestFile', function(){
+      return view('testfile');
+  });
+
   Route::get('/DailyDietForm', function(){
       return view('DailyDietForm');
   });
-
 
   Route::post('/DailyDietForm',function(Request $request){
     $data = $request->validate([
@@ -1444,6 +1447,8 @@ Auth::routes();
   Route::get('/BloodTransfusionForm', function(){
       return view('BloodTransfusionForm');
   });
+
+
 
   Route::post('/BloodTransfusionForm', function(Request $request){
     $data = $request->validate([

@@ -1,3 +1,15 @@
+@extends('layouts.app')
+@section('content')
+
+
+<div class="container">
+  <div class="row">
+    <img src="{{ Storage::url('1.png') }}" />
+  </div>
+</div>
+
+
+<!--    canvas test
 <div class="row">
     <div id="sketch1">
       <canvas id="paint1" style="background: url('https://i.imgur.com/1bvTivk.png');"></canvas>
@@ -54,3 +66,6 @@
       };
     });
 </script>
+-->
+
+@endsection
