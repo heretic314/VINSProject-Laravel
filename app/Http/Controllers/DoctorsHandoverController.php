@@ -65,7 +65,32 @@ class DoctorsHandoverController extends Controller
           'time_taken'  => 'required|max:255',
         ]);
 
+        $create = DoctorsHandover::create(array(
+          'diagnosis' => $request->diagnosis,
+          'day_night' => $request->day_night,
+          'surgical' => $request->surgical,
+          'tentative_date_of_surgery' => $request->tentative_date_of_surgery,
+          'date_of_surgery' => $request->date_of_surgery,
+          'physician_reference' => $request->physician_reference,
+          'other_physician_reference' => $request->other_physician_reference,
+          'pathological_investigation_done' => $request->pathological_investigation_done,
+          'pathological_investigation_collected' => $request->pathological_investigation_collected,
+          'radiological_investigation_collected' => $request->radiological_investigation_collected,
+          'other_investigation_done' => $request->other_investigation_done,
+          'other_investigation_collected' => $request->other_investigation_collected,
+          'echo' => $request->echo,
+          'physiotherapy' => $request->physiotherapy,
+          'specific_instruction' => $request->specific_instruction,
+          'verified_by_assistant' => $request->verified_by_assistant,
+          'name_given' => $request->name_given,
+          'date_given' => $request->date_given,
+          'time_given' => $request->time_given,
+          'name_taken' => $request->name_taken,
+          'date_taken' => $request->date_taken,
+          'time_taken' => $request->time_taken,
 
+        ));
+        return \Redirect::to('index');
     }
 
     /**

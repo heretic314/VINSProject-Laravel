@@ -32,13 +32,19 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'VINS') }}
+                    <a class="navbar-brand" href="{{ url('/') }}" style="padding:2px;">
+                      <img class="img-responsive" src = "{{ Storage::url('NABHLogo.png') }}" style="height:46px ; width:auto; padding-top:1px;" />
                     </a>
+
+
+
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav">
+
+                    </ul>
                     <ul class="nav navbar-nav">
                         <li><a href="{{url('index')}}">Index</a></li>
                     </ul>

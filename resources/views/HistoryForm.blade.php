@@ -434,8 +434,7 @@
 
 		<div class="row">
 		    <div id="sketch1">
-		      <canvas id="paint1" style="background: url('https://i.imgur.com/1bvTivk.png');"></canvas>
-
+		      <canvas name="testcanvas" id="paint1" style="background: url('{{ Storage::url('1.png') }}');"></canvas>
 		</div>
 
 

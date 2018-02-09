@@ -1486,41 +1486,8 @@ Auth::routes();
   Route::get('DoctorsHandover','DoctorsHandoverController@create');
 
   Route::post('DoctorsHandover','DoctorsHandoverController@store');
-/*
-  Route::get('/DoctorsHandover', function(){
-      return view('DoctorsHandover');
-  });
-  Route::post('/DoctorsHandover', function(Request $request){
-    $data = $request->validate([
-      'day_night' => 'required|max:255',
-      'surgical'  => 'max:255',
-      'tentative_date_of_surgery'  => 'max:255',
-      'date_of_surgery'  => 'max:255',
-      'physician_reference'  => 'max:255',
-      'other_physician_reference'  => 'max:255',
-      'pathological_investigation_done'  => 'max:255',
-      'pathological_investigation_collected'  => 'max:255',
-      'radiological_investigation_collected'  => 'max:255',
-      'other_investigation_done'  => 'max:255',
-      'other_investigation_collected'  => 'max:255',
-      'echo'  => 'max:255',
-      'physiotherapy'  => 'max:255',
-      'specific_instruction'  => 'max:255',
-      'verified_by_assistant'  => 'max:255',
-      'name_given'  => 'required|max:255',
-      'date_given'  => 'required|max:255',
-      'time_given'  => 'required|max:255',
-      'name_taken'  => 'required|max:255',
-      'date_taken'  => 'required|max:255',
-      'time_taken'  => 'required|max:255',
 
-    ]);
-    $link3 = tap(new App\DoctorsHandover($data))->save();
 
-    return view('Index');
-  });
-
-*/
 
   Route::get('/NurseProgressNotes', function(){
       return view('NurseProgressNotes');
