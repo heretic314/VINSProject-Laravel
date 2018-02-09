@@ -28,95 +28,22 @@ Auth::routes();
       return view('testfile');
   });
 
-  Route::get('/DailyDietForm', function(){
-      return view('DailyDietForm');
-  });
-
-  Route::post('/DailyDietForm',function(Request $request){
-    $data = $request->validate([
-      'floor_name' => 'required|max:255',
-      'cross_verified_by' => 'required|max:255',
-      'date' => 'required|max:255',
-      'room_no' => 'required|max:255',
-      'patient_name' => 'required|max:255',
-      'diet_suggested_by' => 'required|max:255',
-      'm_tea' => 'max:255',
-      'm_breakfast' => 'max:255',
-      'soup' => 'max:255',
-      'lunch' => 'max:255',
-      'e_snacks' => 'max:255',
-      'juice' => 'max:255',
-      'dinner' => 'max:255',
-      'milk' => 'max:255',
-      'remarks' => 'max:255',
-
-    ]);
-
-    $link = tap(new App\DailyDietForm($data))->save();
-
-    return view('Index');
-  });
-
   Route::get('/index', function(){
       return view('Index');
   });
 
-  Route::get('/AppointmentBook', function(){
-      return view('AppointmentBook');
-  });
+  Route::get('DailyDietForm','DailyDietFormController@create');
+  Route::post('DailyDietForm','DailyDietFormController@store');
 
-  Route::post('/AppointmentBook',function(Request $request){
-    $data = $request->validate([
-      'date' => 'required|max:255',
-      'name_of_patient' => 'required|max:255',
-      'contact_no' => 'required|max:255',
-      'appointment_time' => 'required|max:255',
-      'consultant_name' => 'required|max:255',
-    ]);
-
-    $link = tap(new App\AppointmentBook($data))->save();
-
-    return view('Index');
-  });
+  Route::get('/AppointmentBook','AppointmentBookController@create');
+  Route::post('/AppointmentBook','AppointmentBookController@store');
 
   Route::get('/Checklist', function(){
       return view('Checklist');
   });
 
-  Route::get('/CodeBlueEvaluationForm', function(){
-      return view('CodeBlueEvaluationForm');
-  });
-
-  Route::post('/CodeBlueEvaluationForm',function(Request $request){
-    $data = $request->validate([
-      'drill' => 'required|max:255',
-      'actual_code_blue' => 'required|max:255',
-      '00' => 'required|max:255',
-      'comm_00' => 'max:255',
-      '01' => 'required|max:255',
-      'comm_01' => 'max:255',
-      '02' => 'required|max:255',
-      'comm_02' => 'max:255',
-      '03' => 'required|max:255',
-      'comm_03' => 'max:255',
-      '04' => 'required|max:255',
-      'comm_04' => 'max:255',
-      '05' => 'required|max:255',
-      'comm_05' => 'max:255',
-      '06' => 'required|max:255',
-      'comm_06' => 'max:255',
-      '07' => 'required|max:255',
-      'comm_07' => 'max:255',
-      '08' => 'required|max:255',
-      'comm_08' => 'max:255',
-      '09' => 'required|max:255',
-      'comm_09' => 'max:255'
-    ]);
-
-    $link = tap(new App\CodeBlueEvaluationForm($data))->save();
-
-    return view('Index');
-  });
+  Route::get('/CodeBlueEvaluationForm', 'CodeBlueEvaluationFormController@create');
+  Route::post('/CodeBlueEvaluationForm', 'CodeBlueEvaluationFormController@store');
 
   Route::get('/CompleteNursingAssessment', function(){
       return view('CompleteNursingAssessment');
@@ -1398,10 +1325,6 @@ Auth::routes();
     return view('Index');
   });
 
-  Route::get('/submit_doctors_handover', function(){
-    return redirect('/index');
-  } ) ;
-
   Route::get('/DoctorsInitialAssessment', function(){
       return view('DoctorsInitialAssessment');
   });
@@ -1486,7 +1409,6 @@ Auth::routes();
   Route::get('DoctorsHandover','DoctorsHandoverController@create');
 
   Route::post('DoctorsHandover','DoctorsHandoverController@store');
-
 
 
   Route::get('/NurseProgressNotes', function(){

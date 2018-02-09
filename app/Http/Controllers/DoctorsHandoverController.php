@@ -6,8 +6,6 @@ use App\DoctorsHandover;
 
 use Illuminate\Http\Request;
 
-use Illuminate\Http\DoctorsHandoverRequest;
-
 class DoctorsHandoverController extends Controller
 {
     /**
@@ -90,7 +88,7 @@ class DoctorsHandoverController extends Controller
           'time_taken' => $request->time_taken,
 
         ));
-        return \Redirect::to('index');
+        return view('/Index');
     }
 
     /**

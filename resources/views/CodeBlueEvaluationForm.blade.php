@@ -16,6 +16,15 @@
 			</div>
 		</div>
 	</div>
+
+	@if ($errors->any())
+			<div class="alert alert-danger" role="alert">
+					Please fix the following errors
+			</div>
+			@foreach ($errors->keys() as $error)
+						 <li>{{ $error }}</li>
+				 @endforeach
+	@endif
 	<form action="{{ url('/CodeBlueEvaluationForm') }}" method="post">
 		{{ csrf_field() }}
 		<div class="row form-group">
@@ -62,17 +71,17 @@
 			  <tr>
 			    <td>1</td>
 					<td>Was staff able to identify cardiac arrest?
-						@if($errors->has('00'))
-								<span class="help-block"><div class="text-danger">{{ $errors->first('00') }}</div></span>
+						@if($errors->has('_00'))
+								<span class="help-block"><div class="text-danger">{{ $errors->first('_00') }}</div></span>
 						@endif
 					</td>
 					<td>
 						<div class="form-group">
-							<select class="form-control" name="00">
+							<select class="form-control" name="_00">
 
-								<option value="NA" {{ old('00')=="NA"?"selected":"" }}>NA</option>
-								<option value="Yes" {{ old('00')=="Yes"?"selected":"" }}>Yes</option>
-								<option value="No" {{ old('00')=="No"?"selected":"" }}>No</option>
+								<option value="NA" {{ old('_00')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('_00')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('_00')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -82,18 +91,18 @@
 			  <tr>
 			    <td>2</td>
 				<td>Did CPR begin when the cardiac arrest was indentified?
-					@if($errors->has('01'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('01') }}</div></span>
+					@if($errors->has('_01'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_01') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
-							<select class="form-control" name="01" >
+							<select class="form-control" name="_01" >
 
-								<option value="NA" {{ old('01')=="NA"?"selected":"" }}>NA</option>
-								<option value="Yes" {{ old('01')=="Yes"?"selected":"" }}>Yes</option>
-								<option value="No" {{ old('01')=="No"?"selected":"" }}>No</option>
+								<option value="NA" {{ old('_01')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('_01')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('_01')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -119,18 +128,18 @@
 							Appropriate People called
 						</li>
 					</ul>
-					@if($errors->has('02'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('02') }}</div></span>
+					@if($errors->has('_02'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_02') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
-							<select class="form-control" name="02" >
+							<select class="form-control" name="_02" >
 
-								<option value="NA" {{ old('02')=="NA"?"selected":"" }}>NA</option>
-								<option value="Yes" {{ old('02')=="Yes"?"selected":"" }}>Yes</option>
-								<option value="No" {{ old('02')=="No"?"selected":"" }}>No</option>
+								<option value="NA" {{ old('_02')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('_02')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('_02')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -141,18 +150,18 @@
 			  <tr>
 			    <td>4</td>
 				<td>Did nurse lead the resuscitation effort until the code blue team arrived?
-					@if($errors->has('03'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('03') }}</div></span>
+					@if($errors->has('_03'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_03') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
-							<select class="form-control" name="03" >
+							<select class="form-control" name="_03" >
 
-								<option value="NA" {{ old('03')=="NA"?"selected":"" }}>NA</option>
-								<option value="Yes" {{ old('03')=="Yes"?"selected":"" }}>Yes</option>
-								<option value="No" {{ old('03')=="No"?"selected":"" }}>No</option>
+								<option value="NA" {{ old('_03')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('_03')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('_03')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -163,18 +172,18 @@
 			  <tr>
 			    <td>5</td>
 				<td>Was chest compression perfomed uninterruptedly until code blue team arrived?
-					@if($errors->has('04'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('04') }}</div></span>
+					@if($errors->has('_04'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_04') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
-							<select class="form-control" name="04" >
+							<select class="form-control" name="_04" >
 
-								<option value="NA" {{ old('04')=="NA"?"selected":"" }}>NA</option>
-								<option value="Yes" {{ old('04')=="Yes"?"selected":"" }}>Yes</option>
-								<option value="No" {{ old('04')=="No"?"selected":"" }}>No</option>
+								<option value="NA" {{ old('_04')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('_04')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('_04')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -203,18 +212,18 @@
 							Misplaced
 						</li>
 					</ul>
-					@if($errors->has('05'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('05') }}</div></span>
+					@if($errors->has('_05'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_05') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
-							<select class="form-control" name="05" >
+							<select class="form-control" name="_05" >
 
-								<option value="NA" {{ old('05')=="NA"?"selected":"" }}>NA</option>
-								<option value="Yes" {{ old('05')=="Yes"?"selected":"" }}>Yes</option>
-								<option value="No" {{ old('05')=="No"?"selected":"" }}>No</option>
+								<option value="NA" {{ old('_05')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('_05')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('_05')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -229,18 +238,18 @@
 					<div class="">1 min - Appropriate</div>
 					<div class="">2 min - Acceptable</div>
 					<div class="">>3 min - Unacceptable</div>
-					@if($errors->has('06'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('06') }}</div></span>
+					@if($errors->has('_06'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_06') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
-							<select class="form-control" name="06" >
+							<select class="form-control" name="_06" >
 
-								<option value="NA" {{ old('06')=="NA"?"selected":"" }}>NA</option>
-								<option value="Yes" {{ old('06')=="Yes"?"selected":"" }}>Yes</option>
-								<option value="No" {{ old('06')=="No"?"selected":"" }}>No</option>
+								<option value="NA" {{ old('_06')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('_06')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('_06')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -269,18 +278,18 @@
 							Chest compression in time
 						</li>
 					</ul>
-					@if($errors->has('07'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('07') }}</div></span>
+					@if($errors->has('_07'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_07') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
-							<select class="form-control" name="07" >
+							<select class="form-control" name="_07" >
 
-								<option value="NA" {{ old('07')=="NA"?"selected":"" }}>NA</option>
-								<option value="Yes" {{ old('07')=="Yes"?"selected":"" }}>Yes</option>
-								<option value="No" {{ old('07')=="No"?"selected":"" }}>No</option>
+								<option value="NA" {{ old('_07')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('_07')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('_07')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -312,18 +321,18 @@
 							Drugs
 						</li>
 					</ul>
-					@if($errors->has('08'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('08') }}</div></span>
+					@if($errors->has('_08'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_08') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
-							<select class="form-control" name="08" >
+							<select class="form-control" name="_08" >
 
-								<option value="NA" {{ old('08')=="NA"?"selected":"" }}>NA</option>
-								<option value="Yes" {{ old('08')=="Yes"?"selected":"" }}>Yes</option>
-								<option value="No" {{ old('08')=="No"?"selected":"" }}>No</option>
+								<option value="NA" {{ old('_08')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('_08')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('_08')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>
@@ -334,18 +343,18 @@
 			  <tr>
 			    <td>10</td>
 				<td>Was documentation complete?
-					@if($errors->has('09'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('09') }}</div></span>
+					@if($errors->has('_09'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_09') }}</div></span>
 					@endif
 				</td>
 				<div class="form-group">
 					<td>
 						<div class="form-group">
-							<select class="form-control" name="09" >
+							<select class="form-control" name="_09" >
 
-								<option value="NA" {{ old('09')=="NA"?"selected":"" }}>NA</option>
-								<option value="Yes" {{ old('09')=="Yes"?"selected":"" }}>Yes</option>
-								<option value="No" {{ old('09')=="No"?"selected":"" }}>No</option>
+								<option value="NA" {{ old('_09')=="NA"?"selected":"" }}>NA</option>
+								<option value="Yes" {{ old('_09')=="Yes"?"selected":"" }}>Yes</option>
+								<option value="No" {{ old('_09')=="No"?"selected":"" }}>No</option>
 							</select>
 						</div>
 					</td>

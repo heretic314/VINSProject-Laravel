@@ -16,9 +16,6 @@
 				<div class="alert alert-danger" role="alert">
 						Please fix the following errors
 				</div>
-				@foreach ($errors->keys() as $error)
-							 <li>{{ $error }}</li>
-					 @endforeach
 		@endif
 
 		<form action="{{ url('/AppointmentBook') }}" method="post">
