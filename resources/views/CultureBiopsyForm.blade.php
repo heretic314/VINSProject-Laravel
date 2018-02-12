@@ -21,9 +21,6 @@
 			<div class="alert alert-danger" role="alert">
 					Please fix the following errors
 			</div>
-			@foreach ($errors->keys() as $error)
-						 <li>{{ $error }}</li>
-				 @endforeach
 	@endif
 
 	<form name="{{ url('/CultureBiopsyForm') }}" method="post">

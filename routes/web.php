@@ -163,38 +163,8 @@ Auth::routes();
   });
 
 
-  Route::get('/CultureBiopsyForm', function(){
-      return view('CultureBiopsyForm');
-  });
-  Route::post('/CultureBiopsyForm',function(Request $request){
-    $data = $request->validate([
-
-      'date'=> 'required|max:255',
-      'time'=> 'required|max:255',
-      'doctors_name'=> 'required|max:255',
-      'given_by'=> 'required|max:255',
-      'received_by'=> 'required|max:255',
-      'ihc'=> 'required|max:255',
-      'cytology'=> 'max:255',
-      'others'=> 'required|max:255',
-      'histopathology'=>'max:255',
-      'cytology_01'=> 'max:255',
-      'type_of_biopsy'=> 'max:255',
-      'specimen_info'=> 'required|max:255',
-      'imaging_details'=> 'required|max:255',
-      'clinical_details'=> 'required|max:255',
-      'send_to'=> 'max:255',
-      'consultant_sign'=> 'required|max:255',
-      'consultant_name'=> 'required|max:255',
-      'date_for_sign'=> 'required|max:255',
-      'time_for_sign'=> 'required|max:255',
-
-    ]);
-
-    $link = tap(new App\CultureBiopsyForm($data))->save();
-
-    return view('Index');
-  });
+  Route::get('/CultureBiopsyForm', 'CultureBiopsyFormController@create');
+  Route::post('/CultureBiopsyForm', 'CultureBiopsyFormController@store');
 
 
   Route::get('/DischarheGatepass', function(){
