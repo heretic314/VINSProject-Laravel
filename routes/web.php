@@ -45,70 +45,8 @@ Auth::routes();
   Route::get('/CodeBlueEvaluationForm', 'CodeBlueEvaluationFormController@create');
   Route::post('/CodeBlueEvaluationForm', 'CodeBlueEvaluationFormController@store');
 
-  Route::get('/CompleteNursingAssessment', function(){
-      return view('CompleteNursingAssessment');
-  });
-
-  Route::post('/CompleteNursingAssessment', function(Request $request){
-    $data = $request->validate([
-      'unit' => 'max:255|required',
-      'date' => 'max:255|required',
-      'time' => 'max:255|required',
-      'idbandno' => 'max:255|required',
-      'call_bell' => 'max:255|required',
-      'height' => 'max:255|required',
-      'weight' => 'max:255|required',
-      'allergies' => 'max:255',
-      'allergies_other' => 'max:255',
-      'history_informant' => 'max:255',
-      'history_informant_other' => 'max:255',
-      'patient_arrived' => 'max:255',
-      'patient_arrived_other' => 'max:255',
-      'patient_arrived_from' => 'max:255',
-      'patient_arrived_from_other' => 'max:255',
-      'temperature' => 'max:255|required',
-      'temperature_type' => 'max:255',
-      'pulse' => 'max:255|required',
-      'rr' => 'max:255|required',
-      'blood_pressure' => 'max:255|required',
-      'spo2' => 'max:255|required',
-      'pain' => 'max:255|required',
-      'feeding_usual' => 'max:255',
-      'feeding_admission' => 'max:255',
-      'bathing_usual' => 'max:255',
-      'bathing_admission' => 'max:255',
-      'toileting_usual' => 'max:255',
-      'toileting_admission' => 'max:255',
-      'mobility_usual' => 'max:255',
-      'mobility_admission' => 'max:255',
-      'dressing_usual' => 'max:255',
-      'dressing_admission' => 'max:255',
-      'hallucinating' => 'max:255',
-      'post_op_condition' => 'max:255',
-      'narcotics' => 'max:255',
-      'weakness' => 'max:255',
-      'drug_or_alcohol_withdrawal' => 'max:255',
-      'bowel_bladder' => 'max:255',
-      'seizures' => 'max:255',
-      'walker' => 'max:255',
-      'age_60' => 'max:255',
-      'recent_hx_falls' => 'max:255',
-      'postural_hypo_tension' => 'max:255',
-      'uncooperative' => 'max:255',
-      'age_12' => 'max:255',
-      'poor_eyesight' => 'max:255',
-      'language_barrier' => 'max:255',
-      'paralysis_stroke' => 'max:255',
-      'new_medications' => 'max:255',
-      'poor_hearing' => 'max:255',
-      'relative_name' => 'max:255|required',
-      'relation' => 'max:255|required',
-    ]);
-
-    $link = tap(new App\CompleteNursingAssessment($data))->save();
-
-    return view('Index');
-  });
+  Route::get('/CompleteNursingAssessment','CompleteNursingAssessmentController@create');
+  Route::post('/CompleteNursingAssessment', 'CompleteNursingAssessmentController@store');
 
 
 
