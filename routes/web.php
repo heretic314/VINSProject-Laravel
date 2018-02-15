@@ -35,6 +35,11 @@ Auth::routes();
   Route::get('DailyDietForm','DailyDietFormController@create');
   Route::post('DailyDietForm','DailyDietFormController@store');
 
+  Route::get('PatientAdmissionSheet','PatientAdmissionSheetController@create');
+  Route::post('PatientAdmissionSheet','PatientAdmissionSheetController@store');
+
+
+
   Route::get('/AppointmentBook','AppointmentBookController@create');
   Route::post('/AppointmentBook','AppointmentBookController@store');
 

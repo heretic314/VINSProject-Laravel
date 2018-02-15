@@ -50,7 +50,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#"> ~~~Admission Sheet~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PatientAdmissionSheet') }}">Admission Sheet </a>
 		</div>
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~+ Medical Reconciliation Form~~~ </a>
