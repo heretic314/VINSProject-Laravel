@@ -38,7 +38,11 @@ class DatabaseSeeder extends Seeder
         $this->call(PreAngiographyAngioplastyChecklistSeeder::class);
         $this->call(appointmentbookseeder::class);
         $this->call(NurseProgressNotesSeeder::class);
+<<<<<<< HEAD
         $this->call(CPRFormatSeeder::class);
 
+=======
+        $this->call(provisionaldischargesummaryseeder::class);
+>>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
     }
 }

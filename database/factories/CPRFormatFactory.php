@@ -99,7 +99,7 @@ $factory->define(App\CPRFormat::class, function (Faker $faker) {
       '_06_06'=> $faker->word,
       '_06_07'=> $faker->word,
       '_06_08'=> $faker->word,
-      'initial_time '=>$faker->time,
+      'initial_time'=>$faker->time
     ];
 
 

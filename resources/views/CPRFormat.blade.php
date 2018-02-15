@@ -2,22 +2,21 @@
 
 @section('content')
 <div class="container">
-
-		<div class="page-header">
-			<div class="row">
-				<div class="col-md-6">
-				<h1>CPR Format</h1>
-				</div>
-				<div class="col-md-6">
-					<div class="text-right">
-						DOC NO. FMT/NUR/37 <br>
-						REV. No. 0.1 <br>
-						WEF 01-11-2014 <br>
-						PAGE NO.
-					</div>
+	<div class="page-header">
+		<div class="row">
+			<div class="col-md-6">
+			<h1>CPR Format</h1>
+			</div>
+			<div class="col-md-6">
+				<div class="text-right">
+					DOC NO. FMT/NUR/37 <br>
+					REV. No. 0.1 <br>
+					WEF 01-11-2014 <br>
+					PAGE NO.
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<form action="{{ url('/CPRFormat') }}" method="post">
 			{{ csrf_field() }}
 			@if ($errors->any())
@@ -29,6 +28,21 @@
 					@endforeach
 
 			@endif
+=======
+	</div>
+
+	@if ($errors->any())
+			<div class="alert alert-danger" role="alert">
+					Please fix the following errors
+			</div>
+	@endif
+	@foreach ($errors->keys() as $error)
+		<li>{{$error}}</li>
+	@endforeach
+
+	<form action="{{ url('/CPRFormat') }}" method="post">
+		{{ csrf_field() }}
+>>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
 
 
 
@@ -136,10 +150,9 @@
 				</div>
 			</div>
 		</div>
-
 		<hr>
 
-		<table class="table table-bordered">
+		<table class="table table-bordered table-responsive">
 			<tr>
 				<th>Diagnosis</th>
 				<td  colspan="6">
@@ -265,7 +278,7 @@
 					@endif
 				</td>
 				<td colspan="5">
-					<input type="text" class="form-control" name="medication_name_01" id="medication_name_01" value="{{ old('medication_time_01') }}">
+					<input type="text" class="form-control" name="medication_name_01" id="medication_name_01" value="{{ old('medication_name_01') }}">
 					@if($errors->has('medication_name_01'))
 							<span class="help-block"><div class="text-danger">{{ $errors->first('medication_name_01') }}</div></span>
 					@endif
@@ -279,7 +292,7 @@
 					@endif
 				</td>
 				<td colspan="5">
-					<input type="text" class="form-control" name="medication_name_11" id="medication_name_11" value="{{ old('medication_time_11') }}">
+					<input type="text" class="form-control" name="medication_name_11" id="medication_name_11" value="{{ old('medication_name_11') }}">
 					@if($errors->has('medication_name_11'))
 							<span class="help-block"><div class="text-danger">{{ $errors->first('medication_name_11') }}</div></span>
 					@endif
@@ -293,7 +306,7 @@
 					@endif
 				</td>
 				<td colspan="5">
-					<input type="text" class="form-control" name="medication_name_21" id="medication_name_21" value="{{ old('medication_time_21') }}">
+					<input type="text" class="form-control" name="medication_name_21" id="medication_name_21" value="{{ old('medication_name_21') }}">
 					@if($errors->has('medication_name_21'))
 							<span class="help-block"><div class="text-danger">{{ $errors->first('medication_name_21') }}</div></span>
 					@endif
@@ -307,7 +320,7 @@
 					@endif
 				</td>
 				<td colspan="5">
-					<input type="text" class="form-control" name="medication_name_31" id="medication_name_31" value="{{ old('medication_time_31') }}">
+					<input type="text" class="form-control" name="medication_name_31" id="medication_name_31" value="{{ old('medication_name_31') }}">
 					@if($errors->has('medication_name_31'))
 							<span class="help-block"><div class="text-danger">{{ $errors->first('medication_name_31') }}</div></span>
 					@endif
@@ -321,7 +334,7 @@
 					@endif
 				</td>
 				<td colspan="5">
-					<input type="text" class="form-control" name="medication_name_41" id="medication_name_41" value="{{ old('medication_time_41') }}">
+					<input type="text" class="form-control" name="medication_name_41" id="medication_name_41" value="{{ old('medication_name_41') }}">
 					@if($errors->has('medication_name_41'))
 							<span class="help-block"><div class="text-danger">{{ $errors->first('medication_name_41') }}</div></span>
 					@endif
@@ -362,12 +375,11 @@
 				<th>Remarks</th>
 				<td colspan="6">
 					<div class="text-right">
-						<textarea class="form-control" rows="3" name="remarks">
-							{{ old('remarks') }}
+						<textarea class="form-control" rows="3" name="remarks">{{ old('remarks') }}</textarea>
 						@if($errors->has('remarks'))
 								<span class="help-block"><div class="text-danger">{{ $errors->first('remarks') }}</div></span>
 						@endif
-						</textarea>
+
 					</div>
 				</td>
 			</tr>
@@ -398,14 +410,12 @@
 			</div>
 		</div>
 
-
-		<hr />
-		<hr />
-		<div class="form-group">
-			<table name="vital-chart" class="table table-bordered table-condensed">
+		<hr>
+		<div class="row form-group">
+			<table name="vital-chart" class="table table-bordered table-responsive">
 				<thead>
 					<tr>
-						<th>Time</th>
+						<th>Initial Time</th>
 						<th rowspan="2">Pulse</th>
 						<th rowspan="2">BP</th>
 						<th rowspan="2">SPO<sub>2</sub></th>
@@ -417,7 +427,11 @@
 					</tr>
 					<tr>
 						<th>
+<<<<<<< HEAD
 							Initial Time <input type="time" class="form-control" name="initial_time" id="initial_time">
+=======
+							<input type="time" class="form-control" name="initial_time" id="initial_time" value="{{ old('initial_time') }}">
+>>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
 							@if($errors->has('initial_time'))
 									<span class="help-block"><div class="text-danger">{{ $errors->first('initial_time') }}</div></span>
 							@endif
@@ -472,9 +486,15 @@
 						<td>
 							<textarea class="form-control" cols="2" name="_00_08" placeholder="Medicine">
 								{{old('_00_08')}}
+<<<<<<< HEAD
 
 							</textarea>@if($errors->has('_00_08'))
 									<span class="help-block"><div class="text-danger">{{ $errors->first('_00_08') }}</div></span>
+=======
+							</textarea>
+							@if($errors->has('_00_08'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_00_08') }}</div></span>
+>>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
 							@endif
 						</td>
 					</tr>
@@ -526,9 +546,15 @@
 						<td>
 							<textarea class="form-control" cols="2" name="_01_08" placeholder="Medicine">
 								{{old('_01_08')}}
+<<<<<<< HEAD
 
 							</textarea>@if($errors->has('_01_08'))
 									<span class="help-block"><div class="text-danger">{{ $errors->first('_01_08') }}</div></span>
+=======
+							</textarea>
+							@if($errors->has('_01_08'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_01_08') }}</div></span>
+>>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
 							@endif
 						</td>
 					</tr>
@@ -580,9 +606,15 @@
 						<td>
 							<textarea class="form-control" cols="2" name="_02_08" placeholder="Medicine">
 								{{ old('_02_08') }}
+<<<<<<< HEAD
 
 							</textarea>@if($errors->has('_02_08'))
 									<span class="help-block"><div class="text-danger">{{ $errors->first('_02_08') }}</div></span>
+=======
+							</textarea>
+							@if($errors->has('_02_08'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_02_08') }}</div></span>
+>>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
 							@endif
 						</td>
 					</tr>
@@ -626,7 +658,11 @@
 							@endif
 						</td>
 						<td>
+<<<<<<< HEAD
 							<input type="text" class="form-control" name="_03_07" id="_03_07" value="{{ old('_03_07') }}">>
+=======
+							<input type="text" class="form-control" name="_03_07" id="_03_07" value="{{ old('_03_07') }}">
+>>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
 							@if($errors->has('_03_07'))
 									<span class="help-block"><div class="text-danger">{{ $errors->first('_03_07') }}</div></span>
 							@endif
@@ -634,9 +670,15 @@
 						<td>
 							<textarea class="form-control" cols="2" name="_03_08" placeholder="Medicine">
 								{{ old('_03_08') }}
+<<<<<<< HEAD
 
 							</textarea>@if($errors->has('_03_08'))
 									<span class="help-block"><div class="text-danger">{{ $errors->first('_03_08') }}</div></span>
+=======
+							</textarea>
+							@if($errors->has('_03_08'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_03_08') }}</div></span>
+>>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
 							@endif
 						</td>
 					</tr>
@@ -688,9 +730,15 @@
 						<td>
 							<textarea class="form-control" cols="2" name="_04_08" placeholder="Medicine">
 								{{ old('_04_08') }}
+<<<<<<< HEAD
 
 							</textarea>@if($errors->has('_04_08'))
 									<span class="help-block"><div class="text-danger">{{ $errors->first('_04_08') }}</div></span>
+=======
+							</textarea>
+							@if($errors->has('_04_08'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_04_08') }}</div></span>
+>>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
 							@endif
 						</td>
 					</tr>
@@ -742,9 +790,15 @@
 						<td>
 							<textarea class="form-control" cols="2" name="_05_08" placeholder="Medicine" >
 								{{ old('_05_08') }}
+<<<<<<< HEAD
 
 							</textarea>@if($errors->has('_05_08'))
 									<span class="help-block"><div class="text-danger">{{ $errors->first('_05_08') }}</div></span>
+=======
+							</textarea>
+							@if($errors->has('_05_08'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_05_08') }}</div></span>
+>>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
 							@endif
 						</td>
 					</tr>
@@ -796,9 +850,15 @@
 						<td>
 							<textarea class="form-control" cols="2" name="_06_08" placeholder="Medicine">
 								 {{ old('_06_08') }}
+<<<<<<< HEAD
 
 							</textarea>@if($errors->has('_06_08'))
 									<span class="help-block"><div class="text-danger">{{ $errors->first('_06_08') }}</div></span>
+=======
+							</textarea>
+							@if($errors->has('_06_08'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('_06_08') }}</div></span>
+>>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
 							@endif
 						</td>
 					</tr>
@@ -807,11 +867,9 @@
 			</table>
 		</div>
 
-		<div class="row form-group">
+		<div class="row form-group text-center">
 			<button class="btn btn-success" type="submit">Submit</button>
 		</div>
 	</form>
 </div>
-</body>
-</html>
 @endsection

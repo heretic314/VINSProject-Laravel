@@ -2,8 +2,6 @@
 
 @section('content')
 <div class="container">
-	<form  action="{{ url('/DailyDietForm') }}" method = "post">
-		{{ csrf_field() }}
 	<div class="page-header">
 		<div class="row">
 			<div class="col-md-6">
@@ -19,6 +17,14 @@
 		</div>
 	</div>
 
+	@if ($errors->any())
+			<div class="alert alert-danger" role="alert">
+					Please fix the following errors.
+			</div>
+	@endif
+
+	<form action="{{ url('/DailyDietForm') }}" method = "post">
+		{{ csrf_field() }}
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">

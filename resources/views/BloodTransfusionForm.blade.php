@@ -2,6 +2,21 @@
 
 @section('content')
 <div class="container">
+	<div class="page-header">
+		<div class="row">
+			<div class="col-md-6">
+			<h1>Blood Transfusion Form</h1>
+			</div>
+			<div class="col-md-6">
+				<div class="text-right">
+					DOC NO. FMT/IPD/36 <br>
+					REV. No. 0.1 <br>
+					WEF 01-10-2014 <br>
+					PAGE NO. 01 OF 02
+				</div>
+			</div>
+		</div>
+	</div>
 
 	@if ($errors->any())
       <div class="alert alert-danger" role="alert">
@@ -10,22 +25,6 @@
   @endif
 	<form action="{{ url('/BloodTransfusionForm') }}" method="post">
 			{{ csrf_field() }}
-		<div class="page-header">
-			<div class="row">
-				<div class="col-md-6">
-				<h1>Blood Transfusion Form</h1>
-				</div>
-				<div class="col-md-6">
-					<div class="text-right">
-						DOC NO. FMT/IPD/36 <br>
-						REV. No. 0.1 <br>
-						WEF 01-10-2014 <br>
-						PAGE NO. 01 OF 02
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<div class="row form-group">
 			<div class="col-md-6">
 				<div class="col-md-6">

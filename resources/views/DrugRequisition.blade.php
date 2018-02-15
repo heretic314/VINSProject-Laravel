@@ -19,16 +19,15 @@
 
 			@if ($errors->any())
 		      <div class="alert alert-danger" role="alert">
-		          Please enter atleast one entry.
+		          Please fix the following errors.
 		      </div>
 		  @endif
 
 
-
-			<form action="/DrugRequisition" method="post">
+			<form action="{{ url('/DrugRequisition') }}" method="post">
 				{{csrf_field()}}
 				<div class="row form-group">
-				  <table class="table table-bordered">
+				  <table class="table table-bordered table-responsive">
 				    <thead>
 						  <tr>
 								<th class="text-center">Sr. No.</th>
@@ -158,10 +157,8 @@
 					</div>
 				</div>
 				<div class="row form-group text-center">
-					<button class="btn btn-default" type="submit">Submit </button>
+					<button class="btn btn-success" type="submit">Submit</button>
 				</div>
 			</form>
 		</div>
-	</body>
-</html>
 @endsection

@@ -23,7 +23,7 @@
 			</div>
 	@endif
 
-	<form name="{{ url('/WardProcedureRecord') }}" method="post">
+	<form action="{{ url('/WardProcedureRecord') }}" method="post">
 		{{ csrf_field() }}
 	<!--<div class="row form-group">
 				<div class="col-md-8">

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class doctorsinitialassessmentseeder extends Seeder
+class provisionaldischargesummaryseeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class doctorsinitialassessmentseeder extends Seeder
      */
     public function run()
     {
-        factory(App\DoctorsInitialAssessment::class,4)->create();
+      factory(App\ProvisionDischargeSummary::class,2)->create();
     }
 }

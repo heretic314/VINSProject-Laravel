@@ -2,6 +2,21 @@
 
 @section('content')
 	<div class="container">
+		<div class="page-header">
+			<div class="row">
+				<div class="col-md-6">
+				<h1>Complete Nursing Assessment</h1>
+				</div>
+				<div class="col-md-6">
+					<div class="text-right">
+						DOC NO. F/IPD/22 <br>
+						REV. No. 0.1 <br>
+						WEF 05-01-2015
+					</div>
+				</div>
+			</div>
+		</div>
+
 		@if ($errors->any())
 				<div class="alert alert-danger" role="alert">
 						Please fix the following errors
@@ -10,21 +25,6 @@
 
 		<form action="{{ url('/CompleteNursingAssessment') }}" method="post" >
 			{{ csrf_field() }}
-			<div class="page-header">
-				<div class="row">
-					<div class="col-md-6">
-					<h1>Complete Nursing Assessment</h1>
-					</div>
-					<div class="col-md-6">
-						<div class="text-right">
-							DOC NO. F/IPD/22 <br>
-							REV. No. 0.1 <br>
-							WEF 05-01-2015
-						</div>
-					</div>
-				</div>
-			</div>
-
 			<div class="row form-group">
 				<div class="col-md-6">
 					<div class="col-md-6">

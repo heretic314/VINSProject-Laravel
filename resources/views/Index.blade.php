@@ -209,7 +209,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Blood-Sugar Monitoring Chart~~~ </a>
 		</div>
 	</div>
-	<div class="row">``
+	<div class="row">
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~+ Restraint Administration~~~ </a>
 		</div>
@@ -261,7 +261,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Discharge Sheet~~~ </a>
 		</div>
 		<div class="col-md-4 top-buffer">
-
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/ProvisionalDischargeSummary') }}" > Provisional Discharge Summary </a>
 		</div>
 	</div>
 
@@ -302,8 +302,14 @@
 		<div class="col-md-4 top-buffer top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~WAP Audit Checklist~~~ </a>
 		</div>
+
+	</div>
+	<div class="row">
 		<div class="col-md-4 top-buffer top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/NurseProgressNotes') }}" > Nurse's progress notes </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/NurseProgressNotes') }}" > Nurse's Progress Notes </a>
+		</div>
+		<div class="col-md-4 top-buffer top-buffer">
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/DrugRequisition') }}" > Drug Requisition </a>
 		</div>
 	</div>
 
