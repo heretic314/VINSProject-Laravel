@@ -22,29 +22,18 @@
 			@if ($errors->any())
 					<div class="alert alert-danger" role="alert">
 							Please fix the following errors
-					</div>
-					@foreach($errors->keys() as $error)
-					<li>{{$error}}</li>
-					@endforeach
-
+					</div>		
 			@endif
 =======
 	</div>
 
-	@if ($errors->any())
-			<div class="alert alert-danger" role="alert">
-					Please fix the following errors
+		<div class="row form-group">
+			<div class="col-md-10"></div>
+			<div class="text-right col-md-2">
+				<label>Addressograph</label>
+				<textarea class="form-control" placeholder="Addressograph here"></textarea>
 			</div>
-	@endif
-	@foreach ($errors->keys() as $error)
-		<li>{{$error}}</li>
-	@endforeach
-
-	<form action="{{ url('/CPRFormat') }}" method="post">
-		{{ csrf_field() }}
->>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
-
-
+		</div>
 
 		<div class="row form-group">
 			<div class="col-md-6">
@@ -429,12 +418,6 @@
 						<th>
 <<<<<<< HEAD
 							Initial Time <input type="time" class="form-control" name="initial_time" id="initial_time">
-=======
-							<input type="time" class="form-control" name="initial_time" id="initial_time" value="{{ old('initial_time') }}">
->>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
-							@if($errors->has('initial_time'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('initial_time') }}</div></span>
-							@endif
 						</th>
 					</tr>
 				</thead>
@@ -442,424 +425,378 @@
 					<tr>
 						<th>0 minutes</th>
 						<td>
-							<input type="text" class="form-control" name="_00_01" id="_00_01" value="{{ old('_00_01') }}">
-							@if($errors->has('_00_01'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_00_01') }}</div></span>
+							<input type="text" class="form-control" name="00_01" id="00_01" value="{{ old('00_01') }}">
+							@if($errors->has('00_01'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('00_01') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_00_02" id="_00_02" value="{{ old('_00_02') }}">
-							@if($errors->has('_00_02'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_00_02') }}</div></span>
+							<input type="text" class="form-control" name="00_02" id="00_02" value="{{ old('00_02') }}">
+							@if($errors->has('00_02'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('00_02') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_00_03" id="_00_03" value="{{ old('_00_03') }}">
-							@if($errors->has('_00_03'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_00_03') }}</div></span>
+							<input type="text" class="form-control" name="00_03" id="00_03" value="{{ old('00_03') }}">
+							@if($errors->has('00_03'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('00_03') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_00_04" id="_00_04" value="{{ old('_00_04') }}">
-							@if($errors->has('_00_04'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_00_04') }}</div></span>
+							<input type="text" class="form-control" name="00_04" id="00_04" value="{{ old('00_04') }}">
+							@if($errors->has('00_04'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('00_04') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_00_05" id="_00_05" value="{{ old('_00_05') }}">
-							@if($errors->has('_00_05'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_00_05') }}</div></span>
+							<input type="text" class="form-control" name="00_05" id="00_05" value="{{ old('00_05') }}">
+							@if($errors->has('00_05'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('00_05') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_00_06" id="_00_06" value="{{ old('_00_06') }}">
-							@if($errors->has('_00_06'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_00_06') }}</div></span>
+							<input type="text" class="form-control" name="00_06" id="00_06" value="{{ old('00_06') }}">
+							@if($errors->has('00_06'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('00_06') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_00_07" id="_00_07" value="{{ old('_00_07') }}">
-							@if($errors->has('_00_07'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_00_07') }}</div></span>
+							<input type="text" class="form-control" name="00_07" id="00_07" value="{{ old('00_07') }}">
+							@if($errors->has('00_07'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('00_07') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<textarea class="form-control" cols="2" name="_00_08" placeholder="Medicine">
-								{{old('_00_08')}}
-<<<<<<< HEAD
-
-							</textarea>@if($errors->has('_00_08'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_00_08') }}</div></span>
-=======
+							<textarea class="form-control" cols="2" name="00_08" placeholder="Medicine">
+								{{old('00_08')}}
+								@if($errors->has('00_08'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('00_08') }}</div></span>
+								@endif
 							</textarea>
-							@if($errors->has('_00_08'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('_00_08') }}</div></span>
->>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
-							@endif
 						</td>
 					</tr>
 
 					<tr>
 						<th>5 minutes</th>
 						<td>
-							<input type="text" class="form-control" name="_01_01" id="_01_01" value="{{ old('_01_01') }}">
-							@if($errors->has('_01_01'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_01_01') }}</div></span>
+							<input type="text" class="form-control" name="01_01" id="01_01" value="{{ old('01_01') }}">
+							@if($errors->has('01_01'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('01_01') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_01_02" id="_01_02" value="{{ old('_01_02') }}">
-							@if($errors->has('_01_02'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_01_02') }}</div></span>
+							<input type="text" class="form-control" name="01_02" id="01_02" value="{{ old('01_02') }}">
+							@if($errors->has('01_02'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('01_02') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_01_03" id="_01_03" value="{{ old('_01_03') }}">
-							@if($errors->has('_01_03'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_01_03') }}</div></span>
+							<input type="text" class="form-control" name="01_03" id="01_03" value="{{ old('01_03') }}">
+							@if($errors->has('01_03'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('01_03') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_01_04" id="_01_04" value="{{ old('_01_04') }}">
-							@if($errors->has('_01_04'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_01_04') }}</div></span>
+							<input type="text" class="form-control" name="01_04" id="01_04" value="{{ old('01_04') }}">
+							@if($errors->has('01_04'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('01_04') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_01_05" id="_01_05" value="{{ old('_01_05') }}">
-							@if($errors->has('_01_05'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_01_05') }}</div></span>
+							<input type="text" class="form-control" name="01_05" id="01_05" value="{{ old('01_05') }}">
+							@if($errors->has('01_05'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('01_05') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_01_06" id="_01_06" value="{{ old('_01_06') }}">
-							@if($errors->has('_01_06'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_01_06') }}</div></span>
+							<input type="text" class="form-control" name="01_06" id="01_06" value="{{ old('01_06') }}">
+							@if($errors->has('01_06'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('01_06') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_01_07" id="_01_07" value="{{ old('_01_07') }}">
-							@if($errors->has('_01_07'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_01_07') }}</div></span>
+							<input type="text" class="form-control" name="01_07" id="01_07" value="{{ old('01_07') }}">
+							@if($errors->has('01_07'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('01_07') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<textarea class="form-control" cols="2" name="_01_08" placeholder="Medicine">
-								{{old('_01_08')}}
-<<<<<<< HEAD
-
-							</textarea>@if($errors->has('_01_08'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_01_08') }}</div></span>
-=======
+							<textarea class="form-control" cols="2" name="01_08" placeholder="Medicine">
+								{{old('01_08')}}
+								@if($errors->has('01_08'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('01_08') }}</div></span>
+								@endif
 							</textarea>
-							@if($errors->has('_01_08'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('_01_08') }}</div></span>
->>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
-							@endif
 						</td>
 					</tr>
 
 					<tr>
 						<th>10 minutes</th>
 						<td>
-							<input type="text" class="form-control" name="_02_01" id="_02_01" value="{{ old('_02_01') }}">
-							@if($errors->has('_02_01'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_02_01') }}</div></span>
+							<input type="text" class="form-control" name="02_01" id="02_01" value="{{ old('02_01') }}">
+							@if($errors->has('02_01'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('02_01') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_02_02" id="_02_02" value="{{ old('_02_02') }}">
-							@if($errors->has('_02_02'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_02_02') }}</div></span>
+							<input type="text" class="form-control" name="02_02" id="02_02" value="{{ old('02_02') }}">
+							@if($errors->has('02_02'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('02_02') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_02_03" id="_02_03" value="{{ old('_02_03') }}">
-							@if($errors->has('_02_03'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_02_03') }}</div></span>
+							<input type="text" class="form-control" name="02_03" id="02_03" value="{{ old('02_03') }}">
+							@if($errors->has('02_03'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('02_03') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_02_04" id="_02_04" value="{{ old('_02_04') }}">
-							@if($errors->has('_02_04'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_02_04') }}</div></span>
+							<input type="text" class="form-control" name="02_04" id="02_04" value="{{ old('02_04') }}">
+							@if($errors->has('02_04'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('02_04') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_02_05" id="_02_05" value="{{ old('_02_05') }}">
-							@if($errors->has('_02_05'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_02_05') }}</div></span>
+							<input type="text" class="form-control" name="02_05" id="02_05" value="{{ old('02_05') }}">
+							@if($errors->has('02_05'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('02_05') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_02_06" id="_02_06" value="{{ old('_02_06') }}">
-							@if($errors->has('_02_06'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_02_06') }}</div></span>
+							<input type="text" class="form-control" name="02_06" id="02_06" value="{{ old('02_06') }}">
+							@if($errors->has('02_06'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('02_06') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_02_07" id="_02_07" value="{{ old('_02_07') }}">
-							@if($errors->has('_02_07'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_02_07') }}</div></span>
+							<input type="text" class="form-control" name="02_07" id="02_07" value="{{ old('02_07') }}">
+							@if($errors->has('02_07'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('02_07') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<textarea class="form-control" cols="2" name="_02_08" placeholder="Medicine">
-								{{ old('_02_08') }}
-<<<<<<< HEAD
-
-							</textarea>@if($errors->has('_02_08'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_02_08') }}</div></span>
-=======
+							<textarea class="form-control" cols="2" name="02_08" placeholder="Medicine">
+								{{ old('02_08') }}
+								@if($errors->has('02_08'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('02_08') }}</div></span>
+								@endif
 							</textarea>
-							@if($errors->has('_02_08'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('_02_08') }}</div></span>
->>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
-							@endif
 						</td>
 					</tr>
 
 					<tr>
 						<th>15 minutes</th>
 						<td>
-							<input type="text" class="form-control" name="_03_01" id="_03_01" value="{{ old('_03_01') }}">
-							@if($errors->has('_03_01'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_03_01') }}</div></span>
+							<input type="text" class="form-control" name="03_01" id="03_01" value="{{ old('03_01') }}">
+							@if($errors->has('03_01'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('03_01') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_03_02" id="_03_02" value="{{ old('_03_02') }}">
-							@if($errors->has('_03_02'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_03_02') }}</div></span>
+							<input type="text" class="form-control" name="03_02" id="03_02" value="{{ old('03_02') }}">
+							@if($errors->has('03_02'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('03_02') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_03_03" id="_03_03" value="{{ old('_03_03') }}">
-							@if($errors->has('_03_03'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_03_03') }}</div></span>
+							<input type="text" class="form-control" name="03_03" id="03_03" value="{{ old('03_03') }}">
+							@if($errors->has('03_03'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('03_03') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_03_04" id="_03_04" value="{{ old('_03_04') }}">
-							@if($errors->has('_03_04'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_03_04') }}</div></span>
+							<input type="text" class="form-control" name="03_04" id="03_04" value="{{ old('03_04') }}">
+							@if($errors->has('03_04'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('03_04') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_03_05" id="_03_05" value="{{ old('_03_05') }}">
-							@if($errors->has('_03_05'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_03_05') }}</div></span>
+							<input type="text" class="form-control" name="03_05" id="03_05" value="{{ old('03_05') }}">
+							@if($errors->has('03_05'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('03_05') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_03_06" id="_03_06" value="{{ old('_03_06') }}">
-							@if($errors->has('_03_06'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_03_06') }}</div></span>
+							<input type="text" class="form-control" name="03_06" id="03_06" value="{{ old('03_06') }}">
+							@if($errors->has('03_06'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('03_06') }}</div></span>
 							@endif
 						</td>
 						<td>
-<<<<<<< HEAD
-							<input type="text" class="form-control" name="_03_07" id="_03_07" value="{{ old('_03_07') }}">>
-=======
-							<input type="text" class="form-control" name="_03_07" id="_03_07" value="{{ old('_03_07') }}">
->>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
-							@if($errors->has('_03_07'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_03_07') }}</div></span>
+							<input type="text" class="form-control" name="03_07" id="03_07" value="{{ old('03_07') }}">>
+							@if($errors->has('03_07'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('03_07') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<textarea class="form-control" cols="2" name="_03_08" placeholder="Medicine">
-								{{ old('_03_08') }}
-<<<<<<< HEAD
-
-							</textarea>@if($errors->has('_03_08'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_03_08') }}</div></span>
-=======
+							<textarea class="form-control" cols="2" name="03_08" placeholder="Medicine">
+								{{ old('03_08') }}
+								@if($errors->has('03_08'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('03_08') }}</div></span>
+								@endif
 							</textarea>
-							@if($errors->has('_03_08'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('_03_08') }}</div></span>
->>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
-							@endif
 						</td>
 					</tr>
 
 					<tr>
 						<th>20 minutes</th>
 						<td>
-							<input type="text" class="form-control" name="_04_01" id="_04_01" value="{{ old('_04_01') }}">
-							@if($errors->has('_04_01'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_04_01') }}</div></span>
+							<input type="text" class="form-control" name="04_01" id="04_01" value="{{ old('04_01') }}">
+							@if($errors->has('04_01'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('04_01') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_04_02" id="_04_02" value="{{ old('_04_02') }}">
-							@if($errors->has('_04_02'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_04_02') }}</div></span>
+							<input type="text" class="form-control" name="04_02" id="04_02" value="{{ old('04_02') }}">
+							@if($errors->has('04_02'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('04_02') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_04_03" id="_04_03" value="{{ old('_04_03') }}">
-							@if($errors->has('_04_03'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_04_03') }}</div></span>
+							<input type="text" class="form-control" name="04_03" id="04_03" value="{{ old('04_03') }}">
+							@if($errors->has('04_03'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('04_03') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_04_04" id="_04_04" value="{{ old('_04_04') }}">
-							@if($errors->has('_04_04'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_04_04') }}</div></span>
+							<input type="text" class="form-control" name="04_04" id="04_04" value="{{ old('04_04') }}">
+							@if($errors->has('04_04'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('04_04') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_04_05" id="_04_05" value="{{ old('_04_05') }}">
-							@if($errors->has('_04_05'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_04_05') }}</div></span>
+							<input type="text" class="form-control" name="04_05" id="04_05" value="{{ old('04_05') }}">
+							@if($errors->has('04_05'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('04_05') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_04_06" id="_04_06" value="{{ old('_04_06') }}">
-							@if($errors->has('_04_06'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_04_06') }}</div></span>
+							<input type="text" class="form-control" name="04_06" id="04_06" value="{{ old('04_06') }}">
+							@if($errors->has('04_06'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('04_06') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_04_07" id="_04_07" value="{{ old('_04_07') }}">
-							@if($errors->has('_04_07'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_04_07') }}</div></span>
+							<input type="text" class="form-control" name="04_07" id="04_07" value="{{ old('04_07') }}">
+							@if($errors->has('04_07'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('04_07') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<textarea class="form-control" cols="2" name="_04_08" placeholder="Medicine">
-								{{ old('_04_08') }}
-<<<<<<< HEAD
-
-							</textarea>@if($errors->has('_04_08'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_04_08') }}</div></span>
-=======
+							<textarea class="form-control" cols="2" name="04_08" placeholder="Medicine">
+								{{ old('04_08') }}
+								@if($errors->has('04_08'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('04_08') }}</div></span>
+								@endif
 							</textarea>
-							@if($errors->has('_04_08'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('_04_08') }}</div></span>
->>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
-							@endif
 						</td>
 					</tr>
 
 					<tr>
 						<th>25 minutes</th>
 						<td>
-							<input type="text" class="form-control" name="_05_01" id="_05_01" value="{{ old('_05_01') }}">
-							@if($errors->has('_05_01'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_05_01') }}</div></span>
+							<input type="text" class="form-control" name="05_01" id="05_01" value="{{ old('05_01') }}">
+							@if($errors->has('05_01'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('05_01') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_05_02" id="_05_02" value="{{ old('_05_02') }}">
-							@if($errors->has('_05_02'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_05_02') }}</div></span>
+							<input type="text" class="form-control" name="05_02" id="05_02" value="{{ old('05_02') }}">
+							@if($errors->has('05_02'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('05_02') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_05_03" id="_05_03" value="{{ old('_05_03') }}">
-							@if($errors->has('_05_03'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_05_03') }}</div></span>
+							<input type="text" class="form-control" name="05_03" id="05_03" value="{{ old('05_03') }}">
+							@if($errors->has('05_03'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('05_03') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_05_04" id="_05_04" value="{{ old('_05_04') }}">
-							@if($errors->has('_05_04'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_05_04') }}</div></span>
+							<input type="text" class="form-control" name="05_04" id="05_04" value="{{ old('05_04') }}">
+							@if($errors->has('05_04'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('05_04') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_05_05" id="_05_05" value="{{ old('_05_05') }}">
-							@if($errors->has('_05_05'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_05_05') }}</div></span>
+							<input type="text" class="form-control" name="05_05" id="05_05" value="{{ old('05_05') }}">
+							@if($errors->has('05_05'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('05_05') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_05_06" id="_05_06" value="{{ old('_05_06') }}">
-							@if($errors->has('_05_06'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_05_06') }}</div></span>
+							<input type="text" class="form-control" name="05_06" id="05_06" value="{{ old('05_06') }}">
+							@if($errors->has('05_06'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('05_06') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_05_07" id="_05_07" value="{{ old('_05_07') }}">
-							@if($errors->has('_05_07'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_05_07') }}</div></span>
+							<input type="text" class="form-control" name="05_07" id="05_07" value="{{ old('05_07') }}">
+							@if($errors->has('05_07'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('05_07') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<textarea class="form-control" cols="2" name="_05_08" placeholder="Medicine" >
-								{{ old('_05_08') }}
-<<<<<<< HEAD
-
-							</textarea>@if($errors->has('_05_08'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_05_08') }}</div></span>
-=======
+							<textarea class="form-control" cols="2" name="05_08" placeholder="Medicine" >
+								value="{{ old('05_08') }}"
+								@if($errors->has('05_08'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('05_08') }}</div></span>
+								@endif
 							</textarea>
-							@if($errors->has('_05_08'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('_05_08') }}</div></span>
->>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
-							@endif
 						</td>
 					</tr>
 
 					<tr>
 						<th>30 minutes</th>
 						<td>
-							<input type="text" class="form-control" name="_06_01" id="_06_01"  value="{{ old('_06_01') }}">
-							@if($errors->has('_06_01'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_06_01') }}</div></span>
+							<input type="text" class="form-control" name="06_01" id="06_01"  value="{{ old('06_01') }}">
+							@if($errors->has('06_01'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('06_01') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_06_02" id="_06_02"  value="{{ old('_06_02') }}">
-							@if($errors->has('_06_02'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_06_02') }}</div></span>
+							<input type="text" class="form-control" name="06_02" id="06_02"  value="{{ old('06_02') }}">
+							@if($errors->has('06_02'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('06_02') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_06_03" id="_06_03"  value="{{ old('_06_03') }}">
-							@if($errors->has('_06_03'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_06_03') }}</div></span>
+							<input type="text" class="form-control" name="06_03" id="06_03"  value="{{ old('06_03') }}">
+							@if($errors->has('06_03'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('06_03') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_06_04" id="_06_04"  value="{{ old('_06_04') }}">
-							@if($errors->has('_06_04'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_06_04') }}</div></span>
+							<input type="text" class="form-control" name="06_04" id="06_04"  value="{{ old('06_04') }}">
+							@if($errors->has('06_04'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('06_04') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_06_05" id="_06_05"  value="{{ old('_06_05') }}">
-							@if($errors->has('_06_05'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_06_05') }}</div></span>
+							<input type="text" class="form-control" name="06_05" id="06_05"  value="{{ old('06_05') }}">
+							@if($errors->has('06_05'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('06_05') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_06_06" id="_06_06"  value="{{ old('_06_06') }}">
-							@if($errors->has('_06_06'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_06_06') }}</div></span>
+							<input type="text" class="form-control" name="06_06" id="06_06"  value="{{ old('06_06') }}">
+							@if($errors->has('06_06'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('06_06') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<input type="text" class="form-control" name="_06_07" id="_06_07"  value="{{ old('_06_07') }}">
-							@if($errors->has('_06_07'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_06_07') }}</div></span>
+							<input type="text" class="form-control" name="06_07" id="06_07"  value="{{ old('06_07') }}">
+							@if($errors->has('06_07'))
+									<span class="help-block"><div class="text-danger">{{ $errors->first('06_07') }}</div></span>
 							@endif
 						</td>
 						<td>
-							<textarea class="form-control" cols="2" name="_06_08" placeholder="Medicine">
-								 {{ old('_06_08') }}
-<<<<<<< HEAD
-
-							</textarea>@if($errors->has('_06_08'))
-									<span class="help-block"><div class="text-danger">{{ $errors->first('_06_08') }}</div></span>
-=======
+							<textarea class="form-control" cols="2" name="06_08" placeholder="Medicine">
+								 value="{{ old('06_08') }}"
+								@if($errors->has('06_08'))
+										<span class="help-block"><div class="text-danger">{{ $errors->first('06_08') }}</div></span>
+								@endif
 							</textarea>
-							@if($errors->has('_06_08'))
-							<span class="help-block"><div class="text-danger">{{ $errors->first('_06_08') }}</div></span>
->>>>>>> 2f87fa5a1b634ad3b9cdf404b88bbf619f7d8007
-							@endif
 						</td>
 					</tr>
 
