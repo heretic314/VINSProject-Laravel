@@ -16,15 +16,15 @@
 				</div>
 			</div>
 		</div>
-<<<<<<< HEAD
+
 		<form action="{{ url('/CPRFormat') }}" method="post">
 			{{ csrf_field() }}
 			@if ($errors->any())
 					<div class="alert alert-danger" role="alert">
 							Please fix the following errors
-					</div>		
+					</div>
 			@endif
-=======
+
 	</div>
 
 		<div class="row form-group">

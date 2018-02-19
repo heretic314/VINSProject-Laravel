@@ -319,6 +319,10 @@ Auth::routes();
   Route::get('/HistoryForm', 'HistoryFormController@create');
   Route::post('/HistoryForm', 'HistoryFormController@store');
 
+  Route::get('/InformationForm', function(){
+      return view('InformationForm');
+  });
+
   Route::get('/InvestigationSheet1', function(){
       return view('InvestigationSheet1');
   });
