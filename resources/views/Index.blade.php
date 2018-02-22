@@ -206,7 +206,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Adverse Drug Reaction~~~ </a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Blood-Sugar Monitoring Chart~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/BloodSugarMonitoringChart') }}" > Blood-Sugar Monitoring Chart </a>
 		</div>
 	</div>
 	<div class="row">

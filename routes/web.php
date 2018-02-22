@@ -35,6 +35,10 @@ Auth::routes();
   Route::get('DailyDietForm','DailyDietFormController@create');
   Route::post('DailyDietForm','DailyDietFormController@store');
 
+  Route::get('BloodSugarMonitoringChart','BloodSugarMonitoringChartController@create');
+  Route::post('BloodSugarMonitoringChart','BloodSugarMonitoringChartController@store');
+
+
   Route::get('PatientAdmissionSheet','PatientAdmissionSheetController@create');
   Route::post('PatientAdmissionSheet','PatientAdmissionSheetController@store');
 
