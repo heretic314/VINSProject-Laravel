@@ -247,7 +247,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" >~~~Transfer Checklist~~~</a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Physiotherapy Reassessment~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PhysiotherapyAssessment') }}" > Physiotherapy Assessment </a>
 		</div>
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Discharge/Death Summary~~~ </a>
