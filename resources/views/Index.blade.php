@@ -134,7 +134,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Pre-Anesthesia Form~~~ </a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Pre-OT Checklist~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PreOTChecklist') }}" > Pre-OT Checklist </a>
 		</div>
 	</div>
 	<div class="row">
