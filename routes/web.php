@@ -331,8 +331,8 @@ Auth::routes();
       return view('InformationForm');
   });
 
-  Route::get('/InvestigationSheet1', function(){
-      return view('InvestigationSheet1');
+  Route::get('/InvestigationSheet', function(){
+      return view('InvestigationSheet');
   });
 
   Route::get('/InvestigationSheet2', function(){

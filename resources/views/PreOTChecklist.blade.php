@@ -25,7 +25,7 @@
 						 <li>{{ $error }}</li>
 				 @endforeach
 	@endif
-	<form action="{{ url('/CodeBlueEvaluationForm') }}" method="post">
+	<form action="{{ url('/PreOTChecklist') }}" method="post">
 		{{ csrf_field() }}
     <div class="row form-group">
       <div class="col-md-8">
@@ -529,6 +529,9 @@
       </div>
       <div class="col-md-6">
         <input type="text" name="name_of_incharge" value="{{ old('name_of_incharge') }}" class="form-control">
+				@if($errors->has('name_of_incharge'))
+						<span class="help-block"><div class="text-danger">{{ $errors->first('name_of_incharge') }}</div></span>
+				@endif
       </div>
     </div>
 
@@ -544,6 +547,9 @@
         </div>
         <div class="col-md-6">
           <input type="text" name="over_given_by" value="{{ old('over_given_by') }}" class="form-control">
+					@if($errors->has('over_given_by'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('over_given_by') }}</div></span>
+					@endif
         </div>
       </div>
       <div class="col-md-6">
@@ -552,6 +558,9 @@
         </div>
         <div class="col-md-6">
           <input type="text" name="over_given_to" value="{{ old('over_given_to') }}" class="form-control">
+					@if($errors->has('over_given_to'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('over_given_to') }}</div></span>
+					@endif
         </div>
       </div>
     </div>
@@ -563,6 +572,9 @@
         </div>
         <div class="col-md-6">
           <input type="text" name="ward" value="{{ old('ward') }}" class="form-control">
+					@if($errors->has('ward'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('ward') }}</div></span>
+					@endif
         </div>
       </div>
       <div class="col-md-6">
@@ -571,6 +583,9 @@
         </div>
         <div class="col-md-6">
           <input type="text" name="name_ot_staff" value="{{ old('name_ot_staff') }}" class="form-control">
+					@if($errors->has('name_ot_staff'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('name_ot_staff') }}</div></span>
+					@endif
         </div>
       </div>
     </div>
@@ -584,7 +599,10 @@
           <label for="">Name of Relative:</label>
         </div>
         <div class="col-md-6">
-          <input type="text" name="ward" value="{{ old('ward') }}" class="form-control">
+          <input type="text" name="name_of_relative" value="{{ old('name_of_relative') }}" class="form-control">
+					@if($errors->has('name_of_relative'))
+							<span class="help-block"><div class="text-danger">{{ $errors->first('name_of_relative') }}</div></span>
+					@endif
         </div>
       </div>
     </div>
