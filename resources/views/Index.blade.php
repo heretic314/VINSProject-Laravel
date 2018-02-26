@@ -52,9 +52,7 @@
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PatientAdmissionSheet') }}">Admission Sheet </a>
 		</div>
-		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~+ Medical Reconciliation Form~~~ </a>
-		</div>
+
 		<div class="col-md-4 top-buffer">
 			<!--   -->
 		</div>
@@ -211,7 +209,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~+ Restraint Administration~~~ </a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Monitoring for Moderate Sedation~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/MonitoringModerateSedation') }}" > Monitoring for Moderate Sedation </a>
 		</div>
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Poor Prognosis Sheet~~~ </a>

@@ -32,8 +32,13 @@ Auth::routes();
       return view('Index');
   });
 
-  Route::get('DailyDietForm','DailyDietFormController@create');
-  Route::post('DailyDietForm','DailyDietFormController@store');
+    Route::get('DailyDietForm','DailyDietFormController@create');
+    Route::post('DailyDietForm','DailyDietFormController@store');
+
+    Route::get('MonitoringModerateSedation','MonitoringModerateSedationController@create');
+    Route::post('MonitoringModerateSedation','MonitoringModerateSedationController@store');
+
+
 
   Route::get('TransfusionReactionForm','TransfusionReactionFormController@create');
   Route::post('TransfusionReactionForm','TransfusionReactionFormController@store');
