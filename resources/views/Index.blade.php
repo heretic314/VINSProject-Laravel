@@ -45,7 +45,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/InformationForm') }}" > Information Form </a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Patient Valuables Form~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PatientValuableForm') }}" > Patient Valuables Form </a>
 		</div>
 	</div>
 	<div class="row">

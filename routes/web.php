@@ -38,6 +38,9 @@ Auth::routes();
   Route::get('TransfusionReactionForm','TransfusionReactionFormController@create');
   Route::post('TransfusionReactionForm','TransfusionReactionFormController@store');
 
+  Route::get('PatientValuableForm','PatientValuableFormController@create');
+  Route::post('PatientValuableForm','PatientValuableFormController@store');
+
 
   Route::get('BloodSugarMonitoringChart','BloodSugarMonitoringChartController@create');
   Route::post('BloodSugarMonitoringChart','BloodSugarMonitoringChartController@store');
