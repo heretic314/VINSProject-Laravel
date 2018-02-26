@@ -36,6 +36,9 @@
             </div>
             <div class="col-md-6">
               <input type="time" name="ot_planning_time" class="form-control" value="{{ old('ot_planning_time') }}">
+							@if($errors->has('ot_planning_time'))
+			            <span class="help-block"><div class="text-danger">{{ $errors->first('ot_planning_time') }}</div></span>
+			        @endif
             </div>
           </div>
           <div class="col-md-6">
@@ -44,6 +47,9 @@
             </div>
             <div class="col-md-6">
               <input type="time" name="ot_procedure_time" class="form-control" value="{{ old('ot_procedure_time') }}">
+							@if($errors->has('ot_procedure_time'))
+			            <span class="help-block"><div class="text-danger">{{ $errors->first('ot_procedure_time') }}</div></span>
+			        @endif
             </div>
           </div>
         </div>
@@ -53,6 +59,9 @@
           </div>
           <div class="col-md-6">
             <input type="date" name="date" class="form-control" value="{{ old('date') }}">
+						@if($errors->has('date'))
+		            <span class="help-block"><div class="text-danger">{{ $errors->first('date') }}</div></span>
+		        @endif
           </div>
         </div>
       </div>

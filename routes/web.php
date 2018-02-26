@@ -523,8 +523,6 @@ Auth::routes();
   Route::post('/PatientsDetailForm', 'PatientsDetailFormController@store');
 
 
-
-
   Route::get('/PeripheralLineBundleChecklist', function(){
       return view('PeripheralLineBundleChecklist');
   });
@@ -561,6 +559,10 @@ Auth::routes();
     $link = tap(new App\PlanOfCare($data))->save();
 
     return view('Index');
+  });
+
+  Route::get('/PreAnaesthesiaCheckupForm', function(){
+    return view('PreAnaesthesiaCheckupForm');
   });
 
   Route::get('/RadiologyRequisition', 'RadiologyRequisitionController@create');

@@ -131,7 +131,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Surgical Safety Checklist~~~ </a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Pre-Anesthesia Form~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PreAnaesthesiaCheckupForm') }}" > Pre-Anaesthesia Form </a>
 		</div>
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PreOTChecklist') }}" > Pre-OT Checklist </a>
