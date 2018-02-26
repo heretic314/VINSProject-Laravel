@@ -767,6 +767,10 @@ Auth::routes();
 
 });
 
+Route::get('/PhysiotherapyAssessment', function(){
+    return view('PhysiotherapyAssessment');
+});
+
 /*
     $data = $request->validate([
         'title' => 'required|max:255',
