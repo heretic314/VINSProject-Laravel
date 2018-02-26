@@ -5,7 +5,7 @@
 	<div class="page-header">
 		<div class="row">
 			<div class="col-md-6">
-			<h1>Blood Sugar Monitoring Chart Form</h1>
+			<h1>Blood Sugar Monitoring Chart</h1>
 			</div>
 			<div class="col-md-6">
 				<div class="text-right">
