@@ -98,7 +98,7 @@ Auth::routes();
       'defib_dc_03' => 'max:255|required',
       'defib_dc_04' => 'max:255|required',
       'medication_time_00' => 'max:255',
-      'medication_name_01' => 'max:255',
+      'medication_name_01' => 'max255',
       'medication_time_10' => 'max:255',
       'medication_name_11' => 'max:255',
       'medication_time_20' => 'max:255',
@@ -774,6 +774,9 @@ Route::get('/PhysiotherapyAssessment', function(){
     return view('PhysiotherapyAssessment');
 });
 
+Route::get('/PreOTChecklist', function(){
+    return view('PreOTChecklist');
+});
 /*
     $data = $request->validate([
         'title' => 'required|max:255',
