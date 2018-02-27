@@ -117,9 +117,7 @@
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/InvestigationSheet') }}" > Investigation Sheet </a>
 		</div>
-		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~HIV Detail Sheet~~~ </a>
-		</div>
+		
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Brief Operative Note~~~ </a>
 		</div>
