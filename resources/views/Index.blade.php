@@ -117,32 +117,27 @@
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/InvestigationSheet') }}" > Investigation Sheet </a>
 		</div>
-		
+
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Brief Operative Note~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/BriefOperativeNote') }}" > Brief Operative Note </a>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Surgical Safety Checklist~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PreOTChecklist') }}" > Pre-OT Checklist </a>
 		</div>
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PreAnaesthesiaCheckupForm') }}" > Pre-Anaesthesia Form </a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PreOTChecklist') }}" > Pre-OT Checklist </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PostAnaesthesiaEvaluation') }}" > Post Anesthesia Evaluation </a>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Post Anesthesia Evaluation~~~ </a>
-		</div>
-		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Intra Operative Event & Management~~~ </a>
-		</div>
+
 	</div>
 
-	<hr />
+	<hr >
 
 	<div class="row">
 		<h3>Daily Ward / General Forms</h3>
@@ -193,13 +188,13 @@
 	</div>
 	<div class="row">
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Referral Forms~~~ </a>
-		</div>
-		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Adverse Drug Reaction~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/TransfusionReactionForm') }}" > Transfusion Reaction </a>
 		</div>
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/BloodSugarMonitoringChart') }}" > Blood-Sugar Monitoring Chart </a>
+		</div>
+		<div class="col-md-4 top-buffer">
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/MonitoringModerateSedation') }}" > Monitoring for Moderate Sedation </a>
 		</div>
 	</div>
 	<div class="row">
@@ -207,27 +202,17 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~+ Restraint Administration~~~ </a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/MonitoringModerateSedation') }}" > Monitoring for Moderate Sedation </a>
-		</div>
-		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Poor Prognosis Sheet~~~ </a>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Physiotherapy Charge Sheet~~~ </a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/TransfusionReactionForm') }}" > Transfusion Reaction </a>
-		</div>
-		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Daily Billing Sheet~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Adverse Drug Reaction~~~ </a>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Visiting Charge Sheet~~~ </a>
-		</div>
+
+
+	</div>
+	<div class="row">
 	</div>
 
 	<hr />
@@ -237,25 +222,17 @@
 	</div>
 	<div class="row">
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" >~~~Transfer Checklist~~~</a>
-		</div>
-		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PhysiotherapyAssessment') }}" > Physiotherapy Assessment </a>
 		</div>
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Discharge/Death Summary~~~ </a>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Death Certificate~~~ </a>
-		</div>
-		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Discharge Sheet~~~ </a>
-		</div>
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/ProvisionalDischargeSummary') }}" > Provisional Discharge Summary </a>
 		</div>
+	</div>
+	<div class="row">
+
 	</div>
 
 	<hr />
@@ -284,18 +261,6 @@
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/PreAngiographyAngioplastyChecklist') }}">Pre-Angiography Angioplasty Checklist</a>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Folley's Cathether Checklist~~~ </a>
-		</div>
-		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Central Line Audit Checklist~~~ </a>
-		</div>
-		<div class="col-md-4 top-buffer top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~WAP Audit Checklist~~~ </a>
-		</div>
-
 	</div>
 	<div class="row">
 		<div class="col-md-4 top-buffer top-buffer">

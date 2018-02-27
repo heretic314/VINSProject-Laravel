@@ -32,13 +32,15 @@ Auth::routes();
       return view('Index');
   });
 
-    Route::get('DailyDietForm','DailyDietFormController@create');
-    Route::post('DailyDietForm','DailyDietFormController@store');
+  Route::get('DailyDietForm','DailyDietFormController@create');
+  Route::post('DailyDietForm','DailyDietFormController@store');
 
-    Route::get('MonitoringModerateSedation','MonitoringModerateSedationController@create');
-    Route::post('MonitoringModerateSedation','MonitoringModerateSedationController@store');
+  Route::get('MonitoringModerateSedation','MonitoringModerateSedationController@create');
+  Route::post('MonitoringModerateSedation','MonitoringModerateSedationController@store');
 
 
+  Route::get('/AppointmentBook','AppointmentBookController@create');
+  Route::post('/AppointmentBook','AppointmentBookController@store');
 
   Route::get('TransfusionReactionForm','TransfusionReactionFormController@create');
   Route::post('TransfusionReactionForm','TransfusionReactionFormController@store');
@@ -50,14 +52,16 @@ Auth::routes();
   Route::get('BloodSugarMonitoringChart','BloodSugarMonitoringChartController@create');
   Route::post('BloodSugarMonitoringChart','BloodSugarMonitoringChartController@store');
 
+  Route::get('BriefOperativeNote', function(){
+    return view('BriefOperativeNote');
+  });
+
 
   Route::get('PatientAdmissionSheet','PatientAdmissionSheetController@create');
   Route::post('PatientAdmissionSheet','PatientAdmissionSheetController@store');
 
 
 
-  Route::get('/AppointmentBook','AppointmentBookController@create');
-  Route::post('/AppointmentBook','AppointmentBookController@store');
 
   Route::get('/Checklist', function(){
       return view('Checklist');
@@ -564,6 +568,10 @@ Auth::routes();
     $link = tap(new App\PlanOfCare($data))->save();
 
     return view('Index');
+  });
+
+  Route::get('/PostAnaesthesiaEvaluation', function(){
+    return view('PostAnaesthesiaEvaluation');
   });
 
   Route::get('/PreAnaesthesiaCheckupForm', function(){

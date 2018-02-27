@@ -43,21 +43,10 @@
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="brain_plain" id="brain_plain" value="yes" /><label for="brain_plain">CT Brain Plain</label>
+				<input  type="checkbox" name="brain_plain" id="brain_plain" value="yes" /><label for="brain_plain">CT Brain Plain</label>
 			</div>
 			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="ct_pmns" id="ct_pmns" value="yes" /><label for="ct_pmns"> CT PNS</label>
-			</div>
-		</div>
-	</div>
-
-	<div class="row form-group">
-		<div class="col-md-6">
-			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="brain_plain_contrast" id="brain_plain_contrast" value="yes" /><label for="brain_plain_contrast"> CT Brain Plain with Contrast</label>
-			</div>
-			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="ct_head_face" id="ct_head_face" value="yes" /><label for="ct_head_face"> CT Head with Face</label>
+				<input  type="checkbox" name="ct_pmns" id="ct_pmns" value="yes" /><label for="ct_pmns"> CT PNS</label>
 			</div>
 		</div>
 	</div>
@@ -65,21 +54,10 @@
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="ct_face_plain" id="ct_face_plain" value="yes" /><label for="ct_face_plain">CT Face Plain</label>
+				<input  type="checkbox" name="brain_plain_contrast" id="brain_plain_contrast" value="yes" /><label for="brain_plain_contrast"> CT Brain Plain with Contrast</label>
 			</div>
 			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="ct_3d" id="ct_3d" value="yes" /><label for="ct_3d"> 3D CT</label>
-			</div>
-		</div>
-	</div>
-
-	<div class="row form-group">
-		<div class="col-md-6">
-			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="ct_cv_junction_flex" value="yes" ><label for="ct_cv_junction_flex"> CT C.V. Junction Flex</label>
-			</div>
-			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="ct_cv_junction_ext" id="ct_cv_junction_ext" value="yes" /><label for="ct_cv_junction_ext"> CT C.V. Junction Ext.</label>
+				<input  type="checkbox" name="ct_head_face" id="ct_head_face" value="yes" /><label for="ct_head_face"> CT Head with Face</label>
 			</div>
 		</div>
 	</div>
@@ -87,21 +65,10 @@
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="ct_chest_plain" id="ct_chest_plain" value="yes" /><label for="ct_chest_plain">CT Chest Plain</label>
+				<input  type="checkbox" name="ct_face_plain" id="ct_face_plain" value="yes" /><label for="ct_face_plain">CT Face Plain</label>
 			</div>
 			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="ct_dorsal_spine" id="ct_dorsal_spine" value="yes" /><label for="ct_dorsal_spine"> CT Dorsal Spine</label>
-			</div>
-		</div>
-	</div>
-
-	<div class="row form-group">
-		<div class="col-md-6">
-			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="ct_cervical_spine" id="ct_cervical_spine" value="yes" /><label for="ct_cervical_spine"> CT Cervical Spine</label>
-			</div>
-			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="ct_abdomen_plain" id="ct_abdomen_plain" value="yes" /><label for="ct_abdomen_plain"> CT Abdomen Plain</label>
+				<input  type="checkbox" name="ct_3d" id="ct_3d" value="yes" /><label for="ct_3d"> 3D CT</label>
 			</div>
 		</div>
 	</div>
@@ -109,7 +76,10 @@
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="ct_lumbar_spine" id="ct_lumbar_spine" value="yes" /><label for="ct_lumbar_spine">  CT Lumbar Spine</label>
+				<input  type="checkbox" name="ct_cv_junction_flex" value="yes" > <label for="ct_cv_junction_flex"> CT C.V. Junction Flex</label>
+			</div>
+			<div class="col-md-6">
+				<input  type="checkbox" name="ct_cv_junction_ext" id="ct_cv_junction_ext" value="yes" /> <label for="ct_cv_junction_ext"> CT C.V. Junction Ext.</label>
 			</div>
 		</div>
 	</div>
@@ -117,7 +87,37 @@
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="other" id="other" value="yes" /><label for="other">Other</label>
+				<input  type="checkbox" name="ct_chest_plain" id="ct_chest_plain" value="yes" /> <label for="ct_chest_plain">CT Chest Plain</label>
+			</div>
+			<div class="col-md-6">
+				<input  type="checkbox" name="ct_dorsal_spine" id="ct_dorsal_spine" value="yes" /> <label for="ct_dorsal_spine"> CT Dorsal Spine</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="row form-group">
+		<div class="col-md-6">
+			<div class="col-md-6">
+				<input  type="checkbox" name="ct_cervical_spine" id="ct_cervical_spine" value="yes" /> <label for="ct_cervical_spine"> CT Cervical Spine</label>
+			</div>
+			<div class="col-md-6">
+				<input  type="checkbox" name="ct_abdomen_plain" id="ct_abdomen_plain" value="yes" /> <label for="ct_abdomen_plain"> CT Abdomen Plain</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="row form-group">
+		<div class="col-md-6">
+			<div class="col-md-6">
+				<input  type="checkbox" name="ct_lumbar_spine" id="ct_lumbar_spine" value="yes" /> <label for="ct_lumbar_spine">  CT Lumbar Spine</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="row form-group">
+		<div class="col-md-6">
+			<div class="col-md-6">
+				<input  type="checkbox" name="other" id="other" value="yes" /><label for="other">Other</label>
 			</div>
 			<div class="col-md-6">
 				<input class="form-control" type="text" name="anyother" id="anyother" value="{{old('anyother')}}" />
@@ -134,10 +134,10 @@
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="xray_fixed" id="xray_fixed"><label for="xray_fixed">Fixed</label>
+				<input  type="checkbox" name="xray_fixed" id="xray_fixed"><label for="xray_fixed">Fixed</label>
 			</div>
 			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="xray_portable" id="xray_portable"><label for="xray_portable">Portable</label>
+				<input  type="checkbox" name="xray_portable" id="xray_portable"><label for="xray_portable">Portable</label>
 			</div>
 		</div>
 	</div>
@@ -145,7 +145,7 @@
 	<div class="row form-group">
 		<div class="col-md-6">
 			<div class="col-md-6">
-				<input class="form-check-input" type="checkbox" name="other_xray" id="other_xray" value="yes" /><label for="other_xray">Other</label>
+				<input  type="checkbox" name="other_xray" id="other_xray" value="yes" /><label for="other_xray">Other</label>
 			</div>
 			<div class="col-md-6">
 				<input class="form-control" type="text" name="xray_other" id="xray_other" value="{{old('xray_other')}}" />

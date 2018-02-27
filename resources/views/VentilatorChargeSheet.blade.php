@@ -343,7 +343,7 @@
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th>C. Alarms</th>
+						<th>Alarms</th>
 						<th class="form-inline">Hour :
 							<select required class="form-control" name="time_slot03" value="{{ old('time_slot03') }}">
 								<option>Select Hour</option>
@@ -578,7 +578,7 @@
 			</table>
 		</div>
 	</div>
-	<div class="row form-group">
+	<div class="row form-group text-center">
 		<button class="btn btn-success" type="submit">Submit</button>
 	</div>
 </form>
