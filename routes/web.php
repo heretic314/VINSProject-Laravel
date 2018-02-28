@@ -35,6 +35,11 @@ Auth::routes();
   Route::get('DailyDietForm','DailyDietFormController@create');
   Route::post('DailyDietForm','DailyDietFormController@store');
 
+  Route::get('AdverseDrugReactionForm','AdverseDrugReactionFormController@create');
+  Route::post('AdverseDrugReactionForm','AdverseDrugReactionFormController@store');
+
+
+
   Route::get('MonitoringModerateSedation','MonitoringModerateSedationController@create');
   Route::post('MonitoringModerateSedation','MonitoringModerateSedationController@store');
 
