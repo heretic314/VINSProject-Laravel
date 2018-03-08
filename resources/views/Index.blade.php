@@ -132,7 +132,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > Post Anesthesia Evaluation </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="PostAnaesthesiaEvaluation" > Post Anesthesia Evaluation </a>
 		</div>
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Intra Operative Event & Management~~~ </a>
@@ -248,7 +248,7 @@
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Death Certificate~~~ </a>
 		</div>
 		<div class="col-md-4 top-buffer">
-			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="#" > ~~~Discharge Sheet~~~ </a>
+			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="DischargeGatepass" > Discharge Gatepass </a>
 		</div>
 		<div class="col-md-4 top-buffer">
 			<a class="btn btn-default btn-block text-center" style="white-space: normal;" href="{{ url('/ProvisionalDischargeSummary') }}" > Provisional Discharge Summary </a>

@@ -61,6 +61,10 @@ Auth::routes();
     return view('BriefOperativeNote');
   });
 
+  Route::get('DischargeGatepass',function(){
+    return view('DischargeGatepass');
+  });
+
 
   Route::get('PatientAdmissionSheet','PatientAdmissionSheetController@create');
   Route::post('PatientAdmissionSheet','PatientAdmissionSheetController@store');

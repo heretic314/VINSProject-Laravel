@@ -524,6 +524,6 @@
 				</div>
 		</form>
 	</div>
-</body>
+</div>
 
 @endsection

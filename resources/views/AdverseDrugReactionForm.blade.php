@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
 <div class="container">
 	<div class="page-header">
 		<div class="row">
@@ -309,175 +306,174 @@
     </div></div></div>
     <div class="row form-group">
       <div class="col-md-6">
+    <div class="col-md-6">
+      <label>Date Of Event:</label>
+    </div>
+    <div class="col-md-6">
+      <input class="form-control" type="date"  name="date_event" id="date_event" value="{{ old('date_event') }}" >
+      @if($errors->has('date_event'))
+          <span class="help-block"><div class="text-danger">{{ $errors->first('date_event') }}</div></span>
+      @endif
+    </div></div>
+
+
+      <div class="col-md-6">
         <div class="col-md-6">
-          <label>Date Of Event:</label>
+          <label>Date Of Report:</label>
         </div>
         <div class="col-md-6">
-          <input class="form-control" type="date"  name="date_event" id="date_event" value="{{ old('date_event') }}" >
-          @if($errors->has('date_event'))
-              <span class="help-block"><div class="text-danger">{{ $errors->first('date_event') }}</div></span>
+          <input class="form-control" type="date"  name="date_report" id="date_report" value="{{ old('date_report') }}" >
+          @if($errors->has('date_report'))
+              <span class="help-block"><div class="text-danger">{{ $errors->first('date_report') }}</div></span>
           @endif
-        </div></div>
+        </div></div></div>
 
-
+        <div class="row form-group">
           <div class="col-md-6">
             <div class="col-md-6">
-              <label>Date Of Report:</label>
+              <label>Types of ADR:</label>
             </div>
             <div class="col-md-6">
-              <input class="form-control" type="date"  name="date_report" id="date_report" value="{{ old('date_report') }}" >
-              @if($errors->has('date_report'))
-                  <span class="help-block"><div class="text-danger">{{ $errors->first('date_report') }}</div></span>
+              <select class="form-control" name="adr_types" value="{{ old('adr_types') }}">
+                <option value="NA" @if(old('adr_types') == 'Mild')  selected = 'selected' @endif>Mild</option>
+                <option value="Male" @if(old('adr_types') == 'Moderate')  selected = 'selected' @endif>Moderate</option>
+                <option value="Female" @if(old('adr_types') == 'Severe')  selected = 'selected' @endif>Severe</option>
+              </select>
+              @if($errors->has('adr_types'))
+                  <span class="help-block"><div class="text-danger">{{ $errors->first('adr_types') }}</div></span>
               @endif
-            </div></div></div>
+            </div></div>
 
-            <div class="row form-group">
+
               <div class="col-md-6">
                 <div class="col-md-6">
-                  <label>Types of ADR:</label>
+                  <label>Specification:</label>
                 </div>
                 <div class="col-md-6">
-                  <select class="form-control" name="adr_types" value="{{ old('adr_types') }}">
-                    <option value="NA" @if(old('adr_types') == 'Mild')  selected = 'selected' @endif>Mild</option>
-                    <option value="Male" @if(old('adr_types') == 'Moderate')  selected = 'selected' @endif>Moderate</option>
-                    <option value="Female" @if(old('adr_types') == 'Severe')  selected = 'selected' @endif>Severe</option>
+                  <select class="form-control" name="specification" value="{{ old('specification') }}">
+                    <option value="NA" @if(old('specification') == 'Mild')  selected = 'selected' @endif>Mild</option>
+                    <option value="Male" @if(old('specification') == 'Moderate')  selected = 'selected' @endif>Moderate</option>
+                    <option value="Female" @if(old('specification') == 'Severe')  selected = 'selected' @endif>Severe</option>
                   </select>
-                  @if($errors->has('adr_types'))
-                      <span class="help-block"><div class="text-danger">{{ $errors->first('adr_types') }}</div></span>
+                  @if($errors->has('specification'))
+                      <span class="help-block"><div class="text-danger">{{ $errors->first('specification') }}</div></span>
                   @endif
-                </div></div>
+                </div></div></div>
 
-
-                  <div class="col-md-6">
+                <div class="row form-group">
+                  <div class="col-md-12">
                     <div class="col-md-6">
-                      <label>Specification:</label>
+                      <label>Outcome Attributed to ADR:</label>
                     </div>
                     <div class="col-md-6">
-                      <select class="form-control" name="specification" value="{{ old('specification') }}">
-                        <option value="NA" @if(old('specification') == 'Mild')  selected = 'selected' @endif>Mild</option>
-                        <option value="Male" @if(old('specification') == 'Moderate')  selected = 'selected' @endif>Moderate</option>
-                        <option value="Female" @if(old('specification') == 'Severe')  selected = 'selected' @endif>Severe</option>
+                      <select class="form-control" name="outcome_adr" value="{{ old('outcome_adr') }}">
+                        <option value="Death" @if(old('outcome_adr') == 'Death')  selected = 'selected' @endif>Death</option>
+                        <option value="Life Threatening" @if(old('outcome_adr') == 'Life Threatening')  selected = 'selected' @endif>Life Threatening</option>
+                        <option value="Congenital Anomaly/Birth Defect" @if(old('outcome_adr') == 'Congenital Anomaly/Birth Defect')  selected = 'selected' @endif>Congenital Anomaly/Birth Defect</option>
+                        <option value="Hospitalization- Initial or Prolonged" @if(old('outcome_adr') == 'Hospitalization- Initial or Prolonged')  selected = 'selected' @endif>Hospitalization- Initial or Prolonged</option>
+                        <option value="Other Serious Events" @if(old('outcome_adr') == 'Other Serious Events')  selected = 'selected' @endif>Other Serious Events</option>
+                        <option value="Required Intervention to prevent permanent impairment" @if(old('outcome_adr') == 'Required Intervention to prevent permanent impairment')  selected = 'selected' @endif>Required Intervention to prevent permanent impairment</option>
+
                       </select>
-                      @if($errors->has('specification'))
-                          <span class="help-block"><div class="text-danger">{{ $errors->first('specification') }}</div></span>
+                      @if($errors->has('outcome_adr'))
+                          <span class="help-block"><div class="text-danger">{{ $errors->first('outcome_adr') }}</div></span>
                       @endif
                     </div></div></div>
 
-                    <div class="row form-group">
-                      <div class="col-md-12">
-                        <div class="col-md-6">
-                          <label>Outcome Attributed to ADR:</label>
-                        </div>
-                        <div class="col-md-6">
-                          <select class="form-control" name="outcome_adr" value="{{ old('outcome_adr') }}">
-                            <option value="Death" @if(old('outcome_adr') == 'Death')  selected = 'selected' @endif>Death</option>
-                            <option value="Life Threatening" @if(old('outcome_adr') == 'Life Threatening')  selected = 'selected' @endif>Life Threatening</option>
-                            <option value="Congenital Anomaly/Birth Defect" @if(old('outcome_adr') == 'Congenital Anomaly/Birth Defect')  selected = 'selected' @endif>Congenital Anomaly/Birth Defect</option>
-                            <option value="Hospitalization- Initial or Prolonged" @if(old('outcome_adr') == 'Hospitalization- Initial or Prolonged')  selected = 'selected' @endif>Hospitalization- Initial or Prolonged</option>
-                            <option value="Other Serious Events" @if(old('outcome_adr') == 'Other Serious Events')  selected = 'selected' @endif>Other Serious Events</option>
-                            <option value="Required Intervention to prevent permanent impairment" @if(old('outcome_adr') == 'Required Intervention to prevent permanent impairment')  selected = 'selected' @endif>Required Intervention to prevent permanent impairment</option>
+                    TREATMENT OF REACATION: <hr>
 
-                          </select>
-                          @if($errors->has('outcome_adr'))
-                              <span class="help-block"><div class="text-danger">{{ $errors->first('outcome_adr') }}</div></span>
+                    <div class="row form-group">
+                      <div class="col-md-6">
+                        <div class="col-md-6">
+                          <label>Remedical Medication given:</label>
+                        </div>
+                        <div class="col-md-12">
+                          <textarea class="form-control" type="text" rows="2" name="remedical_medication" id="remedical_medication" value="{{ old('remedical_medication') }}" ></textarea>
+                          @if($errors->has('remedical_medication'))
+                              <span class="help-block"><div class="text-danger">{{ $errors->first('remedical_medication') }}</div></span>
                           @endif
                         </div></div></div>
-
-                        TREATMENT OF REACATION: <hr>
 
                         <div class="row form-group">
                           <div class="col-md-6">
                             <div class="col-md-6">
-                              <label>Remedical Medication given:</label>
+                              <label>Alteration(in dose, frequency) Discontinuation(if any) of Medication:</label>
                             </div>
                             <div class="col-md-12">
-                              <textarea class="form-control" type="text" rows="2" name="remedical_medication" id="remedical_medication" value="{{ old('remedical_medication') }}" ></textarea>
+                              <textarea class="form-control" type="text" rows="4" name="remedical_medication" id="remedical_medication" value="{{ old('remedical_medication') }}" ></textarea>
                               @if($errors->has('remedical_medication'))
                                   <span class="help-block"><div class="text-danger">{{ $errors->first('remedical_medication') }}</div></span>
                               @endif
                             </div></div></div>
 
+
                             <div class="row form-group">
                               <div class="col-md-6">
                                 <div class="col-md-6">
-                                  <label>Alteration(in dose, frequency) Discontinuation(if any) of Medication:</label>
+                                  <label>Events Abated After Use Stopped or Dose Reduced ?:</label>
                                 </div>
-                                <div class="col-md-12">
-                                  <textarea class="form-control" type="text" rows="4" name="remedical_medication" id="remedical_medication" value="{{ old('remedical_medication') }}" ></textarea>
-                                  @if($errors->has('remedical_medication'))
-                                      <span class="help-block"><div class="text-danger">{{ $errors->first('remedical_medication') }}</div></span>
+                                <div class="col-md-6">
+                                  <select class="form-control" name="events_abated" value="{{ old('events_abated') }}">
+                                    <option value="Yes" @if(old('events_abated') == 'Yes')  selected = 'selected' @endif>Yes</option>
+                                    <option value="No" @if(old('events_abated') == 'No')  selected = 'selected' @endif>No</option>
+                                    <option value="Doesnt Apply" @if(old('events_abated') == 'Doesnt Apply')  selected = 'selected' @endif>Doesnt Apply</option>
+                                  </select>
+                                  @if($errors->has('events_abated'))
+                                      <span class="help-block"><div class="text-danger">{{ $errors->first('events_abated') }}</div></span>
                                   @endif
-                                </div></div></div>
+                                </div></div>
 
-
-                                <div class="row form-group">
+                                <div class="col-md-6">
                                   <div class="col-md-6">
-                                    <div class="col-md-6">
-                                      <label>Events Abated After Use Stopped or Dose Reduced ?:</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                      <select class="form-control" name="events_abated" value="{{ old('events_abated') }}">
-                                        <option value="Yes" @if(old('events_abated') == 'Yes')  selected = 'selected' @endif>Yes</option>
-                                        <option value="No" @if(old('events_abated') == 'No')  selected = 'selected' @endif>No</option>
-                                        <option value="Doesnt Apply" @if(old('events_abated') == 'Doesnt Apply')  selected = 'selected' @endif>Doesnt Apply</option>
-                                      </select>
-                                      @if($errors->has('events_abated'))
-                                          <span class="help-block"><div class="text-danger">{{ $errors->first('events_abated') }}</div></span>
-                                      @endif
-                                    </div></div>
+                                    <label>Events reappeared after Reintroduction ?:</label>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <select class="form-control" name="events_reappear" value="{{ old('events_reappear') }}">
+                                      <option value="Yes" @if(old('events_reappear') == 'Yes')  selected = 'selected' @endif>Yes</option>
+                                      <option value="No" @if(old('events_reappear') == 'No')  selected = 'selected' @endif>No</option>
+                                      <option value="Doesnt Apply" @if(old('events_reappear') == 'Doesnt Apply')  selected = 'selected' @endif>Doesnt Apply</option>
+                                    </select>
+                                    @if($errors->has('events_reappear'))
+                                        <span class="help-block"><div class="text-danger">{{ $errors->first('events_reappear') }}</div></span>
+                                    @endif
+                                  </div></div></div>
 
-                                    <div class="col-md-6">
-                                      <div class="col-md-6">
-                                        <label>Events reappeared after Reintroduction ?:</label>
-                                      </div>
-                                      <div class="col-md-6">
-                                        <select class="form-control" name="events_reappear" value="{{ old('events_reappear') }}">
-                                          <option value="Yes" @if(old('events_reappear') == 'Yes')  selected = 'selected' @endif>Yes</option>
-                                          <option value="No" @if(old('events_reappear') == 'No')  selected = 'selected' @endif>No</option>
-                                          <option value="Doesnt Apply" @if(old('events_reappear') == 'Doesnt Apply')  selected = 'selected' @endif>Doesnt Apply</option>
-                                        </select>
-                                        @if($errors->has('events_reappear'))
-                                            <span class="help-block"><div class="text-danger">{{ $errors->first('events_reappear') }}</div></span>
-                                        @endif
-                                      </div></div></div>
+                                  <div class="row form-group">
+                            			<div class="col-md-4">
+                            				<div class="col-md-6">
+                            					<label>Name of the Nurse Administration:</label>
+                            				</div>
+                            				<div class="col-md-6">
+                            					<input class="form-control" type="text"  name="nurse_admin" id="nurse_admin" value="{{ old('nurse_admin') }}" >
+                            					@if($errors->has('nurse_admin'))
+                            							<span class="help-block"><div class="text-danger">{{ $errors->first('nurse_admin') }}</div></span>
+                            					@endif
+                            				</div></div>
 
-                                      <div class="row form-group">
+
                                 			<div class="col-md-4">
                                 				<div class="col-md-6">
-                                					<label>Name of the Nurse Administration:</label>
+                                					<label>Unit/Ward:</label>
                                 				</div>
                                 				<div class="col-md-6">
-                                					<input class="form-control" type="text"  name="nurse_admin" id="nurse_admin" value="{{ old('nurse_admin') }}" >
-                                					@if($errors->has('nurse_admin'))
-                                							<span class="help-block"><div class="text-danger">{{ $errors->first('nurse_admin') }}</div></span>
+                                					<input class="form-control" type="text"  name="unit_ward" id="unit_ward" value="{{ old('unit_ward') }}" >
+                                					@if($errors->has('unit_ward'))
+                                							<span class="help-block"><div class="text-danger">{{ $errors->first('unit_ward') }}</div></span>
                                 					@endif
                                 				</div></div>
+                                        <div class="col-md-4">
+                                          <div class="col-md-6">
+                                            <label>Name Of RMO/Consultant:</label>
+                                  				</div>
+                                  				<div class="col-md-6">
+                                  					<input class="form-control" type="text"  name="rmo" id="rmo" value="{{ old('rmo') }}" >
+                                  					@if($errors->has('rmo'))
+                                  							<span class="help-block"><div class="text-danger">{{ $errors->first('rmo') }}</div></span>
+                                  					@endif
 
-
-                                    			<div class="col-md-4">
-                                    				<div class="col-md-6">
-                                    					<label>Unit/Ward:</label>
-                                    				</div>
-                                    				<div class="col-md-6">
-                                    					<input class="form-control" type="text"  name="unit_ward" id="unit_ward" value="{{ old('unit_ward') }}" >
-                                    					@if($errors->has('unit_ward'))
-                                    							<span class="help-block"><div class="text-danger">{{ $errors->first('unit_ward') }}</div></span>
-                                    					@endif
-                                    				</div></div>
-                                            <div class="col-md-4">
-                                              <div class="col-md-6">
-                                                <label>Name Of RMO/Consultant:</label>
-                                      				</div>
-                                      				<div class="col-md-6">
-                                      					<input class="form-control" type="text"  name="rmo" id="rmo" value="{{ old('rmo') }}" >
-                                      					@if($errors->has('rmo'))
-                                      							<span class="help-block"><div class="text-danger">{{ $errors->first('rmo') }}</div></span>
-                                      					@endif
-
-                                      				</div></div></div>
-                                              <div class="row form-group text-center">
-                                                <button class="form-group btn btn-success" type="submit">Submit</button>
-                                              </div>
-                                            </form>
+                                  				</div></div></div>
+                                          <div class="row form-group text-center">
+                                            <button class="form-group btn btn-success" type="submit">Submit</button>
                                           </div>
-                                          @endsection
+                                        </form>
+                                      </div>
